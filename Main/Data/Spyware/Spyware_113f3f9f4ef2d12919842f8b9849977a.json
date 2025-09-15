@@ -1,0 +1,2963 @@
+{
+    "version": "v4.4.0",
+    "title": "Static Analysis",
+    "file_name": "Spyware_b913bdb396d87c1f71073cdfef901697b512bd409c59447bcde1ddab07e5b7e6.apk",
+    "app_name": "GoogleService",
+    "app_type": "apk",
+    "size": "0.69MB",
+    "md5": "113f3f9f4ef2d12919842f8b9849977a",
+    "sha1": "ea9e939f6d0b8fdb8825b62478615303160b4119",
+    "sha256": "b913bdb396d87c1f71073cdfef901697b512bd409c59447bcde1ddab07e5b7e6",
+    "package_name": "usqo.mkinrpn.ljhfdb",
+    "main_activity": "usqo.mkinrpn.ljhfdb.AndroidserviceActivity",
+    "exported_activities": "[]",
+    "browsable_activities": {},
+    "activities": [
+        "usqo.mkinrpn.ljhfdb.AndroidserviceActivity",
+        "usqo.mkinrpn.ljhfdb.Camerapic"
+    ],
+    "receivers": [
+        "usqo.mkinrpn.ljhfdb.TimerReceiver",
+        "usqo.mkinrpn.ljhfdb.GeSmE",
+        "usqo.mkinrpn.ljhfdb.NetWorkMonitor",
+        "usqo.mkinrpn.ljhfdb.PhoneReceiver"
+    ],
+    "providers": [],
+    "services": [
+        "usqo.mkinrpn.ljhfdb.AaTService",
+        "usqo.mkinrpn.ljhfdb.InstallApkService",
+        "usqo.mkinrpn.ljhfdb.FxService"
+    ],
+    "libraries": [],
+    "target_sdk": "10",
+    "max_sdk": "",
+    "min_sdk": "10",
+    "version_name": "1.0",
+    "version_code": "1",
+    "icon_path": "113f3f9f4ef2d12919842f8b9849977a-icon.png",
+    "permissions": {
+        "android.permission.RECORD_AUDIO": {
+            "status": "dangerous",
+            "info": "record audio",
+            "description": "Allows application to access the audio record path."
+        },
+        "android.permission.CAMERA": {
+            "status": "dangerous",
+            "info": "take pictures and videos",
+            "description": "Allows application to take pictures and videos with the camera. This allows the application to collect images that the camera is seeing at any time."
+        },
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+            "status": "dangerous",
+            "info": "read/modify/delete external storage contents",
+            "description": "Allows an application to write to external storage."
+        },
+        "android.permission.INSTALL_DRM": {
+            "status": "unknown",
+            "info": "Unknown permission",
+            "description": "Unknown permission from android reference"
+        },
+        "android.permission.MOUNT_UNMOUNT_FILESYSTEMS": {
+            "status": "dangerous",
+            "info": "mount and unmount file systems",
+            "description": "Allows the application to mount and unmount file systems for removable storage."
+        },
+        "android.permission.SYSTEM_ALERT_WINDOW": {
+            "status": "dangerous",
+            "info": "display system-level alerts",
+            "description": "Allows an application to show system-alert windows. Malicious applications can take over the entire screen of the phone."
+        },
+        "android.permission.INTERNET": {
+            "status": "normal",
+            "info": "full Internet access",
+            "description": "Allows an application to create network sockets."
+        },
+        "android.permission.ACCESS_WIFI_STATE": {
+            "status": "normal",
+            "info": "view Wi-Fi status",
+            "description": "Allows an application to view the information about the status of Wi-Fi."
+        },
+        "android.permission.ACCESS_NETWORK_STATE": {
+            "status": "normal",
+            "info": "view network status",
+            "description": "Allows an application to view the status of all networks."
+        },
+        "android.permission.READ_PHONE_STATE": {
+            "status": "dangerous",
+            "info": "read phone state and identity",
+            "description": "Allows the application to access the phone features of the device. An application with this permission can determine the phone number and serial number of this phone, whether a call is active, the number that call is connected to and so on."
+        },
+        "com.android.browser.permission.READ_HISTORY_BOOKMARKS": {
+            "status": "unknown",
+            "info": "Unknown permission",
+            "description": "Unknown permission from android reference"
+        },
+        "android.permission.WAKE_LOCK": {
+            "status": "normal",
+            "info": "prevent phone from sleeping",
+            "description": "Allows an application to prevent the phone from going to sleep."
+        },
+        "android.permission.READ_EXTERNAL_STORAGE": {
+            "status": "dangerous",
+            "info": "read external storage contents",
+            "description": "Allows an application to read from external storage."
+        },
+        "android.permission.ACCESS_FINE_LOCATION": {
+            "status": "dangerous",
+            "info": "fine (GPS) location",
+            "description": "Access fine location sources, such as the Global Positioning System on the phone, where available. Malicious applications can use this to determine where you are and may consume additional battery power."
+        },
+        "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS": {
+            "status": "normal",
+            "info": "access extra location provider commands",
+            "description": "Access extra location provider commands. Malicious applications could use this to interfere with the operation of the GPS or other location sources."
+        },
+        "android.permission.ACCESS_MOCK_LOCATION": {
+            "status": "dangerous",
+            "info": "mock location sources for testing",
+            "description": "Create mock location sources for testing. Malicious applications can use this to override the location and/or status returned by real-location sources such as GPS or Network providers."
+        },
+        "android.permission.GET_ACCOUNTS": {
+            "status": "dangerous",
+            "info": "list accounts",
+            "description": "Allows access to the list of accounts in the Accounts Service."
+        },
+        "android.permission.READ_CONTACTS": {
+            "status": "dangerous",
+            "info": "read contact data",
+            "description": "Allows an application to read all of the contact (address) data stored on your phone. Malicious applications can use this to send your data to other people."
+        },
+        "android.permission.READ_SMS": {
+            "status": "dangerous",
+            "info": "read SMS or MMS",
+            "description": "Allows application to read SMS messages stored on your phone or SIM card. Malicious applications may read your confidential messages."
+        },
+        "android.permission.RECEIVE_SMS": {
+            "status": "dangerous",
+            "info": "receive SMS",
+            "description": "Allows application to receive and process SMS messages. Malicious applications may monitor your messages or delete them without showing them to you."
+        },
+        "android.permission.SEND_SMS": {
+            "status": "dangerous",
+            "info": "send SMS messages",
+            "description": "Allows application to send SMS messages. Malicious applications may cost you money by sending messages without your confirmation."
+        },
+        "android.permission.WRITE_SMS": {
+            "status": "dangerous",
+            "info": "edit SMS or MMS",
+            "description": "Allows application to write to SMS messages stored on your phone or SIM card. Malicious applications may delete your messages."
+        },
+        "android.permission.RECEIVE_BOOT_COMPLETED": {
+            "status": "normal",
+            "info": "automatically start at boot",
+            "description": "Allows an application to start itself as soon as the system has finished booting. This can make it take longer to start the phone and allow the application to slow down the overall phone by always running."
+        },
+        "android.permission.READ_CALL_LOG": {
+            "status": "dangerous",
+            "info": "grants read access to the user's call log.",
+            "description": "Allows an application to read the user's call log."
+        },
+        "android.permission.WRITE_CALL_LOG": {
+            "status": "dangerous",
+            "info": "allows writing to (but not reading) the user's call log.",
+            "description": "Allows an application to write (but not read) the user's call log data."
+        },
+        "android.permission.WRITE_SETTINGS": {
+            "status": "dangerous",
+            "info": "modify global system settings",
+            "description": "Allows an application to modify the system's settings data. Malicious applications can corrupt your system's configuration."
+        }
+    },
+    "malware_permissions": {
+        "top_malware_permissions": [
+            "android.permission.RECORD_AUDIO",
+            "android.permission.CAMERA",
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            "android.permission.SYSTEM_ALERT_WINDOW",
+            "android.permission.INTERNET",
+            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.ACCESS_NETWORK_STATE",
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.WAKE_LOCK",
+            "android.permission.READ_EXTERNAL_STORAGE",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.GET_ACCOUNTS",
+            "android.permission.READ_CONTACTS",
+            "android.permission.READ_SMS",
+            "android.permission.RECEIVE_SMS",
+            "android.permission.SEND_SMS",
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            "android.permission.READ_CALL_LOG",
+            "android.permission.WRITE_SETTINGS"
+        ],
+        "other_abused_permissions": [
+            "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
+            "android.permission.ACCESS_MOCK_LOCATION",
+            "android.permission.WRITE_SMS"
+        ],
+        "total_malware_permissions": 25,
+        "total_other_permissions": 44
+    },
+    "certificate_analysis": {
+        "certificate_info": "Binary is signed\nv1 signature: True\nv2 signature: False\nv3 signature: False\nv4 signature: False\nX.509 Subject: C=211, ST=1459921545, L=1459921545, O=1459921545, OU=1459921545, CN=abda\nSignature Algorithm: rsassa_pkcs1v15\nValid From: 2016-04-06 05:45:46+00:00\nValid To: 2125-10-12 05:45:46+00:00\nIssuer: C=211, ST=1459921545, L=1459921545, O=1459921545, OU=1459921545, CN=abda\nSerial Number: 0x51d84af0\nHash Algorithm: sha256\nmd5: 70b2b4c472c61651144e364a1c694c94\nsha1: f5ddfbf77170d95910ba9143a139aa8b7efc21ca\nsha256: 8d1400de1f0558f065afcc1d60fbbb11512be4f0e0f97429ae6dcb4a53be4334\nsha512: 2fb5095c56dcef96dd18fec03fc36a9b7bc877f224d48346bdf4ad7ed28d30ef15e04bccb8016d7cefc256b426d9c45c60edc19785de627e2bc5b756640953a8\nFound 1 unique certificates",
+        "certificate_findings": [
+            [
+                "info",
+                "Application is signed with a code signing certificate",
+                "Signed Application"
+            ],
+            [
+                "high",
+                "Application is signed with v1 signature scheme, making it vulnerable to Janus vulnerability on Android 5.0-8.0, if signed only with v1 signature scheme. Applications running on Android 5.0-7.0 signed with v1, and v2/v3 scheme is also vulnerable.",
+                "Application vulnerable to Janus Vulnerability"
+            ]
+        ],
+        "certificate_summary": {
+            "high": 1,
+            "warning": 0,
+            "info": 1
+        }
+    },
+    "manifest_analysis": {
+        "manifest_findings": [
+            {
+                "rule": "vulnerable_os_version",
+                "title": "App can be installed on a vulnerable unpatched Android version<br>Android 2.3.3-2.3.7, [minSdk=10]",
+                "severity": "high",
+                "description": "This application can be installed on an older version of android that has multiple unfixed vulnerabilities. These devices won't receive reasonable security updates from Google. Support an Android version => 10, API 29 to receive reasonable security updates.",
+                "name": "App can be installed on a vulnerable unpatched Android version 2.3.3-2.3.7, [minSdk=10]",
+                "component": [
+                    "2.3.3-2.3.7",
+                    "10"
+                ]
+            },
+            {
+                "rule": "exported_intent_filter_exists",
+                "title": "<strong>Broadcast Receiver</strong> (usqo.mkinrpn.ljhfdb.TimerReceiver) is not Protected.<br>An intent-filter exists.",
+                "severity": "warning",
+                "description": "A Broadcast Receiver is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Broadcast Receiver is explicitly exported.",
+                "name": "Broadcast Receiver usqo.mkinrpn.ljhfdb.TimerReceiver is not Protected.An intent-filter exists.",
+                "component": [
+                    "Broadcast Receiver",
+                    "usqo.mkinrpn.ljhfdb.TimerReceiver"
+                ]
+            },
+            {
+                "rule": "exported_intent_filter_exists",
+                "title": "<strong>Broadcast Receiver</strong> (usqo.mkinrpn.ljhfdb.GeSmE) is not Protected.<br>An intent-filter exists.",
+                "severity": "warning",
+                "description": "A Broadcast Receiver is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Broadcast Receiver is explicitly exported.",
+                "name": "Broadcast Receiver usqo.mkinrpn.ljhfdb.GeSmE is not Protected.An intent-filter exists.",
+                "component": [
+                    "Broadcast Receiver",
+                    "usqo.mkinrpn.ljhfdb.GeSmE"
+                ]
+            },
+            {
+                "rule": "exported_intent_filter_exists",
+                "title": "<strong>Broadcast Receiver</strong> (usqo.mkinrpn.ljhfdb.NetWorkMonitor) is not Protected.<br>An intent-filter exists.",
+                "severity": "warning",
+                "description": "A Broadcast Receiver is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Broadcast Receiver is explicitly exported.",
+                "name": "Broadcast Receiver usqo.mkinrpn.ljhfdb.NetWorkMonitor is not Protected.An intent-filter exists.",
+                "component": [
+                    "Broadcast Receiver",
+                    "usqo.mkinrpn.ljhfdb.NetWorkMonitor"
+                ]
+            },
+            {
+                "rule": "exported_intent_filter_exists",
+                "title": "<strong>Broadcast Receiver</strong> (usqo.mkinrpn.ljhfdb.PhoneReceiver) is not Protected.<br>An intent-filter exists.",
+                "severity": "warning",
+                "description": "A Broadcast Receiver is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Broadcast Receiver is explicitly exported.",
+                "name": "Broadcast Receiver usqo.mkinrpn.ljhfdb.PhoneReceiver is not Protected.An intent-filter exists.",
+                "component": [
+                    "Broadcast Receiver",
+                    "usqo.mkinrpn.ljhfdb.PhoneReceiver"
+                ]
+            },
+            {
+                "rule": "high_intent_priority_found",
+                "title": "High Intent Priority (1000) - {1} Hit(s)<br>[android:priority]",
+                "severity": "warning",
+                "description": "By setting an intent priority higher than another intent, the app effectively overrides other requests.",
+                "name": "High Intent Priority (1000) - {1} Hit(s) [android:priority]",
+                "component": [
+                    "1000",
+                    1
+                ]
+            }
+        ],
+        "manifest_summary": {
+            "high": 1,
+            "warning": 5,
+            "info": 0,
+            "suppressed": 0
+        }
+    },
+    "network_security": {
+        "network_findings": [],
+        "network_summary": {}
+    },
+    "binary_analysis": [
+        {
+            "name": "lib/armeabi/libbspatch.so",
+            "nx": {
+                "is_nx": true,
+                "severity": "info",
+                "description": "The binary has NX bit set. This marks a memory page non-executable making attacker injected shellcode non-executable."
+            },
+            "pie": {
+                "is_pie": "Dynamic Shared Object (DSO)",
+                "severity": "info",
+                "description": "The shared object is build with -fPIC flag which enables Position independent code. This makes Return Oriented Programming (ROP) attacks much more difficult to execute reliably."
+            },
+            "stack_canary": {
+                "has_canary": true,
+                "severity": "info",
+                "description": "This binary has a stack canary value added to the stack so that it will be overwritten by a stack buffer that overflows the return address. This allows detection of overflows by verifying the integrity of the canary before function return."
+            },
+            "relocation_readonly": {
+                "relro": "Full RELRO",
+                "severity": "info",
+                "description": "This shared object has full RELRO enabled. RELRO ensures that the GOT cannot be overwritten in vulnerable ELF binaries. In Full RELRO, the entire GOT (.got and .got.plt both) is marked as read-only."
+            },
+            "rpath": {
+                "rpath": null,
+                "severity": "info",
+                "description": "The binary does not have run-time search path or RPATH set."
+            },
+            "runpath": {
+                "runpath": null,
+                "severity": "info",
+                "description": "The binary does not have RUNPATH set."
+            },
+            "fortify": {
+                "is_fortified": false,
+                "severity": "warning",
+                "description": "The binary does not have any fortified functions. Fortified functions provides buffer overflow checks against glibc's commons insecure functions like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fortify functions. This check is not applicable for Dart/Flutter libraries."
+            },
+            "symbol": {
+                "is_stripped": true,
+                "severity": "info",
+                "description": "Symbols are stripped."
+            }
+        },
+        {
+            "name": "apktool_out/lib/armeabi/libbspatch.so",
+            "nx": {
+                "is_nx": true,
+                "severity": "info",
+                "description": "The binary has NX bit set. This marks a memory page non-executable making attacker injected shellcode non-executable."
+            },
+            "pie": {
+                "is_pie": "Dynamic Shared Object (DSO)",
+                "severity": "info",
+                "description": "The shared object is build with -fPIC flag which enables Position independent code. This makes Return Oriented Programming (ROP) attacks much more difficult to execute reliably."
+            },
+            "stack_canary": {
+                "has_canary": true,
+                "severity": "info",
+                "description": "This binary has a stack canary value added to the stack so that it will be overwritten by a stack buffer that overflows the return address. This allows detection of overflows by verifying the integrity of the canary before function return."
+            },
+            "relocation_readonly": {
+                "relro": "Full RELRO",
+                "severity": "info",
+                "description": "This shared object has full RELRO enabled. RELRO ensures that the GOT cannot be overwritten in vulnerable ELF binaries. In Full RELRO, the entire GOT (.got and .got.plt both) is marked as read-only."
+            },
+            "rpath": {
+                "rpath": null,
+                "severity": "info",
+                "description": "The binary does not have run-time search path or RPATH set."
+            },
+            "runpath": {
+                "runpath": null,
+                "severity": "info",
+                "description": "The binary does not have RUNPATH set."
+            },
+            "fortify": {
+                "is_fortified": false,
+                "severity": "warning",
+                "description": "The binary does not have any fortified functions. Fortified functions provides buffer overflow checks against glibc's commons insecure functions like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fortify functions. This check is not applicable for Dart/Flutter libraries."
+            },
+            "symbol": {
+                "is_stripped": true,
+                "severity": "info",
+                "description": "Symbols are stripped."
+            }
+        }
+    ],
+    "file_analysis": [],
+    "android_api": {
+        "api_local_file_io": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "105,265,1644,167,168,37,38,38,39,39,40,40,41,41,42,42,43,43,44,44,45,45,46,46,47,182,185,462,472,519,564,848,880,913,1426,1487,1606",
+                "usqo/mkinrpn/ljhfdb/AndroidApp.java": "2,3,3,4,4,5,24,30,39,63,64,70",
+                "usqo/mkinrpn/ljhfdb/AppManage.java": "3,4,4,5,5,6,26,31,33,38,55,90",
+                "usqo/mkinrpn/ljhfdb/Audio.java": "7,8,8,9,9,10,10,11,74,140,212,247,250,283,286,308,366",
+                "usqo/mkinrpn/ljhfdb/BackIp.java": "2,3,3,4,4,5,5,6,6,7,31,84",
+                "usqo/mkinrpn/ljhfdb/Camerapic.java": "12,13,13,14,14,15,37,67",
+                "usqo/mkinrpn/ljhfdb/DirTheard.java": "4,5,5,6,6,7,7,8,8,9,32,35,55,111,146,168",
+                "usqo/mkinrpn/ljhfdb/FileManage.java": "3,4,4,5,5,6,21,34",
+                "usqo/mkinrpn/ljhfdb/FileMd5.java": "2,3,21,31",
+                "usqo/mkinrpn/ljhfdb/GPS.java": "9,10",
+                "usqo/mkinrpn/ljhfdb/GetHttp.java": "2,3,3,4,4,5",
+                "usqo/mkinrpn/ljhfdb/GetMobileInfor.java": "7,8,8,9,9,10",
+                "usqo/mkinrpn/ljhfdb/GsmLocation.java": "6,7",
+                "usqo/mkinrpn/ljhfdb/HttpGetFile.java": "2,3,3,4,4,5,5,6,6,7,7,8,42,60",
+                "usqo/mkinrpn/ljhfdb/LoadPlugins.java": "5,6,78",
+                "usqo/mkinrpn/ljhfdb/MMS.java": "4,5,5,6,6,7,7,8",
+                "usqo/mkinrpn/ljhfdb/MontePI.java": "2,3,26",
+                "usqo/mkinrpn/ljhfdb/ObjectToFile.java": "2,3,3,4,4,5,5,6",
+                "usqo/mkinrpn/ljhfdb/PublicFun.java": "25,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,62,73,88,89,109,120,128,138,155,166,181,186,187,209,223,272,287,342",
+                "usqo/mkinrpn/ljhfdb/RecordThread.java": "9,10,10,11,148,153",
+                "usqo/mkinrpn/ljhfdb/RecvThread.java": "29,7,8,8,9,54,64,69,71,154,231,603,625,730",
+                "usqo/mkinrpn/ljhfdb/ReleaseApk.java": "8,9,9,10,10,11,11,12,65",
+                "usqo/mkinrpn/ljhfdb/RootCmd.java": "3,4,4,5,5,6,6,7,7,8,8,9,52,52,63,67,86",
+                "usqo/mkinrpn/ljhfdb/RootThread.java": "3,4,4,5,48,49,83,83",
+                "usqo/mkinrpn/ljhfdb/SControl.java": "6,7,7,8,8,9,9,10,10,11,11,12,69,76,100,133,135,182,193",
+                "usqo/mkinrpn/ljhfdb/SU.java": "4,5,5,6,6,7,7,8,47,89,92,107,109",
+                "usqo/mkinrpn/ljhfdb/Screen.java": "89,104,7,8,54,62",
+                "usqo/mkinrpn/ljhfdb/SearchDir.java": "4,5,83,121,136,162,180",
+                "usqo/mkinrpn/ljhfdb/SearchFilter.java": "3,4,4,5,5,6,6,7,7,8,8,9,9,10,31,96",
+                "usqo/mkinrpn/ljhfdb/SendDir.java": "3,4,28",
+                "usqo/mkinrpn/ljhfdb/SendOldFile.java": "4,5",
+                "usqo/mkinrpn/ljhfdb/SendThread.java": "2,3,3,4,4,5,5,6,6,7",
+                "usqo/mkinrpn/ljhfdb/Shot.java": "73,7,8,8,9,9,10,10,11,63",
+                "usqo/mkinrpn/ljhfdb/StorageList.java": "4,5,22,27,35",
+                "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "12,13,13,14,14,15,15,16,16,17,141,146,366,406,424",
+                "usqo/mkinrpn/ljhfdb/TcpServer.java": "4,5",
+                "usqo/mkinrpn/ljhfdb/Thumbnail.java": "6,7,7,8,8,9,9,10,28,31,93,135,169,173,180",
+                "usqo/mkinrpn/ljhfdb/TransTfiles.java": "2,3,3,4,4,5,5,6,6,7,38",
+                "usqo/mkinrpn/ljhfdb/UDP.java": "3,4,4,5,5,6,78,90",
+                "usqo/mkinrpn/ljhfdb/UninstallByUdp.java": "2,3",
+                "usqo/mkinrpn/ljhfdb/UpdateManager.java": "9,10,10,11,73,131,132,156",
+                "usqo/mkinrpn/ljhfdb/UploadApp.java": "3,4,4,5,5,6,6,7,43,100,137,146",
+                "usqo/mkinrpn/ljhfdb/UploadDirFile.java": "3,4,78,96",
+                "usqo/mkinrpn/ljhfdb/WavHeard.java": "3,4,4,5,5,6,6,7,32,75,78,103,106",
+                "usqo/mkinrpn/ljhfdb/ZipUtils.java": "2,3,3,4,4,5,5,6,24,29,55,58,84,94",
+                "usqo/mkinrpn/ljhfdb/base64.java": "2,3,3,4,4,5",
+                "usqo/mkinrpn/ljhfdb/broot.java": "4,5,5,6,6,7,7,8,8,9,9,10,31,45,81,257",
+                "usqo/mkinrpn/ljhfdb/environmentaudio.java": "65,6,7,7,8,8,9,44,141",
+                "usqo/mkinrpn/ljhfdb/passwd.java": "3,4,4,5,5,6,6,7,7,8,8,9,9,10,34,107",
+                "usqo/mkinrpn/ljhfdb/process.java": "3,4,4,5,5,6,6,7,7,8,20,26,31,126",
+                "usqo/mkinrpn/ljhfdb/rootcmdthread.java": "2,3,3,4,4,5"
+            },
+            "metadata": {
+                "description": "Local File I/O Operations",
+                "severity": "info"
+            }
+        },
+        "api_os_command": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "588,1152,588,1152",
+                "usqo/mkinrpn/ljhfdb/ReleaseApk.java": "94,93",
+                "usqo/mkinrpn/ljhfdb/RootThread.java": "57,57",
+                "usqo/mkinrpn/ljhfdb/UpdateManager.java": "67,65",
+                "usqo/mkinrpn/ljhfdb/broot.java": "95,127,95,127",
+                "usqo/mkinrpn/ljhfdb/rootcmdthread.java": "26,26"
+            },
+            "metadata": {
+                "description": "Execute OS Command",
+                "severity": "info"
+            }
+        },
+        "api_start_activity": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "33",
+                "usqo/mkinrpn/ljhfdb/InstallApk.java": "22",
+                "usqo/mkinrpn/ljhfdb/NetWorkMonitor.java": "20",
+                "usqo/mkinrpn/ljhfdb/PhoneReceiver.java": "62",
+                "usqo/mkinrpn/ljhfdb/RecvThread.java": "672",
+                "usqo/mkinrpn/ljhfdb/ReleaseApk.java": "101",
+                "usqo/mkinrpn/ljhfdb/TimerReceiver.java": "13",
+                "usqo/mkinrpn/ljhfdb/UpdateManager.java": "58,75,146"
+            },
+            "metadata": {
+                "description": "Starting Activity",
+                "severity": "info"
+            }
+        },
+        "api_ipc": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "29,142,7,13,14,142,260,260,270,270,747,748,748,751,751,751,753",
+                "usqo/mkinrpn/ljhfdb/AndroidserviceActivity.java": "4,13,13",
+                "usqo/mkinrpn/ljhfdb/FxService.java": "6,64,5,64",
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "4,8,27,31,31,151,151,152",
+                "usqo/mkinrpn/ljhfdb/InstallApk.java": "4,19,19",
+                "usqo/mkinrpn/ljhfdb/NetWorkMonitor.java": "6,14,17,18,18",
+                "usqo/mkinrpn/ljhfdb/PhoneReceiver.java": "5,22,22,26,28,30,33,40,59,59,97,97,97,99,100,103,103,103,104,105,106,107,108,109,109,109,111,112,113,113,113,115,116,117,117,117,118,119,120,121,122,125,125,125,127,128",
+                "usqo/mkinrpn/ljhfdb/RecvThread.java": "4,667,667",
+                "usqo/mkinrpn/ljhfdb/ReleaseApk.java": "4,98,98",
+                "usqo/mkinrpn/ljhfdb/SControl.java": "4,159,159",
+                "usqo/mkinrpn/ljhfdb/ScreenActionReceiver.java": "5,6,23,41,41",
+                "usqo/mkinrpn/ljhfdb/TimerReceiver.java": "5,10,11,11",
+                "usqo/mkinrpn/ljhfdb/UpdateManager.java": "4,55,55,71,71,141,141,141,142,144,145,146"
+            },
+            "metadata": {
+                "description": "Inter Process Communication",
+                "severity": "info"
+            }
+        },
+        "api_get_system_service": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "151,397,437,742,1114,1124",
+                "usqo/mkinrpn/ljhfdb/FxService.java": "72",
+                "usqo/mkinrpn/ljhfdb/GPS.java": "77,94",
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "136",
+                "usqo/mkinrpn/ljhfdb/GetMobileInfor.java": "28",
+                "usqo/mkinrpn/ljhfdb/NetWorkMonitor.java": "22,33",
+                "usqo/mkinrpn/ljhfdb/PhoneReceiver.java": "31,86,89,94",
+                "usqo/mkinrpn/ljhfdb/Screen.java": "79,83"
+            },
+            "metadata": {
+                "description": "Get System Service",
+                "severity": "info"
+            }
+        },
+        "api_java_reflection": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/PhoneReceiver.java": "13"
+            },
+            "metadata": {
+                "description": "Java Reflection",
+                "severity": "info"
+            }
+        },
+        "api_send_broadcast": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/PhoneReceiver.java": "100,108,112,116,122,128",
+                "usqo/mkinrpn/ljhfdb/SControl.java": "161"
+            },
+            "metadata": {
+                "description": "Sending Broadcast",
+                "severity": "info"
+            }
+        },
+        "api_gps": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GPS.java": "4,5,6,7,86"
+            },
+            "metadata": {
+                "description": "GPS Location",
+                "severity": "info"
+            }
+        },
+        "api_start_service": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "271",
+                "usqo/mkinrpn/ljhfdb/AndroidserviceActivity.java": "14",
+                "usqo/mkinrpn/ljhfdb/NetWorkMonitor.java": "17"
+            },
+            "metadata": {
+                "description": "Starting Service",
+                "severity": "info"
+            }
+        },
+        "api_sms_call": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "9,691,708,782,865,915,940,990,1016,1102,1536,1543,1576",
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "6,170,204,212,243",
+                "usqo/mkinrpn/ljhfdb/Sms.java": "3,30,65",
+                "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "3,221,229,246,265,298"
+            },
+            "metadata": {
+                "description": "Query Database of SMS, Contacts etc",
+                "severity": "info"
+            }
+        },
+        "api_send_sms": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "152,15",
+                "usqo/mkinrpn/ljhfdb/RecvThread.java": "560,563,698,701,7"
+            },
+            "metadata": {
+                "description": "Send SMS",
+                "severity": "info"
+            }
+        },
+        "api_web": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GetHttp.java": "7"
+            },
+            "metadata": {
+                "description": "HTTP Requests, Connections and Sessions",
+                "severity": "info"
+            }
+        },
+        "api_tcp": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "18,30,37,18",
+                "usqo/mkinrpn/ljhfdb/TcpServer.java": "6,7,24,26,26,28,30,7",
+                "usqo/mkinrpn/ljhfdb/UDP.java": "8,10,15,15,27,32,34,36,40,42,43,44,49,52,54,60,60,61,67,74,109,110,115,116,175,180,212,223,230,10",
+                "usqo/mkinrpn/ljhfdb/UninstallByUdp.java": "5,7,14,14,14,15,21,28,7"
+            },
+            "metadata": {
+                "description": "TCP Socket",
+                "severity": "info"
+            }
+        },
+        "api_installed": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "1087,1086,1634",
+                "usqo/mkinrpn/ljhfdb/ReleaseApk.java": "45,27,44",
+                "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "209,208"
+            },
+            "metadata": {
+                "description": "Get Installed Applications",
+                "severity": "info"
+            }
+        },
+        "api_http_connection": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "931,977,996,1114,1124,55",
+                "usqo/mkinrpn/ljhfdb/GsmLocation.java": "94,140,177,10,11,12,13,14,15,16,17",
+                "usqo/mkinrpn/ljhfdb/HttpGetFile.java": "9,22,22,22,12,13,14"
+            },
+            "metadata": {
+                "description": "HTTP Connection",
+                "severity": "info"
+            }
+        },
+        "api_get_location": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GsmLocation.java": "61,72,110,117,4"
+            },
+            "metadata": {
+                "description": "Get Cell Location",
+                "severity": "info"
+            }
+        },
+        "api_dexloading": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/LoadPlugins.java": "99,96,5"
+            },
+            "metadata": {
+                "description": "Dynamic Class and Dexloading",
+                "severity": "info"
+            }
+        },
+        "api_udp_datagram": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/UDP.java": "7,179,179,222,222,7",
+                "usqo/mkinrpn/ljhfdb/UninstallByUdp.java": "4,19,19,4"
+            },
+            "metadata": {
+                "description": "UDP Datagram Packet",
+                "severity": "info"
+            }
+        },
+        "api_udp_datagram_socket": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/UDP.java": "8,15,60,8",
+                "usqo/mkinrpn/ljhfdb/UninstallByUdp.java": "5,14,14,5"
+            },
+            "metadata": {
+                "description": "UDP Datagram Socket",
+                "severity": "info"
+            }
+        },
+        "api_tcp_server": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/TcpServer.java": "6,24,26,26,28,6"
+            },
+            "metadata": {
+                "description": "TCP Server Socket",
+                "severity": "info"
+            }
+        },
+        "api_native_code": {
+            "files": {
+                "baidu/android/BaiduApi/DecodeBaiDuBuf.java": "74"
+            },
+            "metadata": {
+                "description": "Loading Native Code (Shared Library)",
+                "severity": "info"
+            }
+        },
+        "api_notifications": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "6,743,745,754"
+            },
+            "metadata": {
+                "description": "Android Notifications",
+                "severity": "info"
+            }
+        },
+        "api_get_subscriber": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "157,35"
+            },
+            "metadata": {
+                "description": "Get Subscriber ID",
+                "severity": "info"
+            }
+        },
+        "api_get_phone": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "161,35"
+            },
+            "metadata": {
+                "description": "Get Phone Number",
+                "severity": "info"
+            }
+        },
+        "api_get_wifi": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "398,438,26"
+            },
+            "metadata": {
+                "description": "Get WiFi Details",
+                "severity": "info"
+            }
+        }
+    },
+    "code_analysis": {
+        "findings": {
+            "android_detect_root": {
+                "files": {
+                    "usqo/mkinrpn/ljhfdb/AaTService.java": "564",
+                    "usqo/mkinrpn/ljhfdb/RootCmd.java": "52,58,58,52",
+                    "usqo/mkinrpn/ljhfdb/RootThread.java": "83,83",
+                    "usqo/mkinrpn/ljhfdb/broot.java": "55,62,55,61"
+                },
+                "metadata": {
+                    "cvss": 0,
+                    "cwe": "",
+                    "masvs": "MSTG-RESILIENCE-1",
+                    "owasp-mobile": "",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05j-Testing-Resiliency-Against-Reverse-Engineering.md#testing-root-detection-mstg-resilience-1",
+                    "description": "This App may have root detection capabilities.",
+                    "severity": "good"
+                }
+            },
+            "android_read_write_external": {
+                "files": {
+                    "usqo/mkinrpn/ljhfdb/AaTService.java": "265,267,1601,1644,1645",
+                    "usqo/mkinrpn/ljhfdb/Audio.java": "73,307",
+                    "usqo/mkinrpn/ljhfdb/FileManage.java": "51",
+                    "usqo/mkinrpn/ljhfdb/GPS.java": "57",
+                    "usqo/mkinrpn/ljhfdb/GsmLocation.java": "36",
+                    "usqo/mkinrpn/ljhfdb/PublicFun.java": "25",
+                    "usqo/mkinrpn/ljhfdb/RecvThread.java": "29",
+                    "usqo/mkinrpn/ljhfdb/Screen.java": "89,104,105",
+                    "usqo/mkinrpn/ljhfdb/SearchDir.java": "160,164",
+                    "usqo/mkinrpn/ljhfdb/SendOldFile.java": "131",
+                    "usqo/mkinrpn/ljhfdb/Shot.java": "62,73",
+                    "usqo/mkinrpn/ljhfdb/StorageList.java": "19",
+                    "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "404,408",
+                    "usqo/mkinrpn/ljhfdb/UpdateManager.java": "130",
+                    "usqo/mkinrpn/ljhfdb/environmentaudio.java": "43,65"
+                },
+                "metadata": {
+                    "cvss": 5.5,
+                    "cwe": "CWE-276: Incorrect Default Permissions",
+                    "owasp-mobile": "M2: Insecure Data Storage",
+                    "masvs": "MSTG-STORAGE-2",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#external-storage",
+                    "description": "App can read/write to External Storage. Any App can read data written to External Storage.",
+                    "severity": "warning"
+                }
+            },
+            "android_temp_file": {
+                "files": {
+                    "usqo/mkinrpn/ljhfdb/Audio.java": "320"
+                },
+                "metadata": {
+                    "cvss": 5.5,
+                    "cwe": "CWE-276: Incorrect Default Permissions",
+                    "owasp-mobile": "M2: Insecure Data Storage",
+                    "masvs": "MSTG-STORAGE-2",
+                    "description": "App creates temp file. Sensitive information should never be written into a temp file.",
+                    "severity": "warning"
+                }
+            },
+            "android_logging": {
+                "files": {
+                    "baidu/android/BaiduApi/JarLoader.java": "10",
+                    "usqo/mkinrpn/ljhfdb/GetMobileInfor.java": "42",
+                    "usqo/mkinrpn/ljhfdb/GsmLocation.java": "204",
+                    "usqo/mkinrpn/ljhfdb/MontePI.java": "25",
+                    "usqo/mkinrpn/ljhfdb/PhoneReceiver.java": "35",
+                    "usqo/mkinrpn/ljhfdb/RecordThread.java": "70,73",
+                    "usqo/mkinrpn/ljhfdb/RootCmd.java": "95",
+                    "usqo/mkinrpn/ljhfdb/SU.java": "56",
+                    "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "81",
+                    "usqo/mkinrpn/ljhfdb/TcpServer.java": "24,28",
+                    "usqo/mkinrpn/ljhfdb/UsePower.java": "14",
+                    "usqo/mkinrpn/ljhfdb/Utilities.java": "6",
+                    "usqo/mkinrpn/ljhfdb/base64.java": "85,102",
+                    "usqo/mkinrpn/ljhfdb/broot.java": "106,155,241,110",
+                    "usqo/mkinrpn/ljhfdb/servertrans.java": "18"
+                },
+                "metadata": {
+                    "cvss": 7.5,
+                    "cwe": "CWE-532: Insertion of Sensitive Information into Log File",
+                    "owasp-mobile": "",
+                    "masvs": "MSTG-STORAGE-3",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#logs",
+                    "description": "The App logs information. Sensitive information should never be logged.",
+                    "severity": "info"
+                }
+            },
+            "android_aar_jar_debug_enabled": {
+                "files": {
+                    "usqo/mkinrpn/ljhfdb/BuildConfig.java": "4,5"
+                },
+                "metadata": {
+                    "cvss": 5.4,
+                    "cwe": "CWE-919: Weaknesses in Mobile Applications",
+                    "owasp-mobile": "M1: Improper Platform Usage",
+                    "masvs": "MSTG-RESILIENCE-2",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04c-Tampering-and-Reverse-Engineering.md#debugging-and-tracing",
+                    "description": "Debug configuration enabled. Production builds must not be debuggable.",
+                    "severity": "high"
+                }
+            },
+            "android_sql_raw_query": {
+                "files": {
+                    "usqo/mkinrpn/ljhfdb/SqliteOperate.java": "6,34,73,126,177"
+                },
+                "metadata": {
+                    "cvss": 5.9,
+                    "cwe": "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+                    "owasp-mobile": "M7: Client Code Quality",
+                    "masvs": "",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#injection-flaws-mstg-arch-2-and-mstg-platform-2",
+                    "description": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.",
+                    "severity": "warning"
+                }
+            },
+            "android_insecure_random": {
+                "files": {
+                    "usqo/mkinrpn/ljhfdb/Thumbnail.java": "12"
+                },
+                "metadata": {
+                    "cvss": 7.5,
+                    "cwe": "CWE-330: Use of Insufficiently Random Values",
+                    "owasp-mobile": "M5: Insufficient Cryptography",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#weak-random-number-generators",
+                    "masvs": "MSTG-CRYPTO-6",
+                    "description": "The App uses an insecure Random Number Generator.",
+                    "severity": "warning"
+                }
+            },
+            "android_ip_disclosure": {
+                "files": {
+                    "usqo/mkinrpn/ljhfdb/UninstallByUdp.java": "17"
+                },
+                "metadata": {
+                    "cvss": 4.3,
+                    "cwe": "CWE-200: Information Exposure",
+                    "owasp-mobile": "",
+                    "masvs": "MSTG-CODE-2",
+                    "description": "IP Address disclosure",
+                    "severity": "warning"
+                }
+            }
+        },
+        "summary": {
+            "high": 1,
+            "warning": 5,
+            "info": 1,
+            "secure": 1,
+            "suppressed": 0
+        }
+    },
+    "niap_analysis": {},
+    "permission_mapping": {
+        "android.permission.ACCESS_NETWORK_STATE": {
+            "usqo/mkinrpn/ljhfdb/AaTService.java": "21,22,25,26,35,1476",
+            "usqo/mkinrpn/ljhfdb/Audio.java": "7,297,350",
+            "usqo/mkinrpn/ljhfdb/GeSmE.java": "15,193,226,229,276",
+            "usqo/mkinrpn/ljhfdb/GsmLocation.java": "4,6,40",
+            "usqo/mkinrpn/ljhfdb/NetWorkMonitor.java": "7,8,23,24",
+            "usqo/mkinrpn/ljhfdb/RecvThread.java": "7,556,694"
+        },
+        "android.permission.READ_EXTERNAL_STORAGE": {
+            "usqo/mkinrpn/ljhfdb/AaTService.java": "1613,1676,12,43",
+            "usqo/mkinrpn/ljhfdb/Audio.java": "216,9",
+            "usqo/mkinrpn/ljhfdb/ObjectToFile.java": "19,3",
+            "usqo/mkinrpn/ljhfdb/PublicFun.java": "188,3,10",
+            "usqo/mkinrpn/ljhfdb/RootCmd.java": "88,3,5",
+            "usqo/mkinrpn/ljhfdb/SControl.java": "137,3,8",
+            "usqo/mkinrpn/ljhfdb/SU.java": "49,3,6",
+            "usqo/mkinrpn/ljhfdb/SendThread.java": "34,5",
+            "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "70,4",
+            "usqo/mkinrpn/ljhfdb/TransTfiles.java": "39,5",
+            "usqo/mkinrpn/ljhfdb/WavHeard.java": "36,5",
+            "usqo/mkinrpn/ljhfdb/ZipUtils.java": "18,49,97,4"
+        },
+        "android.permission.READ_PHONE_STATE": {
+            "usqo/mkinrpn/ljhfdb/AaTService.java": "35,153,155,360",
+            "usqo/mkinrpn/ljhfdb/Audio.java": "7,38",
+            "usqo/mkinrpn/ljhfdb/GeSmE.java": "15,150",
+            "usqo/mkinrpn/ljhfdb/PhoneReceiver.java": "8,38",
+            "usqo/mkinrpn/ljhfdb/RecvThread.java": "7,556,694"
+        },
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+            "usqo/mkinrpn/ljhfdb/AaTService.java": "848,880,913,1426,1500,44",
+            "usqo/mkinrpn/ljhfdb/AndroidApp.java": "70,4",
+            "usqo/mkinrpn/ljhfdb/AppManage.java": "55,5",
+            "usqo/mkinrpn/ljhfdb/Audio.java": "146,218,10",
+            "usqo/mkinrpn/ljhfdb/BackIp.java": "84,5",
+            "usqo/mkinrpn/ljhfdb/Camerapic.java": "39,14",
+            "usqo/mkinrpn/ljhfdb/DirTheard.java": "146,7",
+            "usqo/mkinrpn/ljhfdb/HttpGetFile.java": "49,5",
+            "usqo/mkinrpn/ljhfdb/PublicFun.java": "62,190,11",
+            "usqo/mkinrpn/ljhfdb/ReleaseApk.java": "68,10",
+            "usqo/mkinrpn/ljhfdb/RootCmd.java": "66,89,6",
+            "usqo/mkinrpn/ljhfdb/SControl.java": "138,9",
+            "usqo/mkinrpn/ljhfdb/SU.java": "50,7",
+            "usqo/mkinrpn/ljhfdb/Shot.java": "38,10",
+            "usqo/mkinrpn/ljhfdb/Thumbnail.java": "95,137,9",
+            "usqo/mkinrpn/ljhfdb/WavHeard.java": "38,6",
+            "usqo/mkinrpn/ljhfdb/ZipUtils.java": "60,83,5",
+            "usqo/mkinrpn/ljhfdb/environmentaudio.java": "147,8",
+            "usqo/mkinrpn/ljhfdb/passwd.java": "107,6"
+        },
+        "android.permission.RECORD_AUDIO": {
+            "usqo/mkinrpn/ljhfdb/Audio.java": "3,4,92,92,108,149,223",
+            "usqo/mkinrpn/ljhfdb/RecordThread.java": "5,31,43,167",
+            "usqo/mkinrpn/ljhfdb/WavHeard.java": "3,51",
+            "usqo/mkinrpn/ljhfdb/environmentaudio.java": "3,105,105,121,150"
+        },
+        "android.permission.CAMERA": {
+            "usqo/mkinrpn/ljhfdb/AaTService.java": "20,1441,1460,1498,1613,1675",
+            "usqo/mkinrpn/ljhfdb/Camerapic.java": "8,118",
+            "usqo/mkinrpn/ljhfdb/RecordThread.java": "3,57,68"
+        },
+        "android.permission.RECEIVE_BOOT_COMPLETED": {
+            "usqo/mkinrpn/ljhfdb/GeSmE.java": "5,27",
+            "usqo/mkinrpn/ljhfdb/NetWorkMonitor.java": "4,14",
+            "usqo/mkinrpn/ljhfdb/PhoneReceiver.java": "3,26",
+            "usqo/mkinrpn/ljhfdb/ScreenActionReceiver.java": "3,44,51",
+            "usqo/mkinrpn/ljhfdb/TimerReceiver.java": "3,10"
+        },
+        "android.permission.RECEIVE_SMS": {
+            "usqo/mkinrpn/ljhfdb/GeSmE.java": "23,5",
+            "usqo/mkinrpn/ljhfdb/NetWorkMonitor.java": "4,14",
+            "usqo/mkinrpn/ljhfdb/PhoneReceiver.java": "3,26",
+            "usqo/mkinrpn/ljhfdb/ScreenActionReceiver.java": "3,23",
+            "usqo/mkinrpn/ljhfdb/TimerReceiver.java": "3,10"
+        },
+        "android.permission.SYSTEM_ALERT_WINDOW": {
+            "usqo/mkinrpn/ljhfdb/FxService.java": "83,12",
+            "usqo/mkinrpn/ljhfdb/PhoneReceiver.java": "11,31,86,89,94"
+        },
+        "android.permission.ACCESS_FINE_LOCATION": {
+            "usqo/mkinrpn/ljhfdb/GPS.java": "7,88",
+            "usqo/mkinrpn/ljhfdb/GsmLocation.java": "4,61,72,110,117"
+        },
+        "android.permission.SEND_SMS": {
+            "usqo/mkinrpn/ljhfdb/GeSmE.java": "15,152",
+            "usqo/mkinrpn/ljhfdb/RecvThread.java": "7,560,563,698,701"
+        },
+        "android.permission.READ_CONTACTS": {
+            "usqo/mkinrpn/ljhfdb/AaTService.java": "32,691,708,782,865,915,940,990,1016,1102,1536,1543,1576",
+            "usqo/mkinrpn/ljhfdb/GeSmE.java": "14,170,204,212,243",
+            "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "11,221,229,246,265,298"
+        },
+        "android.permission.READ_SMS": {
+            "usqo/mkinrpn/ljhfdb/AaTService.java": "9,691,708,782,865,915,940,990,1016,1102,1536,1543,1576",
+            "usqo/mkinrpn/ljhfdb/GeSmE.java": "6,170,204,212,243",
+            "usqo/mkinrpn/ljhfdb/Sms.java": "3,30,65",
+            "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "3,221,229,246,265,298"
+        },
+        "android.permission.READ_CALL_LOG": {
+            "usqo/mkinrpn/ljhfdb/AaTService.java": "9,691,708,782,865,915,940,990,1016,1102,1536,1543,1576",
+            "usqo/mkinrpn/ljhfdb/GeSmE.java": "6,170,204,212,243",
+            "usqo/mkinrpn/ljhfdb/Sms.java": "3,30,65",
+            "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "3,221,229,246,265,298"
+        },
+        "android.permission.INTERNET": {
+            "usqo/mkinrpn/ljhfdb/AaTService.java": "21,591,1155,55",
+            "usqo/mkinrpn/ljhfdb/HttpGetFile.java": "9,10,11,22,12,13,14",
+            "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "70,18,19"
+        },
+        "android.permission.ACCESS_WIFI_STATE": {
+            "usqo/mkinrpn/ljhfdb/AaTService.java": "21,25,26,398,438"
+        },
+        "android.permission.WAKE_LOCK": {
+            "usqo/mkinrpn/ljhfdb/AaTService.java": "25,26,1476"
+        },
+        "android.permission.GET_ACCOUNTS": {
+            "usqo/mkinrpn/ljhfdb/AaTService.java": "4,843"
+        },
+        "android.permission.WRITE_CALL_LOG": {
+            "usqo/mkinrpn/ljhfdb/AaTService.java": "9,555,1490"
+        }
+    },
+    "urls": [
+        {
+            "urls": [
+                "http://www.163.com/"
+            ],
+            "path": "usqo/mkinrpn/ljhfdb/GetHttp.java"
+        },
+        {
+            "urls": [
+                "http://loc.map.baidu.com/sdk.php"
+            ],
+            "path": "usqo/mkinrpn/ljhfdb/GsmLocation.java"
+        },
+        {
+            "urls": [
+                "www.baidu.com"
+            ],
+            "path": "usqo/mkinrpn/ljhfdb/AaTService.java"
+        }
+    ],
+    "domains": {
+        "www.baidu.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "103.235.46.102",
+                "country_short": "HK",
+                "country_long": "Hong Kong",
+                "region": "Hong Kong",
+                "city": "Hong Kong",
+                "latitude": "22.285521",
+                "longitude": "114.157692"
+            },
+            "ofac": true
+        },
+        "www.163.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "163.181.17.236",
+                "country_short": "TH",
+                "country_long": "Thailand",
+                "region": "Krung Thep Maha Nakhon",
+                "city": "Bangkok",
+                "latitude": "13.750000",
+                "longitude": "100.516670"
+            },
+            "ofac": false
+        },
+        "loc.map.baidu.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "180.76.11.229",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Beijing",
+                "city": "Beijing",
+                "latitude": "39.907501",
+                "longitude": "116.397232"
+            },
+            "ofac": true
+        }
+    },
+    "emails": [],
+    "strings": {
+        "strings_apk_res": [
+            "\"app_name\" : \"GoogleService\""
+        ],
+        "strings_so": [
+            {
+                "lib/armeabi/libbspatch.so": [
+                    "St8ios_base",
+                    "/system/bin/cp",
+                    "system",
+                    "+0086",
+                    "info.adjustedPtr && cur_base_info.adjustedPtr",
+                    "St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "Friday",
+                    "moneypunct",
+                    "std::bad_cast",
+                    "0123456789abcdefx",
+                    "St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "/system/bin/sux",
+                    "Unable to find facet",
+                    "oemid",
+                    "sux -c 'powermanager %s %s %s'",
+                    "fwrev",
+                    "basic_string",
+                    "St13messages_base",
+                    "Exception destructor has thrown!",
+                    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+                    "St12codecvt_base",
+                    "St13basic_filebufIwSt11char_traitsIwEE",
+                    "/system/bin/%s",
+                    "LC_MONETARY=",
+                    "/storage/sdcard0",
+                    "St15messages_bynameIcE",
+                    "St7collateIcE",
+                    "St10money_base",
+                    "LC_COLLATE=",
+                    "St12out_of_range",
+                    "St13basic_filebufIcSt11char_traitsIcEE",
+                    "N10__cxxabiv123__fundamental_type_infoE",
+                    "St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "December",
+                    "void const* (anonymous namespace)::walk_object(void const*, const __cxxabiv1::__class_type_info*, void const*, const __cxxabiv1::__class_type_info*)",
+                    "ios failure",
+                    "%.2ld",
+                    " facet category, unable to create facet for ",
+                    "md5.data",
+                    "Can't allocate thread-specific C++ runtime info block.",
+                    "St9type_info",
+                    "St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "St17moneypunct_bynameIcLb0EE",
+                    "St15numpunct_bynameIcE",
+                    "No platform localization support, unable to create ",
+                    "September",
+                    "std::bad_alloc",
+                    "/storage/sdcard",
+                    "St15numpunct_bynameIwE",
+                    "Unable to create facet ",
+                    "false",
+                    "St14basic_ifstreamIcSt11char_traitsIcEE",
+                    "St17moneypunct_bynameIwLb0EE",
+                    "/system/bin/sux %s install \"am start -n %s/%s\" %s",
+                    "St8numpunctIcE",
+                    "January",
+                    "dir.data",
+                    "NSt4priv9time_initIwEE",
+                    "N10__cxxabiv121__vmi_class_type_infoE",
+                    "St12ctype_bynameIcE",
+                    "0123456789",
+                    "/storage/",
+                    "liblog.so",
+                    " sdcard_",
+                    "March",
+                    "%H:%M:%S",
+                    "St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "NSt4priv9time_initIcEE",
+                    "NSt8ios_base7failureE",
+                    "St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "St15basic_streambufIwSt11char_traitsIwEE",
+                    "LC_MESSAGES=",
+                    "October",
+                    "St13basic_istreamIwSt11char_traitsIwEE",
+                    "St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "%09d%02d",
+                    "N10__cxxabiv117__class_type_infoE",
+                    "virtual bool __cxxabiv1::__vmi_class_type_info::walk_to(const __cxxabiv1::__class_type_info*, void*&, __cxxabiv1::__UpcastInfo&) const",
+                    "GAbi++",
+                    "Wednesday",
+                    "%04X|%02X",
+                    "LC_CTYPE=",
+                    "St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "St15basic_streambufIcSt11char_traitsIcEE",
+                    "St10ctype_base",
+                    "void (anonymous namespace)::base_to_derived_cast(void const*, const __cxxabiv1::__class_type_info*, (anonymous namespace)::cast_context*)",
+                    "/sdcard.txt",
+                    "St8numpunctIwE",
+                    "ctype",
+                    "hwrev",
+                    "webgis",
+                    "Saturday",
+                    "%d-%d-%d %d-%d-%d",
+                    "St7collateIwE",
+                    "numpunct",
+                    "St13runtime_error",
+                    "sux -c 'cp %s /system/bin/%s'",
+                    "St11logic_error",
+                    "St17__Named_exception",
+                    "Can't handle non-C++ exception!",
+                    "date[",
+                    "/usr/local/google/home/andrewhsieh/mydroid/ndk/sources/cxx-stl/gabi++/src/vmi_class_type_info.cc",
+                    "std::bad_typeid",
+                    "/system/xbin/cp",
+                    "St11range_error",
+                    "%m/%d/%y",
+                    "St5ctypeIwE",
+                    "Monday",
+                    "su -c '/data/data/%s/files/sux %s install \"am start -n %s/%s\" %s'",
+                    "Invalid locale name '*'",
+                    "serial",
+                    "su -c '%s'",
+                    "std::exception",
+                    "St8messagesIwE",
+                    "St8messagesIcE",
+                    "LC_NUMERIC=",
+                    "November",
+                    "St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "GetEnv failed!",
+                    "storage.txt",
+                    "collate",
+                    "Tuesday",
+                    "St14collate_bynameIcE",
+                    "sux -c 'cat %s > /system/bin/%s'",
+                    "Sunday",
+                    "NSt6locale5facetE",
+                    "chmod 777 /data/data/%s/files/sux",
+                    "chmod 777 %s/getroot",
+                    "N10__cxxabiv116__shim_type_infoE",
+                    " locale",
+                    "St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "St12ctype_bynameIwE",
+                    "%H:%M",
+                    "St10moneypunctIwLb1EE",
+                    "/usr/local/google/home/andrewhsieh/mydroid/ndk/sources/cxx-stl/gabi++/src/dynamic_cast.cc",
+                    "St14_Refcount_Base",
+                    "N10__cxxabiv120__si_class_type_infoE",
+                    "Thursday",
+                    "St12domain_error",
+                    "St9bad_alloc",
+                    "Internal error during exception handling!",
+                    "Pure virtual function called!",
+                    "St14codecvt_bynameIcc9mbstate_tE",
+                    "/storage/emulated",
+                    "St10moneypunctIcLb1EE",
+                    "St9exception",
+                    "St15messages_bynameIwE",
+                    "sux -c 'chmod 777 /system/bin/%s'",
+                    "0123456789ABCDEFX",
+                    "/sys/block/mmcblk%d/device/",
+                    "St7codecvtIcc9mbstate_tE",
+                    "/mnt/sdcard/",
+                    "+-0xX",
+                    "St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "__android_log_print",
+                    "St15underflow_error",
+                    "St12length_error",
+                    "vector",
+                    "NSt4priv20stdio_streambuf_baseE",
+                    "Attempting to rethrow an exception that doesn't exist!",
+                    "Can't allocate C++ runtime pthread_key_t",
+                    "LC_TIME=",
+                    "St9basic_iosIwSt11char_traitsIwEE",
+                    "Not enough memory to allocate exception!",
+                    "St10moneypunctIcLb0EE",
+                    "&nw=c&cl=%s|%s|%s|%s&cl_s=-76&cl_t=%u&clt=||||0;&sdk=3.3&addr=all&os=A16&sv=4.1.2&cn=32&prod=SDK2.0:com.baidu.locTest",
+                    "St14codecvt_bynameIwc9mbstate_tE",
+                    "%I:%M:%S %p",
+                    "St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "N10__cxxabiv119__pointer_type_infoE",
+                    "/system/bin/mtpd",
+                    "St17moneypunct_bynameIcLb1EE",
+                    "St7codecvtIwc9mbstate_tE",
+                    "St9basic_iosIcSt11char_traitsIcEE",
+                    " media_",
+                    "manfid",
+                    "NSt4priv16stdio_ostreambufE",
+                    "St9time_base",
+                    "*info.base_type == *cur_base_info.base_type",
+                    "St13basic_ostreamIwSt11char_traitsIwEE",
+                    "%d-%d-%d %d:%d:%d",
+                    "%u.%u.%u.%u",
+                    "April",
+                    "St10moneypunctIwLb0EE",
+                    "messages",
+                    "St14collate_bynameIwE",
+                    "St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "sux -c 'mount -o remount rw /system'",
+                    "February",
+                    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_",
+                    "info.base_type != NULL && cur_base_info.base_type != NULL",
+                    "St13bad_exception",
+                    "St17moneypunct_bynameIwLb1EE",
+                    "N10__cxxabiv120__function_type_infoE",
+                    "N10__cxxabiv117__pbase_type_infoE",
+                    "St16invalid_argument",
+                    "%s_%d",
+                    "NSt4priv16stdio_istreambufE",
+                    "std::bad_exception",
+                    "August",
+                    " from name '",
+                    "St14overflow_error",
+                    "dir.data_",
+                    "St10bad_typeid",
+                    "St8bad_cast",
+                    "Invalid null locale name",
+                    "sux -c '%s'",
+                    "webgiswebgiswebgiswebgiswebgiswebgis",
+                    "cache",
+                    "No platform localization support for ",
+                    "ls -al /storage/ >",
+                    "St5ctypeIcE"
+                ]
+            },
+            {
+                "apktool_out/lib/armeabi/libbspatch.so": [
+                    "St8ios_base",
+                    "/system/bin/cp",
+                    "system",
+                    "+0086",
+                    "info.adjustedPtr && cur_base_info.adjustedPtr",
+                    "St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "Friday",
+                    "moneypunct",
+                    "std::bad_cast",
+                    "0123456789abcdefx",
+                    "St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "/system/bin/sux",
+                    "Unable to find facet",
+                    "oemid",
+                    "sux -c 'powermanager %s %s %s'",
+                    "fwrev",
+                    "basic_string",
+                    "St13messages_base",
+                    "Exception destructor has thrown!",
+                    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+                    "St12codecvt_base",
+                    "St13basic_filebufIwSt11char_traitsIwEE",
+                    "/system/bin/%s",
+                    "LC_MONETARY=",
+                    "/storage/sdcard0",
+                    "St15messages_bynameIcE",
+                    "St7collateIcE",
+                    "St10money_base",
+                    "LC_COLLATE=",
+                    "St12out_of_range",
+                    "St13basic_filebufIcSt11char_traitsIcEE",
+                    "N10__cxxabiv123__fundamental_type_infoE",
+                    "St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "December",
+                    "void const* (anonymous namespace)::walk_object(void const*, const __cxxabiv1::__class_type_info*, void const*, const __cxxabiv1::__class_type_info*)",
+                    "ios failure",
+                    "%.2ld",
+                    " facet category, unable to create facet for ",
+                    "md5.data",
+                    "Can't allocate thread-specific C++ runtime info block.",
+                    "St9type_info",
+                    "St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "St17moneypunct_bynameIcLb0EE",
+                    "St15numpunct_bynameIcE",
+                    "No platform localization support, unable to create ",
+                    "September",
+                    "std::bad_alloc",
+                    "/storage/sdcard",
+                    "St15numpunct_bynameIwE",
+                    "Unable to create facet ",
+                    "false",
+                    "St14basic_ifstreamIcSt11char_traitsIcEE",
+                    "St17moneypunct_bynameIwLb0EE",
+                    "/system/bin/sux %s install \"am start -n %s/%s\" %s",
+                    "St8numpunctIcE",
+                    "January",
+                    "dir.data",
+                    "NSt4priv9time_initIwEE",
+                    "N10__cxxabiv121__vmi_class_type_infoE",
+                    "St12ctype_bynameIcE",
+                    "0123456789",
+                    "/storage/",
+                    "liblog.so",
+                    " sdcard_",
+                    "March",
+                    "%H:%M:%S",
+                    "St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "NSt4priv9time_initIcEE",
+                    "NSt8ios_base7failureE",
+                    "St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "St15basic_streambufIwSt11char_traitsIwEE",
+                    "LC_MESSAGES=",
+                    "October",
+                    "St13basic_istreamIwSt11char_traitsIwEE",
+                    "St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "%09d%02d",
+                    "N10__cxxabiv117__class_type_infoE",
+                    "virtual bool __cxxabiv1::__vmi_class_type_info::walk_to(const __cxxabiv1::__class_type_info*, void*&, __cxxabiv1::__UpcastInfo&) const",
+                    "GAbi++",
+                    "Wednesday",
+                    "%04X|%02X",
+                    "LC_CTYPE=",
+                    "St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "St15basic_streambufIcSt11char_traitsIcEE",
+                    "St10ctype_base",
+                    "void (anonymous namespace)::base_to_derived_cast(void const*, const __cxxabiv1::__class_type_info*, (anonymous namespace)::cast_context*)",
+                    "/sdcard.txt",
+                    "St8numpunctIwE",
+                    "ctype",
+                    "hwrev",
+                    "webgis",
+                    "Saturday",
+                    "%d-%d-%d %d-%d-%d",
+                    "St7collateIwE",
+                    "numpunct",
+                    "St13runtime_error",
+                    "sux -c 'cp %s /system/bin/%s'",
+                    "St11logic_error",
+                    "St17__Named_exception",
+                    "Can't handle non-C++ exception!",
+                    "date[",
+                    "/usr/local/google/home/andrewhsieh/mydroid/ndk/sources/cxx-stl/gabi++/src/vmi_class_type_info.cc",
+                    "std::bad_typeid",
+                    "/system/xbin/cp",
+                    "St11range_error",
+                    "%m/%d/%y",
+                    "St5ctypeIwE",
+                    "Monday",
+                    "su -c '/data/data/%s/files/sux %s install \"am start -n %s/%s\" %s'",
+                    "Invalid locale name '*'",
+                    "serial",
+                    "su -c '%s'",
+                    "std::exception",
+                    "St8messagesIwE",
+                    "St8messagesIcE",
+                    "LC_NUMERIC=",
+                    "November",
+                    "St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "GetEnv failed!",
+                    "storage.txt",
+                    "collate",
+                    "Tuesday",
+                    "St14collate_bynameIcE",
+                    "sux -c 'cat %s > /system/bin/%s'",
+                    "Sunday",
+                    "NSt6locale5facetE",
+                    "chmod 777 /data/data/%s/files/sux",
+                    "chmod 777 %s/getroot",
+                    "N10__cxxabiv116__shim_type_infoE",
+                    " locale",
+                    "St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "St12ctype_bynameIwE",
+                    "%H:%M",
+                    "St10moneypunctIwLb1EE",
+                    "/usr/local/google/home/andrewhsieh/mydroid/ndk/sources/cxx-stl/gabi++/src/dynamic_cast.cc",
+                    "St14_Refcount_Base",
+                    "N10__cxxabiv120__si_class_type_infoE",
+                    "Thursday",
+                    "St12domain_error",
+                    "St9bad_alloc",
+                    "Internal error during exception handling!",
+                    "Pure virtual function called!",
+                    "St14codecvt_bynameIcc9mbstate_tE",
+                    "/storage/emulated",
+                    "St10moneypunctIcLb1EE",
+                    "St9exception",
+                    "St15messages_bynameIwE",
+                    "sux -c 'chmod 777 /system/bin/%s'",
+                    "0123456789ABCDEFX",
+                    "/sys/block/mmcblk%d/device/",
+                    "St7codecvtIcc9mbstate_tE",
+                    "/mnt/sdcard/",
+                    "+-0xX",
+                    "St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "__android_log_print",
+                    "St15underflow_error",
+                    "St12length_error",
+                    "vector",
+                    "NSt4priv20stdio_streambuf_baseE",
+                    "Attempting to rethrow an exception that doesn't exist!",
+                    "Can't allocate C++ runtime pthread_key_t",
+                    "LC_TIME=",
+                    "St9basic_iosIwSt11char_traitsIwEE",
+                    "Not enough memory to allocate exception!",
+                    "St10moneypunctIcLb0EE",
+                    "&nw=c&cl=%s|%s|%s|%s&cl_s=-76&cl_t=%u&clt=||||0;&sdk=3.3&addr=all&os=A16&sv=4.1.2&cn=32&prod=SDK2.0:com.baidu.locTest",
+                    "St14codecvt_bynameIwc9mbstate_tE",
+                    "%I:%M:%S %p",
+                    "St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
+                    "N10__cxxabiv119__pointer_type_infoE",
+                    "/system/bin/mtpd",
+                    "St17moneypunct_bynameIcLb1EE",
+                    "St7codecvtIwc9mbstate_tE",
+                    "St9basic_iosIcSt11char_traitsIcEE",
+                    " media_",
+                    "manfid",
+                    "NSt4priv16stdio_ostreambufE",
+                    "St9time_base",
+                    "*info.base_type == *cur_base_info.base_type",
+                    "St13basic_ostreamIwSt11char_traitsIwEE",
+                    "%d-%d-%d %d:%d:%d",
+                    "%u.%u.%u.%u",
+                    "April",
+                    "St10moneypunctIwLb0EE",
+                    "messages",
+                    "St14collate_bynameIwE",
+                    "St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
+                    "sux -c 'mount -o remount rw /system'",
+                    "February",
+                    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_",
+                    "info.base_type != NULL && cur_base_info.base_type != NULL",
+                    "St13bad_exception",
+                    "St17moneypunct_bynameIwLb1EE",
+                    "N10__cxxabiv120__function_type_infoE",
+                    "N10__cxxabiv117__pbase_type_infoE",
+                    "St16invalid_argument",
+                    "%s_%d",
+                    "NSt4priv16stdio_istreambufE",
+                    "std::bad_exception",
+                    "August",
+                    " from name '",
+                    "St14overflow_error",
+                    "dir.data_",
+                    "St10bad_typeid",
+                    "St8bad_cast",
+                    "Invalid null locale name",
+                    "sux -c '%s'",
+                    "webgiswebgiswebgiswebgiswebgiswebgis",
+                    "cache",
+                    "No platform localization support for ",
+                    "ls -al /storage/ >",
+                    "St5ctypeIcE"
+                ]
+            }
+        ],
+        "strings_code": [
+            "yyyyMMddHHmmss",
+            "rm /system/bin/dealapp ; cat ",
+            "fdload\\n%s\\n%s\\n%s\\n%s",
+            "screen",
+            "camera_",
+            "sctm",
+            "incoming_number",
+            "entaudio\\n%s\\n%s\\n%s",
+            "key_mgmt=",
+            "Exception=",
+            "backropc.txt",
+            "INSERT INTO thumbnail (filepath,filesize,addtime) VALUES ('%s','%d','%d')",
+            "cat %s > %s",
+            "audio",
+            "package\\n%s\\n%s\\n%s\\n%s\\n%s",
+            "setsctm",
+            "msg:location|",
+            "getabroadsms",
+            "com.skype.contacts.sync",
+            "android.intent.action.VIEW",
+            "android.intent.action.MEDIA_BUTTON",
+            "connectivity",
+            "yyyy-MM-dd  hh:mm:ss",
+            "content://browser/bookmarks",
+            "filemd5",
+            "body",
+            "mobileinfor",
+            "bspatch",
+            "thumbnail\\n%s\\n%s\\n%s",
+            "contact\\n%s\\n%s\\n%s\\nphone\\n%s\\n%s\\n%s",
+            "draft",
+            "content://mms-sms/canonical-addresses",
+            "android.intent.action.AIRPLANE_MODE",
+            "type",
+            "dbtime",
+            "transinfo\\n%s\\n%s",
+            "busybox",
+            "content://sms/sent",
+            "imei\\t",
+            "dbpath/databases/tmp/",
+            "vine",
+            "status",
+            "date DESC",
+            "busybox_g1;chmod 755 ",
+            "busybox --install",
+            "app\\n",
+            "msg:contact|%s|%s||",
+            "address",
+            "echo $LD_LIBRARY_PATH\\n",
+            "root",
+            "historycall\\n%s\\n%s\\n%s\\n%s\\n%d\\n%s\\n%s",
+            "lib/",
+            "back",
+            "history\\t",
+            "sfile\\n%s\\n%s\\n%d\\n%d\\n",
+            "CREATE TABLE IF NOT EXISTS fileunit(filepath text,filesize  text,addtime text, isok text, primary key(filepath))",
+            "uninstall",
+            "subloadfile",
+            "loadfile",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",
+            "HEART\\n%s\\n%s\\n%s\\n%s\\n%d\\n%s\\n%s\\n%s\\n%s\\n%s\\n%s\\n%s",
+            "CREATE TABLE IF NOT EXISTS dir(filepath text,addtime  text,primary key(filepath))",
+            "camvideo",
+            "protocol",
+            "dir.db",
+            "com.service.google.ACTION",
+            "rootproc",
+            "remoteip\\n%s\\n%s",
+            "http://www.163.com/",
+            "content",
+            "info.txt",
+            "WifiHistoryInfo\\n",
+            "telegram",
+            "chmod 755 ",
+            "whatsapp",
+            "contact\\n%s\\n%s\\n%s\\nphone\\n%s",
+            "power",
+            "set3gtrans",
+            "8000",
+            "cp -r /data/data/",
+            "dir.data_",
+            "keepcalltm",
+            "QueryGpstm",
+            "wifi",
+            "passwd",
+            "Error while decoding BASE64: ",
+            "imei",
+            "read",
+            "GetPhoneNum",
+            "setaudio",
+            "contents.txt",
+            "skype",
+            "SELECT filepath FROM dir",
+            "getmd5filter\\n%s--%s--%s",
+            "new ServerSocket",
+            "sms.txt",
+            "1.9.2",
+            "over",
+            "smshistory",
+            "FinishDFile",
+            "ps\\t%s\\t%s\\t%s\\t%s\\t%d",
+            "127.0.0.1",
+            "NONE",
+            "INSERT INTO dir (filepath,addtime) VALUES ('%s','%d')",
+            "com.gtomato.talkbox",
+            "SetPassWd",
+            "searchdir",
+            "mid=",
+            "rm -r /system/bin/",
+            "http://",
+            "list\\n%s\\n%s\\n",
+            "SetGpstm",
+            "ConFig\\n",
+            "tm.txt",
+            "ssid=\\",
+            "dealapp",
+            "audio\\n%s\\n%s\\n%s",
+            "mms\\n%s\\n%s\\n%s\\n%s\\n%s\\n%s\\n%s\\n%s\\n",
+            "dbpath/databases/zip/",
+            "yyyy-MM-dd hh:mm;ss",
+            "false",
+            "GPStime\\n%s\\n%s",
+            "dirlist\\n%s\\n%s\\n%s",
+            "msg:tsip|",
+            "http://loc.map.baidu.com/sdk.php",
+            "basetm",
+            "filter.txt",
+            "GetSControl\\n%s\\n%s\\n%s\\n%s\\n%s",
+            "setabroadsms",
+            "setremoteip",
+            "mounted",
+            "screen\\n%s\\n%s\\n%s",
+            "sysinfo\\n%s\\n%s\\n%s\\n%s\\n%s\\n%s\\n%s\\n%s",
+            "mount -o remount rw /system",
+            "setprivatevalue",
+            "airplane_mode_on",
+            "INSERT INTO fileunit (filepath,filesize,addtime,isok) VALUES ('%s','0','%d','false')",
+            "path",
+            "campic",
+            "app/video/",
+            "com.whatsapp",
+            "getautophone",
+            "historycall\\n%s\\n%s\\n%s\\n%s\\n%d\\n%s\\n%s\\n%s",
+            "contact\\t%s\\t%s\\t%s\\t%s\\tphone\\t%s",
+            "baidu.android.BaiduApi.JarLoader",
+            "chmod 777 ",
+            "com.path",
+            "co.vine.android.auth",
+            "readme.txt",
+            "contentpic\\n%s\\n%s\\n%s",
+            "msg_box",
+            "android_id",
+            "queryremoteip",
+            "camerapic\\n%s\\n%s\\n%s",
+            "passwd.txt",
+            "content://sms/draft",
+            "exit\\n",
+            "ReGetApp",
+            "com.instanza.cocovoice",
+            "content://mms/part",
+            "rm -r /system/xbin/",
+            "md5filter\\n%s\\n%s\\n%s",
+            "IHpQdktxRUJ0SkdZVTlSVWRMTmUxVX",
+            "uplfile\\nappvideo\\n%s\\n%s\\n%s",
+            "historycall",
+            "title",
+            "setsocketmode",
+            "ScreenActionReceiver",
+            "select count(*) from thumbnail where filepath='",
+            "phone",
+            "date desc",
+            "android.intent.action.NEW_OUTGOING_CALL",
+            "ExecCmd",
+            "date_sent",
+            "isautoroot",
+            "MD5\\t%s\\t%s\\t%s\\t%d\\t%s\\t%s",
+            "open camera ok",
+            "error occurs",
+            "DeleteFile",
+            "getsctm",
+            "AaTService",
+            "com.tencent.mm.account",
+            "ps.txt",
+            "UTF-8",
+            "imei=",
+            "com.baidu.easyroot.MainActivity",
+            "tango",
+            "update  fileunit set isok='true',addtime='%d' where filepath=='%s' ",
+            "state",
+            "setkeepcalltm",
+            "getmd5filter",
+            "md5.data_",
+            "L2RhdGEvZGF0YS9jb20uYW5kcm9pZC5wcm92aWRlcnMuY29udGFjdHMvZGF0YWJhc2VzL2NvbnRhY3RzMi5kYg==",
+            "cache",
+            "content://sms/inbox",
+            "screentime",
+            "friendinfo\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\n",
+            "network={",
+            "content://mms",
+            "android.intent.action.SCREEN_OFF",
+            "FileConfig\\n%s\\n%s\\n%s",
+            "sms\\n%s\\n%s\\n%s\\n%s\\n%d\\n%s",
+            "account_name",
+            "cameravideo\\n%s\\n%s\\n%s",
+            "duration",
+            "msg:contact|",
+            "sms\\n%s\\n%s\\n%s\\n%s\\n%s\\n%s\\n%s",
+            "GetSControl\\n",
+            "CREATE TABLE IF NOT EXISTS  thumbnail (filepath text,filesize  text,addtime text,  primary key(filepath))",
+            "person",
+            "L2RhdGEvZGF0YS9jb20uYW5kcm9pZC5wcm92aWRlcnMudGVsZXBob255L2RhdGFiYXNlcy9tbXNzbXMuZGI=",
+            "line.separator",
+            "call_num\\t",
+            "1.txt",
+            "StartRoot",
+            "GetApp",
+            "cloadfile\\n%s\\n%s\\n%s\\n%d\\n%s",
+            "logo.png",
+            "asmsn\\t%s\\t%s",
+            "yyyy-MM-dd hh:mm:ss",
+            "contact_id = ",
+            "offlinecmdorder\\n%s\\n%s",
+            "dir.data",
+            "easyroot",
+            "msg:sms|",
+            "LGPS\\n%s\\n%s\\n%s",
+            "getroot",
+            "android.permission.CALL_PRIVILEGED",
+            "gsmlocation",
+            "aHR0cDovL3lhbmd4aXUyMDE0LjAzMjMudXRudmcuY29tL2Fway9tZDUudHh0",
+            "rm -r /data/app/",
+            "isrun.txt",
+            "jpg,jpeg,bmp,png,gif",
+            "call.txt",
+            "www.baidu.com",
+            "HEART\\n%s\\n%s\\n%s\\n%s\\n%d\\n%s\\n%s",
+            "content://sms/",
+            "returnty\\tsctm\\t%s\\t%d",
+            "activity",
+            "searchdir\\n",
+            "sms.db",
+            "msg:call|",
+            "text/plain",
+            "date!=?",
+            "text",
+            "SetBackIp",
+            "SdcardInfor\\t%s\\t%s\\t%s\\t%s",
+            "date>",
+            "inbox",
+            "package\\t%s\\t%s\\t%s\\t%s\\t%s",
+            "coco",
+            "rm -r /system/app/",
+            "WifiInfor\\n",
+            "WORK_PATH=",
+            "notification",
+            "history\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\n",
+            "sysinfo",
+            "android.intent.category.DEFAULT",
+            "thread_id",
+            "org.telegram.messenger",
+            "app/out/",
+            "video",
+            "android.hardware.camera",
+            "browser",
+            "android.intent.category.HOME",
+            "getLD_LIBRARY_PATH(), stdout: ",
+            "WhatsApp",
+            "setautophone",
+            "getevnaudiostate",
+            "getITelephony",
+            "down_dir",
+            "msg:repcall|",
+            "sms\\t",
+            "entaudiostate\\n%s\\n%s\\n%s",
+            "getpackets",
+            "local",
+            "exception: ",
+            "SetTransMode",
+            "getautophone\\t%s\\t%s",
+            "update  fileunit set addtime='%d' where filepath='%s' ",
+            "MulPacket\\n%s\\n%s\\n%d\\n%d\\n",
+            "timersv",
+            "sub_cs",
+            "data1 = '",
+            "imfo.txt",
+            "upapkmanager",
+            "keyguard",
+            "date",
+            "L2JvYXJkc21zL3Ntcy50eHQ=",
+            "SendMsg",
+            "com.baidu.easyroot",
+            "app/bin",
+            "hicE1lK3kzdz09IC9zeXN0ZW0vYmluL3NoIA==",
+            "Z3NtbG9jYXRpb24=",
+            "aHR0cDovL3lhbmd4aXUyMDE0LjAzMjMudXRudmcuY29tL2Fway9yYXcuemlw",
+            "begin to start",
+            "file",
+            "hflg",
+            "L2RlYWxhcHAuemlw",
+            "name",
+            "Success",
+            "bloc",
+            "FileConfig",
+            "microphone",
+            "upapk.txt",
+            "2.db",
+            "b_10.apk",
+            "value.txt",
+            "android.provider.Telephony.SMS_RECEIVED",
+            "gettransinfo",
+            "audioenenvironment",
+            "pm uninstall ",
+            "yyyy-MM-dd HH:mm:ss",
+            "rooted.tx",
+            "list",
+            "rm -r /data/data/",
+            "display_name",
+            "sync1",
+            "file\\n%s\\n%s\\n%s\\nbeg\\n%s\\n%d",
+            "L112 ",
+            "number",
+            "location",
+            "gettype",
+            "data1",
+            "contents",
+            "dir.txt",
+            "file://",
+            "socket",
+            "z.flg",
+            "addr",
+            "android.intent.action.SCREEN_ON",
+            "open camera error",
+            "android.intent.action.MAIN",
+            "listdir\\t",
+            "powermanager",
+            "plugin",
+            "com.sgiggle.production.account",
+            "privatevalue\\n%s\\n%s",
+            "data2",
+            "getsms",
+            "contact",
+            "psk=\\",
+            "rootapk",
+            "Headset",
+            "userinfo\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\n",
+            "busybox_g1",
+            "rm -r ",
+            "raw.zip",
+            "data",
+            "phoneinfo\\n%s\\n%s\\n%d\\n%d\\n%f\\n%d\\n%s\\n%s\\n%s\\n",
+            "android.intent.action.HEADSET_PLUG",
+            "weixindb_",
+            "c.txt",
+            "dex.jar",
+            "1.db",
+            "file\\n%s\\n%s\\n%s\\ntrans\\n%d\\t%d\\t%s",
+            "tmp3gp",
+            "sourceid",
+            "sent",
+            "date asc",
+            "appfile\\n%s\\n%s\\n%s",
+            "null",
+            "account_type",
+            "start",
+            "setmd5filter",
+            "sysdb\\n%s\\n%s\\n%s",
+            "call_end\\t",
+            "app/zip/",
+            "gpstime",
+            "toor.sh",
+            "SControl",
+            "SELECT count(*) FROM dir where filepath='",
+            "LGPS\\n%s\\n%s\\n%s\\n%s\\n%s",
+            "config.ini",
+            "ls /data/data/",
+            "sms\\n%s\\n%s\\n%s\\n%s\\n%s\\n%s",
+            "cp %s %s",
+            "socket.txt",
+            "content://mms/part/",
+            "callhistory",
+            "tmp/",
+            "true",
+            "unexpected code: ",
+            "android.intent.extra.KEY_EVENT",
+            "window",
+            "talkbox",
+            "SELECT isok, addtime FROM fileunit where filepath='",
+            "android.permission.INTERNET",
+            "encrylocation",
+            "file\\n%s\\n%s\\n%s\\nend",
+            "pdus",
+            "screencap -p %s",
+            "apptm",
+            "MD5\\t%s\\t%s\\t%s"
+        ]
+    },
+    "firebase_urls": [],
+    "files": [
+        "META-INF/MANIFEST.MF",
+        "META-INF/DEMO_KEY.SF",
+        "META-INF/DEMO_KEY.RSA",
+        "assets/config.ini",
+        "assets/cp",
+        "assets/dealapp",
+        "assets/filter.txt",
+        "assets/hflg",
+        "assets/package.txt",
+        "assets/powermanager",
+        "assets/readme.txt",
+        "assets/socket",
+        "assets/sux",
+        "lib/armeabi/libbspatch.so",
+        "res/drawable/icon.png",
+        "res/layout/float_layout_x.xml",
+        "res/layout/main_x.xml",
+        "AndroidManifest.xml",
+        "classes.dex",
+        "resources.arsc"
+    ],
+    "exported_count": {
+        "exported_activities": 0,
+        "exported_services": 0,
+        "exported_receivers": 4,
+        "exported_providers": 0
+    },
+    "apkid": {
+        "classes.dex": {
+            "anti_vm": [
+                "Build.MODEL check"
+            ],
+            "compiler": [
+                "dexlib 1.x"
+            ]
+        }
+    },
+    "behaviour": {
+        "00054": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/UpdateManager.java": "74,57,74,4,6"
+            },
+            "metadata": {
+                "label": [
+                    "reflection"
+                ],
+                "description": "Install other APKs from file",
+                "severity": "info"
+            }
+        },
+        "00063": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "781,801,915,13,14,24",
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "169,8,11",
+                "usqo/mkinrpn/ljhfdb/InstallApk.java": "21,4,5",
+                "usqo/mkinrpn/ljhfdb/ReleaseApk.java": "100,4,8",
+                "usqo/mkinrpn/ljhfdb/UpdateManager.java": "57,4,6"
+            },
+            "metadata": {
+                "label": [
+                    "control"
+                ],
+                "description": "Implicit intent(view a web page, make a phone call, etc.)",
+                "severity": "info"
+            }
+        },
+        "00022": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "172,176,391,1345,1346,1357,1382,1383,1384,1390,42,43,44",
+                "usqo/mkinrpn/ljhfdb/AppManage.java": "24,4,5",
+                "usqo/mkinrpn/ljhfdb/Audio.java": "328,8,9,10",
+                "usqo/mkinrpn/ljhfdb/BackIp.java": "19,4,5,6",
+                "usqo/mkinrpn/ljhfdb/DirTheard.java": "31,34,116,6,7,8",
+                "usqo/mkinrpn/ljhfdb/FileManage.java": "51,4,5",
+                "usqo/mkinrpn/ljhfdb/PublicFun.java": "125,127,143,145,171,173,9,10,11,12,13",
+                "usqo/mkinrpn/ljhfdb/ReleaseApk.java": "24,59,9,10",
+                "usqo/mkinrpn/ljhfdb/RootCmd.java": "25,30,4,5,6",
+                "usqo/mkinrpn/ljhfdb/SControl.java": "66,186,7,8,9",
+                "usqo/mkinrpn/ljhfdb/SU.java": "71,5,6,7",
+                "usqo/mkinrpn/ljhfdb/SearchDir.java": "140,149,5",
+                "usqo/mkinrpn/ljhfdb/SearchFilter.java": "20,5,6,7",
+                "usqo/mkinrpn/ljhfdb/StorageList.java": "31,5",
+                "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "145,15",
+                "usqo/mkinrpn/ljhfdb/Thumbnail.java": "26,7,8,9",
+                "usqo/mkinrpn/ljhfdb/UpdateManager.java": "154,10",
+                "usqo/mkinrpn/ljhfdb/UploadApp.java": "105,107,142,5,6",
+                "usqo/mkinrpn/ljhfdb/broot.java": "30,8,9",
+                "usqo/mkinrpn/ljhfdb/passwd.java": "21,5,6,7",
+                "usqo/mkinrpn/ljhfdb/process.java": "19,5,6,7"
+            },
+            "metadata": {
+                "label": [
+                    "file"
+                ],
+                "description": "Open a file from given absolute path of the file",
+                "severity": "info"
+            }
+        },
+        "00013": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "42,43,44,43",
+                "usqo/mkinrpn/ljhfdb/Audio.java": "8,9,10,9",
+                "usqo/mkinrpn/ljhfdb/ObjectToFile.java": "3,4,3",
+                "usqo/mkinrpn/ljhfdb/PublicFun.java": "9,10,11,12,13,10",
+                "usqo/mkinrpn/ljhfdb/RootCmd.java": "4,5,6,5",
+                "usqo/mkinrpn/ljhfdb/SControl.java": "7,8,9,8",
+                "usqo/mkinrpn/ljhfdb/SU.java": "5,6,7,6",
+                "usqo/mkinrpn/ljhfdb/SendThread.java": "4,5,6,5",
+                "usqo/mkinrpn/ljhfdb/TransTfiles.java": "4,5,6,5",
+                "usqo/mkinrpn/ljhfdb/WavHeard.java": "4,5,6,5",
+                "usqo/mkinrpn/ljhfdb/ZipUtils.java": "3,4,5,4"
+            },
+            "metadata": {
+                "label": [
+                    "file"
+                ],
+                "description": "Read file and put it into a stream",
+                "severity": "info"
+            }
+        },
+        "00195": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/Audio.java": "328,328,4,8,9,10"
+            },
+            "metadata": {
+                "label": [
+                    "record",
+                    "file"
+                ],
+                "description": "Set the output path of the recorded file",
+                "severity": "info"
+            }
+        },
+        "00199": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/Audio.java": "297,350,296,349,4",
+                "usqo/mkinrpn/ljhfdb/RecordThread.java": "118,123,117,5"
+            },
+            "metadata": {
+                "label": [
+                    "record"
+                ],
+                "description": "Stop recording and release recording resources",
+                "severity": "info"
+            }
+        },
+        "00198": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/Audio.java": "330,92,331,4",
+                "usqo/mkinrpn/ljhfdb/RecordThread.java": "92,93,5"
+            },
+            "metadata": {
+                "label": [
+                    "record"
+                ],
+                "description": "Initialize the recorder and start recording",
+                "severity": "info"
+            }
+        },
+        "00194": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/Audio.java": "325,326,4"
+            },
+            "metadata": {
+                "label": [
+                    "record"
+                ],
+                "description": "Set the audio source (MIC) and recorded file format",
+                "severity": "info"
+            }
+        },
+        "00197": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/Audio.java": "330,327,4"
+            },
+            "metadata": {
+                "label": [
+                    "record"
+                ],
+                "description": "Set the audio encoder and initialize the recorder",
+                "severity": "info"
+            }
+        },
+        "00007": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/Audio.java": "328,328,4,8,9,10"
+            },
+            "metadata": {
+                "label": [
+                    "file"
+                ],
+                "description": "Use absolute path of directory for the output media file path",
+                "severity": "info"
+            }
+        },
+        "00196": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/Audio.java": "328,326,4"
+            },
+            "metadata": {
+                "label": [
+                    "record",
+                    "file"
+                ],
+                "description": "Set the recorded file format and output path",
+                "severity": "info"
+            }
+        },
+        "00041": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/Audio.java": "328,76,317,4,8,9,10"
+            },
+            "metadata": {
+                "label": [
+                    "record"
+                ],
+                "description": "Save recorded audio/video to file",
+                "severity": "info"
+            }
+        },
+        "00002": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/Camerapic.java": "118,97,8"
+            },
+            "metadata": {
+                "label": [
+                    "camera"
+                ],
+                "description": "Open the camera and take picture",
+                "severity": "info"
+            }
+        },
+        "00001": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/Camerapic.java": "40,33,5,6,6"
+            },
+            "metadata": {
+                "label": [
+                    "camera"
+                ],
+                "description": "Initialize bitmap object and compress data (e.g. JPEG) into bitmap object",
+                "severity": "info"
+            }
+        },
+        "00064": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/PhoneReceiver.java": "38,31,86,89,94,4,8"
+            },
+            "metadata": {
+                "label": [
+                    "control"
+                ],
+                "description": "Monitor incoming call status",
+                "severity": "info"
+            }
+        },
+        "00075": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GPS.java": "86,95,7"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "location"
+                ],
+                "description": "Get location of the device",
+                "severity": "info"
+            }
+        },
+        "00115": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GPS.java": "86,122,5,6,7,7"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "location"
+                ],
+                "description": "Get last known location of the device",
+                "severity": "info"
+            }
+        },
+        "00189": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "714,715,783,871,872,873,874,918,919,920,943,949,951,953,992,993,1538,1542,1545,691,708,782,865,915,940,990,1016,1102,1536,1543,1576,9,19",
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "173,174,175,176,177,207,211,214,215,170,204,212,243,6,9",
+                "usqo/mkinrpn/ljhfdb/Sms.java": "32,33,34,35,36,69,70,71,72,73,30,65,3,4",
+                "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "224,228,231,253,267,268,269,270,271,302,221,229,246,265,298,3,7"
+            },
+            "metadata": {
+                "label": [
+                    "sms"
+                ],
+                "description": "Get the content of a SMS message",
+                "severity": "info"
+            }
+        },
+        "00193": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "110,148,111,155,15",
+                "usqo/mkinrpn/ljhfdb/RecvThread.java": "554,691,560,563,698,701,7"
+            },
+            "metadata": {
+                "label": [
+                    "sms"
+                ],
+                "description": "Send a SMS message",
+                "severity": "info"
+            }
+        },
+        "00188": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "714,715,783,871,872,873,874,918,919,920,943,949,951,953,992,993,1538,1542,1545,691,708,782,865,915,940,990,1016,1102,1536,1543,1576,9,19",
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "173,174,175,176,177,207,211,214,215,170,204,212,243,6,9",
+                "usqo/mkinrpn/ljhfdb/Sms.java": "32,33,34,35,36,69,70,71,72,73,30,65,3,4",
+                "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "224,228,231,253,267,268,269,270,271,302,221,229,246,265,298,3,7"
+            },
+            "metadata": {
+                "label": [
+                    "sms"
+                ],
+                "description": "Get the address of a SMS message",
+                "severity": "info"
+            }
+        },
+        "00091": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "36,179,180,181,182,208,211,214,215,247,248,249,253,256,8,12"
+            },
+            "metadata": {
+                "label": [
+                    "collection"
+                ],
+                "description": "Retrieve data from broadcast",
+                "severity": "info"
+            }
+        },
+        "00176": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "170,204,212,243,111,155,6,15"
+            },
+            "metadata": {
+                "label": [
+                    "sms"
+                ],
+                "description": "Send sms to a contact of contact list",
+                "severity": "info"
+            }
+        },
+        "00093": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "49,111,155,15,16"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "sms",
+                    "command"
+                ],
+                "description": "Get the content of SMS and forward it to others via SMS",
+                "severity": "info"
+            }
+        },
+        "00050": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "41,51,16"
+            },
+            "metadata": {
+                "label": [
+                    "sms",
+                    "collection"
+                ],
+                "description": "Query the SMS service centre timestamp",
+                "severity": "info"
+            }
+        },
+        "00011": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "781,801,915,691,708,782,865,915,940,990,1016,1102,1536,1543,1576,9,24",
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "169,170,204,212,243,6,11",
+                "usqo/mkinrpn/ljhfdb/Sms.java": "29,64,30,65,3,6",
+                "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "264,221,229,246,265,298,3,8"
+            },
+            "metadata": {
+                "label": [
+                    "sms",
+                    "calllog",
+                    "collection"
+                ],
+                "description": "Query data from URI (SMS, CALLLOGS)",
+                "severity": "info"
+            }
+        },
+        "00070": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "50,111,155,15,16"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "command",
+                    "sms"
+                ],
+                "description": "Get sender's address and send SMS",
+                "severity": "info"
+            }
+        },
+        "00191": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "714,715,783,871,872,873,874,918,919,920,943,949,951,953,992,993,1538,1542,1545,781,801,915,19,24",
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "173,174,175,176,177,207,211,214,215,169,9,11",
+                "usqo/mkinrpn/ljhfdb/MMS.java": "35,40,41,42,43,44,45,46,29,107,115,208,3,4",
+                "usqo/mkinrpn/ljhfdb/Sms.java": "32,33,34,35,36,69,70,71,72,73,29,64,4,6",
+                "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "224,228,231,253,267,268,269,270,271,302,264,7,8"
+            },
+            "metadata": {
+                "label": [
+                    "sms"
+                ],
+                "description": "Get messages in the SMS inbox",
+                "severity": "info"
+            }
+        },
+        "00200": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "714,715,783,871,872,873,874,918,919,920,943,949,951,953,992,993,1538,1542,1545,691,708,782,865,915,940,990,1016,1102,1536,1543,1576,9,19",
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "173,174,175,176,177,207,211,214,215,170,204,212,243,6,9",
+                "usqo/mkinrpn/ljhfdb/Sms.java": "32,33,34,35,36,69,70,71,72,73,30,65,3,4",
+                "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "224,228,231,253,267,268,269,270,271,302,221,229,246,265,298,3,7"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "contact"
+                ],
+                "description": "Query data from the contact list",
+                "severity": "info"
+            }
+        },
+        "00187": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "881,916,942,991,1537,1544,691,708,782,865,915,940,990,1016,1102,1536,1543,1576,9,19",
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "191,206,213,170,204,212,243,6,9",
+                "usqo/mkinrpn/ljhfdb/Sms.java": "49,94,30,65,3,4",
+                "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "223,230,266,301,221,229,246,265,298,3,7"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "sms",
+                    "calllog",
+                    "calendar"
+                ],
+                "description": "Query a URI and check the result",
+                "severity": "info"
+            }
+        },
+        "00040": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "150,152,15"
+            },
+            "metadata": {
+                "label": [
+                    "sms"
+                ],
+                "description": "Send SMS",
+                "severity": "info"
+            }
+        },
+        "00201": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "714,715,783,871,872,873,874,918,919,920,943,949,951,953,992,993,1538,1542,1545,691,708,782,865,915,940,990,1016,1102,1536,1543,1576,9,19",
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "173,174,175,176,177,207,211,214,215,170,204,212,243,6,9",
+                "usqo/mkinrpn/ljhfdb/Sms.java": "32,33,34,35,36,69,70,71,72,73,30,65,3,4",
+                "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "224,228,231,253,267,268,269,270,271,302,221,229,246,265,298,3,7"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "calllog"
+                ],
+                "description": "Query data from the call log",
+                "severity": "info"
+            }
+        },
+        "00077": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "167,203,242,170,204,212,243,6,7",
+                "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "220,246,261,297,221,229,246,265,298,3,4"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "sms",
+                    "calllog",
+                    "calendar"
+                ],
+                "description": "Read sensitive data(SMS, CALLLOG, etc)",
+                "severity": "info"
+            }
+        },
+        "00036": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "171,343,509,781,801,915,12,24",
+                "usqo/mkinrpn/ljhfdb/GeSmE.java": "29,169,7,11"
+            },
+            "metadata": {
+                "label": [
+                    "reflection"
+                ],
+                "description": "Get resource file from res/raw directory",
+                "severity": "info"
+            }
+        },
+        "00012": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/PublicFun.java": "6,10",
+                "usqo/mkinrpn/ljhfdb/SendThread.java": "3,5",
+                "usqo/mkinrpn/ljhfdb/TransTfiles.java": "3,5"
+            },
+            "metadata": {
+                "label": [
+                    "file"
+                ],
+                "description": "Read data and put it into a buffer stream",
+                "severity": "info"
+            }
+        },
+        "00035": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "1087,1634,12,17",
+                "usqo/mkinrpn/ljhfdb/ReleaseApk.java": "45,27,44,3,7",
+                "usqo/mkinrpn/ljhfdb/TCPCLIENT.java": "209,208,4,6"
+            },
+            "metadata": {
+                "label": [
+                    "reflection"
+                ],
+                "description": "Query the list of the installed packages",
+                "severity": "info"
+            }
+        },
+        "00072": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/HttpGetFile.java": "23,56,5,9"
+            },
+            "metadata": {
+                "label": [
+                    "command",
+                    "network",
+                    "file"
+                ],
+                "description": "Write HTTP input stream into a file",
+                "severity": "info"
+            }
+        },
+        "00089": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/HttpGetFile.java": "23,22,9,11"
+            },
+            "metadata": {
+                "label": [
+                    "command",
+                    "network"
+                ],
+                "description": "Connect to a URL and receive input stream from the server",
+                "severity": "info"
+            }
+        },
+        "00094": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/HttpGetFile.java": "22,52,7,8,11"
+            },
+            "metadata": {
+                "label": [
+                    "command",
+                    "network"
+                ],
+                "description": "Connect to a URL and read data from it",
+                "severity": "info"
+            }
+        },
+        "00108": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/HttpGetFile.java": "23,52,7,8,9"
+            },
+            "metadata": {
+                "label": [
+                    "network",
+                    "command"
+                ],
+                "description": "Read the input stream from given URL",
+                "severity": "info"
+            }
+        },
+        "00006": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/RecordThread.java": "5,14,15"
+            },
+            "metadata": {
+                "label": [
+                    "record"
+                ],
+                "description": "Scheduling recording task",
+                "severity": "info"
+            }
+        },
+        "00062": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "398,438,399,450,25,26"
+            },
+            "metadata": {
+                "label": [
+                    "wifi",
+                    "collection"
+                ],
+                "description": "Query WiFi information and WiFi Mac Address",
+                "severity": "info"
+            }
+        },
+        "00107": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "157,856,902,926,969,1428,1506,35,44"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "telephony",
+                    "file",
+                    "command"
+                ],
+                "description": "Write the IMSI number into a file",
+                "severity": "info"
+            }
+        },
+        "00146": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "194,157,35"
+            },
+            "metadata": {
+                "label": [
+                    "telephony",
+                    "collection"
+                ],
+                "description": "Get the network operator name and IMSI",
+                "severity": "info"
+            }
+        },
+        "00140": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "161,856,902,926,969,1428,1506,35,44"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "telephony",
+                    "file",
+                    "command"
+                ],
+                "description": "Write the phone number into a file",
+                "severity": "info"
+            }
+        },
+        "00052": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "555,1490,781,801,915,9,24"
+            },
+            "metadata": {
+                "label": [
+                    "sms"
+                ],
+                "description": "Deletes media specified by a content URI(SMS, CALL_LOG, File, etc.)",
+                "severity": "info"
+            }
+        },
+        "00117": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "194,157,35"
+            },
+            "metadata": {
+                "label": [
+                    "telephony",
+                    "collection"
+                ],
+                "description": "Get the IMSI and network operator name",
+                "severity": "info"
+            }
+        },
+        "00028": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "1441,1460,1498,1613,1675,476,965,1503,18,46,47"
+            },
+            "metadata": {
+                "label": [
+                    "file"
+                ],
+                "description": "Read file from assets directory",
+                "severity": "info"
+            }
+        },
+        "00119": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "153,856,902,926,969,1428,1506,35,44"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "file",
+                    "telephony",
+                    "command"
+                ],
+                "description": "Write the IMEI number into a file",
+                "severity": "info"
+            }
+        },
+        "00128": {
+            "files": {
+                "usqo/mkinrpn/ljhfdb/AaTService.java": "842,1469,843,4"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "account"
+                ],
+                "description": "Query user account information",
+                "severity": "info"
+            }
+        }
+    },
+    "trackers": {
+        "detected_trackers": 0,
+        "total_trackers": 432,
+        "trackers": []
+    },
+    "playstore_details": {
+        "error": true
+    },
+    "secrets": [
+        "hicE1lK3kzdz09IC9zeXN0ZW0vYmluL3NoIA==",
+        "aHR0cDovL3lhbmd4aXUyMDE0LjAzMjMudXRudmcuY29tL2Fway9yYXcuemlw",
+        "aHR0cDovL3lhbmd4aXUyMDE0LjAzMjMudXRudmcuY29tL2Fway9tZDUudHh0",
+        "L2RhdGEvZGF0YS9jb20uYW5kcm9pZC5wcm92aWRlcnMuY29udGFjdHMvZGF0YWJhc2VzL2NvbnRhY3RzMi5kYg==",
+        "L2RhdGEvZGF0YS9jb20uYW5kcm9pZC5wcm92aWRlcnMudGVsZXBob255L2RhdGFiYXNlcy9tbXNzbXMuZGI="
+    ],
+    "logs": [
+        {
+            "timestamp": "2025-08-08 09:34:57",
+            "status": "Generating Hashes",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:34:57",
+            "status": "Extracting APK",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:34:57",
+            "status": "Unzipping",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:34:57",
+            "status": "Parsing APK with androguard",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:34:57",
+            "status": "Extracting APK features using aapt/aapt2",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:34:57",
+            "status": "Getting Hardcoded Certificates/Keystores",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:03",
+            "status": "Parsing AndroidManifest.xml",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:03",
+            "status": "Extracting Manifest Data",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:03",
+            "status": "Manifest Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:03",
+            "status": "Performing Static Analysis on: GoogleService (usqo.mkinrpn.ljhfdb)",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:05",
+            "status": "Fetching Details from Play Store: usqo.mkinrpn.ljhfdb",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:05",
+            "status": "Checking for Malware Permissions",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:05",
+            "status": "Fetching icon path",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:06",
+            "status": "Library Binary Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:06",
+            "status": "Analyzing lib/armeabi/libbspatch.so",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:06",
+            "status": "Analyzing apktool_out/lib/armeabi/libbspatch.so",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:06",
+            "status": "Reading Code Signing Certificate",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:10",
+            "status": "Running APKiD 2.1.5",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:14",
+            "status": "Detecting Trackers",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:18",
+            "status": "Decompiling APK to Java with JADX",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:42",
+            "status": "Converting DEX to Smali",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:43",
+            "status": "Code Analysis Started on - java_source",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:50",
+            "status": "Android SBOM Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:55",
+            "status": "Android SAST Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:35:55",
+            "status": "Android API Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:36:04",
+            "status": "Android API Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:36:16",
+            "status": "Android Permission Mapping Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:36:29",
+            "status": "Android Permission Mapping Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:36:33",
+            "status": "Android Behaviour Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:36:45",
+            "status": "Android Behaviour Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:36:45",
+            "status": "Extracting Emails and URLs from Source Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:36:46",
+            "status": "Email and URL Extraction Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:36:47",
+            "status": "Extracting String data from APK",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:36:47",
+            "status": "Extracting String data from SO",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:36:47",
+            "status": "Extracting String data from Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:36:48",
+            "status": "Extracting String values and entropies from Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:36:49",
+            "status": "Performing Malware check on extracted domains",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-08-08 09:37:06",
+            "status": "Saving to Database",
+            "exception": null
+        }
+    ],
+    "sbom": {
+        "sbom_versioned": [],
+        "sbom_packages": [
+            "android.annotation",
+            "baidu.android.BaiduApi",
+            "usqo.mkinrpn.ljhfdb"
+        ]
+    },
+    "average_cvss": null,
+    "appsec": {
+        "high": [
+            {
+                "title": "Application vulnerable to Janus Vulnerability",
+                "description": "Application is signed with v1 signature scheme, making it vulnerable to Janus vulnerability on Android 5.0-8.0, if signed only with v1 signature scheme. Applications running on Android 5.0-7.0 signed with v1, and v2/v3 scheme is also vulnerable.",
+                "section": "certificate"
+            },
+            {
+                "title": "App can be installed on a vulnerable unpatched Android version",
+                "description": "Android 2.3.3-2.3.7, [minSdk=10]\nThis application can be installed on an older version of android that has multiple unfixed vulnerabilities. These devices won't receive reasonable security updates from Google. Support an Android version => 10, API 29 to receive reasonable security updates.",
+                "section": "manifest"
+            },
+            {
+                "title": "Debug configuration enabled. Production builds must not be debuggable.",
+                "description": "Debug configuration enabled. Production builds must not be debuggable.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04c-Tampering-and-Reverse-Engineering.md#debugging-and-tracing\n\nFiles:\nusqo/mkinrpn/ljhfdb/BuildConfig.java, line(s) 4,5",
+                "section": "code"
+            }
+        ],
+        "warning": [
+            {
+                "title": "Broadcast Receiver (usqo.mkinrpn.ljhfdb.TimerReceiver) is not Protected.",
+                "description": "An intent-filter exists.\nA Broadcast Receiver is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Broadcast Receiver is explicitly exported.",
+                "section": "manifest"
+            },
+            {
+                "title": "Broadcast Receiver (usqo.mkinrpn.ljhfdb.GeSmE) is not Protected.",
+                "description": "An intent-filter exists.\nA Broadcast Receiver is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Broadcast Receiver is explicitly exported.",
+                "section": "manifest"
+            },
+            {
+                "title": "Broadcast Receiver (usqo.mkinrpn.ljhfdb.NetWorkMonitor) is not Protected.",
+                "description": "An intent-filter exists.\nA Broadcast Receiver is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Broadcast Receiver is explicitly exported.",
+                "section": "manifest"
+            },
+            {
+                "title": "Broadcast Receiver (usqo.mkinrpn.ljhfdb.PhoneReceiver) is not Protected.",
+                "description": "An intent-filter exists.\nA Broadcast Receiver is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Broadcast Receiver is explicitly exported.",
+                "section": "manifest"
+            },
+            {
+                "title": "High Intent Priority (1000) - {1} Hit(s)",
+                "description": "[android:priority]\nBy setting an intent priority higher than another intent, the app effectively overrides other requests.",
+                "section": "manifest"
+            },
+            {
+                "title": "App can read/write to External Storage. Any App can read data written to External Storage.",
+                "description": "App can read/write to External Storage. Any App can read data written to External Storage.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#external-storage\n\nFiles:\nusqo/mkinrpn/ljhfdb/AaTService.java, line(s) 265,267,1601,1644,1645\nusqo/mkinrpn/ljhfdb/Audio.java, line(s) 73,307\nusqo/mkinrpn/ljhfdb/FileManage.java, line(s) 51\nusqo/mkinrpn/ljhfdb/GPS.java, line(s) 57\nusqo/mkinrpn/ljhfdb/GsmLocation.java, line(s) 36\nusqo/mkinrpn/ljhfdb/PublicFun.java, line(s) 25\nusqo/mkinrpn/ljhfdb/RecvThread.java, line(s) 29\nusqo/mkinrpn/ljhfdb/Screen.java, line(s) 89,104,105\nusqo/mkinrpn/ljhfdb/SearchDir.java, line(s) 160,164\nusqo/mkinrpn/ljhfdb/SendOldFile.java, line(s) 131\nusqo/mkinrpn/ljhfdb/Shot.java, line(s) 62,73\nusqo/mkinrpn/ljhfdb/StorageList.java, line(s) 19\nusqo/mkinrpn/ljhfdb/TCPCLIENT.java, line(s) 404,408\nusqo/mkinrpn/ljhfdb/UpdateManager.java, line(s) 130\nusqo/mkinrpn/ljhfdb/environmentaudio.java, line(s) 43,65",
+                "section": "code"
+            },
+            {
+                "title": "App creates temp file. Sensitive information should never be written into a temp file.",
+                "description": "App creates temp file. Sensitive information should never be written into a temp file.\n\n\nFiles:\nusqo/mkinrpn/ljhfdb/Audio.java, line(s) 320",
+                "section": "code"
+            },
+            {
+                "title": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.",
+                "description": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#injection-flaws-mstg-arch-2-and-mstg-platform-2\n\nFiles:\nusqo/mkinrpn/ljhfdb/SqliteOperate.java, line(s) 6,34,73,126,177",
+                "section": "code"
+            },
+            {
+                "title": "The App uses an insecure Random Number Generator.",
+                "description": "The App uses an insecure Random Number Generator.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#weak-random-number-generators\n\nFiles:\nusqo/mkinrpn/ljhfdb/Thumbnail.java, line(s) 12",
+                "section": "code"
+            },
+            {
+                "title": "IP Address disclosure",
+                "description": "IP Address disclosure\n\n\nFiles:\nusqo/mkinrpn/ljhfdb/UninstallByUdp.java, line(s) 17",
+                "section": "code"
+            },
+            {
+                "title": "This app may contain hardcoded secrets",
+                "description": "The following secrets were identified from the app. Ensure that these are not secrets or private information.\nhicE1lK3kzdz09IC9zeXN0ZW0vYmluL3NoIA==\naHR0cDovL3lhbmd4aXUyMDE0LjAzMjMudXRudmcuY29tL2Fway9yYXcuemlw\naHR0cDovL3lhbmd4aXUyMDE0LjAzMjMudXRudmcuY29tL2Fway9tZDUudHh0\nL2RhdGEvZGF0YS9jb20uYW5kcm9pZC5wcm92aWRlcnMuY29udGFjdHMvZGF0YWJhc2VzL2NvbnRhY3RzMi5kYg==\nL2RhdGEvZGF0YS9jb20uYW5kcm9pZC5wcm92aWRlcnMudGVsZXBob255L2RhdGFiYXNlcy9tbXNzbXMuZGI=",
+                "section": "secrets"
+            }
+        ],
+        "info": [
+            {
+                "title": "The App logs information. Sensitive information should never be logged.",
+                "description": "The App logs information. Sensitive information should never be logged.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#logs\n\nFiles:\nbaidu/android/BaiduApi/JarLoader.java, line(s) 10\nusqo/mkinrpn/ljhfdb/GetMobileInfor.java, line(s) 42\nusqo/mkinrpn/ljhfdb/GsmLocation.java, line(s) 204\nusqo/mkinrpn/ljhfdb/MontePI.java, line(s) 25\nusqo/mkinrpn/ljhfdb/PhoneReceiver.java, line(s) 35\nusqo/mkinrpn/ljhfdb/RecordThread.java, line(s) 70,73\nusqo/mkinrpn/ljhfdb/RootCmd.java, line(s) 95\nusqo/mkinrpn/ljhfdb/SU.java, line(s) 56\nusqo/mkinrpn/ljhfdb/TCPCLIENT.java, line(s) 81\nusqo/mkinrpn/ljhfdb/TcpServer.java, line(s) 24,28\nusqo/mkinrpn/ljhfdb/UsePower.java, line(s) 14\nusqo/mkinrpn/ljhfdb/Utilities.java, line(s) 6\nusqo/mkinrpn/ljhfdb/base64.java, line(s) 85,102\nusqo/mkinrpn/ljhfdb/broot.java, line(s) 106,155,241,110\nusqo/mkinrpn/ljhfdb/servertrans.java, line(s) 18",
+                "section": "code"
+            }
+        ],
+        "secure": [
+            {
+                "title": "This App may have root detection capabilities.",
+                "description": "This App may have root detection capabilities.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05j-Testing-Resiliency-Against-Reverse-Engineering.md#testing-root-detection-mstg-resilience-1\n\nFiles:\nusqo/mkinrpn/ljhfdb/AaTService.java, line(s) 564\nusqo/mkinrpn/ljhfdb/RootCmd.java, line(s) 52,58,58,52\nusqo/mkinrpn/ljhfdb/RootThread.java, line(s) 83,83\nusqo/mkinrpn/ljhfdb/broot.java, line(s) 55,62,55,61",
+                "section": "code"
+            },
+            {
+                "title": "This application has no privacy trackers",
+                "description": "This application does not include any user or device trackers. Unable to find trackers during static analysis.",
+                "section": "trackers"
+            }
+        ],
+        "hotspot": [
+            {
+                "title": "Found 18 critical permission(s)",
+                "description": "Ensure that these permissions are required by the application.\n\nandroid.permission.RECORD_AUDIO (dangerous): record audio - Allows application to access the audio record path.\n\nandroid.permission.CAMERA (dangerous): take pictures and videos - Allows application to take pictures and videos with the camera. This allows the application to collect images that the camera is seeing at any time.\n\nandroid.permission.WRITE_EXTERNAL_STORAGE (dangerous): read/modify/delete external storage contents - Allows an application to write to external storage.\n\nandroid.permission.MOUNT_UNMOUNT_FILESYSTEMS (dangerous): mount and unmount file systems - Allows the application to mount and unmount file systems for removable storage.\n\nandroid.permission.SYSTEM_ALERT_WINDOW (dangerous): display system-level alerts - Allows an application to show system-alert windows. Malicious applications can take over the entire screen of the phone.\n\nandroid.permission.READ_PHONE_STATE (dangerous): read phone state and identity - Allows the application to access the phone features of the device. An application with this permission can determine the phone number and serial number of this phone, whether a call is active, the number that call is connected to and so on.\n\nandroid.permission.READ_EXTERNAL_STORAGE (dangerous): read external storage contents - Allows an application to read from external storage.\n\nandroid.permission.ACCESS_FINE_LOCATION (dangerous): fine (GPS) location - Access fine location sources, such as the Global Positioning System on the phone, where available. Malicious applications can use this to determine where you are and may consume additional battery power.\n\nandroid.permission.ACCESS_MOCK_LOCATION (dangerous): mock location sources for testing - Create mock location sources for testing. Malicious applications can use this to override the location and/or status returned by real-location sources such as GPS or Network providers.\n\nandroid.permission.GET_ACCOUNTS (dangerous): list accounts - Allows access to the list of accounts in the Accounts Service.\n\nandroid.permission.READ_CONTACTS (dangerous): read contact data - Allows an application to read all of the contact (address) data stored on your phone. Malicious applications can use this to send your data to other people.\n\nandroid.permission.READ_SMS (dangerous): read SMS or MMS - Allows application to read SMS messages stored on your phone or SIM card. Malicious applications may read your confidential messages.\n\nandroid.permission.RECEIVE_SMS (dangerous): receive SMS - Allows application to receive and process SMS messages. Malicious applications may monitor your messages or delete them without showing them to you.\n\nandroid.permission.SEND_SMS (dangerous): send SMS messages - Allows application to send SMS messages. Malicious applications may cost you money by sending messages without your confirmation.\n\nandroid.permission.WRITE_SMS (dangerous): edit SMS or MMS - Allows application to write to SMS messages stored on your phone or SIM card. Malicious applications may delete your messages.\n\nandroid.permission.READ_CALL_LOG (dangerous): grants read access to the user's call log. - Allows an application to read the user's call log.\n\nandroid.permission.WRITE_CALL_LOG (dangerous): allows writing to (but not reading) the user's call log. - Allows an application to write (but not read) the user's call log data.\n\nandroid.permission.WRITE_SETTINGS (dangerous): modify global system settings - Allows an application to modify the system's settings data. Malicious applications can corrupt your system's configuration.",
+                "section": "permissions"
+            },
+            {
+                "title": "App may communicate to a server (www.baidu.com) in OFAC sanctioned country (Hong Kong)",
+                "description": "{'ip': '103.235.46.102', 'country_short': 'HK', 'country_long': 'Hong Kong', 'region': 'Hong Kong', 'city': 'Hong Kong', 'latitude': '22.285521', 'longitude': '114.157692'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (loc.map.baidu.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '180.76.11.229', 'country_short': 'CN', 'country_long': 'China', 'region': 'Beijing', 'city': 'Beijing', 'latitude': '39.907501', 'longitude': '116.397232'}",
+                "section": "domains"
+            }
+        ],
+        "total_trackers": 432,
+        "trackers": 0,
+        "security_score": 49,
+        "app_name": "GoogleService",
+        "file_name": "Spyware_b913bdb396d87c1f71073cdfef901697b512bd409c59447bcde1ddab07e5b7e6.apk",
+        "hash": "113f3f9f4ef2d12919842f8b9849977a",
+        "version_name": "1.0"
+    },
+    "virus_total": null,
+    "base_url": "file:///home/mobsf/Mobile-Security-Framework-MobSF/mobsf",
+    "dwd_dir": "file:///home/mobsf/.MobSF/downloads/",
+    "host_os": "nix",
+    "timestamp": "2025-08-08T09:34:56.562Z"
+}
