@@ -1,118 +1,79 @@
-
-
-folders = ['Banker', 'Spyware', 'Trojan','Safe']
-
 import json
 
-permissions_list = ['SEND_SMS', 'READ_CONTACTS', 'INTERNET', 'ACCESS_FINE_LOCATION', 'CAMERA']
-api_calls_list = ['Runtime.exec', 'DexClassLoader', 'Reflection', 'exec', 'getExternalStorage']
-network_hosts_list = ['http', 'https', 'ftp']
-activities_services_list = ['MainActivity', 'Service', 'Receiver']
-security_issues_list = ['Weak Encryption', 'Hardcoded Credentials', 'Insecure Communication']
-
-def extract_features_from_json(json_data):
+def extract_features(data):
     features = {}
 
-    # 1. Dangerous Permissions
-    try:
-        permissions_raw = json_data.get('permissions', {})
-        dangerous = [v for v in permissions_raw.values() if v.get('status') == 'dangerous']
-        features['dangerous_permissions_count'] = len(dangerous)
-    except:
-        features['dangerous_permissions_count'] = 0
+    # 1. Basic info
+    features["size_mb"] = float(data.get("size", "0MB").replace("MB", ""))
+    def safe_int(val, default=0):
+        try:
+            return int(val)
+        except (ValueError, TypeError):
+            return default
 
-    # 2. High & Medium Severity Vulnerabilities from manifest and certificate
-    try:
-        manifest_findings = json_data.get('manifest_analysis', {}).get('manifest_findings', [])
-        features['high_severity_vulns'] = sum(1 for x in manifest_findings if x.get('severity') == 'high')
-        features['medium_severity_vulns'] = sum(1 for x in manifest_findings if x.get('severity') == 'medium')
-    except:
-        features['high_severity_vulns'] = 0
-        features['medium_severity_vulns'] = 0
+    features["activities"] = len(data.get("activities", []))
+    features["receivers"] = len(data.get("receivers", []))
+    features["services"] = len(data.get("services", []))
 
-    try:
-        cert_summary = json_data.get('certificate_analysis', {}).get('certificate_summary', {})
-        features['high_severity_vulns'] += cert_summary.get('high', 0)
-        features['medium_severity_vulns'] += cert_summary.get('warning', 0)
-    except:
-        pass
+    # 2. Permissions
+    permissions = data.get("permissions", {})
+    features["dangerous_permissions"] = sum(1 for p in permissions.values() if p["status"] == "dangerous")
+    features["normal_permissions"] = sum(1 for p in permissions.values() if p["status"] == "normal")
+    features["unknown_permissions"] = sum(1 for p in permissions.values() if p["status"] == "unknown")
 
-    # 3. AllowBackup & Debuggable
-    findings = json_data.get('manifest_analysis', {}).get('manifest_findings', [])
-    features['is_allow_backup'] = int(any('allowbackup' in f.get('title', '').lower() and f.get('severity') == 'high' for f in findings))
-    features['is_debuggable'] = int(any('debuggable' in f.get('title', '').lower() and f.get('severity') == 'high' for f in findings))
+    # Flag important permissions
+    def has_perm(perm):
+        return 1 if perm in permissions else 0
 
-    # 4. Obfuscation & Reflection
-    try:
-        code_str = json.dumps(json_data.get("code_analysis", {})).lower()
-        features['uses_reflection'] = int('reflection' in code_str)
-        features['uses_obfuscation'] = int('obfuscation' in code_str)
-    except:
-        features['uses_reflection'] = 0
-        features['uses_obfuscation'] = 0
+    features["has_camera"] = has_perm("android.permission.CAMERA")
+    features["has_record_audio"] = has_perm("android.permission.RECORD_AUDIO")
+    features["has_sms_permissions"] = any(has_perm(p) for p in [
+        "android.permission.READ_SMS", "android.permission.SEND_SMS",
+        "android.permission.RECEIVE_SMS", "android.permission.WRITE_SMS"
+    ])
+    features["has_contacts_permissions"] = has_perm("android.permission.READ_CONTACTS") or has_perm("android.permission.GET_ACCOUNTS")
+    features["has_calllog_permissions"] = has_perm("android.permission.READ_CALL_LOG") or has_perm("android.permission.WRITE_CALL_LOG")
+    features["system_alert_window"] = has_perm("android.permission.SYSTEM_ALERT_WINDOW")
+    features["internet_access"] = has_perm("android.permission.INTERNET")
 
-    # 5. VirusTotal Summary (if exists)
-    vt = json_data.get('virus_total_summary', {})
-    try:
-        features['virustotal_positives'] = vt.get('positives', 0)
-        features['virustotal_total'] = vt.get('total', 1)
-        features['virustotal_ratio'] = features['virustotal_positives'] / features['virustotal_total']
-    except:
-        features['virustotal_positives'] = 0
-        features['virustotal_ratio'] = 0.0
+    # 3. Certificate analysis
+    cert = data.get("certificate_analysis", {})
+    cert_findings = cert.get("certificate_findings", [])
+    features["certificate_v1_only"] = 0
+    for fnd in cert_findings:
+        if "v1 signature scheme" in fnd[1]:
+            features["certificate_v1_only"] = 1
 
-    # 6. Binary Flags (Native, Java Debug, Cleartext)
-    binary_flags = {
-        'uses_native': 'lib/' in json.dumps(json_data.get('binary_analysis', [])).lower(),
-        'uses_java_debug': False,  # MobSF JSON ไม่มี uses_java_debug
-        'uses_cleartext': any('cleartext' in f.get('title', '').lower() for f in findings)
-    }
-    for k, v in binary_flags.items():
-        features[k] = int(v)
+    # 4. Manifest analysis
+    manifest = data.get("manifest_analysis", {})
+    features["manifest_high"] = manifest.get("manifest_summary", {}).get("high", 0)
+    features["manifest_warning"] = manifest.get("manifest_summary", {}).get("warning", 0)
 
-    # 7. Trackers (best-effort)
-    features['has_tracker'] = 0  # Not found in this JSON
+    # 5. API usage
+    api_usage = data.get("android_api", {})
+    def has_api(key):
+        return 1 if key in api_usage and api_usage[key].get("files") else 0
 
-    # 8. Suspicious URLs
-    url_list = json_data.get('urls', [])
-    suspicious = []
+    features["uses_reflection"] = has_api("api_java_reflection")
+    features["uses_dexloading"] = has_api("api_dexloading")
+    features["uses_os_command"] = has_api("api_os_command")
+    features["uses_sms_api"] = has_api("api_sms_call") or has_api("api_send_sms")
+    features["uses_location_api"] = has_api("api_gps") or has_api("api_get_location")
+    features["uses_network_api"] = has_api("api_http_connection") or has_api("api_tcp") or has_api("api_udp_datagram")
 
-    for item in url_list:
-        if isinstance(item, dict):
-            url = item.get('url', '')
-        elif isinstance(item, str):
-            url = item
-        else:
-            continue
+    suspicious_keys = [
+        "api_java_reflection", "api_dexloading", "api_os_command",
+        "api_sms_call", "api_send_sms", "api_gps", "api_get_location",
+        "api_http_connection", "api_tcp", "api_udp_datagram"
+    ]
+    features["suspicious_api_count"] = sum(has_api(k) for k in suspicious_keys)
 
-        if any(tld in url for tld in ['.ru', '.cn', '.xyz']) or (url.startswith('http://') and '127.0.0.1' not in url):
-            suspicious.append(url)
+    # 6. Code analysis
+    code_analysis = data.get("code_analysis", {})
+    features["code_high"] = code_analysis.get("summary", {}).get("high", 0)
+    features["code_warning"] = code_analysis.get("summary", {}).get("warning", 0)
 
-    features['suspicious_url_count'] = len(suspicious)
-
-    # 9. Exported Components
-    for comp in ['activities', 'services', 'receivers', 'providers']:
-        comp_list = json_data.get(comp, [])
-        features[f'exported_{comp}_count'] = sum(1 for c in comp_list if isinstance(c, dict) and c.get('exported') is True)
-    features['exported_components_total'] = sum(features[f'exported_{c}_count'] for c in ['activities', 'services', 'receivers', 'providers'])
-
-    # 10. Dangerous API Calls
-    features['uses_exec'] = int('exec(' in code_str or 'runtime.getruntime().exec' in code_str)
-    features['uses_system_exit'] = int('system.exit' in code_str)
-
-    # 11. Crypto API
-    features['uses_md5'] = int('md5' in code_str)
-    features['uses_des'] = int('des' in code_str)
-
-    # 12. Suspicious Strings
-    all_text = json.dumps(json_data).lower()
-    for s in ['root', 'shell', 'inject']:
-        features[f'has_{s}_string'] = int(s in all_text)
-
-    # 13. Dynamic Behavior & Frequency Features
-    features['api_call_count'] = sum(1 for api in ['exec', 'runtime.exec', 'system.exit'] if api in code_str)
-
-    # 14. Rooting Detection (if exists)
-    features['is_rooted'] = int(any(keyword in all_text for keyword in ['root', 'su', 'busybox']))
+    # 7. Network
+    features["network_domains"] = len(data.get("domains", {}))
 
     return features

@@ -2,10 +2,10 @@ import requests
 import json
 import os
 
-MOBSF_URL = "http://100.85.4.118:8888"
+MOBSF_URL = "http://localhost:8000"
 # "http://localhost:8000"
 # "http://100.85.4.118:8888" 
-API_KEY ="b75bf63030e6cfab53811eb080d0be0c55d971f43345ccea68f09a5addd331da"
+API_KEY ="bd54344feef27f85886aed8904ef23e8d775813680b743e339610e7d12457d34"
 # "bd54344feef27f85886aed8904ef23e8d775813680b743e339610e7d12457d34"
 # "b75bf63030e6cfab53811eb080d0be0c55d971f43345ccea68f09a5addd331da"
 FILE_HASH_BANKER = [
@@ -47,7 +47,7 @@ FILE_HASH_SPYWARE = [
     "4ab6bab65805838612f298f5e544b0c6"
 ]
 FILE_HASH_TEST = [
-    "334edf9311e3cae6fab67cb7c9a81e00"
+    "fd0b81f3219af435570d2cc87e7022aa"
 ]
 PATH = "Test"
 
