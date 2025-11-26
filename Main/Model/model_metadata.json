@@ -1,7 +1,7 @@
 {
-  "training_date": "2025-10-07T01:36:21.037137",
+  "training_date": "2025-11-24T23:11:50.476522",
   "dataset_info": {
-    "total_samples": 41,
-    "features_count": 27,
+    "total_samples": 3332,
+    "features_count": 40,
     "class_distribution": {
       "1": 

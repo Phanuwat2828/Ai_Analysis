@@ -2,20 +2,27 @@ import glob
 import pandas as pd
 import json
 import os
-from feature import extract_features
+from feature import extract_features_002 as extract_features
 
-def process_malware_dataset():
+def process_malware_dataset(max_files_per_folder=2000):
     BASE_PATH = os.path.abspath(os.path.join(os.getcwd(), "."))  
-    folders = ['Banker', 'Spyware', 'Trojan', 'Safe']
+    folders = ['malware', 'benign']
     dataset = []
     
     for folder in folders:
         folder_path = os.path.join(BASE_PATH, "Data", folder)
         print("===========> " + folder_path)
+
         json_files = glob.glob(os.path.join(folder_path, "*.json"))
         print(f"{folder}: found {len(json_files)} JSON files")
 
-        label = 0 if folder == 'Safe' else 1  # 0=Safe, 1=Malware
+        # จำกัดไฟล์สูงสุด 10k ต่อ folder
+        if len(json_files) > max_files_per_folder:
+            json_files = json_files[:max_files_per_folder]  # หรือ random.sample(json_files, max_files_per_folder)
+
+        print(f"{folder}: using {len(json_files)} files")
+
+        label = 0 if folder == 'benign' else 1  # 0=Safe, 1=Malware
         
         for json_file in json_files:
             try:

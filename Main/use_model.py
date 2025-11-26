@@ -1,7 +1,8 @@
 import joblib
 import json
 import pandas as pd
-from feature import extract_permission_features
+from feature import extract_features_001 as extract_features
+import os
 class MalwareDetector:
     def __init__(self, model_dir="./Model"):
         self.xgb_model = joblib.load(f"{model_dir}/XGBoost_final.pkl")
@@ -11,16 +12,12 @@ class MalwareDetector:
             self.feature_names = json.load(f)
     
     def extract_features_from_json(self, json_path):
-        """Extract features from MobSF JSON file"""
         with open(json_path, 'r', encoding='utf-8',) as f:
             json_data = json.load(f)
-        
-        # ใช้ฟังก์ชัน extract_permission_features ที่เขียนไว้ก่อนหน้า
-        features = extract_permission_features(json_data)
+        features = extract_features(json_data)
         return features
     
     def predict_from_file(self, json_file_path, use_ensemble=True):
-        """Predict directly from JSON file"""
         features = self.extract_features_from_json(json_file_path)
         return self.predict(features, use_ensemble)
     
@@ -47,9 +44,45 @@ class MalwareDetector:
                 'prediction': 'Malware' if pred == 1 else 'Safe',
                 'probability': prob[1]
             }
-
-# ใช้งาน
 detector = MalwareDetector()
-result = detector.predict_from_file("./Data/Test/Test_fd0b81f3219af435570d2cc87e7022aa.json", use_ensemble=True)
 
-print(result)
+# โฟลเดอร์ที่ต้องการทดสอบ
+folders = {
+    "malware": "./Data_test/malware",
+    "benign": "./Data_test/benign"
+}
+
+results = []
+
+for label, folder in folders.items():
+    for file_name in os.listdir(folder):
+        if file_name.endswith(".json"):
+            file_path = os.path.join(folder, file_name)
+            
+            try:
+                result = detector.predict_from_file(file_path, use_ensemble=True)
+                results.append({
+                    "file": file_name,
+                    "folder": label,
+                    "prediction": result["prediction"],
+                    "probability": result["probability"]
+                })
+                
+                print(f"[{label}] {file_name} -> {result}")
+            
+            except Exception as e:
+                print(f"❌ Error processing {file_name}: {e}")
+
+# สรุปผล cuối
+print("\n===== SUMMARY =====")
+malware_correct = 0
+benign_correct = 0
+
+for r in results:
+    if r["folder"] == "malware" and r["prediction"] == "Malware":
+        malware_correct += 1
+    if r["folder"] == "benign" and r["prediction"] == "Safe":
+        benign_correct += 1
+
+print(f"Malware Correct: {malware_correct}/{len([x for x in results if x['folder']=='malware'])}")
+print(f"Benign Correct: {benign_correct}/{len([x for x in results if x['folder']=='benign'])}")
