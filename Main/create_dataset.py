@@ -3,8 +3,10 @@ import pandas as pd
 import json
 import os
 from feature import extract_features_002 as extract_features
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-def process_malware_dataset(max_files_per_folder=2000):
+def process_malware_dataset(max_files_per_folder=6000):
     BASE_PATH = os.path.abspath(os.path.join(os.getcwd(), "."))  
     folders = ['malware', 'benign']
     dataset = []
@@ -16,13 +18,12 @@ def process_malware_dataset(max_files_per_folder=2000):
         json_files = glob.glob(os.path.join(folder_path, "*.json"))
         print(f"{folder}: found {len(json_files)} JSON files")
 
-        # จำกัดไฟล์สูงสุด 10k ต่อ folder
         if len(json_files) > max_files_per_folder:
-            json_files = json_files[:max_files_per_folder]  # หรือ random.sample(json_files, max_files_per_folder)
+            json_files = json_files[:max_files_per_folder] 
 
         print(f"{folder}: using {len(json_files)} files")
 
-        label = 0 if folder == 'benign' else 1  # 0=Safe, 1=Malware
+        label = 0 if folder == 'benign' else 1 
         
         for json_file in json_files:
             try:
@@ -42,8 +43,6 @@ def process_malware_dataset(max_files_per_folder=2000):
     return pd.DataFrame(dataset)
 
 
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 if __name__ == "__main__":
     df = process_malware_dataset()
@@ -72,10 +71,10 @@ if __name__ == "__main__":
         plt.figure(figsize=(15, 8))
         for i, feat in enumerate(key_features, 1):
             plt.subplot(2, 3, i)
-            if df[feat].nunique() <= 2:  # ถ้า feature เป็น binary
+            if df[feat].nunique() <= 2:  
                 sns.countplot(data=df, x=feat, hue="label", palette="husl")
                 plt.title(f"{feat} (Binary)")
-            else:  # ถ้าเป็น numeric
+            else:
                 sns.boxplot(data=df, x="label", y=feat, palette="husl")
                 plt.title(f"{feat} (Numeric)")
             plt.xlabel("Label (0=Safe, 1=Malware)")
