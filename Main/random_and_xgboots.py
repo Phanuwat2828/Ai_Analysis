@@ -29,12 +29,12 @@ class MalwareModelComparison:
         self.data = pd.read_csv(self.data_path) # อ่านไฟล์ CSV เป็น DataFrame
         print(f"Dataset shape: {self.data.shape}")
         
-        if "total_permissions" not in self.data.columns: # ตรวจสอบว่ามีคอลัมน์ total_permissions หรือไม่
-            self.data["total_permissions"] = ( # คำนวณคอลัมน์ total_permissions
-                self.data.get("dangerous_permissions", 0) +
-                self.data.get("normal_permissions", 0) +
-                self.data.get("unknown_permissions", 0)
-            )
+        # if "total_permissions" not in self.data.columns: # ตรวจสอบว่ามีคอลัมน์ total_permissions หรือไม่
+        #     self.data["total_permissions"] = ( # คำนวณคอลัมน์ total_permissions
+        #         self.data.get("dangerous_permissions", 0) +
+        #         self.data.get("normal_permissions", 0) +
+        #         self.data.get("unknown_permissions", 0)
+        #     )
         #self.data = self.data[self.data['total_permissions'] > 0] # กรองแถวที่มี total_permissions > 0 กรองเพราะอย่างน้อย 1 แอปต้องขอสิทธิ์ dangerous normal unknown total
         #print(f"Cleaned dataset shape: {self.data.shape}")
 
@@ -132,40 +132,40 @@ class MalwareModelComparison:
     
     def print_final_recommendation(self): # <-- function show best model 
         """Print final model recommendation"""
-        if not self.results:
+        if not self.results: # ตรวจสอบว่ามีผลลัพธ์การประเมินโมเดลหรือไม่
             print("No results available.")
             return None, None
 
-        models = list(self.results.keys())
-        overall_scores = {}
-        weights = {'accuracy':0.2, 'precision':0.2, 'recall':0.2, 'f1':0.3, 'roc_auc':0.1}
+        models = list(self.results.keys()) # ดึงชื่อโมเดลทั้งหมด
+        overall_scores = {} # dictionary เก็บคะแนนรวมของแต่ละโมเดล
+        weights = {'accuracy':0.2, 'precision':0.2, 'recall':0.2, 'f1':0.3, 'roc_auc':0.1} # กำหนดน้ำหนักให้กับแต่ละเมตริก
 
-        for model in models:
-            score = 0
+        for model in models: # loop ผ่านแต่ละโมเดล
+            score = 0 # ตัวแปรเก็บคะแนนรวม
             for metric, w in weights.items():
-                score += self.results[model][f'{metric}_test']['mean'] * w
-            overall_scores[model] = score
+                score += self.results[model][f'{metric}_test']['mean'] * w # คำนวณคะแนนรวมโดยคูณค่า mean ของแต่ละเมตริกกับน้ำหนักที่กำหนด
+            overall_scores[model] = score # เก็บคะแนนรวมใน dictionary
         
-        best_model = max(overall_scores, key=overall_scores.get)
-        best_score = overall_scores[best_model]
-        print(f"\nBest Model: {best_model} | Overall Score: {best_score:.3f}")
+        best_model = max(overall_scores, key=overall_scores.get) # หาโมเดลที่มีคะแนนรวมสูงสุด
+        best_score = overall_scores[best_model] # คะแนนรวมสูงสุด
+        print(f"\nBest Model: {best_model} | Overall Score: {best_score:.3f}") # แสดงผลโมเดลที่ดีที่สุดและคะแนนรวมo
         
-        print("\nDetailed metrics per model:")
-        for model in models:
-            print(f"\n{model}:")
-            for metric in ['accuracy','precision','recall','f1','roc_auc']:
-                print(f"  {metric.upper():8}: {self.results[model][f'{metric}_test']['mean']:.3f} ± {self.results[model][f'{metric}_test']['std']:.3f}")
-            print(f"  Weighted Overall Score: {overall_scores[model]:.3f}")
+        # print("\nDetailed metrics per model:")
+        # for model in models: 
+        #     print(f"\n{model}:")
+        #     for metric in ['accuracy','precision','recall','f1','roc_auc']:
+        #         print(f"  {metric.upper():8}: {self.results[model][f'{metric}_test']['mean']:.3f} ± {self.results[model][f'{metric}_test']['std']:.3f}")
+        #     print(f"  Weighted Overall Score: {overall_scores[model]:.3f}")
         
         return best_model, best_score
     
     def train_final_models(self): # <-- function for train final model 
         """Train both models on full dataset"""
-        rf_model = RandomForestClassifier(
+        rf_model = RandomForestClassifier( 
             n_estimators=100,
             max_depth=10,
             min_samples_split=5,
-            min_samples_leaf=2,
+            min_samples_leaf=2,        
             random_state=42,
             class_weight='balanced'
         )
@@ -186,7 +186,7 @@ class MalwareModelComparison:
     
     def save_models(self, output_dir="./Model"):
         """Save models and feature names"""
-        os.makedirs(output_dir, exist_ok=True)
+        os.makedirs(output_dir, exist_ok=True) #
         for name, model in self.final_models.items():
             path = f"{output_dir}/{name.replace(' ','_')}_final.pkl"
             joblib.dump(model, path)
