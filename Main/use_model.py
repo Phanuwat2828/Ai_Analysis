@@ -28,7 +28,7 @@ class MalwareDetector:
         for feature in self.feature_names:
             if feature not in df.columns:
                 df[feature] = 0
-        
+    
         X = df[self.feature_names]
     
         # malware and benign
@@ -52,7 +52,6 @@ class MalwareDetector:
 # -------------------------
 detector = MalwareDetector()
 
-json_file_path_malware_test = "./Data_test/x.json"
 json_file_path_benign = "./Data_test/benign/0543752128630452470A69504F889EC22CDBA93CAF84C2428514E121DE5F2DC4.json"
 json_file_path_malware = "./Data_test/malware/a3ab5fdca8b90512e05d56bc9f1dcc8c.json"
 
@@ -65,4 +64,5 @@ def use_model(json_file_path):
     except Exception as e:
         print(f"❌ Error processing {json_file_path}: {e}")
 
-use_model(json_file_path_malware_test)
+use_model(json_file_path_malware)
+

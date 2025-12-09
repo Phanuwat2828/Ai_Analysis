@@ -82,3 +82,5 @@ def debug(json_path, label):
 # ใช้แค่ไฟล์แรกของแต่ละโฟลเดอร์
 debug(malware_files[0], "malware")
 debug(benign_files[0], "benign")
+
+
