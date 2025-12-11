@@ -10,15 +10,6 @@ benign_files  = glob.glob(os.path.join(BASE_PATH, "Data", "benign", "*.json"))
 
 # ลิสต์ feature ตามลำดับที่คุณต้องการ
 feature_order = [
-    "binary_count",
-    "binary_has_rpath",
-    "binary_has_runpath",
-    "binary_no_canary",
-    "binary_no_fortify",
-    "binary_no_nx",
-    "binary_no_relro",
-    "binary_not_pie",
-    "binary_symbol_not_stripped",
     "count_activities",
     "count_dangerous_permissions",
     "count_exported_activities",
@@ -76,8 +67,8 @@ def debug(json_path, label):
     # Loop ตามลำดับ feature ที่กำหนด
     for idx, feat in enumerate(feature_order, start=1):
         value = features.get(feat, None)
-        # print(f"{idx:02d}| {feat:35} : {value}")
-        print(value)
+        print(f"{idx:02d}| {feat:35} : {value}")
+        # print(value)
 
 # ใช้แค่ไฟล์แรกของแต่ละโฟลเดอร์
 debug(malware_files[0], "malware")

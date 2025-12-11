@@ -53,7 +53,7 @@ class MalwareDetector:
 detector = MalwareDetector()
 
 json_file_path_benign = "./Data_test/benign/0543752128630452470A69504F889EC22CDBA93CAF84C2428514E121DE5F2DC4.json"
-json_file_path_malware = "./Data_test/malware/a3ab5fdca8b90512e05d56bc9f1dcc8c.json"
+json_file_path_malware = "./Data_test/malware/00A03FB63CAF7B03568586150E3F2F9164EB0AE8CAC9F921DE789AA687DF4E24.json"
 
 
 def use_model(json_file_path):

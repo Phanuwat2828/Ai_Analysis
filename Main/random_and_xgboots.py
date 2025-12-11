@@ -90,11 +90,11 @@ class MalwareModelComparison:
         }
 
         scoring = ['accuracy','precision','recall','f1','roc_auc']
-        cv = StratifiedKFold(n_splits=cv_folds, shuffle=True, random_state=42)
+        cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
         results = {}
 
         for model_name, model in models.items():
-            print(f"\n----- 🔥 Training {model_name} -----")
+            print(f"\n----- Training {model_name} -----")
 
             # ⭐ ไม่เก็บ train score
             cv_results = cross_validate(
@@ -164,13 +164,13 @@ class MalwareModelComparison:
         print("\n=== 📌 Training Final Models ===")
 
         rf = RandomForestClassifier(
-            n_estimators=100, max_depth=10,
+            n_estimators=200, max_depth=10,
             min_samples_split=5, min_samples_leaf=2,
             random_state=42
         ).fit(self.train_x, self.train_y)
 
         xgb_ = xgb.XGBClassifier(
-            n_estimators=100, max_depth=6,
+            n_estimators=200, max_depth=6,
             learning_rate=0.1, subsample=0.8,
             colsample_bytree=0.8, random_state=42
         ).fit(self.train_x, self.train_y)

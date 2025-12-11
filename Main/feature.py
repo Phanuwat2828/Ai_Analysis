@@ -111,47 +111,6 @@ def extract_features_001(data):
     features["network_domains"] = len(data.get("domains", {})) # นับจำนวนโดเมนที่แอปพลิเคชันติดต่อ
     features["network_urls"] = len(data.get("urls", [])) # นับจำนวน URL ที่แอปพลิเคชันติดต่อ
 
-    binary_list = data.get("binary_analysis", [])
-    features["binary_count"] = len(binary_list)
-    features["binary_no_relro"] = 0
-    features["binary_no_fortify"] = 0
-    features["binary_no_canary"] = 0
-    features["binary_no_nx"] = 0
-    features["binary_not_pie"] = 0
-    features["binary_symbol_not_stripped"] = 0
-    features["binary_has_rpath"] = 0
-    features["binary_has_runpath"] = 0
-
-    for b in binary_list:
-        # RELRO
-        if b["relocation_readonly"]["relro"] == "No RELRO":
-            features["binary_no_relro"] += 1
-        
-        # FORTIFY
-        if not b["fortify"]["is_fortified"]:
-            features["binary_no_fortify"] += 1
-        
-        # Canary
-        if not b["stack_canary"]["has_canary"]:
-            features["binary_no_canary"] += 1
-        
-        # NX
-        if not b["nx"]["is_nx"]:
-            features["binary_no_nx"] += 1
-        
-        # PIE
-        if b["pie"]["is_pie"] != "Dynamic Shared Object (DSO)":
-            features["binary_not_pie"] += 1
-        
-        # Symbols stripped?
-        if not b["symbol"]["is_stripped"]:
-            features["binary_symbol_not_stripped"] += 1
-        
-        # RPATH / RUNPATH
-        if b["rpath"]["rpath"] is not None:
-            features["binary_has_rpath"] += 1
-        if b["runpath"]["runpath"] is not None:
-            features["binary_has_runpath"] += 1
 
 
     features["hardcoded_keystore"] = 0
