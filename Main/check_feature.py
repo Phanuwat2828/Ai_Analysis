@@ -40,7 +40,7 @@ def analyze_feature_difference(csv_path):
 
 
 # Run
-df_result = analyze_feature_difference("./Dataset/malware_dataset.csv")
+df_result = analyze_feature_difference("./Dataset/malware_dataset_regression.csv")
 
 # ให้ Pandas แสดงผลทั้งหมดแบบไม่ตัด
 import pandas as pd

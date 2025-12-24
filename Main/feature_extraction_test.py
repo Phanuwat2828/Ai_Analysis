@@ -1,7 +1,7 @@
 import glob
 import json
 import os
-from feature import extract_features_001 as extract_features
+from Regressionfeature import extract_features_001 as extract_features
 
 BASE_PATH = os.path.abspath(os.path.join(os.getcwd(), "."))
 
@@ -48,8 +48,7 @@ feature_order = [
     "has_uses_sms_api",
     "is_on_playstore",
     "network_domains",
-    "network_urls",
-    "size_mb"
+    "network_urls"
 ]
 
 def debug(json_path, label):
@@ -63,13 +62,14 @@ def debug(json_path, label):
     features = extract_features(data)
 
     print(f"\nจำนวน feature: {len(features)}\n")
-
+    total = 0;
     # Loop ตามลำดับ feature ที่กำหนด
     for idx, feat in enumerate(feature_order, start=1):
         value = features.get(feat, None)
+        total+=value
         print(f"{idx:02d}| {feat:35} : {value}")
         # print(value)
-
+    print("Score : ",total)
 # ใช้แค่ไฟล์แรกของแต่ละโฟลเดอร์
 debug(malware_files[0], "malware")
 debug(benign_files[0], "benign")
