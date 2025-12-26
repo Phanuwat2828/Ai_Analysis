@@ -73,11 +73,16 @@ class MalwareModelComparison:
 
         models = {
             'Random Forest': RandomForestClassifier(
-                n_estimators=200,
+                n_estimators=180,
                 max_depth=12,
                 min_samples_split=5,
                 min_samples_leaf=2,
-                random_state=42
+                random_state=42,
+                oob_score=True,
+                warm_start=True,
+                ccp_alpha=0.035,
+                max_features='log2'
+                
             ),
             'XGBoost': xgb.XGBClassifier(
                 n_estimators=200,
@@ -164,9 +169,12 @@ class MalwareModelComparison:
         print("\n=== 📌 Training Final Models ===")
 
         rf = RandomForestClassifier(
-            n_estimators=200, max_depth=10,
+            n_estimators=180, max_depth=10,
             min_samples_split=5, min_samples_leaf=2,
-            random_state=42
+            random_state=42,oob_score=True,
+                warm_start=True,
+                ccp_alpha=0.035,
+                max_features='log2'
         ).fit(self.train_x, self.train_y)
 
         xgb_ = xgb.XGBClassifier(

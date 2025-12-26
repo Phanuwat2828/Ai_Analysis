@@ -8,48 +8,7 @@ BASE_PATH = os.path.abspath(os.path.join(os.getcwd(), "."))
 malware_files = glob.glob(os.path.join(BASE_PATH, "Data", "malware", "*.json"))
 benign_files  = glob.glob(os.path.join(BASE_PATH, "Data", "benign", "*.json"))
 
-# ลิสต์ feature ตามลำดับที่คุณต้องการ
-feature_order = [
-    "count_activities",
-    "count_dangerous_permissions",
-    "count_exported_activities",
-    "count_exported_receivers",
-    "count_exported_services",
-    "count_normal_permissions",
-    "count_providers",
-    "count_receivers",
-    "count_services",
-    "count_unknown_permissions",
-    "hardcoded_keystore",
-    "hardcoded_keystore_count",
-    "has_body_sensors_permission",
-    "has_calllog_permissions",
-    "has_camera",
-    "has_cert_v1",
-    "has_cert_v2",
-    "has_cert_v3",
-    "has_cert_v4",
-    "has_certificate_high",
-    "has_certificate_info",
-    "has_certificate_warning",
-    "has_code_high",
-    "has_code_info",
-    "has_contacts_permissions",
-    "has_location_permissions",
-    "has_manifest_high",
-    "has_manifest_warning",
-    "has_microphone_permission",
-    "has_phonecall_permission",
-    "has_sms_permissions",
-    "has_storage_permissions",
-    "has_suspicious_api_count",
-    "has_system_alert_window",
-    "has_uses_os_command",
-    "has_uses_sms_api",
-    "is_on_playstore",
-    "network_domains",
-    "network_urls"
-]
+
 
 def debug(json_path, label):
     print("\n==============================")
@@ -66,7 +25,8 @@ def debug(json_path, label):
     # Loop ตามลำดับ feature ที่กำหนด
     for idx, feat in enumerate(feature_order, start=1):
         value = features.get(feat, None)
-        total+=value
+        print(value)
+        total+=int(value)
         print(f"{idx:02d}| {feat:35} : {value}")
         # print(value)
     print("Score : ",total)

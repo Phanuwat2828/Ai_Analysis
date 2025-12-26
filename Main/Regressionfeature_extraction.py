@@ -2,32 +2,24 @@ import glob
 import pandas as pd
 import json
 import os
-import math
 from tqdm import tqdm
 from Regressionfeature import extract_features_001 as extract_features
 
-MAX_CAP = 50  # cap สำหรับ feature ที่เป็น count
 
-
-def compute_feature_score(v, max_cap=MAX_CAP):
+def binarize(v):
     """
-    Generic scoring for all features
+    Convert all features to 0 / 1
     """
-    # boolean
     if isinstance(v, bool):
-        return 1.0 if v else 0.0
+        return 1 if v else 0
 
-    # numeric (count-based)
     if isinstance(v, (int, float)):
-        if v <= 0:
-            return 0.0
-        if v <= 1:
-            return 1.0
-        v = min(v, max_cap)
-        return math.log1p(v) / math.log1p(max_cap)
+        return 1 if v > 0 else 0
 
-    # others
-    return 0.0
+    if isinstance(v, (list, dict, set, tuple)):
+        return 1 if len(v) > 0 else 0
+
+    return 0
 
 
 def process_malware_dataset(max_files_per_folder=8000):
@@ -49,16 +41,14 @@ def process_malware_dataset(max_files_per_folder=8000):
             raw_features = extract_features(data)
 
             feature_row = {}
-            risk_sum = 0.0
+            risk_sum = 0
             total_features = 0
 
             for k, v in raw_features.items():
-                score = compute_feature_score(v)
+                val = binarize(v)
 
-                # เก็บค่า feature ดิบ (ไว้ train ML)
-                feature_row[k] = v
-
-                risk_sum += score
+                feature_row[k] = val
+                risk_sum += val
                 total_features += 1
 
             # 🎯 regression label (0–1)

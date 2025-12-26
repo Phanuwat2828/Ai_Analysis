@@ -42,7 +42,6 @@ def process_malware_dataset(max_files_per_folder=4000): # <-- function for creat
     return pd.DataFrame(dataset) # แปลง dataset เป็น DataFrame และคืนค่า
 
 
-
 if __name__ == "__main__":
     df = process_malware_dataset() # เรียกใช้ฟังก์ชันเพื่อสร้าง dataset
     print(f"Dataset shape: {df.shape}")
