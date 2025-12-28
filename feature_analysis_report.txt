@@ -1,0 +1,151 @@
+====================================================================================================
+MOBSF FEATURE ANALYSIS REPORT
+====================================================================================================
+
+Total Keys in MobSF JSON: 56
+
+====================================================================================================
+ALL AVAILABLE KEYS:
+====================================================================================================
+  1. activities                          [list      ] (3 items)
+  2. android_api                         [dict      ] (5 keys)
+  3. apkid                               [dict      ] (1 keys)
+  4. app_name                            [str       ] = "独角兽号的秘密 下集"
+  5. app_type                            [str       ] = "apk"
+  6. appsec                              [dict      ] (12 keys)
+  7. average_cvss                        [NoneType  ] 
+  8. base_url                            [str       ] = "file:///home/mobsf/Mobile-Security-Frame..."
+  9. behaviour                           [dict      ] (3 keys)
+ 10. binary_analysis                     [list      ] (0 items)
+ 11. browsable_activities                [dict      ] (0 keys)
+ 12. certificate_analysis                [dict      ] (3 keys)
+ 13. code_analysis                       [dict      ] (2 keys)
+ 14. domains                             [dict      ] (2 keys)
+ 15. dwd_dir                             [str       ] = "file:///home/mobsf/.MobSF/downloads/"
+ 16. emails                              [list      ] (1 items)
+ 17. exported_activities                 [str       ] = "[]"
+ 18. exported_count                      [dict      ] (4 keys)
+ 19. file_analysis                       [list      ] (0 items)
+ 20. file_name                           [str       ] = "0489CD2840897CDC3AA7F5D70A6D7689F611BE99..."
+ 21. files                               [list      ] (115 items)
+ 22. firebase_urls                       [list      ] (0 items)
+ 23. host_os                             [str       ] = "nix"
+ 24. icon_path                           [str       ] = "2ceb4a0015c032dca10c73690e00aec2-icon.pn..."
+ 25. libraries                           [list      ] (0 items)
+ 26. logs                                [list      ] (35 items)
+ 27. main_activity                       [str       ] = ".TingTing21"
+ 28. malware_permissions                 [dict      ] (4 keys)
+ 29. manifest_analysis                   [dict      ] (2 keys)
+ 30. max_sdk                             [str       ] = ""
+ 31. md5                                 [str       ] = "2ceb4a0015c032dca10c73690e00aec2"
+ 32. min_sdk                             [str       ] = "7"
+ 33. network_security                    [dict      ] (2 keys)
+ 34. niap_analysis                       [dict      ] (0 keys)
+ 35. package_name                        [str       ] = "com.GoldDream.TingTing04ii"
+ 36. permission_mapping                  [dict      ] (1 keys)
+ 37. permissions                         [dict      ] (3 keys)
+ 38. playstore_details                   [dict      ] (1 keys)
+ 39. providers                           [list      ] (0 items)
+ 40. receivers                           [list      ] (0 items)
+ 41. sbom                                [dict      ] (2 keys)
+ 42. secrets                             [list      ] (0 items)
+ 43. services                            [list      ] (0 items)
+ 44. sha1                                [str       ] = "ced9a7853a0dff30b670dcbc2141942ee75e0650"
+ 45. sha256                              [str       ] = "0489cd2840897cdc3aa7f5d70a6d7689f611be99..."
+ 46. size                                [str       ] = "3.04MB"
+ 47. strings                             [dict      ] (3 keys)
+ 48. target_sdk                          [str       ] = "7"
+ 49. timestamp                           [str       ] = "2025-12-08T10:02:30.694Z"
+ 50. title                               [str       ] = "Static Analysis"
+ 51. trackers                            [dict      ] (3 keys)
+ 52. urls                                [list      ] (3 items)
+ 53. version                             [str       ] = "v4.4.3"
+ 54. version_code                        [str       ] = "1"
+ 55. version_name                        [str       ] = "1.0"
+ 56. virus_total                         [NoneType  ] 
+
+====================================================================================================
+CURRENT FEATURES EXTRACTED: 40 features
+====================================================================================================
+
+====================================================================================================
+RECOMMENDED ADDITIONAL FEATURES:
+====================================================================================================
+
+1. TRACKERS - Tracking libraries detected
+   Type: dict
+   Count: 3
+   Sample keys: ['detected_trackers', 'total_trackers', 'trackers']
+   Code: features['tracker_count'] = len(data.get('trackers', {}))
+
+2. SECRETS - Hardcoded secrets found
+   Type: list
+   Count: 0
+   Code: features['secrets_count'] = len(data.get('secrets', []))
+
+3. AVERAGE_CVSS - Vulnerability score
+   Value: None
+   Code: features['average_cvss'] = float(data.get('average_cvss', 0))
+
+4. MALWARE_PERMISSIONS - Malware-specific permissions
+   Type: dict
+   Count: 4
+   Sample keys: ['top_malware_permissions', 'other_abused_permissions', 'total_malware_permissions']
+   Code: features['malware_permission_count'] = len(data.get('malware_permissions', []))
+
+5. APPSEC - App security best practices
+   Type: dict
+   Count: 12
+   Keys: ['high', 'warning', 'info', 'secure', 'hotspot']
+   Code: features['appsec_issues_count'] = len(data.get('appsec', {}))
+
+6. EMAILS - Email addresses found
+   Count: 1
+   Code: features['email_count'] = len(data.get('emails', []))
+
+7. SDK VERSIONS
+   Min SDK: 7
+   Target SDK: 7
+   Code: features['min_sdk'] = int(data.get('min_sdk', 0))
+   Code: features['target_sdk'] = int(data.get('target_sdk', 0))
+
+8. BINARY_ANALYSIS - Binary/native code findings
+   Type: list
+   Count: 0
+   Code: features['binary_analysis_count'] = len(data.get('binary_analysis', []))
+
+9. CODE_ANALYSIS - Additional metrics
+   High: 0 (already extracted)
+   Warning: 0 [NEW]
+   Info: 0 (already extracted)
+   Code: features['has_code_warning'] = code_analysis.get('summary', {}).get('warning', 0)
+
+10. MANIFEST_ANALYSIS - Additional metrics
+   High: 1 (already extracted)
+   Warning: 1 (already extracted)
+   Info: 0 [NEW]
+   Code: features['has_manifest_info'] = manifest.get('manifest_summary', {}).get('info', 0)
+
+====================================================================================================
+SUMMARY:
+====================================================================================================
+Current features: 40
+Recommended additional features: 11
+Total potential features: 51
+
+Recommended features to add:
+  1. tracker_count
+  2. secrets_count
+  3. average_cvss
+  4. malware_permission_count
+  5. appsec_issues_count
+  6. email_count
+  7. min_sdk
+  8. target_sdk
+  9. binary_analysis_count
+  10. has_code_warning
+  11. has_manifest_info
+
+====================================================================================================
+ANALYSIS COMPLETE!
+====================================================================================================

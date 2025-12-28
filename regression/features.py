@@ -83,11 +83,69 @@ def extract_features_001(data):
     ]
     features["has_suspicious_api_count"] = sum(has_api(k) for k in suspicious_keys) # นับจำนวน API ที่น่าสงสัยที่ถูกใช้งานในแอปพลิเคชัน
 
+    # 6. Trackers - ตรวจจับ tracking libraries
+    trackers_data = data.get("trackers", {})
+    if isinstance(trackers_data, dict):
+        tracker_list = trackers_data.get("trackers", [])
+        features["tracker_count"] = len(tracker_list) if isinstance(tracker_list, list) else 0
+    else:
+        features["tracker_count"] = 0
 
+    # 7. Secrets - hardcoded secrets
+    secrets = data.get("secrets", [])
+    features["secrets_count"] = len(secrets) if isinstance(secrets, list) else 0
 
+    # 8. Average CVSS - คะแนนความเสี่ยง
+    cvss = data.get("average_cvss")
+    features["average_cvss"] = float(cvss) if cvss and cvss != "null" else 0.0
 
+    # 9. Malware Permissions
+    malware_perms = data.get("malware_permissions", {})
+    if isinstance(malware_perms, dict):
+        features["malware_permission_count"] = malware_perms.get("total_malware_permissions", 0)
+    else:
+        features["malware_permission_count"] = 0
 
+    # 10. SDK Versions
+    min_sdk_str = data.get("min_sdk", "0")
+    target_sdk_str = data.get("target_sdk", "0")
 
+    try:
+        features["min_sdk"] = int(min_sdk_str) if min_sdk_str else 0
+    except (ValueError, TypeError):
+        features["min_sdk"] = 0
+
+    try:
+        features["target_sdk"] = int(target_sdk_str) if target_sdk_str else 0
+    except (ValueError, TypeError):
+        features["target_sdk"] = 0
+
+    # 11. App Security
+    appsec = data.get("appsec", {})
+    if isinstance(appsec, dict):
+        appsec_high_list = appsec.get("high", [])
+        appsec_warning_list = appsec.get("warning", [])
+        features["appsec_high"] = len(appsec_high_list) if isinstance(appsec_high_list, list) else 0
+        features["appsec_warning"] = len(appsec_warning_list) if isinstance(appsec_warning_list, list) else 0
+    else:
+        features["appsec_high"] = 0
+        features["appsec_warning"] = 0
+
+    # 12. Email count
+    emails = data.get("emails", [])
+    features["email_count"] = len(emails) if isinstance(emails, list) else 0
+
+    # 13. Binary Analysis
+    binary_analysis = data.get("binary_analysis", [])
+    features["binary_analysis_count"] = len(binary_analysis) if isinstance(binary_analysis, list) else 0
+
+    # 14. Code Analysis - warning
+    code_analysis = data.get("code_analysis", {})
+    features["has_code_warning"] = code_analysis.get("summary", {}).get("warning", 0)
+
+    # 15. Manifest Analysis - info
+    manifest = data.get("manifest_analysis", {})
+    features["has_manifest_info"] = manifest.get("manifest_summary", {}).get("info", 0)
 
     return features
 

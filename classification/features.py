@@ -125,5 +125,69 @@ def extract_features_001(data):
             features["hardcoded_keystore"] = 1  # เจอ Hardcoded Keystore
             features["hardcoded_keystore_count"] += len(files)
     features["is_on_playstore"] = 1 if data.get("playstore_details") else 0
+
+    # 9. Trackers - ตรวจจับ tracking libraries
+    trackers_data = data.get("trackers", {})
+    if isinstance(trackers_data, dict):
+        tracker_list = trackers_data.get("trackers", [])
+        features["tracker_count"] = len(tracker_list) if isinstance(tracker_list, list) else 0
+    else:
+        features["tracker_count"] = 0
+
+    # 10. Secrets - hardcoded secrets (API keys, passwords, etc.)
+    secrets = data.get("secrets", [])
+    features["secrets_count"] = len(secrets) if isinstance(secrets, list) else 0
+
+    # 11. Average CVSS - คะแนนความเสี่ยงจาก vulnerability
+    cvss = data.get("average_cvss")
+    features["average_cvss"] = float(cvss) if cvss and cvss != "null" else 0.0
+
+    # 12. Malware Permissions - permissions ที่มัลแวร์มักใช้
+    malware_perms = data.get("malware_permissions", {})
+    if isinstance(malware_perms, dict):
+        features["malware_permission_count"] = malware_perms.get("total_malware_permissions", 0)
+    else:
+        features["malware_permission_count"] = 0
+
+    # 13. SDK Versions - Android SDK ที่รองรับ
+    min_sdk_str = data.get("min_sdk", "0")
+    target_sdk_str = data.get("target_sdk", "0")
+
+    try:
+        features["min_sdk"] = int(min_sdk_str) if min_sdk_str else 0
+    except (ValueError, TypeError):
+        features["min_sdk"] = 0
+
+    try:
+        features["target_sdk"] = int(target_sdk_str) if target_sdk_str else 0
+    except (ValueError, TypeError):
+        features["target_sdk"] = 0
+
+    # 14. App Security (appsec) - app security best practices
+    appsec = data.get("appsec", {})
+    if isinstance(appsec, dict):
+        # กรณีเป็น dict มี keys: high, warning, info ซึ่งเก็บเป็น list
+        appsec_high_list = appsec.get("high", [])
+        appsec_warning_list = appsec.get("warning", [])
+        features["appsec_high"] = len(appsec_high_list) if isinstance(appsec_high_list, list) else 0
+        features["appsec_warning"] = len(appsec_warning_list) if isinstance(appsec_warning_list, list) else 0
+    else:
+        features["appsec_high"] = 0
+        features["appsec_warning"] = 0
+
+    # 15. Email addresses found
+    emails = data.get("emails", [])
+    features["email_count"] = len(emails) if isinstance(emails, list) else 0
+
+    # 16. Binary Analysis - native code findings
+    binary_analysis = data.get("binary_analysis", [])
+    features["binary_analysis_count"] = len(binary_analysis) if isinstance(binary_analysis, list) else 0
+
+    # 17. Code Analysis - warning level (เพิ่มเติมจาก high, info)
+    features["has_code_warning"] = code_analysis.get("summary", {}).get("warning", 0)
+
+    # 18. Manifest Analysis - info level (เพิ่มเติมจาก high, warning)
+    features["has_manifest_info"] = manifest.get("manifest_summary", {}).get("info", 0)
+
     return features
 

@@ -1,0 +1,21 @@
+================================================================================
+ANALYZING MobSF JSON STRUCTURE
+================================================================================
+
+[OK] Sample file loaded
+Total keys in MobSF JSON: 56
+
+================================================================================
+ALL AVAILABLE KEYS IN MobSF JSON:
+================================================================================
+ 1. activities                     [list    ] (3 items)
+ 2. android_api                    [dict    ] (5 keys)
+ 3. apkid                          [dict    ] (1 keys)
+Traceback (most recent call last):
+  File "e:\GITHUB\Ai_Analysis\analyze_mobsf_features.py", line 48, in <module>
+    print(f"{i:2}. {key:30} [{type_name:8}] {extra_info}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ubuntu24\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 47-53: character maps to <undefined>
