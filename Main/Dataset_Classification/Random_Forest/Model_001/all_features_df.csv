@@ -1,4 +1,0 @@
-dangerous_permissions_count,high_severity_vulns,medium_severity_vulns,is_allow_backup,is_debuggable,uses_reflection,uses_obfuscation,virustotal_positives,virustotal_total,virustotal_ratio,uses_native,uses_java_debug,uses_cleartext,has_tracker,suspicious_url_count,exported_activities_count,exported_services_count,exported_receivers_count,exported_providers_count,exported_components_total,uses_exec,uses_system_exit,uses_md5,uses_des,has_root_string,has_shell_string,has_inject_string,label
-14,2,0,0,0,0,1,0,1,0.0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0
-26,2,2,0,0,0,1,0,1,0.0,1,0,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0
-7,3,1,0,0,0,1,0,1,0.0,1,0,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0

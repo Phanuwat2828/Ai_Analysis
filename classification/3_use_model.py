@@ -1,0 +1,74 @@
+
+
+import joblib
+import json
+import pandas as pd
+from features import extract_features_001 as extract_features
+import os
+
+class MalwareDetector:
+
+    def __init__(self, model_dir=None):
+        if model_dir is None:
+            model_dir = os.path.join(os.path.dirname(__file__), "..", "Model")
+        self.xgb_model = joblib.load(f"{model_dir}/XGBoost_final.pkl")
+        self.rf_model = joblib.load(f"{model_dir}/Random_Forest_final.pkl")
+
+        with open(f"{model_dir}/feature_names.json", 'r', encoding='utf-8') as f:
+            self.feature_names = json.load(f)
+    
+    def extract_features_from_json(self, json_path):
+        with open(json_path, 'r', encoding='utf-8') as f:
+            json_data = json.load(f)
+        features = extract_features(json_data)
+        return features
+    
+    def predict(self, features_dict, use_ensemble=True):
+        df = pd.DataFrame([features_dict])
+        
+        # เติม feature ที่หายไป
+        for feature in self.feature_names:
+            if feature not in df.columns:
+                df[feature] = 0
+    
+        X = df[self.feature_names]
+    
+        # malware and benign
+        xgb_prob_malware = self.xgb_model.predict_proba(X)[0][1]  # probability เป็น Malware
+        rf_prob_malware = self.rf_model.predict_proba(X)[0][1]
+        xgb_prob_benign = self.xgb_model.predict_proba(X)[0][0]  # probability เป็น Benign
+        rf_prob_benign = self.rf_model.predict_proba(X)[0][0]
+
+        # if xgb_prob_malware > xgb_prob_benign:
+        #     print("Malware XGBoost : {:.3f}%".format(self.xgb_model.predict_proba(X)[0][1]*100))
+        # else:
+        #     print("Benign XGBoost : {:.3f}%".format(self.xgb_model.predict_proba(X)[0][0]*100))
+
+        # if rf_prob_malware > rf_prob_benign:
+        #     print("Malware Random Forest : {:.3f}%".format(self.rf_model.predict_proba(X)[0][1]*100))
+        # else:
+        #     print("Benign Random Forest : {:.3f}%".format(self.rf_model.predict_proba(X)[0][0]*100))
+
+        print("Malware XGBoost : {:.3f}%".format(self.xgb_model.predict_proba(X)[0][1]*100))
+        print("Malware Random Forest : {:.3f}%".format(self.rf_model.predict_proba(X)[0][1]*100))
+
+       
+
+# -------------------------
+detector = MalwareDetector()
+
+BASE_DIR = os.path.join(os.path.dirname(__file__), "..")
+json_file_path_benign = os.path.join(BASE_DIR, "Data_test", "benign", "0543752128630452470A69504F889EC22CDBA93CAF84C2428514E121DE5F2DC4.json")
+json_file_path_malware = os.path.join(BASE_DIR, "Data_test", "malware", "1234.json")
+
+
+def use_model(json_file_path):
+    try:
+        features = detector.extract_features_from_json(json_file_path)
+        result = detector.predict(features)
+
+    except Exception as e:
+        print(f"❌ Error processing {json_file_path}: {e}")
+
+
+use_model(json_file_path_malware)

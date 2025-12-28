@@ -1,1 +1,0 @@
-has_record_audio
