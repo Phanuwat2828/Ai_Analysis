@@ -6,13 +6,13 @@ from Classificationusefeature import extract_features_001 as extract_features
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def process_malware_dataset(max_files_per_folder=4000): # <-- function for create dataset from json report file
+def process_malware_dataset(max_files_per_folder=2000): # <-- function for create dataset from json report file
     BASE_PATH = os.path.abspath(os.path.join(os.getcwd(), "."))  # กำหนด path ฐานที่เก็บข้อมูล
     folders = ['malware', 'benign'] # โฟลเดอร์ที่เก็บข้อมูล malware และ benign
     dataset = [] # list สำหรับเก็บข้อมูลทั้งหมด
 
     for folder in folders: # loop ผ่านแต่ละโฟลเดอร์
-        folder_path = os.path.join(BASE_PATH, "Data", folder) # สร้าง path เต็มไปยังโฟลเดอร์ folder Data
+        folder_path = os.path.join(BASE_PATH, "Dataset_Test", folder) # สร้าง path เต็มไปยังโฟลเดอร์ folder Data
         print("===========> " + folder_path)
 
         json_files = glob.glob(os.path.join(folder_path, "*.json")) # ค้นหาไฟล์ .json ทั้งหมดในโฟลเดอร์

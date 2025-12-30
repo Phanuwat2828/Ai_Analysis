@@ -1,0 +1,3341 @@
+{
+    "version": "v4.4.3",
+    "title": "Static Analysis",
+    "file_name": "00A4E78A2EEE9E2D56BB662867C5D55ACBAC7E34194B38FF363BB18B8BA1B65C.apk",
+    "app_name": "可爱驴跳跳",
+    "app_type": "apk",
+    "size": "7.69MB",
+    "md5": "64e48a6dd2d639ab975734fef7505f51",
+    "sha1": "8bd1831a1c470d9b06457b86bdf5bf9231cc9071",
+    "sha256": "00a4e78a2eee9e2d56bb662867c5d55acbac7e34194b38ff363bb18b8ba1b65c",
+    "package_name": "com.tiaolvi.donkeyjump",
+    "main_activity": "com.droidhen.game.donkeyjump.CoverActivity",
+    "exported_activities": "['com.kuguo.pushads.PushAdsActivity']",
+    "browsable_activities": {},
+    "activities": [
+        "com.droidhen.game.donkeyjump.CoverActivity",
+        "com.droidhen.game.donkeyjump.GameActivity",
+        "com.droidhen.api.scoreclient.ui.HighScoresActivity",
+        "com.droidhen.api.scoreclient.ui.AchievementListActivity",
+        "com.droidhen.activity.MoreActivity",
+        "com.droidhen.recommend.RecommendActivity",
+        "com.kuguo.openads.AdsOfferListActivity",
+        "com.kuguo.pushads.PushAdsActivity"
+    ],
+    "receivers": [
+        "com.kuguo.pushads.AdsReceiver"
+    ],
+    "providers": [
+        "com.droidhen.api.scoreclient.ScoreClientProvider"
+    ],
+    "services": [
+        "com.kuguo.pushads.AdsService"
+    ],
+    "libraries": [],
+    "target_sdk": "4",
+    "max_sdk": "",
+    "min_sdk": "4",
+    "version_name": "2.2.6",
+    "version_code": "9",
+    "icon_path": "64e48a6dd2d639ab975734fef7505f51-icon.png",
+    "permissions": {
+        "android.permission.ACCESS_NETWORK_STATE": {
+            "status": "normal",
+            "info": "view network status",
+            "description": "Allows an application to view the status of all networks."
+        },
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+            "status": "dangerous",
+            "info": "read/modify/delete external storage contents",
+            "description": "Allows an application to write to external storage."
+        },
+        "android.permission.READ_PHONE_STATE": {
+            "status": "dangerous",
+            "info": "read phone state and identity",
+            "description": "Allows the application to access the phone features of the device. An application with this permission can determine the phone number and serial number of this phone, whether a call is active, the number that call is connected to and so on."
+        },
+        "android.permission.VIBRATE": {
+            "status": "normal",
+            "info": "control vibrator",
+            "description": "Allows the application to control the vibrator."
+        },
+        "android.permission.WAKE_LOCK": {
+            "status": "normal",
+            "info": "prevent phone from sleeping",
+            "description": "Allows an application to prevent the phone from going to sleep."
+        },
+        "android.permission.INTERNET": {
+            "status": "normal",
+            "info": "full Internet access",
+            "description": "Allows an application to create network sockets."
+        },
+        "android.permission.ACCESS_WIFI_STATE": {
+            "status": "normal",
+            "info": "view Wi-Fi status",
+            "description": "Allows an application to view the information about the status of Wi-Fi."
+        },
+        "com.android.launcher.permission.INSTALL_SHORTCUT": {
+            "status": "unknown",
+            "info": "Unknown permission",
+            "description": "Unknown permission from android reference"
+        }
+    },
+    "malware_permissions": {
+        "top_malware_permissions": [
+            "android.permission.ACCESS_NETWORK_STATE",
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.VIBRATE",
+            "android.permission.WAKE_LOCK",
+            "android.permission.INTERNET",
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "other_abused_permissions": [
+            "com.android.launcher.permission.INSTALL_SHORTCUT"
+        ],
+        "total_malware_permissions": 25,
+        "total_other_permissions": 44
+    },
+    "certificate_analysis": {
+        "certificate_info": "Binary is signed\nv1 signature: True\nv2 signature: False\nv3 signature: False\nv4 signature: False\nX.509 Subject: C=US, ST=California, L=Mountain View, O=Android, OU=Android, CN=Android, E=android@android.com\nSignature Algorithm: rsassa_pkcs1v15\nValid From: 2008-02-29 01:33:46+00:00\nValid To: 2035-07-17 01:33:46+00:00\nIssuer: C=US, ST=California, L=Mountain View, O=Android, OU=Android, CN=Android, E=android@android.com\nSerial Number: 0x936eacbe07f201df\nHash Algorithm: sha1\nmd5: e89b158e4bcf988ebd09eb83f5378e87\nsha1: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81\nsha256: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc\nsha512: 5216ccb62004c4534f35c780ad7c582f4ee528371e27d4151f0553325de9ccbe6b34ec4233f5f640703581053abfea303977272d17958704d89b7711292a4569\nFound 1 unique certificates",
+        "certificate_findings": [
+            [
+                "info",
+                "Application is signed with a code signing certificate",
+                "Signed Application"
+            ],
+            [
+                "high",
+                "Application is signed with v1 signature scheme, making it vulnerable to Janus vulnerability on Android 5.0-8.0, if signed only with v1 signature scheme. Applications running on Android 5.0-7.0 signed with v1, and v2/v3 scheme is also vulnerable.",
+                "Application vulnerable to Janus Vulnerability"
+            ],
+            [
+                "high",
+                "Application is signed with SHA1withRSA. SHA1 hash algorithm is known to have collision issues.",
+                "Certificate algorithm vulnerable to hash collision"
+            ]
+        ],
+        "certificate_summary": {
+            "high": 2,
+            "warning": 0,
+            "info": 1
+        }
+    },
+    "manifest_analysis": {
+        "manifest_findings": [
+            {
+                "rule": "vulnerable_os_version",
+                "title": "App can be installed on a vulnerable unpatched Android version<br>Android 1.6, [minSdk=4]",
+                "severity": "high",
+                "description": "This application can be installed on an older version of android that has multiple unfixed vulnerabilities. These devices won't receive reasonable security updates from Google. Support an Android version => 10, API 29 to receive reasonable security updates.",
+                "name": "App can be installed on a vulnerable unpatched Android version 1.6, [minSdk=4]",
+                "component": [
+                    "1.6",
+                    "4"
+                ]
+            },
+            {
+                "rule": "allowbackup_not_set",
+                "title": "Application Data can be Backed up<br>[android:allowBackup] flag is missing.",
+                "severity": "warning",
+                "description": "The flag [android:allowBackup] should be set to false. By default it is set to true and allows anyone to backup your application data via adb. It allows users who have enabled USB debugging to copy application data off of the device.",
+                "name": "Application Data can be Backed up [android:allowBackup] flag is missing.",
+                "component": []
+            },
+            {
+                "rule": "exported_provider",
+                "title": "<strong>Content Provider</strong> (com.droidhen.api.scoreclient.ScoreClientProvider) is not Protected. <br>[Content Provider, targetSdkVersion < 17]",
+                "severity": "warning",
+                "description": "A Content Provider is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. It is a Content Provider that targets an API level under 17, which makes it exported by default, regardless of the API level of the system that the application runs on.",
+                "name": "Content Provider com.droidhen.api.scoreclient.ScoreClientProvider is not Protected. [Content Provider, targetSdkVersion < 17]",
+                "component": [
+                    "Content Provider",
+                    "com.droidhen.api.scoreclient.ScoreClientProvider"
+                ]
+            },
+            {
+                "rule": "exported_intent_filter_exists",
+                "title": "<strong>Activity</strong> (com.kuguo.pushads.PushAdsActivity) is not Protected.<br>An intent-filter exists.",
+                "severity": "warning",
+                "description": "An Activity is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Activity is explicitly exported.",
+                "name": "Activity com.kuguo.pushads.PushAdsActivity is not Protected.An intent-filter exists.",
+                "component": [
+                    "Activity",
+                    "com.kuguo.pushads.PushAdsActivity"
+                ]
+            },
+            {
+                "rule": "exported_intent_filter_exists",
+                "title": "<strong>Broadcast Receiver</strong> (com.kuguo.pushads.AdsReceiver) is not Protected.<br>An intent-filter exists.",
+                "severity": "warning",
+                "description": "A Broadcast Receiver is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Broadcast Receiver is explicitly exported.",
+                "name": "Broadcast Receiver com.kuguo.pushads.AdsReceiver is not Protected.An intent-filter exists.",
+                "component": [
+                    "Broadcast Receiver",
+                    "com.kuguo.pushads.AdsReceiver"
+                ]
+            }
+        ],
+        "manifest_summary": {
+            "high": 1,
+            "warning": 4,
+            "info": 0,
+            "suppressed": 0
+        }
+    },
+    "network_security": {
+        "network_findings": [],
+        "network_summary": {}
+    },
+    "binary_analysis": [],
+    "file_analysis": [],
+    "android_api": {
+        "api_java_reflection": {
+            "files": {
+                "com/droidhen/game/a/b.java": "8",
+                "net/youmi/android/ch.java": "5",
+                "net/youmi/android/dg.java": "32",
+                "net/youmi/android/ds.java": "6",
+                "net/youmi/android/eh.java": "10,11",
+                "net/youmi/android/ei.java": "9"
+            },
+            "metadata": {
+                "description": "Java Reflection",
+                "severity": "info"
+            }
+        },
+        "api_installed": {
+            "files": {
+                "com/droidhen/activity/MoreActivity.java": "15,15",
+                "com/droidhen/recommend/a.java": "50,160,50,160",
+                "com/kuguo/pushads/a.java": "386,437,440"
+            },
+            "metadata": {
+                "description": "Get Installed Applications",
+                "severity": "info"
+            }
+        },
+        "api_local_file_io": {
+            "files": {
+                "com/droidhen/a.java": "4,5",
+                "com/droidhen/api/scoreclient/c/a.java": "55,19",
+                "com/droidhen/api/scoreclient/ui/AchievementListActivity.java": "12,13",
+                "com/droidhen/api/scoreclient/ui/HighScoresActivity.java": "18,19",
+                "com/droidhen/api/scoreclient/ui/f.java": "126,132,142,169,193,199,210,229,270,275,38,126,132,142,169,193,199,210,229,270,275,10,11,11,12",
+                "com/droidhen/game/d/a/a.java": "7,8",
+                "com/droidhen/game/donkeyjump/aj.java": "18,25",
+                "com/droidhen/game/opengl/a.java": "5,6",
+                "com/droidhen/recommend/RecommendActivity.java": "9,10,10,11,11,12",
+                "com/droidhen/recommend/a.java": "5,6,6,7,7,8,8,9,9,10",
+                "com/droidhen/recommend/e.java": "32",
+                "com/droidhen/score/OnlineScoreActivity.java": "13,14,14,15,15,16",
+                "com/droidhen/score/a.java": "24,38,44",
+                "com/kuguo/a/d.java": "4,5,5,6,6,7,7,8,8,9,31",
+                "com/kuguo/b/a.java": "3,4,4,5",
+                "com/kuguo/b/b.java": "5,6",
+                "com/kuguo/d/d.java": "2,3,3,4,4,5,5,6,6,7,7,8,8,9",
+                "com/kuguo/d/e.java": "9,10",
+                "com/kuguo/openads/f.java": "8,9,82",
+                "com/kuguo/openads/k.java": "97,209,213,233,13,14,75,145,151,181",
+                "com/kuguo/openads/u.java": "25,26,26,27,27,28,167,72,72,74,97,101,115",
+                "com/kuguo/openads/v.java": "3,4",
+                "com/kuguo/openads/x.java": "12,13",
+                "com/kuguo/pushads/AdsService.java": "35,13,14",
+                "com/kuguo/pushads/a.java": "216,230,275,371,502,513,184,203,285,328,216,228,268,354,465,487,502,513,553,19,20,20,21,21,22,22,23,23,24,24,25,185,193,206,288,332,336",
+                "com/kuguo/pushads/e.java": "9,10,10,11,11,12,12,13",
+                "com/kuguo/pushads/l.java": "8,9",
+                "com/kuguo/pushads/o.java": "4,5",
+                "net/youmi/android/aa.java": "2,3",
+                "net/youmi/android/al.java": "4,5",
+                "net/youmi/android/aq.java": "2,3",
+                "net/youmi/android/as.java": "3,4",
+                "net/youmi/android/ay.java": "5,6",
+                "net/youmi/android/az.java": "6,7",
+                "net/youmi/android/ba.java": "3,4,4,5,35,35,36,37,40,51,51,52,55,57",
+                "net/youmi/android/bc.java": "13,20",
+                "net/youmi/android/bd.java": "176,7,8,8,9,9,10,228,155,155,166,171",
+                "net/youmi/android/bo.java": "3,4,4,5",
+                "net/youmi/android/bq.java": "6,7,7,8,56,92,106,119",
+                "net/youmi/android/br.java": "2,3,3,4",
+                "net/youmi/android/bx.java": "9,10,10,11,11,12,142",
+                "net/youmi/android/cf.java": "4,5",
+                "net/youmi/android/cn.java": "2,3",
+                "net/youmi/android/cu.java": "3,4,4,5,5,6",
+                "net/youmi/android/cw.java": "12,13,48",
+                "net/youmi/android/d.java": "212,129,212",
+                "net/youmi/android/df.java": "2,3,3,4",
+                "net/youmi/android/dj.java": "2,3,3,4,4,5,38",
+                "net/youmi/android/dx.java": "4,5,5,6,6,7,7,8,70",
+                "net/youmi/android/dy.java": "13,14",
+                "net/youmi/android/ek.java": "2,3,3,4,4,5",
+                "net/youmi/android/fa.java": "4,5,5,6,6,7,7,8",
+                "net/youmi/android/ff.java": "6,7",
+                "net/youmi/android/fg.java": "2,3,3,4,4,5,5,6,6,7",
+                "net/youmi/android/j.java": "2,3,32",
+                "net/youmi/android/m.java": "2,3",
+                "net/youmi/android/p.java": "2,3",
+                "net/youmi/android/q.java": "2,3,3,4",
+                "net/youmi/android/t.java": "4,5,33,48,53",
+                "net/youmi/android/v.java": "7,8,8,9,9,10,107,130,195,229",
+                "net/youmi/android/w.java": "5,6,36"
+            },
+            "metadata": {
+                "description": "Local File I/O Operations",
+                "severity": "info"
+            }
+        },
+        "api_start_activity": {
+            "files": {
+                "com/droidhen/activity/c.java": "13",
+                "com/droidhen/game/donkeyjump/r.java": "25,41,47",
+                "com/droidhen/game/donkeyjump/y.java": "40,64",
+                "com/droidhen/recommend/a.java": "37",
+                "com/droidhen/recommend/f.java": "20",
+                "com/kuguo/openads/k.java": "137",
+                "com/kuguo/pushads/PushAdsActivity.java": "64,75",
+                "com/kuguo/pushads/a.java": "193,411,428",
+                "com/kuguo/pushads/h.java": "75",
+                "com/kuguo/pushads/s.java": "144",
+                "net/youmi/android/AdActivity.java": "27,42,97",
+                "net/youmi/android/bj.java": "48,58,70,84,98,114,144,164,169,186,203,239,265",
+                "net/youmi/android/cp.java": "59",
+                "net/youmi/android/n.java": "122,138,154",
+                "net/youmi/android/w.java": "62"
+            },
+            "metadata": {
+                "description": "Starting Activity",
+                "severity": "info"
+            }
+        },
+        "api_ipc": {
+            "files": {
+                "com/droidhen/activity/c.java": "4,11,11",
+                "com/droidhen/api/scoreclient/ui/HighScoresActivity.java": "108",
+                "com/droidhen/game/donkeyjump/r.java": "3,25,39,39,47",
+                "com/droidhen/game/donkeyjump/y.java": "3,37,37,62,62",
+                "com/droidhen/recommend/a.java": "4,37",
+                "com/droidhen/recommend/f.java": "3,20",
+                "com/droidhen/score/OnlineScoreActivity.java": "5,44,44",
+                "com/kuguo/openads/AdsOfferListActivity.java": "24,25,26,27,45",
+                "com/kuguo/openads/b.java": "5,10,22",
+                "com/kuguo/openads/f.java": "6,8,45,45,56,56,74,74,97,97,134,134",
+                "com/kuguo/openads/k.java": "6,7,59,59,134,134",
+                "com/kuguo/pushads/AdsReceiver.java": "6,38,51",
+                "com/kuguo/pushads/AdsService.java": "10,125,4,7,60,60,60,125,146",
+                "com/kuguo/pushads/PushAdsActivity.java": "6,60,60,71,71,99,103,104,104,114,114,127,142,142",
+                "com/kuguo/pushads/a.java": "5,8,98,99,99,157,165,406,406,424,432,438,438,440,440,441,442,444,456,456",
+                "com/kuguo/pushads/e.java": "5,7,54,55,55,64,64,69,69",
+                "com/kuguo/pushads/f.java": "5,25,25,32,36",
+                "com/kuguo/pushads/h.java": "5,7,38,40,40,75",
+                "com/kuguo/pushads/l.java": "5,67,84,84,105,105",
+                "com/kuguo/pushads/m.java": "3,24",
+                "com/kuguo/pushads/o.java": "4,50,60",
+                "com/kuguo/pushads/s.java": "5,119,119,133,133,144",
+                "net/youmi/android/AdActivity.java": "5,16,17,17,25,25,37,37,51,51,95,95",
+                "net/youmi/android/bj.java": "6,37,37,55,55,68,68,81,81,81,82,83,84,98,110,110,133,133,161,161,167,167,184,184,201,201,235,235,263,263",
+                "net/youmi/android/bx.java": "6,8,22,34,34",
+                "net/youmi/android/cp.java": "3,59",
+                "net/youmi/android/en.java": "5,10",
+                "net/youmi/android/n.java": "5,6,62,62,120,120,120,121,122,136,136,136,137,138,152,152,152,153,154",
+                "net/youmi/android/s.java": "4,9,13",
+                "net/youmi/android/v.java": "6,25,25",
+                "net/youmi/android/w.java": "3,38,38,62"
+            },
+            "metadata": {
+                "description": "Inter Process Communication",
+                "severity": "info"
+            }
+        },
+        "api_crypto": {
+            "files": {
+                "com/droidhen/api/scoreclient/a.java": "11",
+                "net/youmi/android/cg.java": "38,55,5,6,7,8",
+                "net/youmi/android/ct.java": "47,166"
+            },
+            "metadata": {
+                "description": "Crypto",
+                "severity": "info"
+            }
+        },
+        "api_message_digest": {
+            "files": {
+                "com/droidhen/api/scoreclient/a.java": "3,11,11,3",
+                "net/youmi/android/ct.java": "5,47,47,166,166,5"
+            },
+            "metadata": {
+                "description": "Message Digest",
+                "severity": "info"
+            }
+        },
+        "api_http_connection": {
+            "files": {
+                "com/droidhen/recommend/RecommendActivity.java": "13,26,28,30,30,65,30",
+                "com/droidhen/recommend/a.java": "11,87,88,90,92,92,155,92",
+                "com/kuguo/b/a.java": "14,28,40,8,9,10,11,12,13,14,15,16",
+                "com/kuguo/pushads/h.java": "87,100,11,12,13,14,15,16",
+                "net/youmi/android/ay.java": "112,207,8",
+                "net/youmi/android/by.java": "11,61,5,6,7,8,9,10,11,12,13",
+                "net/youmi/android/dx.java": "649,650,651,676,677,678,691,692,693,11,12,13,14",
+                "net/youmi/android/fa.java": "615,616,617,630,631,632,646,647,648,660,661,662,674,675,676,688,689,690,702,703,704,716,717,718,731,732,733,10,11,12,13,14,15",
+                "net/youmi/android/u.java": "49,78,7,8,9,10,11,12,13"
+            },
+            "metadata": {
+                "description": "HTTP Connection",
+                "severity": "info"
+            }
+        },
+        "api_get_system_service": {
+            "files": {
+                "com/droidhen/api/scoreclient/ui/f.java": "49",
+                "com/droidhen/api/scoreclient/widget/UsernameEdit.java": "84",
+                "com/droidhen/game/donkeyjump/l.java": "43",
+                "com/droidhen/score/h.java": "12",
+                "com/kuguo/b/b.java": "107,122",
+                "com/kuguo/d/c.java": "15",
+                "com/kuguo/d/e.java": "35",
+                "com/kuguo/openads/k.java": "44,57",
+                "com/kuguo/openads/u.java": "346,359",
+                "com/kuguo/pushads/AdsReceiver.java": "41,66,85",
+                "com/kuguo/pushads/AdsService.java": "59",
+                "com/kuguo/pushads/a.java": "151,159",
+                "com/kuguo/pushads/e.java": "72",
+                "com/kuguo/pushads/h.java": "49,87,100",
+                "com/kuguo/pushads/k.java": "41,45",
+                "net/youmi/android/bi.java": "39,134",
+                "net/youmi/android/bx.java": "42,64",
+                "net/youmi/android/eh.java": "245",
+                "net/youmi/android/ei.java": "36,47",
+                "net/youmi/android/ev.java": "23",
+                "net/youmi/android/u.java": "49,78",
+                "net/youmi/android/v.java": "244"
+            },
+            "metadata": {
+                "description": "Get System Service",
+                "severity": "info"
+            }
+        },
+        "api_webview_get": {
+            "files": {
+                "com/kuguo/openads/d.java": "8,173,173,8,174",
+                "com/kuguo/pushads/g.java": "10,225,225,10,226",
+                "net/youmi/android/az.java": "6,11,43,65,5,6,34",
+                "net/youmi/android/dy.java": "11,338,338,11,339"
+            },
+            "metadata": {
+                "description": "WebView GET Request",
+                "severity": "info"
+            }
+        },
+        "api_notifications": {
+            "files": {
+                "com/kuguo/openads/f.java": "5,47,58,77,93,100,136",
+                "com/kuguo/openads/k.java": "3,253",
+                "com/kuguo/pushads/a.java": "4,179",
+                "com/kuguo/pushads/h.java": "4,49",
+                "net/youmi/android/bx.java": "5,42",
+                "net/youmi/android/v.java": "5,252"
+            },
+            "metadata": {
+                "description": "Android Notifications",
+                "severity": "info"
+            }
+        },
+        "api_gps": {
+            "files": {
+                "net/youmi/android/ay.java": "5,460",
+                "net/youmi/android/ei.java": "4,5,38",
+                "net/youmi/android/eo.java": "3,21",
+                "net/youmi/android/ev.java": "4,5,6,36"
+            },
+            "metadata": {
+                "description": "GPS Location",
+                "severity": "info"
+            }
+        },
+        "api_web": {
+            "files": {
+                "com/kuguo/b/a.java": "11",
+                "com/kuguo/pushads/AdsService.java": "18",
+                "com/kuguo/pushads/h.java": "12"
+            },
+            "metadata": {
+                "description": "HTTP Requests, Connections and Sessions",
+                "severity": "info"
+            }
+        },
+        "api_get_subscriber": {
+            "files": {
+                "com/kuguo/pushads/a.java": "151,18",
+                "net/youmi/android/bi.java": "42,7",
+                "net/youmi/android/eh.java": "263,8"
+            },
+            "metadata": {
+                "description": "Get Subscriber ID",
+                "severity": "info"
+            }
+        },
+        "api_get_wifi": {
+            "files": {
+                "net/youmi/android/bi.java": "134,4"
+            },
+            "metadata": {
+                "description": "Get WiFi Details",
+                "severity": "info"
+            }
+        },
+        "api_start_service": {
+            "files": {
+                "com/kuguo/pushads/AdsReceiver.java": "46"
+            },
+            "metadata": {
+                "description": "Starting Service",
+                "severity": "info"
+            }
+        },
+        "api_send_broadcast": {
+            "files": {
+                "com/kuguo/pushads/PushAdsActivity.java": "123"
+            },
+            "metadata": {
+                "description": "Sending Broadcast",
+                "severity": "info"
+            }
+        },
+        "api_sms_call": {
+            "files": {
+                "com/droidhen/api/scoreclient/ui/f.java": "3,99,99,100,101,103,104,104,108,108,114,266,266,267,267,279,280,280,280,280,283,284"
+            },
+            "metadata": {
+                "description": "Query Database of SMS, Contacts etc",
+                "severity": "info"
+            }
+        },
+        "api_get_location": {
+            "files": {
+                "net/youmi/android/eh.java": "276,293,8",
+                "net/youmi/android/ei.java": "50,8"
+            },
+            "metadata": {
+                "description": "Get Cell Location",
+                "severity": "info"
+            }
+        },
+        "api_content_provider": {
+            "files": {
+                "com/droidhen/api/scoreclient/ScoreClientProvider.java": "3"
+            },
+            "metadata": {
+                "description": "Content Provider",
+                "severity": "info"
+            }
+        }
+    },
+    "code_analysis": {
+        "findings": {
+            "android_insecure_random": {
+                "files": {
+                    "com/droidhen/activity/b.java": "3",
+                    "com/droidhen/game/donkeyjump/a/g.java": "4",
+                    "com/droidhen/game/donkeyjump/aa.java": "4",
+                    "com/droidhen/game/donkeyjump/ad.java": "8",
+                    "com/droidhen/game/donkeyjump/j.java": "3",
+                    "com/droidhen/game/donkeyjump/o.java": "5",
+                    "com/droidhen/game/donkeyjump/s.java": "4",
+                    "com/kuguo/b/f.java": "4",
+                    "net/youmi/android/bt.java": "3",
+                    "net/youmi/android/cg.java": "4"
+                },
+                "metadata": {
+                    "cvss": 7.5,
+                    "cwe": "CWE-330: Use of Insufficiently Random Values",
+                    "owasp-mobile": "M5: Insufficient Cryptography",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#weak-random-number-generators",
+                    "masvs": "MSTG-CRYPTO-6",
+                    "description": "The App uses an insecure Random Number Generator.",
+                    "severity": "warning"
+                }
+            },
+            "android_md5": {
+                "files": {
+                    "com/droidhen/api/scoreclient/a.java": "11",
+                    "net/youmi/android/cg.java": "25,38,55",
+                    "net/youmi/android/ct.java": "47,166"
+                },
+                "metadata": {
+                    "cvss": 7.4,
+                    "cwe": "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+                    "masvs": "MSTG-CRYPTO-4",
+                    "owasp-mobile": "M5: Insufficient Cryptography",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#identifying-insecure-andor-deprecated-cryptographic-algorithms-mstg-crypto-4",
+                    "description": "MD5 is a weak hash known to have hash collisions.",
+                    "severity": "warning"
+                }
+            },
+            "android_logging": {
+                "files": {
+                    "com/droidhen/api/scoreclient/c.java": "27",
+                    "com/kuguo/pushads/AdsReceiver.java": "61",
+                    "com/kuguo/pushads/AdsService.java": "39,93",
+                    "com/kuguo/pushads/a.java": "396",
+                    "com/kuguo/pushads/m.java": "25,30,36",
+                    "net/youmi/android/g.java": "36,17,18,35"
+                },
+                "metadata": {
+                    "cvss": 7.5,
+                    "cwe": "CWE-532: Insertion of Sensitive Information into Log File",
+                    "owasp-mobile": "",
+                    "masvs": "MSTG-STORAGE-3",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#logs",
+                    "description": "The App logs information. Sensitive information should never be logged.",
+                    "severity": "info"
+                }
+            },
+            "android_read_write_external": {
+                "files": {
+                    "com/kuguo/pushads/AdsService.java": "35",
+                    "com/kuguo/pushads/a.java": "184,185,203,206,285,288,328,332,336",
+                    "net/youmi/android/bc.java": "13,20",
+                    "net/youmi/android/bq.java": "24",
+                    "net/youmi/android/t.java": "47"
+                },
+                "metadata": {
+                    "cvss": 5.5,
+                    "cwe": "CWE-276: Incorrect Default Permissions",
+                    "owasp-mobile": "M2: Insecure Data Storage",
+                    "masvs": "MSTG-STORAGE-2",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#external-storage",
+                    "description": "App can read/write to External Storage. Any App can read data written to External Storage.",
+                    "severity": "warning"
+                }
+            },
+            "android_ip_disclosure": {
+                "files": {
+                    "com/kuguo/b/b.java": "111",
+                    "com/kuguo/pushads/h.java": "33",
+                    "net/youmi/android/di.java": "60",
+                    "net/youmi/android/u.java": "98"
+                },
+                "metadata": {
+                    "cvss": 4.3,
+                    "cwe": "CWE-200: Information Exposure",
+                    "owasp-mobile": "",
+                    "masvs": "MSTG-CODE-2",
+                    "description": "IP Address disclosure",
+                    "severity": "warning"
+                }
+            },
+            "android_weak_ciphers": {
+                "files": {
+                    "net/youmi/android/cg.java": "38,55"
+                },
+                "metadata": {
+                    "cvss": 7.4,
+                    "cwe": "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+                    "masvs": "MSTG-CRYPTO-4",
+                    "owasp-mobile": "M5: Insufficient Cryptography",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#identifying-insecure-andor-deprecated-cryptographic-algorithms-mstg-crypto-4",
+                    "description": "Weak Encryption algorithm used",
+                    "severity": "high"
+                }
+            },
+            "android_sql_raw_query": {
+                "files": {
+                    "com/droidhen/api/scoreclient/c.java": "4,5,16,17,30,33,36,39,40,41",
+                    "com/kuguo/a/a.java": "4,5,16,22"
+                },
+                "metadata": {
+                    "cvss": 5.9,
+                    "cwe": "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+                    "owasp-mobile": "M7: Client Code Quality",
+                    "masvs": "",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#injection-flaws-mstg-arch-2-and-mstg-platform-2",
+                    "description": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.",
+                    "severity": "warning"
+                }
+            },
+            "android_world_writable": {
+                "files": {
+                    "com/kuguo/openads/k.java": "97,209",
+                    "com/kuguo/openads/u.java": "72"
+                },
+                "metadata": {
+                    "cvss": 6,
+                    "cwe": "CWE-276: Incorrect Default Permissions",
+                    "owasp-mobile": "M2: Insecure Data Storage",
+                    "masvs": "MSTG-STORAGE-2",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#testing-local-storage-for-sensitive-data-mstg-storage-1-and-mstg-storage-2",
+                    "description": "The file or SharedPreference is World Writable. Any App can write to the file",
+                    "severity": "high"
+                }
+            },
+            "android_world_readable": {
+                "files": {
+                    "com/kuguo/openads/k.java": "213,233"
+                },
+                "metadata": {
+                    "cvss": 4,
+                    "cwe": "CWE-276: Incorrect Default Permissions",
+                    "owasp-mobile": "M2: Insecure Data Storage",
+                    "masvs": "MSTG-STORAGE-2",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#testing-local-storage-for-sensitive-data-mstg-storage-1-and-mstg-storage-2",
+                    "description": "The file or SharedPreference is World Readable. Any App can read from the file",
+                    "severity": "high"
+                }
+            }
+        },
+        "summary": {
+            "high": 3,
+            "warning": 5,
+            "info": 1,
+            "secure": 0,
+            "suppressed": 0
+        }
+    },
+    "niap_analysis": {},
+    "permission_mapping": {
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+            "com/kuguo/openads/u.java": "28,95,326",
+            "net/youmi/android/bd.java": "10,166",
+            "net/youmi/android/bq.java": "69,8",
+            "net/youmi/android/bx.java": "174,11",
+            "net/youmi/android/dx.java": "290,6",
+            "net/youmi/android/ek.java": "22,5",
+            "net/youmi/android/fa.java": "266,7"
+        },
+        "android.permission.ACCESS_NETWORK_STATE": {
+            "com/droidhen/api/scoreclient/ui/f.java": "9,49",
+            "com/droidhen/score/h.java": "5,12",
+            "com/kuguo/b/b.java": "4,5,107,122",
+            "com/kuguo/openads/k.java": "13,44",
+            "com/kuguo/pushads/AdsReceiver.java": "44,91,7,66",
+            "com/kuguo/pushads/a.java": "18,151",
+            "com/kuguo/pushads/h.java": "8,9,87,100",
+            "com/kuguo/pushads/k.java": "7,41",
+            "net/youmi/android/bi.java": "4,7,42",
+            "net/youmi/android/eh.java": "8,9,263",
+            "net/youmi/android/u.java": "4,5,49,78"
+        },
+        "android.permission.READ_PHONE_STATE": {
+            "com/droidhen/api/scoreclient/ui/f.java": "9,49",
+            "com/droidhen/score/h.java": "5,12",
+            "com/kuguo/openads/k.java": "13,44",
+            "com/kuguo/pushads/a.java": "18,151",
+            "com/kuguo/pushads/k.java": "7,41",
+            "net/youmi/android/bi.java": "7,49",
+            "net/youmi/android/eh.java": "8,9,263"
+        },
+        "android.permission.INTERNET": {
+            "com/droidhen/recommend/RecommendActivity.java": "13,14,32",
+            "com/droidhen/recommend/a.java": "11,12,94",
+            "com/kuguo/b/a.java": "61,8,9,10,11,12,13,14,15,16",
+            "net/youmi/android/bo.java": "147,7,8,9,10,11,12",
+            "net/youmi/android/br.java": "72,6,7,8,9,10,11,12",
+            "net/youmi/android/bx.java": "173,13,14,15,16",
+            "net/youmi/android/dj.java": "58,6,7,8,9",
+            "net/youmi/android/dx.java": "69,11,12,13,14",
+            "net/youmi/android/fa.java": "608,10,11,12,13,14,15"
+        },
+        "android.permission.WAKE_LOCK": {
+            "com/droidhen/game/d/a/a.java": "6,98",
+            "com/kuguo/pushads/AdsReceiver.java": "44,91,7,66,8",
+            "com/kuguo/pushads/AdsService.java": "3,135",
+            "com/kuguo/pushads/e.java": "4,142,145,153,156,166,169,180,183"
+        },
+        "android.permission.ACCESS_WIFI_STATE": {
+            "com/kuguo/pushads/AdsReceiver.java": "7,66,66",
+            "net/youmi/android/bi.java": "4,134"
+        }
+    },
+    "urls": [
+        {
+            "urls": [
+                "www.cooguo.com"
+            ],
+            "path": "com/kuguo/d/b.java"
+        },
+        {
+            "urls": [
+                "http://www.cooguo.com/gw/ads.action"
+            ],
+            "path": "com/kuguo/openads/aa.java"
+        },
+        {
+            "urls": [
+                "http://www.cooguo.com/cooguogw/sms.action"
+            ],
+            "path": "com/kuguo/pushads/AdsService.java"
+        },
+        {
+            "urls": [
+                "http://droidhenapps4.appspot.com/?exclude=",
+                "http://droidhenapps9.appspot.com/?exclude=",
+                "http://droidhenapps10.appspot.com/?exclude=",
+                "http://droidhenapps3.appspot.com/?exclude=",
+                "http://droidhenapps8.appspot.com/?exclude=",
+                "http://droidhenapps6.appspot.com/?exclude=",
+                "http://droidhenapps2.appspot.com/?exclude=",
+                "http://droidhenapps1.appspot.com/?exclude=",
+                "http://droidhenapps7.appspot.com/?exclude=",
+                "http://droidhenapps5.appspot.com/?exclude="
+            ],
+            "path": "com/droidhen/activity/b.java"
+        },
+        {
+            "urls": [
+                "http://dhprompt.appspot.com/prompt?id="
+            ],
+            "path": "com/droidhen/recommend/a.java"
+        },
+        {
+            "urls": [
+                "http://dhprompt.appspot.com"
+            ],
+            "path": "com/droidhen/recommend/RecommendActivity.java"
+        },
+        {
+            "urls": [
+                "http://sdk.youmi.net/?p=3&app="
+            ],
+            "path": "net/youmi/android/et.java"
+        },
+        {
+            "urls": [
+                "http://sdk.youmi.net/?p=3&app="
+            ],
+            "path": "net/youmi/android/dx.java"
+        },
+        {
+            "urls": [
+                "http://schemas.android.com/apk/res/"
+            ],
+            "path": "net/youmi/android/AdView.java"
+        },
+        {
+            "urls": [
+                "http://sdk.youmi.net/?p=3&app="
+            ],
+            "path": "net/youmi/android/bo.java"
+        },
+        {
+            "urls": [
+                "http://sdk.youmi.net/?p=3&app="
+            ],
+            "path": "net/youmi/android/br.java"
+        },
+        {
+            "urls": [
+                "http://sdk.youmi.net/?p=3&app="
+            ],
+            "path": "net/youmi/android/by.java"
+        },
+        {
+            "urls": [
+                "http://sdk.youmi.net/?p=3&app="
+            ],
+            "path": "net/youmi/android/dj.java"
+        },
+        {
+            "urls": [
+                "http://sdk.youmi.net/?p=3&app="
+            ],
+            "path": "net/youmi/android/bx.java"
+        },
+        {
+            "urls": [
+                "http://sdk.youmi.net/?p=3&app="
+            ],
+            "path": "net/youmi/android/fa.java"
+        },
+        {
+            "urls": [
+                "http://ditu.google.com/maps?q="
+            ],
+            "path": "net/youmi/android/bj.java"
+        },
+        {
+            "urls": [
+                "https://market.android.com/details?id=%3$s&feature=search_result"
+            ],
+            "path": "Android String Resource"
+        }
+    ],
+    "domains": {
+        "schemas.android.com": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "droidhenapps5.appspot.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "142.250.204.148",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Mountain View",
+                "latitude": "37.405991",
+                "longitude": "-122.078514"
+            },
+            "ofac": false
+        },
+        "sdk.youmi.net": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "droidhenapps2.appspot.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "142.250.204.116",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Mountain View",
+                "latitude": "37.405991",
+                "longitude": "-122.078514"
+            },
+            "ofac": false
+        },
+        "droidhenapps10.appspot.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "142.251.10.153",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Mountain View",
+                "latitude": "37.405991",
+                "longitude": "-122.078514"
+            },
+            "ofac": false
+        },
+        "ditu.google.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "142.250.204.78",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Mountain View",
+                "latitude": "37.405991",
+                "longitude": "-122.078514"
+            },
+            "ofac": false
+        },
+        "droidhenapps8.appspot.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "142.250.204.148",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Mountain View",
+                "latitude": "37.405991",
+                "longitude": "-122.078514"
+            },
+            "ofac": false
+        },
+        "dhprompt.appspot.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "142.250.204.244",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Mountain View",
+                "latitude": "37.405991",
+                "longitude": "-122.078514"
+            },
+            "ofac": false
+        },
+        "droidhenapps3.appspot.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "142.250.66.148",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Mountain View",
+                "latitude": "37.405991",
+                "longitude": "-122.078514"
+            },
+            "ofac": false
+        },
+        "market.android.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "64.233.170.118",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Mountain View",
+                "latitude": "37.405991",
+                "longitude": "-122.078514"
+            },
+            "ofac": false
+        },
+        "droidhenapps7.appspot.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "142.250.204.244",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Mountain View",
+                "latitude": "37.405991",
+                "longitude": "-122.078514"
+            },
+            "ofac": false
+        },
+        "droidhenapps9.appspot.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "142.250.204.180",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Mountain View",
+                "latitude": "37.405991",
+                "longitude": "-122.078514"
+            },
+            "ofac": false
+        },
+        "www.cooguo.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "107.151.99.169",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Los Angeles",
+                "latitude": "34.043240",
+                "longitude": "-118.250916"
+            },
+            "ofac": false
+        },
+        "droidhenapps1.appspot.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "142.250.204.180",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Mountain View",
+                "latitude": "37.405991",
+                "longitude": "-122.078514"
+            },
+            "ofac": false
+        },
+        "droidhenapps4.appspot.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "172.253.118.153",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Mountain View",
+                "latitude": "37.405991",
+                "longitude": "-122.078514"
+            },
+            "ofac": false
+        },
+        "droidhenapps6.appspot.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "142.250.204.212",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Mountain View",
+                "latitude": "37.405991",
+                "longitude": "-122.078514"
+            },
+            "ofac": false
+        }
+    },
+    "emails": [],
+    "strings": {
+        "strings_apk_res": [
+            "\"submit\" : \"提交\"",
+            "\"rank\" : \"等级\"",
+            "\"anonymous\" : \"匿名\"",
+            "\"recommend_content\" : \"Playing %1$s on my %2$s, https://market.android.com/details?id=%3$s&feature=search_result\"",
+            "\"top\" : \"顶部\"",
+            "\"next\" : \"下一页\"",
+            "\"name\" : \"名字\"",
+            "\"score_column\" : \"得分\"",
+            "\"query_failed\" : \"很抱歉，网络服务器正忙，请稍后再重试。\"",
+            "\"achievement\" : \"成就\"",
+            "\"app_name\" : \"可爱驴跳跳\"",
+            "\"score_error\" : \"很抱歉，不能连接到网络服务器。\"",
+            "\"name_hint\" : \"输入你的名字\"",
+            "\"previous\" : \"上一页\"",
+            "\"rank_text\" : \"%d.\"",
+            "\"hello\" : \"Hello World, MainActivity!\"",
+            "\"exit_confirm_msg\" : \"你真的打算退出游戏吗？\"",
+            "\"online_score\" : \"在线得分\"",
+            "\"highscores_score_label\" : \"最高得分\""
+        ],
+        "strings_so": [],
+        "strings_code": [
+            "floor.png",
+            "hill.png",
+            "appType: ",
+            "CREATE TABLE score (_id INTEGER PRIMARY KEY,score_value FLOAT,mode_id INTEGER,user_name TEXT);",
+            "connectivity",
+            "super0022.png",
+            "last.png",
+            "游戏获得40000分",
+            "run0024.png",
+            "http://droidhenapps3.appspot.com/?exclude=",
+            "platform",
+            "游戏获得5000分",
+            "flat=",
+            "music",
+            "adsense.mobileads.afmanotify.receiveMessage(\\",
+            "飞船狂热",
+            "Malformed input (7)",
+            "cloud01.png",
+            "android.intent.extra.SUBJECT",
+            "0b451641094b1f565b421857454f4f5d4c585a485a54461d5b451f410b1f50595a",
+            "plan0004.png",
+            "submit",
+            "请为您的应用程序添加AdActivity,否则无法显示广告详情",
+            "client",
+            "ads_pref",
+            "shortcut",
+            "com.reverie.game",
+            "F1B19978F3D74302BA126760F96262CD",
+            "android.intent.category.LAUNCHER",
+            "package",
+            "Mozilla/5.0 (Linux; U; Android ",
+            "google_ads.xml",
+            "缺少READ_PHONE_STATE权限",
+            "type",
+            "comic.ttf",
+            "ClientId",
+            "LoadAdResponse",
+            "ads/spot_default.png",
+            "点击查看下载状态",
+            "show_dialog",
+            "qiqiu0098.png",
+            "run0008.png",
+            "Error loading debug watermark",
+            "number_ingame.png",
+            "applist version: ",
+            "f785026ae812ebed145aef7f7cc53135",
+            "cache applist failed !",
+            "score_value DESC, score._id DESC",
+            "android.intent.action.PACKAGE_ADDED",
+            "UFO0004.png",
+            "desc < role: 6 producer: 24 historical_role: 1 historical_producer: 12 timestamp: %d latlng < latitude_e7: %d longitude_e7: %d> radius: %d>",
+            "being_ready.png",
+            "showOffers",
+            "url = ? and file = ?",
+            "ping",
+            "effect_super01.png",
+            "AppName",
+            "server",
+            "effect_super09.png",
+            "CBD2998A3D5A4744BF128B91E1410DEA",
+            "market://details?id=",
+            "click_y",
+            "shootingstar06.png",
+            "DROP TABLE IF EXISTS score",
+            "boow2.png",
+            "0123456789abcdef",
+            "plan0006.png",
+            "一次飞行超过50块云层",
+            "r_LINK",
+            "jump0014.png",
+            "bottom",
+            "format",
+            "f75a3a45f171138a5df50d16c5590fcb",
+            "46C02DF8DF4C4C18A578C63449C7F64D",
+            "google_sdk",
+            "address: ",
+            "jump0028.png",
+            "0123456789",
+            "FABC",
+            "advertId: ",
+            "AdAlarm",
+            "stair_friable_disappear03.png",
+            "qiqiu0004.png",
+            "achievement08.png",
+            "height",
+            "android.permission.WRITE_EXTERNAL_STORAGE_PERMISSION",
+            "com.hz.game",
+            "Parameter name cannot be null.",
+            "下载失败...",
+            "收集超过30个舞蹈帽子",
+            "收集超过30个火箭",
+            "UFO0002.png",
+            "qiqiu0046.png",
+            "0123456789ABCDEF",
+            "effect_mj005.png",
+            "run0022.png",
+            "imgs_800_1200/",
+            "user_name",
+            "android:configChanges=\\",
+            "dead0001.png",
+            "Unexpected I/O error",
+            "duplicate",
+            "fetch_start",
+            "projectId == ",
+            "ads/m.txt",
+            "大小: ",
+            "5c4d1216091749555f174f50464c4f59105d591c08074318564a4d15024d590d",
+            "AES/CBC/PKCS5Padding",
+            "MJ0084.png",
+            "App Sec is set to ",
+            "stair_stable_n_05.png",
+            "notify app installed !",
+            "UFO0020.png",
+            "effect_mj09.png",
+            "effect_super03.png",
+            "background_night.png",
+            "super0016.png",
+            "打开应用失败或者不是打开应用，没有发送点击记录",
+            "Method not decompiled: net.youmi.android.AdView.setVisibility(int):void",
+            "remove package:",
+            "stair_stable02.png",
+            "test_ad.png",
+            "shootingstar07.png",
+            "android.intent.extra.CC",
+            "cstart=",
+            "正在加载",
+            "achievement_data",
+            "Unknown URI ",
+            "plan0012.png",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",
+            "gct and lct is all null",
+            "下载更新失败",
+            "jump0005.png",
+            "http.route.default-proxy",
+            "ads/wait_download_btn2_pressed.png",
+            "googleadservices.com",
+            "model",
+            "modeMin should be equal or greater than 0",
+            "E2FDAA28C7344D2F9FAA4A0FEC1296AA",
+            "application/octet-stream",
+            "Malformed input (5)",
+            "输入您的名字",
+            "CREATE TABLE downloads (_id INTEGER PRIMARY KEY,url TEXT,file TEXT,size INTEGER,total_size INTEGER,state INTEGER);",
+            "achievement13.png",
+            "stair_moveable_n_02.png",
+            "click_x",
+            "下载管理",
+            "this is not a gif image",
+            "App Version Name is set to ",
+            "sample",
+            "点击直接下载",
+            "qiqiu0074.png",
+            "have set the alarm!",
+            "App PackageName is set to ",
+            "异度空间",
+            "stair_stable03.png",
+            "downloads",
+            "balloon03.png",
+            "http://dhprompt.appspot.com",
+            "highscore.png",
+            "stair_stable_n_01.png",
+            "Unknown URI: ",
+            "android.intent.action.DIAL",
+            "1bbb2bda09c00000ab12276463721bd7",
+            "请为您的应用配置相应权限",
+            "点击拨打电话",
+            "android_id",
+            "ads/selected_icon.png",
+            "qiqiu0030.png",
+            "ads/back_btn.png",
+            "text/javascript\\",
+            "local_applist",
+            "Content-Length",
+            "phone",
+            "color_text",
+            "qiqiu0054.png",
+            "00001111",
+            "11000000",
+            "click_outside_ad",
+            "http://www.cooguo.com/gw/ads.action",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "发送点击记录失败",
+            "一次跳跃超过10块云层",
+            "ads/push_cancel_btn_pressed.png",
+            "仰望星空",
+            "com.myyearbook",
+            "android.intent.action.PACKAGE_INSTALL",
+            "l53d2lj8sdf6jks8lq9efx",
+            "cache applist !",
+            "android.intent.extra.TEXT",
+            "ads/download_icon.png",
+            "sun.png",
+            "boow3.png",
+            "1100",
+            "存储卡不可用,请启用存储卡",
+            "jump0018.png",
+            "ads/visitweb_btn.png",
+            "youmicache/CBB27B6EF764459EAEEE877D9DA42B6D",
+            "qiqiu0080.png",
+            "http://droidhenapps1.appspot.com/?exclude=",
+            "存储卡不可用,无法保存图片",
+            "qiqiu0076.png",
+            "cstr=",
+            "Malformed input (2)",
+            "ogg_background.ogg",
+            "color_url",
+            "float",
+            "effect_mj004.png",
+            "link",
+            "MJ0052.png",
+            "show.png",
+            "正在加载中...",
+            "打开该应用的指定界面",
+            "MJ0000.png",
+            "achievement16.png",
+            "ads/download_btn2_pressed.png",
+            "adsState == ",
+            "alt_color",
+            "EB80F3291A8E469c962CA133BDC549D7",
+            "run0000.png",
+            "effect_mj009.png.png",
+            "已下载(",
+            "densityDpi",
+            "DONOT SUPPORT YOUR DEVICE!",
+            "Parameter(",
+            "count",
+            "道具收藏者",
+            "AppName must be set before calling generateParameters().",
+            "code",
+            "开始下载",
+            "FEDC335110C04414AF100EA25C26A70D",
+            "MJ0008.png",
+            "ad_x",
+            "D780FBF4215247bcBB1AC0AD33C474FE",
+            "HttpConnectionQueue@",
+            "ads/p.txt",
+            "r_icon_url",
+            "name",
+            "mode_id",
+            "stair_friable_disappear_n_03.png",
+            "ad_type",
+            "effect_mj01.png",
+            "正在下载(0)",
+            "tel:",
+            "youmicache/1BD3ACC63FA94E5B99B5479664B9CE69",
+            "permissions: ",
+            "run0018.png",
+            "appId",
+            "是否将版本更新到最新的",
+            "action",
+            "download.png",
+            "width",
+            "jump0022.png",
+            "Latency[fstart=",
+            "qiqiu0000.png",
+            "xhtml",
+            "正在加载中",
+            "targetSdkVersion",
+            "r_title",
+            "click_start",
+            "ScoreClientManagerSingleton.init() can be called only once",
+            "boow7.png",
+            "FALSE.",
+            "youmicache/CD1D37A4A08F465A97D040CCD0FF7D1F",
+            "dt != null  = ",
+            "UFO0006.png",
+            "0c1612110a1749075a121f01114b1d5c110e5e4a5f01461c5a4a1a10054b46155643",
+            "stair_friable_disappear_n_01.png",
+            "DoubleClick could not fill the ad request.",
+            "ro.kernel.qemu",
+            "window",
+            "google_ad_view_parent_state",
+            "stair_stable01.png",
+            "qiqiu0032.png",
+            "请求ping链接失败",
+            "CE94557724F842149D690D0E8CBB1CBD",
+            "GoogleAdView",
+            "StartingAlertMessage",
+            "imsi == ",
+            "location",
+            "shootingstar03.png",
+            "0100",
+            "0101",
+            "MJ.png",
+            "点击升级程序",
+            "android.intent.action.BOOT_COMPLETED",
+            "plan0018.png",
+            "scoreclient.db",
+            "0011",
+            "1000",
+            "effect_mj02.png",
+            "http://droidhenapps9.appspot.com/?exclude=",
+            "jump0029.png",
+            "shootingstar01.png",
+            "run0012.png",
+            "next.png",
+            "shake.png",
+            "游戏获得10000分",
+            "score._id = ",
+            "一次飞行超过150块云层",
+            "jump0024.png",
+            "webviewCache.db",
+            "plan0002.png",
+            "fetch_latency",
+            "ads/push_cancel_btn.png",
+            "下载成功,正在安装...",
+            "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-",
+            "mimetype in (?,?,?)",
+            "jump0032.png",
+            "prop_spring01.png",
+            "being_go.png",
+            "score_value DESC, score._id ASC",
+            "Android",
+            "super0014.png",
+            "query",
+            "0000",
+            "state",
+            "跳跃之王",
+            "effect_mj08.png",
+            "ogg_gameover.ogg",
+            "color_link",
+            "请求ping链接成功",
+            "jump0040.png",
+            "正在下载中...",
+            "qiqiu0026.png",
+            "score/#",
+            "last-enable.png",
+            "qiqiu0020.png",
+            "http://",
+            "run0014.png",
+            "qiqiu0038.png",
+            "dPvR6OIwVr7443aSVEEndczaY3SkhD9G7Hf8H4E83awB5E3gU1sfeVHoUSzNRAMscp1b_nJR8HG2addSsSXuxVkYoMBM_5QmHdPWHBVmNxpJoj2Qqt4DkqjSPSNS9rgRxEKBdZOG1Uxlu9_qk6jJu5nhE3C2ai84C_gmEldj50DrCOt5vcrs3o7whARCMMNAHTkQroSQvwnzusS8djoZiCK_z-CJ-ayxlfjK1B-QFVnrqcjHrwoY3zuMGGVZMN1GMZSrUIn-K0DaWyoa4u8aB1J1T7LdIH3FqPDaGyusq6zoY2r4EzxyrWfgyWs_KQ4zobjLlpV60i-yGFcd83zxGQ",
+            "effect_mj04.png",
+            "DCDAE4873D1F4c64BB121FDE4131DDFF",
+            "iconUrl: ",
+            "unknow",
+            "right",
+            "scoreclient_config",
+            "requestMode",
+            "size",
+            "ads/spot_light.png",
+            "下载进度:",
+            "mounted_ro",
+            "imsi",
+            "软件权限",
+            "FD7C4B12A60F415dBE8C580A137F5F1C",
+            "props_michael.png",
+            "DROP TABLE IF EXISTS mode",
+            "cacheADHashtable is null",
+            "utf8",
+            "ads/back_btn_pressed.png",
+            "Channel",
+            "空中翱翔",
+            "stair_friable_disappear_n_04.png",
+            "super0004.png",
+            "1861b676e8889ee3dfbb1e53d4305b11",
+            "boow8.png",
+            "103cc347e7ce1dbfff3d9c2bc031c372",
+            "uule",
+            "local_user_name",
+            "sport",
+            "youmicache/C8F62501155F41fbBBAA47A53C7F1A9B",
+            "protocol",
+            "achievement02.png",
+            "handle feedback return: ",
+            "android ",
+            "jump0033.png",
+            "forceClick: ",
+            "achievement12.png",
+            "jump0027.png",
+            "props_gliding03.png",
+            "next-enable.png",
+            "下载更新",
+            "ads/shortcut.png",
+            "input_method",
+            "stair_stable05.png",
+            "ads/unselected_icon.png",
+            "effect_qiqiu.png",
+            "DD5E8CD46CF94B22BAAD68AB06710752",
+            "appVersion: ",
+            "以后再说",
+            "feed back app installed !",
+            "text/plain",
+            "android.intent.extra.shortcut.INTENT",
+            "achievement05.png",
+            "jump0041.png",
+            "ads/download_btn2.png",
+            "result",
+            "deviceid",
+            "UFO0018.png",
+            "the length of modeTitles is not consistent with modeCount",
+            "请选择共享方式",
+            "ads/wait_download_btn2.png",
+            "super0020.png",
+            "jump0016.png",
+            "A33E523A1CEF496dB37ABD886CBCB005",
+            "effect_super04.png",
+            "D50EF1926ADD471892E72BCE6D7E032C",
+            "subcategory",
+            "jump0001.png",
+            "2d800967deb503e4113efc3726c1eda6",
+            "imgs",
+            "filepath",
+            "qiqiu0066.png",
+            "imei",
+            "App Version Code is set to ",
+            "TRUE",
+            "dead0002.png",
+            "qiqiu0052.png",
+            "total_size",
+            "请求ping链接失败！ url",
+            "screen_height",
+            "点击播放视频",
+            "feedback",
+            "apkName: ",
+            "effect_mj001.png",
+            "qiqiu0018.png",
+            "YOUMI_CHANNEL",
+            "javascript: ",
+            "offset",
+            "nextRequest: ",
+            "effect_mj006.png",
+            "boow6.png",
+            "hill_near.png",
+            "list_version",
+            "AdsService",
+            "jump0013.png",
+            "MJ0060.png",
+            "super0010.png",
+            "props_balloon.png",
+            "vibrate: ",
+            "0110",
+            "版本: ",
+            "r_id",
+            "achievement07.png",
+            "stair_stable_n_03.png",
+            "qiqiu0050.png",
+            "qiqiu0042.png",
+            "应用程序有新版本更新",
+            "http://droidhenapps4.appspot.com/?exclude=",
+            "stair_friable.png",
+            "CompanyName must be set before calling generateParameters().",
+            "imgs_480_800/",
+            "qiqiu0084.png",
+            "CompanyName",
+            "Util failed: ",
+            "收集超过30个气球",
+            "body: ",
+            "com.android.launcher.action.INSTALL_SHORTCUT",
+            "分享图片",
+            "r_desc",
+            "qiqiu0060.png",
+            "US-ASCII",
+            "MANUFACTURER",
+            "marketPackage: ",
+            "jump0030.png",
+            "showDialog: ",
+            "1011",
+            "Location",
+            "StartingAlertService",
+            "wifi",
+            "getBaseStationLongitude",
+            "更新失败,请稍候重试",
+            "text",
+            "Malformed input (3)",
+            "cloud02.png",
+            "dead0003.png",
+            "props_gliding04.png",
+            "滑翔机狂热",
+            "stair_friable_n.png",
+            "stair_moveable01.png",
+            "11111100",
+            "net.youmi.android.AdActivity\\",
+            "method",
+            "5d151649581a19005e121c024f4d1c5d100c081b0f53161d07104e13554a170d47",
+            "plan0016.png",
+            "download state == ",
+            "getBaseStationId",
+            "afma-sdk-a-v3.1",
+            "android.intent.action.SEND",
+            "jump0031.png",
+            "backgroundColor",
+            "achievement14.png",
+            "firstScore",
+            "qiqiu0096.png",
+            "icon.png",
+            "super0018.png",
+            "正在下载",
+            "effect_mj06.png",
+            "请求ping链接开始",
+            "notification",
+            "DRWjzp4vScwqwyrb",
+            "Current SDK Version is youmi android sdk ",
+            "props_super.png",
+            "date: ",
+            "props_gliding01.png",
+            "0001",
+            "ccstr=",
+            "qiqiu0094.png",
+            "正在下载...",
+            "props_gliding05.png",
+            "离家出走",
+            "prop_spring03.png",
+            "balloon02.png",
+            "android.intent.extra.shortcut.ICON",
+            "Requesting Interval is set to ",
+            "screen_width",
+            "舞蹈狂热",
+            "qiqiu0014.png",
+            "qiqiu0086.png",
+            "3.05",
+            "发送-直接打开-点击记录",
+            "179%",
+            "stair_friable_disappear02.png",
+            "testAd: ",
+            "解析结果出错",
+            "parse graphics extend block error",
+            "再次按后退键返回",
+            "android.permission.ACCESS_NETWORK_STATE",
+            "收集超过30个滑翔机",
+            "http",
+            "UFO0016.png",
+            "android.intent.extra.STREAM",
+            "MJ0016.png",
+            "adid:",
+            "http://sdk.youmi.net/?p=3&app=",
+            "achievement11.png",
+            "ads/money.png",
+            "Referer",
+            "text/html",
+            "thirdScore",
+            "android.os.SystemProperties",
+            "qiqiu0010.png",
+            "Content-Disposition",
+            "package.png",
+            "Invalid mode id: ",
+            "unknown",
+            "network",
+            "quit.png",
+            "MJ0092.png",
+            "有米广告SDK配置简易教程",
+            "jump0025.png",
+            "501740450e4a1d161502454802471e4c5f105c5f175c504118005a",
+            "缺少WRITE_EXTERNAL_STORAGE_PERMISSION权限",
+            "qiqiu0082.png",
+            "url: ",
+            "image/jpeg",
+            "00000",
+            "UFO0012.png",
+            "stair_friable_disappear01.png",
+            "need_back",
+            "0111",
+            "www.cooguo.com",
+            "effect_mj007.png",
+            "static{<br/>",
+            "android.permission.INTERNET",
+            "download/ads/",
+            "dt == null ",
+            "3gwap",
+            "jump0015.png",
+            "jump0036.png",
+            "stair_friable_disappear_n_02.png",
+            "stair_moveable_n_01.png",
+            "Last-Modified",
+            "request_prefs",
+            "http://__NO_MATCHING_AD__",
+            "点击浏览网页",
+            "Google.AdUtil",
+            "plan0020.png",
+            "5c4715125b171c53094b165443184a0d105c5f1a5f5246195a174a4f561b400441",
+            "正在等待下载...",
+            "app_youtube",
+            "qiqiu0056.png",
+            "achievement01.png",
+            "点击发送短信",
+            "image/gif",
+            "5cc71df611973c978124396dd7a00185",
+            "alarm",
+            "game_icon.png",
+            "score_type",
+            "flag",
+            "super0006.png",
+            "effect_super06.png",
+            "Keywords",
+            "effect_mj003.png",
+            "至少在弹簧上跳跃30次",
+            "MEID:",
+            "jump0026.png",
+            "qiqiu0022.png",
+            "cache applist success !",
+            "run0006.png",
+            "android.intent.extra.shortcut.NAME",
+            "points",
+            "应用软件",
+            "WIFI",
+            "Parameter value cannot be null.",
+            "缺少net.youmi.android.AdActivity",
+            "网络错误,无法更新下载",
+            "android.permission.ACCESS_WIFI_STATE",
+            "Invalid syntax in forwarded message: ",
+            "UFO0000.png",
+            "qiqiu0044.png",
+            "backgroundTransparent",
+            "super0008.png",
+            "jump0035.png",
+            "imgs/",
+            "run0002.png",
+            "开始下载更新.",
+            "point.png",
+            "youmicache/02ECC682A05F4E72AD0DA4C4C2FFC6D9",
+            "弹簧狂热",
+            "message",
+            "file://",
+            "click_string",
+            "更新失败,请稍候重试!",
+            "Invalid id",
+            "r_last_fetch_time",
+            "发送延迟的点击记录",
+            "youmicache/CDDA55C678C34d07957074BF6956862F",
+            "smsto:",
+            "收集所有五种不同的道具在一局游戏里",
+            "安装过程出现错误,请稍后重试",
+            "MJ0068.png",
+            "gmsg",
+            "appid",
+            "翱翔之王",
+            "about:blank",
+            "Method not decompiled: net.youmi.android.dx.onPostExecute(java.lang.String[]):void",
+            "package:",
+            "jump0009.png",
+            "jump0038.png",
+            "http://127.0.0.1",
+            "appSize: ",
+            "http://droidhenapps6.appspot.com/?exclude=",
+            "qiqiu0008.png",
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            "jump0017.png",
+            "jump0037.png",
+            "plan0010.png",
+            "图片已经保存到",
+            "mailto:",
+            "r_last_show_time",
+            "stair_stable_n_02.png",
+            "mode_id=",
+            "market://",
+            "title",
+            "缺少INTERNET权限",
+            "plan0022.png",
+            "effect_mj07.png",
+            "submitted",
+            "Donkey Jump",
+            "sms:",
+            "mode",
+            "msid",
+            "TestMode is set to ",
+            "android.intent.action.SENDTO",
+            "score_value",
+            "xdir",
+            "qiqiu0036.png",
+            "stair_stable_n_04.png",
+            "qiqiu0028.png",
+            "type: ",
+            "0b1045405e1917570a401c5540171f5d460f58165703421b514419150b4b0e43",
+            "background_night.jpg",
+            "ad_height",
+            "getNetworkId",
+            "FALSE",
+            "Build.10",
+            "props_gliding02.png",
+            "cooId",
+            "C97CE45F9A5A447c98BBB83D88790503",
+            "date",
+            "00000011",
+            "无法连接服务器,请稍后重试!",
+            "android.intent.action.MAIN",
+            "UFO0008.png",
+            "ads/fold_arrow.png",
+            "qiqiu0024.png",
+            "qiqiu0078.png",
+            "ads/download_btn.png",
+            "ads/snapshot_empty.png",
+            "下载完成",
+            "http://droidhenapps5.appspot.com/?exclude=",
+            "android.intent.extra.BCC",
+            "effect_super08.png",
+            "ads/download_btn_pressed.png",
+            "qiqiu0088.png",
+            "mounted",
+            "description",
+            "current_click_string",
+            "achievement03.png",
+            "the frame[ ",
+            "content://",
+            "类型: ",
+            "qiqiu0006.png",
+            "已下载(0)",
+            "secondScore",
+            "file",
+            "background:url\\\\((.+?)\\\\)",
+            "android.intent.category.BROWSABLE",
+            "text_image",
+            "boow4.png",
+            "CREATE INDEX IF NOT EXISTS mode_id ON score(mode_id);",
+            "achievement15.png",
+            "score",
+            "sms_body",
+            "score_value ASC, score._id DESC",
+            "qiqiu0072.png",
+            "score_sort_order",
+            "channel",
+            "showDetail",
+            "DB9C288EF60A40d4897665843327626E",
+            "autoDownload: ",
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "下载失败",
+            "balloon01.png",
+            "http://dhprompt.appspot.com/prompt?id=",
+            "酷果应用列表",
+            "plan0014.png",
+            "ad_y",
+            "游戏获得100000分",
+            "image/png",
+            "300x250_as",
+            "纯熟跳跃",
+            "对不起，暂时无法加载该页面，请重试。",
+            "jump0021.png",
+            "dead0005.png",
+            "generic",
+            "jump0043.png",
+            "alternate_ad_url",
+            "cmwap",
+            "MJ0024.png",
+            "captureUrls: ",
+            "getSystemId",
+            "缺少ACCESS_NETWORK_STATE权限",
+            "https://",
+            "http://droidhenapps8.appspot.com/?exclude=",
+            "wtai://wp/mc;",
+            "AFMAUtil",
+            "UFO0022.png",
+            "游戏获得70000分",
+            "qiqiu0016.png",
+            "1111",
+            "安装完成",
+            "sdfkoi897hk5490g89dlsd99",
+            "power",
+            "qiqiu0064.png",
+            "filePath",
+            "是否更新到最新版本?",
+            "缺少ACCESS_COARSE_LOCATION权限",
+            "boow1.png",
+            "background.png",
+            "1001",
+            "alarm handle --- \\t",
+            "qiqiu0058.png",
+            "keyboard|keyboardHidden|orientation\\",
+            "http://ditu.google.com/maps?q=",
+            "qiqiu0034.png",
+            "qiqiu0062.png",
+            "ScoreClientProvider",
+            "立即更新",
+            "super0012.png",
+            "net.youmi.android.AdActivity",
+            "delete applist cache: ",
+            "bad base-64",
+            "ads/visitweb_btn_pressed.png",
+            "yuJtmxbnRzbmWJnK",
+            "ad_width",
+            "sharedid",
+            "http://droidhenapps2.appspot.com/?exclude=",
+            "jump0034.png",
+            "请求ping链接线程失败！ url",
+            "存储卡不可用,无法更新下载,请检查存储卡设置!",
+            "android.intent.extra.EMAIL",
+            "cloud04.png",
+            "effect_mj008.png",
+            "http://www.cooguo.com/cooguogw/sms.action",
+            "local_score_list_size",
+            "qiqiu0092.png",
+            "点击查看地图",
+            "page",
+            "shootingstar08.png",
+            "achievement09.png",
+            "icon",
+            "qiqiu0068.png",
+            "click_latency",
+            "effect_super05.png",
+            "stair_stable04.png",
+            "点击查看详情",
+            "0010",
+            "achievement10.png",
+            "afma.google.com",
+            "on downloading: ",
+            "com.droidhen",
+            "fonts/ARCENA.ttf",
+            "504c45480a1b1c111758451e57121b400a10595e480d51431f131656504256",
+            "Error encoding JSON: ",
+            "jump0019.png",
+            "super0002.png",
+            "plan0008.png",
+            "packagename:",
+            "externalStorageState = ",
+            "message/rfc822",
+            "setDensity",
+            "dest",
+            "boow5.png",
+            "cache",
+            "ERROR: src parameter not found in loadAdUrl",
+            "utf-8",
+            "已正在下载中...",
+            "dead0004.png",
+            "2861008795",
+            "android.net.wifi.WIFI_STATE_CHANGED",
+            "Unable to connect to the server, please check your network configuration!",
+            "ad is null",
+            "ctwap:cdma",
+            "jump0045.png",
+            "DROP TABLE IF EXISTS notes",
+            "点击发送邮件",
+            "Fetching ad: ",
+            "reflesh.png",
+            "App ID is set to ",
+            "javascript: document.body.style.margin = 0;",
+            "ScoreClientManagerSingleton.init() must be called first",
+            "Promotion Channel ID is set to ",
+            "打开该应用的指定界面failed",
+            "正在下载(",
+            "r_show_count",
+            "PBEWITHMD5andDES",
+            "A821718FB7F248b590F3721F6576D289",
+            "dead0006.png",
+            "checksum",
+            "Request Ad Error Code : ",
+            "adtest",
+            "YoumiSdk",
+            "loc:",
+            "qiqiu0012.png",
+            "youmicache/D080F8A1E1134cabA1910B7129A75B44",
+            "http://droidhenapps7.appspot.com/?exclude=",
+            "11110000",
+            "1010",
+            "color_border",
+            "Upgrading database from version ",
+            "1.0.9",
+            "unsupport interf flag now",
+            "achievement's title and description can't be null",
+            "名字不能为空",
+            "MJ0040.png",
+            "MJ0076.png",
+            "气球狂热",
+            "E91A62B2CF0744bd9CA37BA14615050F",
+            "youmicache/CC39825145FD4445ADD9860797CA5744",
+            "googleads.g.doubleclick.net",
+            "stair_friable_disappear04.png",
+            "Mozilla/5.0(Linux;U;",
+            "achievement06.png",
+            "message_prefs",
+            "adsState",
+            "com.android.phone",
+            "00000000",
+            "effect_mj002.png",
+            "Malformed input (6)",
+            "android.permission.READ_PHONE_STATE",
+            "您可稍候通过桌面上 [",
+            "effect_super02.png",
+            "clat=",
+            "00111111",
+            "10.0.0.172",
+            "火箭狂热",
+            "Malformed input (4)",
+            "太空漫步",
+            "jump0020.png",
+            "sensor",
+            "qiqiu0070.png",
+            "UFO0024.png",
+            "qiqiu0002.png",
+            "MJ0050.png",
+            "nextRequest",
+            "left",
+            "已经安装...",
+            "发送-下载-点击记录",
+            "super0000.png",
+            "jump0039.png",
+            "qiqiu0040.png",
+            "report_application_installation_state",
+            "run0010.png",
+            "ads/wait_download_btn.png",
+            "r_target",
+            "textColor",
+            "umknown",
+            "apkPackage: ",
+            "filename=\\",
+            "getBaseStationLatitude",
+            "http.socket.timeout",
+            "Method not decompiled: net.youmi.android.eh.c(android.content.Context):void",
+            "UFO0010.png",
+            "app_name",
+            "daiji.png",
+            "shootingstar02.png",
+            "http.connection.timeout",
+            "Bad base64 stream",
+            "stair_moveable02.png",
+            "172C94EDC717477aBF600D7898A64A8E",
+            "effect_mj03.png",
+            "320x50_mb",
+            "color_bg",
+            "effect_mj05.png",
+            "qiqiu0090.png",
+            "下载成功",
+            "image",
+            "get applist from cache !",
+            "UFO0014.png",
+            "effect_super07.png",
+            "下载过程遇到错误,取消本次下载",
+            "channelId",
+            "ads/wait_download_btn_pressed.png",
+            "category",
+            "filename='(.*?)'",
+            "achievement04.png",
+            "geo:",
+            "shootingstar05.png",
+            "3gnet",
+            "http://droidhenapps10.appspot.com/?exclude=",
+            "收集超过30个飞船",
+            "uniwap",
+            "plan0000.png",
+            "一次跳跃超过25块云层",
+            "jump0023.png",
+            "default",
+            "LOCATION",
+            "MJ0032.png",
+            "ca-mb-app-pub-3225353880193922",
+            "score_value ASC, score._id ASC",
+            "1110",
+            "DROP TABLE IF EXISTS achievement",
+            "run0004.png",
+            "download size == ",
+            "cloud03.png",
+            "解析ping出错",
+            "shootingstar04.png",
+            "imgs_320_480/",
+            "run0020.png",
+            "run0016.png",
+            "android.intent.action.VIEW",
+            "props_ufo.png",
+            "36d9e5f710fa3357f16ac39eef87ab57",
+            "1101",
+            "qiqiu0048.png",
+            "UTF-8",
+            "android__log",
+            "Unknown or unsupported URL: ",
+            "autoInstall: "
+        ]
+    },
+    "firebase_urls": [],
+    "files": [
+        "META-INF/MANIFEST.MF",
+        "META-INF/CERT.SF",
+        "META-INF/CERT.RSA",
+        "assets/imgs_480_800/UFO0024.png",
+        "assets/imgs_480_800/qiqiu0028.png",
+        "assets/imgs_320_480/qiqiu0054.png",
+        "assets/imgs_480_800/qiqiu0040.png",
+        "res/drawable-hdpi/btn_play_highlight.png",
+        "assets/imgs_480_800/jump0021.png",
+        "assets/imgs_480_800/super0010.png",
+        "assets/imgs_320_480/qiqiu0028.png",
+        "res/drawable-hdpi/mode_btn_bg_selected.9.png",
+        "assets/imgs_480_800/stair_friable_disappear_n_02.png",
+        "res/drawable-hdpi/btn_sound_enabled.png",
+        "assets/imgs_320_480/stair_moveable02.png",
+        "assets/imgs_320_480/qiqiu0038.png",
+        "assets/imgs_480_800/plan0018.png",
+        "res/drawable-hdpi/btn_play_normal.png",
+        "res/drawable-hdpi/btn_retry2_normal.png",
+        "assets/imgs_480_800/qiqiu0084.png",
+        "assets/imgs_480_800/props_gliding01.png",
+        "assets/imgs_480_800/qiqiu0056.png",
+        "assets/imgs_480_800/qiqiu0052.png",
+        "assets/imgs_320_480/UFO0020.png",
+        "assets/imgs_320_480/boow4.png",
+        "res/drawable-hdpi/mode_spinner.png",
+        "res/drawable/r_dlg_cancel.xml",
+        "assets/imgs_480_800/UFO0012.png",
+        "assets/imgs_320_480/effect_super02.png",
+        "res/raw/ogg_jump.ogg",
+        "assets/imgs_320_480/qiqiu0058.png",
+        "assets/imgs_480_800/MJ0008.png",
+        "assets/imgs_480_800/MJ0084.png",
+        "assets/imgs_480_800/run0020.png",
+        "assets/imgs_480_800/qiqiu0096.png",
+        "res/drawable/r_dlg_cancel_default.png",
+        "assets/imgs_320_480/MJ0024.png",
+        "assets/imgs_480_800/UFO0004.png",
+        "assets/imgs_320_480/stair_stable04.png",
+        "assets/imgs_320_480/qiqiu0040.png",
+        "assets/imgs_480_800/jump0038.png",
+        "assets/imgs_320_480/run0008.png",
+        "assets/imgs_480_800/qiqiu0078.png",
+        "assets/imgs_320_480/plan0004.png",
+        "assets/imgs_320_480/achievement04.png",
+        "assets/imgs_480_800/effect_mj05.png",
+        "assets/imgs_320_480/UFO0000.png",
+        "assets/imgs_480_800/super0020.png",
+        "assets/imgs_480_800/jump0028.png",
+        "res/drawable/edit_normal.png",
+        "assets/imgs_480_800/jump0030.png",
+        "assets/imgs_480_800/being_ready.png",
+        "assets/imgs_480_800/run0014.png",
+        "assets/imgs_480_800/effect_qiqiu.png",
+        "assets/imgs_320_480/stair_moveable01.png",
+        "assets/imgs_480_800/stair_friable_disappear_n_03.png",
+        "assets/imgs_320_480/jump0028.png",
+        "assets/imgs_480_800/achievement12.png",
+        "assets/imgs_320_480/qiqiu0002.png",
+        "assets/imgs_320_480/MJ0008.png",
+        "res/layout/list_item_achievement.xml",
+        "assets/imgs_480_800/prop_spring03.png",
+        "assets/imgs_320_480/qiqiu0048.png",
+        "assets/imgs_480_800/effect_super01.png",
+        "assets/imgs_480_800/jump0025.png",
+        "assets/imgs_320_480/background_night.png",
+        "res/raw/ogg_super_pick.ogg",
+        "assets/imgs_480_800/super0006.png",
+        "res/raw/ogg_mj.ogg",
+        "res/layout/list_item_score.xml",
+        "res/raw/ogg_321.ogg",
+        "assets/imgs_320_480/being_go.png",
+        "assets/imgs_480_800/UFO0010.png",
+        "assets/game_icon.png",
+        "assets/imgs_320_480/stair_stable_n_01.png",
+        "assets/imgs_320_480/cloud04.png",
+        "assets/imgs_480_800/effect_mj02.png",
+        "assets/imgs_320_480/MJ0084.png",
+        "assets/imgs_480_800/effect_mj006.png",
+        "assets/imgs_320_480/super0000.png",
+        "assets/imgs_320_480/jump0016.png",
+        "assets/imgs_320_480/qiqiu0032.png",
+        "assets/imgs_480_800/cloud02.png",
+        "assets/imgs_480_800/effect_mj005.png",
+        "assets/imgs_320_480/run0002.png",
+        "assets/imgs_480_800/plan0012.png",
+        "assets/imgs_480_800/effect_mj08.png",
+        "assets/imgs_320_480/stair_friable_disappear_n_03.png",
+        "res/drawable-hdpi/btn_pause.png",
+        "res/drawable/score_button_normal.9.png",
+        "assets/imgs_320_480/effect_mj07.png",
+        "assets/imgs_320_480/qiqiu0036.png",
+        "assets/imgs_480_800/super0002.png",
+        "assets/imgs_320_480/jump0014.png",
+        "assets/imgs_480_800/MJ.png",
+        "res/drawable/r_dlg_download_pressed.png",
+        "assets/imgs_480_800/run0016.png",
+        "assets/imgs_320_480/UFO0024.png",
+        "assets/imgs_480_800/achievement16.png",
+        "assets/imgs_320_480/highscore.png",
+        "assets/imgs_320_480/effect_mj006.png",
+        "assets/imgs_320_480/UFO0010.png",
+        "assets/imgs_320_480/achievement10.png",
+        "assets/imgs_480_800/UFO0008.png",
+        "res/drawable/default_game_icon.png",
+        "assets/imgs_480_800/run0006.png",
+        "assets/imgs_320_480/run0024.png",
+        "assets/imgs_320_480/run0014.png",
+        "assets/imgs_480_800/achievement14.png",
+        "assets/imgs_320_480/achievement08.png",
+        "res/drawable-hdpi/gold.png",
+        "assets/imgs_480_800/qiqiu0092.png",
+        "assets/imgs_480_800/MJ0068.png",
+        "assets/imgs_480_800/super0008.png",
+        "assets/imgs_480_800/effect_mj09.png",
+        "assets/imgs_480_800/plan0000.png",
+        "assets/ads/download_btn2_pressed.png",
+        "assets/imgs_480_800/qiqiu0050.png",
+        "assets/imgs_480_800/super0022.png",
+        "assets/imgs_320_480/achievement15.png",
+        "assets/imgs_320_480/jump0022.png",
+        "assets/imgs_320_480/qiqiu0090.png",
+        "assets/imgs_480_800/qiqiu0036.png",
+        "res/drawable/default_unachieved_icon.png",
+        "assets/imgs_480_800/qiqiu0080.png",
+        "assets/imgs_480_800/jump0015.png",
+        "assets/imgs_480_800/cloud04.png",
+        "assets/imgs_480_800/shootingstar05.png",
+        "assets/imgs_480_800/being_go.png",
+        "res/drawable-hdpi/btn_resume_exit.png",
+        "assets/imgs_320_480/jump0043.png",
+        "assets/imgs_480_800/UFO0020.png",
+        "assets/imgs_480_800/qiqiu0008.png",
+        "assets/imgs_320_480/dead0002.png",
+        "assets/imgs_320_480/shootingstar01.png",
+        "assets/ads/fold_arrow.png",
+        "assets/imgs_480_800/achievement13.png",
+        "assets/imgs_320_480/UFO0012.png",
+        "assets/imgs_480_800/qiqiu0072.png",
+        "assets/ads/visitweb_btn_pressed.png",
+        "assets/imgs_320_480/effect_super09.png",
+        "assets/ads/wait_download_btn2_pressed.png",
+        "assets/imgs_320_480/run0010.png",
+        "res/drawable/default_achieved_icon.png",
+        "assets/imgs_320_480/achievement03.png",
+        "assets/imgs_480_800/jump0009.png",
+        "assets/imgs_320_480/effect_super06.png",
+        "assets/imgs_320_480/jump0024.png",
+        "assets/imgs_480_800/effect_super03.png",
+        "res/drawable/a.png",
+        "assets/imgs_320_480/plan0006.png",
+        "assets/imgs_480_800/boow8.png",
+        "assets/imgs_480_800/effect_mj002.png",
+        "res/drawable-hdpi/mode_btn_bg.9.png",
+        "assets/imgs_320_480/MJ.png",
+        "assets/imgs_320_480/qiqiu0084.png",
+        "assets/imgs_320_480/dead0006.png",
+        "assets/imgs_480_800/qiqiu0054.png",
+        "res/raw/ogg_mj_pick.ogg",
+        "assets/imgs_480_800/props_gliding03.png",
+        "assets/imgs_480_800/stair_stable_n_04.png",
+        "assets/imgs_480_800/shootingstar01.png",
+        "assets/imgs_480_800/boow3.png",
+        "assets/imgs_480_800/stair_stable_n_05.png",
+        "assets/imgs_320_480/effect_mj03.png",
+        "assets/imgs_320_480/qiqiu0024.png",
+        "assets/imgs_320_480/run0020.png",
+        "assets/imgs_480_800/stair_stable01.png",
+        "res/drawable-hdpi/btn_score2_normal.png",
+        "assets/imgs_480_800/effect_super08.png",
+        "res/raw/ogg_gliding.ogg",
+        "res/drawable-hdpi/icon.png",
+        "assets/imgs_320_480/dead0004.png",
+        "assets/imgs_480_800/props_balloon.png",
+        "assets/imgs_480_800/effect_super04.png",
+        "assets/imgs_480_800/shootingstar03.png",
+        "res/layout/score.xml",
+        "assets/imgs_480_800/jump0001.png",
+        "assets/imgs_320_480/qiqiu0080.png",
+        "assets/imgs_480_800/jump0022.png",
+        "assets/imgs_320_480/run0012.png",
+        "assets/imgs_480_800/props_gliding05.png",
+        "assets/imgs_480_800/jump0013.png",
+        "assets/imgs_320_480/UFO0008.png",
+        "assets/imgs_480_800/effect_mj003.png",
+        "assets/imgs_320_480/super0002.png",
+        "assets/imgs_480_800/boow7.png",
+        "assets/imgs_320_480/effect_mj004.png",
+        "assets/imgs_480_800/jump0027.png",
+        "assets/imgs_320_480/effect_super04.png",
+        "assets/imgs_480_800/balloon03.png",
+        "assets/imgs_480_800/run0024.png",
+        "assets/imgs_480_800/props_ufo.png",
+        "assets/imgs_480_800/dead0006.png",
+        "assets/imgs_480_800/effect_mj009.png.png",
+        "assets/imgs_320_480/MJ0016.png",
+        "assets/imgs_480_800/run0012.png",
+        "assets/imgs_480_800/run0008.png",
+        "assets/imgs_320_480/qiqiu0008.png",
+        "assets/imgs_320_480/run0006.png",
+        "assets/imgs_320_480/stair_stable03.png",
+        "assets/imgs_320_480/balloon01.png",
+        "assets/ads/back_btn.png",
+        "assets/imgs_480_800/plan0016.png",
+        "assets/ads/wait_download_btn2.png",
+        "assets/imgs_480_800/super0018.png",
+        "assets/imgs_320_480/jump0033.png",
+        "assets/imgs_480_800/jump0043.png",
+        "assets/ads/back_btn_pressed.png",
+        "assets/imgs_320_480/shootingstar03.png",
+        "assets/imgs_320_480/being_ready.png",
+        "assets/imgs_320_480/jump0013.png",
+        "assets/imgs_320_480/qiqiu0042.png",
+        "assets/imgs_480_800/achievement05.png",
+        "assets/imgs_320_480/jump0015.png",
+        "assets/imgs_480_800/effect_mj01.png",
+        "assets/imgs_320_480/qiqiu0098.png",
+        "res/raw/ogg_ufo.ogg",
+        "assets/imgs_480_800/super0012.png",
+        "assets/imgs_320_480/jump0009.png",
+        "assets/imgs_320_480/plan0012.png",
+        "assets/imgs_320_480/achievement01.png",
+        "assets/imgs_480_800/qiqiu0070.png",
+        "assets/imgs_320_480/effect_mj05.png",
+        "assets/imgs_320_480/MJ0040.png",
+        "assets/imgs_320_480/qiqiu0062.png",
+        "assets/ads/visitweb_btn.png",
+        "assets/imgs_480_800/jump0014.png",
+        "assets/imgs_320_480/boow2.png",
+        "assets/imgs_320_480/super0004.png",
+        "assets/imgs_480_800/shootingstar04.png",
+        "assets/test_ad.png",
+        "assets/imgs_480_800/run0000.png",
+        "assets/imgs_320_480/shootingstar07.png",
+        "AndroidManifest.xml",
+        "assets/comic.ttf",
+        "res/drawable-hdpi/score_list_bg.9.png",
+        "assets/ads/wait_download_btn.png",
+        "assets/imgs_480_800/achievement03.png",
+        "assets/imgs_480_800/run0004.png",
+        "assets/imgs_320_480/plan0014.png",
+        "assets/imgs_320_480/achievement11.png",
+        "assets/imgs_480_800/achievement09.png",
+        "assets/imgs_320_480/stair_friable_n.png",
+        "assets/imgs_480_800/qiqiu0016.png",
+        "res/drawable/r_dlg_cancel_pressed.png",
+        "assets/imgs_320_480/jump0017.png",
+        "assets/imgs_480_800/boow4.png",
+        "assets/imgs_480_800/point.png",
+        "assets/imgs_320_480/jump0041.png",
+        "classes.dex",
+        "assets/imgs_480_800/qiqiu0088.png",
+        "assets/imgs_320_480/jump0030.png",
+        "assets/imgs_320_480/qiqiu0068.png",
+        "assets/imgs_480_800/jump0039.png",
+        "assets/imgs_320_480/stair_stable05.png",
+        "assets/imgs_320_480/qiqiu0034.png",
+        "assets/imgs_320_480/qiqiu0006.png",
+        "assets/ads/download_btn.png",
+        "assets/imgs_320_480/qiqiu0052.png",
+        "assets/imgs_480_800/qiqiu0086.png",
+        "assets/imgs_480_800/stair_friable_disappear03.png",
+        "assets/imgs_480_800/plan0008.png",
+        "assets/imgs_480_800/stair_stable03.png",
+        "assets/imgs_320_480/UFO0002.png",
+        "assets/imgs_480_800/qiqiu0048.png",
+        "assets/imgs_480_800/MJ0040.png",
+        "assets/imgs_320_480/jump0005.png",
+        "assets/imgs_320_480/qiqiu0094.png",
+        "assets/imgs_320_480/plan0002.png",
+        "assets/imgs_320_480/effect_super08.png",
+        "assets/imgs_320_480/dead0001.png",
+        "res/drawable/edit.xml",
+        "assets/imgs_320_480/qiqiu0092.png",
+        "assets/imgs_480_800/qiqiu0014.png",
+        "res/raw/ogg_spring.ogg",
+        "assets/imgs_320_480/plan0008.png",
+        "assets/imgs_320_480/jump0001.png",
+        "assets/imgs_320_480/achievement09.png",
+        "assets/imgs_480_800/jump0005.png",
+        "assets/ads/selected_icon.png",
+        "assets/imgs_480_800/jump0032.png",
+        "assets/imgs_320_480/jump0025.png",
+        "res/drawable/mode_btn_bg_selected.9.png",
+        "assets/imgs_320_480/number_ingame.png",
+        "assets/imgs_320_480/effect_super05.png",
+        "assets/imgs_480_800/MJ0000.png",
+        "assets/imgs_320_480/achievement14.png",
+        "assets/ads/push_cancel_btn_pressed.png",
+        "assets/imgs_480_800/shootingstar07.png",
+        "assets/imgs_480_800/jump0017.png",
+        "assets/imgs_320_480/cloud01.png",
+        "res/drawable-hdpi/btn_more2_highlight.png",
+        "assets/imgs_320_480/boow7.png",
+        "assets/imgs_320_480/plan0022.png",
+        "assets/imgs_480_800/qiqiu0020.png",
+        "assets/imgs_480_800/qiqiu0074.png",
+        "assets/imgs_320_480/dead0005.png",
+        "assets/imgs_320_480/effect_qiqiu.png",
+        "assets/imgs_480_800/props_gliding04.png",
+        "assets/imgs_480_800/highscore.png",
+        "assets/imgs_320_480/plan0020.png",
+        "assets/imgs_480_800/stair_moveable_n_02.png",
+        "assets/imgs_480_800/qiqiu0012.png",
+        "assets/imgs_480_800/stair_stable_n_01.png",
+        "assets/imgs_320_480/dead0003.png",
+        "assets/imgs_480_800/shake.png",
+        "assets/imgs_320_480/super0022.png",
+        "assets/imgs_320_480/qiqiu0000.png",
+        "assets/imgs_320_480/qiqiu0088.png",
+        "assets/imgs_320_480/effect_mj08.png",
+        "assets/imgs_480_800/qiqiu0058.png",
+        "assets/imgs_480_800/plan0010.png",
+        "res/drawable-hdpi/btn_score_highlight.png",
+        "assets/ads/download_btn2.png",
+        "assets/imgs_480_800/props_gliding02.png",
+        "assets/imgs_320_480/boow5.png",
+        "assets/imgs_320_480/effect_mj009.png.png",
+        "assets/imgs_320_480/balloon03.png",
+        "assets/imgs_480_800/qiqiu0042.png",
+        "assets/imgs_320_480/jump0021.png",
+        "assets/imgs_480_800/number_ingame.png",
+        "assets/imgs_320_480/prop_spring01.png",
+        "assets/imgs_480_800/run0010.png",
+        "res/drawable-hdpi/silver.png",
+        "assets/imgs_320_480/effect_super01.png",
+        "assets/imgs_320_480/sun.png",
+        "assets/imgs_320_480/shootingstar05.png",
+        "assets/imgs_480_800/qiqiu0004.png",
+        "assets/imgs_320_480/shootingstar08.png",
+        "assets/imgs_480_800/stair_stable04.png",
+        "assets/imgs_480_800/plan0022.png",
+        "res/drawable/score_mode_bg.9.png",
+        "assets/imgs_320_480/jump0032.png",
+        "assets/imgs_480_800/balloon02.png",
+        "assets/imgs_480_800/props_super.png",
+        "res/drawable/score_list_bg.9.png",
+        "assets/imgs_320_480/effect_mj02.png",
+        "res/drawable/r_dlg_bg.png",
+        "assets/imgs_320_480/props_ufo.png",
+        "assets/imgs_320_480/jump0023.png",
+        "assets/imgs_480_800/MJ0052.png",
+        "assets/imgs_480_800/floor.png",
+        "assets/imgs_480_800/effect_super09.png",
+        "assets/imgs_480_800/stair_moveable01.png",
+        "assets/imgs_480_800/MJ0092.png",
+        "assets/imgs_320_480/effect_mj01.png",
+        "assets/imgs_480_800/stair_stable_n_02.png",
+        "assets/imgs_320_480/plan0016.png",
+        "assets/imgs_480_800/dead0004.png",
+        "assets/imgs_480_800/plan0014.png",
+        "assets/imgs_320_480/effect_mj002.png",
+        "res/drawable/r_dlg_download_default.png",
+        "assets/imgs_320_480/background.png",
+        "res/raw/ogg_firecrackers.ogg",
+        "assets/imgs_480_800/qiqiu0094.png",
+        "res/drawable-hdpi/btn_score_normal.png",
+        "res/drawable-hdpi/btn_more_highlight.png",
+        "assets/imgs_320_480/run0022.png",
+        "res/drawable-hdpi/btn_sound_disabled.png",
+        "assets/imgs_480_800/stair_friable_disappear_n_01.png",
+        "assets/imgs_320_480/super0014.png",
+        "assets/ads/download_icon.png",
+        "assets/imgs_320_480/cloud03.png",
+        "assets/imgs_480_800/super0004.png",
+        "assets/imgs_480_800/jump0035.png",
+        "assets/imgs_480_800/qiqiu0024.png",
+        "res/raw/ogg_balloon.ogg",
+        "res/layout/achievements_list.xml",
+        "assets/imgs_320_480/stair_friable_disappear_n_02.png",
+        "res/drawable-hdpi/btn_resume_down.png",
+        "assets/imgs_480_800/jump0023.png",
+        "assets/imgs_320_480/show.png",
+        "assets/imgs_480_800/UFO0014.png",
+        "assets/imgs_480_800/UFO0016.png",
+        "assets/imgs_320_480/qiqiu0072.png",
+        "res/drawable/r_dlg_download.xml",
+        "assets/imgs_480_800/qiqiu0006.png",
+        "assets/imgs_320_480/qiqiu0050.png",
+        "assets/imgs_320_480/qiqiu0020.png",
+        "assets/imgs_480_800/qiqiu0090.png",
+        "assets/imgs_480_800/jump0040.png",
+        "assets/imgs_320_480/jump0034.png",
+        "assets/imgs_320_480/jump0040.png",
+        "assets/imgs_320_480/qiqiu0064.png",
+        "assets/ads/spot_default.png",
+        "assets/imgs_480_800/qiqiu0044.png",
+        "assets/imgs_320_480/jump0020.png",
+        "assets/imgs_320_480/shootingstar04.png",
+        "assets/imgs_480_800/hill.png",
+        "assets/imgs_320_480/stair_stable02.png",
+        "assets/imgs_480_800/stair_friable_n.png",
+        "assets/imgs_320_480/qiqiu0030.png",
+        "assets/imgs_320_480/stair_stable_n_02.png",
+        "assets/imgs_480_800/jump0029.png",
+        "assets/imgs_320_480/effect_mj001.png",
+        "assets/imgs_480_800/super0016.png",
+        "assets/imgs_480_800/dead0001.png",
+        "assets/imgs_480_800/qiqiu0030.png",
+        "assets/imgs_480_800/plan0020.png",
+        "assets/imgs_480_800/run0002.png",
+        "assets/imgs_480_800/jump0026.png",
+        "assets/imgs_320_480/achievement07.png",
+        "assets/imgs_480_800/jump0019.png",
+        "res/drawable-hdpi/btn_more2_normal.png",
+        "assets/imgs_320_480/props_michael.png",
+        "assets/imgs_320_480/plan0000.png",
+        "assets/imgs_480_800/effect_super02.png",
+        "assets/imgs_320_480/qiqiu0046.png",
+        "assets/imgs_480_800/stair_friable_disappear_n_04.png",
+        "assets/imgs_480_800/background_night.jpg",
+        "assets/imgs_320_480/achievement02.png",
+        "assets/imgs_320_480/qiqiu0074.png",
+        "assets/imgs_480_800/UFO0022.png",
+        "res/layout/r_dlg.xml",
+        "assets/imgs_320_480/MJ0032.png",
+        "assets/imgs_320_480/achievement05.png",
+        "assets/imgs_480_800/achievement11.png",
+        "assets/imgs_480_800/effect_mj07.png",
+        "assets/imgs_320_480/MJ0052.png",
+        "assets/imgs_320_480/qiqiu0086.png",
+        "assets/imgs_320_480/jump0036.png",
+        "assets/imgs_320_480/stair_friable_disappear_n_01.png",
+        "assets/imgs_320_480/shootingstar06.png",
+        "assets/ads/money.png",
+        "assets/ads/unselected_icon.png",
+        "res/raw/ogg_ufo_pick.ogg",
+        "res/drawable-hdpi/bronze.png",
+        "assets/imgs_480_800/daiji.png",
+        "assets/imgs_480_800/boow5.png",
+        "assets/imgs_480_800/dead0003.png",
+        "assets/imgs_480_800/UFO0002.png",
+        "assets/imgs_320_480/jump0035.png",
+        "res/drawable-hdpi/btn_cup_highlight.png",
+        "res/drawable/silver.png",
+        "assets/imgs_480_800/shootingstar06.png",
+        "assets/imgs_480_800/plan0006.png",
+        "assets/imgs_480_800/effect_mj008.png",
+        "res/drawable-hdpi/btn_share_flip.png",
+        "assets/imgs_480_800/jump0016.png",
+        "assets/imgs_320_480/effect_mj09.png",
+        "assets/imgs_320_480/jump0038.png",
+        "assets/imgs_320_480/effect_mj003.png",
+        "res/drawable-hdpi/gameover.jpg",
+        "assets/imgs_320_480/qiqiu0078.png",
+        "assets/imgs_320_480/effect_mj008.png",
+        "res/raw/ogg_gliding_pick.ogg",
+        "assets/imgs_480_800/jump0033.png",
+        "assets/imgs_320_480/jump0031.png",
+        "assets/imgs_320_480/super0016.png",
+        "assets/imgs_480_800/qiqiu0010.png",
+        "assets/imgs_320_480/props_super.png",
+        "assets/imgs_480_800/effect_mj06.png",
+        "assets/imgs_320_480/super0018.png",
+        "assets/ads/spot_light.png",
+        "assets/imgs_320_480/props_gliding04.png",
+        "assets/imgs_480_800/qiqiu0060.png",
+        "assets/imgs_320_480/effect_mj007.png",
+        "assets/imgs_480_800/run0022.png",
+        "assets/imgs_320_480/daiji.png",
+        "assets/imgs_480_800/stair_friable_disappear01.png",
+        "assets/imgs_320_480/jump0045.png",
+        "assets/imgs_320_480/MJ0000.png",
+        "assets/imgs_320_480/qiqiu0056.png",
+        "res/drawable-hdpi/btn_cup_normal.png",
+        "assets/imgs_480_800/qiqiu0046.png",
+        "assets/imgs_320_480/UFO0022.png",
+        "res/raw/ogg_btn_click.ogg",
+        "assets/imgs_480_800/qiqiu0018.png",
+        "assets/imgs_320_480/effect_mj005.png",
+        "assets/imgs_480_800/super0000.png",
+        "assets/imgs_480_800/jump0045.png",
+        "assets/imgs_320_480/MJ0076.png",
+        "assets/imgs_320_480/qiqiu0012.png",
+        "assets/imgs_320_480/point.png",
+        "res/drawable-hdpi/btn_resume.png",
+        "assets/imgs_480_800/stair_stable05.png",
+        "assets/imgs_320_480/stair_friable_disappear02.png",
+        "res/raw/ogg_go.ogg",
+        "assets/imgs_320_480/jump0029.png",
+        "assets/imgs_320_480/stair_friable_disappear01.png",
+        "assets/imgs_480_800/qiqiu0002.png",
+        "assets/imgs_480_800/effect_super07.png",
+        "assets/imgs_480_800/MJ0032.png",
+        "res/raw/ogg_super.ogg",
+        "assets/imgs_320_480/jump0026.png",
+        "assets/imgs_320_480/qiqiu0026.png",
+        "assets/imgs_320_480/UFO0006.png",
+        "assets/imgs_480_800/qiqiu0098.png",
+        "assets/imgs_480_800/plan0004.png",
+        "assets/imgs_320_480/qiqiu0010.png",
+        "assets/imgs_480_800/qiqiu0066.png",
+        "res/drawable/edit_focused.png",
+        "assets/imgs_480_800/effect_super06.png",
+        "assets/imgs_480_800/boow1.png",
+        "assets/imgs_480_800/MJ0016.png",
+        "assets/imgs_480_800/shootingstar02.png",
+        "assets/imgs_320_480/effect_super07.png",
+        "assets/imgs_480_800/MJ0024.png",
+        "assets/imgs_320_480/boow1.png",
+        "assets/imgs_480_800/effect_mj04.png",
+        "assets/imgs_320_480/MJ0092.png",
+        "assets/imgs_320_480/achievement12.png",
+        "assets/imgs_320_480/props_gliding05.png",
+        "assets/imgs_320_480/super0012.png",
+        "assets/imgs_320_480/qiqiu0004.png",
+        "assets/imgs_320_480/MJ0060.png",
+        "assets/imgs_320_480/super0020.png",
+        "assets/imgs_480_800/jump0037.png",
+        "assets/imgs_480_800/stair_stable_n_03.png",
+        "res/drawable/mode_btn_bg.9.png",
+        "assets/imgs_320_480/jump0027.png",
+        "assets/imgs_480_800/achievement06.png",
+        "res/raw/ogg_balloon_pick.ogg",
+        "assets/imgs_480_800/qiqiu0032.png",
+        "assets/imgs_320_480/cloud02.png",
+        "assets/imgs_320_480/qiqiu0082.png",
+        "assets/imgs_320_480/qiqiu0044.png",
+        "assets/imgs_320_480/super0008.png",
+        "res/drawable/score_button_pressed.9.png",
+        "assets/imgs_320_480/jump0037.png",
+        "assets/imgs_480_800/achievement01.png",
+        "assets/imgs_480_800/jump0020.png",
+        "assets/imgs_320_480/super0010.png",
+        "assets/imgs_480_800/qiqiu0076.png",
+        "assets/imgs_320_480/stair_friable_disappear03.png",
+        "assets/imgs_320_480/stair_friable_disappear_n_04.png",
+        "assets/imgs_320_480/balloon02.png",
+        "res/drawable-hdpi/btn_more_normal.png",
+        "assets/ogg_background.ogg",
+        "assets/imgs_320_480/UFO0004.png",
+        "assets/imgs_480_800/effect_mj007.png",
+        "res/drawable/mode_spinner.png",
+        "res/drawable-hdpi/btn_share.png",
+        "assets/imgs_320_480/qiqiu0076.png",
+        "assets/imgs_320_480/stair_friable_disappear04.png",
+        "assets/imgs_320_480/MJ0068.png",
+        "assets/imgs_480_800/hill_near.png",
+        "assets/imgs_480_800/stair_friable.png",
+        "assets/imgs_480_800/qiqiu0062.png",
+        "res/drawable/bronze.png",
+        "assets/ads/wait_download_btn_pressed.png",
+        "assets/imgs_320_480/qiqiu0070.png",
+        "assets/imgs_480_800/jump0041.png",
+        "assets/imgs_320_480/props_gliding03.png",
+        "assets/imgs_480_800/background.png",
+        "assets/imgs_480_800/achievement04.png",
+        "assets/imgs_480_800/dead0005.png",
+        "assets/imgs_320_480/props_gliding02.png",
+        "assets/imgs_320_480/jump0019.png",
+        "assets/imgs_320_480/boow3.png",
+        "assets/imgs_320_480/floor.png",
+        "assets/imgs_320_480/qiqiu0022.png",
+        "assets/imgs_480_800/jump0036.png",
+        "assets/imgs_480_800/MJ0076.png",
+        "res/drawable-hdpi/btn_retry2_highlight.png",
+        "assets/ads/push_cancel_btn.png",
+        "assets/imgs_480_800/stair_friable_disappear02.png",
+        "assets/imgs_480_800/super0014.png",
+        "assets/imgs_480_800/stair_stable02.png",
+        "assets/imgs_320_480/qiqiu0016.png",
+        "assets/imgs_320_480/run0000.png",
+        "assets/imgs_480_800/boow2.png",
+        "assets/imgs_480_800/qiqiu0026.png",
+        "assets/imgs_480_800/cloud01.png",
+        "assets/imgs_480_800/UFO0000.png",
+        "resources.arsc",
+        "assets/imgs_480_800/qiqiu0022.png",
+        "assets/imgs_480_800/achievement07.png",
+        "assets/imgs_480_800/stair_friable_disappear04.png",
+        "assets/imgs_320_480/shake.png",
+        "res/drawable-hdpi/btn_score2_highlight.png",
+        "assets/imgs_320_480/jump0039.png",
+        "assets/imgs_320_480/super0006.png",
+        "assets/imgs_320_480/stair_stable01.png",
+        "assets/imgs_480_800/qiqiu0000.png",
+        "assets/imgs_320_480/achievement06.png",
+        "assets/imgs_320_480/props_balloon.png",
+        "assets/imgs_320_480/plan0018.png",
+        "assets/imgs_320_480/qiqiu0018.png",
+        "assets/imgs_480_800/MJ0050.png",
+        "assets/imgs_480_800/boow6.png",
+        "assets/imgs_480_800/stair_moveable02.png",
+        "assets/imgs_480_800/run0018.png",
+        "assets/imgs_480_800/qiqiu0038.png",
+        "assets/imgs_320_480/hill.png",
+        "assets/imgs_320_480/stair_stable_n_04.png",
+        "assets/imgs_320_480/plan0010.png",
+        "res/drawable/score_header_bg.9.png",
+        "assets/imgs_480_800/effect_super05.png",
+        "assets/imgs_480_800/jump0031.png",
+        "res/drawable-hdpi/cover.jpg",
+        "assets/imgs_480_800/jump0018.png",
+        "assets/imgs_320_480/achievement13.png",
+        "assets/imgs_320_480/run0018.png",
+        "assets/imgs_480_800/UFO0018.png",
+        "assets/imgs_480_800/qiqiu0082.png",
+        "assets/imgs_320_480/prop_spring03.png",
+        "assets/imgs_320_480/effect_mj04.png",
+        "assets/imgs_480_800/props_michael.png",
+        "res/raw/ogg_die.ogg",
+        "assets/imgs_320_480/shootingstar02.png",
+        "assets/imgs_320_480/jump0018.png",
+        "assets/imgs_320_480/MJ0050.png",
+        "res/drawable/score_button.xml",
+        "assets/imgs_320_480/stair_stable_n_03.png",
+        "assets/imgs_320_480/boow8.png",
+        "assets/imgs_320_480/qiqiu0096.png",
+        "assets/imgs_480_800/package.png",
+        "assets/imgs_480_800/dead0002.png",
+        "assets/imgs_480_800/prop_spring01.png",
+        "assets/imgs_320_480/achievement16.png",
+        "assets/imgs_320_480/stair_stable_n_05.png",
+        "assets/imgs_480_800/plan0002.png",
+        "assets/imgs_320_480/UFO0014.png",
+        "assets/ads/download_btn_pressed.png",
+        "assets/imgs_480_800/MJ0060.png",
+        "assets/imgs_320_480/stair_moveable_n_01.png",
+        "assets/imgs_320_480/qiqiu0060.png",
+        "assets/imgs_480_800/jump0034.png",
+        "res/layout/main.xml",
+        "assets/imgs_480_800/achievement15.png",
+        "assets/imgs_320_480/qiqiu0014.png",
+        "assets/imgs_320_480/props_gliding01.png",
+        "assets/imgs_320_480/effect_super03.png",
+        "assets/imgs_480_800/effect_mj001.png",
+        "assets/imgs_480_800/stair_moveable_n_01.png",
+        "assets/imgs_480_800/show.png",
+        "assets/ads/shortcut.png",
+        "assets/ads/snapshot_empty.png",
+        "assets/imgs_480_800/sun.png",
+        "assets/imgs_320_480/run0004.png",
+        "assets/imgs_480_800/qiqiu0064.png",
+        "assets/imgs_320_480/boow6.png",
+        "assets/imgs_480_800/qiqiu0068.png",
+        "assets/imgs_480_800/shootingstar08.png",
+        "assets/imgs_320_480/UFO0018.png",
+        "assets/imgs_320_480/run0016.png",
+        "assets/ogg_gameover.ogg",
+        "res/drawable-hdpi/score_header_bg.9.png",
+        "assets/imgs_480_800/achievement02.png",
+        "assets/imgs_480_800/achievement10.png",
+        "assets/imgs_480_800/cloud03.png",
+        "assets/imgs_320_480/hill_near.png",
+        "assets/imgs_480_800/achievement08.png",
+        "assets/imgs_320_480/stair_friable.png",
+        "assets/imgs_480_800/balloon01.png",
+        "assets/imgs_320_480/UFO0016.png",
+        "assets/imgs_320_480/qiqiu0066.png",
+        "assets/imgs_320_480/stair_moveable_n_02.png",
+        "assets/imgs_480_800/UFO0006.png",
+        "assets/imgs_480_800/effect_mj004.png",
+        "res/raw/ogg_step_broken.ogg",
+        "assets/imgs_480_800/effect_mj03.png",
+        "assets/imgs_320_480/package.png",
+        "assets/imgs_480_800/qiqiu0034.png",
+        "assets/imgs_480_800/jump0024.png",
+        "res/layout/highscores.xml",
+        "res/drawable/gold.png",
+        "assets/imgs_320_480/effect_mj06.png"
+    ],
+    "exported_count": {
+        "exported_activities": 1,
+        "exported_services": 0,
+        "exported_receivers": 1,
+        "exported_providers": 1
+    },
+    "apkid": {
+        "classes.dex": {
+            "anti_vm": [
+                "Build.MODEL check",
+                "Build.MANUFACTURER check",
+                "Build.PRODUCT check",
+                "Build.BOARD check",
+                "network operator name check",
+                "ro.kernel.qemu check"
+            ],
+            "compiler": [
+                "dexlib 1.x",
+                "r8 without marker (suspicious)"
+            ]
+        }
+    },
+    "behaviour": {
+        "00063": {
+            "files": {
+                "com/droidhen/recommend/f.java": "20,3,4",
+                "com/kuguo/openads/k.java": "135,6,7,10",
+                "com/kuguo/pushads/a.java": "407,8,16",
+                "com/kuguo/pushads/h.java": "75,7,10",
+                "net/youmi/android/bj.java": "56,110,161,167,184,201,235,263,6,7",
+                "net/youmi/android/cp.java": "59,3,4"
+            },
+            "metadata": {
+                "label": [
+                    "control"
+                ],
+                "description": "Implicit intent(view a web page, make a phone call, etc.)",
+                "severity": "info"
+            }
+        },
+        "00013": {
+            "files": {
+                "com/droidhen/api/scoreclient/ui/f.java": "11,12,12",
+                "com/kuguo/pushads/a.java": "21,22,23,22",
+                "net/youmi/android/ba.java": "4,5,4",
+                "net/youmi/android/bd.java": "8,9,10,9",
+                "net/youmi/android/df.java": "3,4,4",
+                "net/youmi/android/ek.java": "3,4,5,4",
+                "net/youmi/android/v.java": "9,10,10"
+            },
+            "metadata": {
+                "label": [
+                    "file"
+                ],
+                "description": "Read file and put it into a stream",
+                "severity": "info"
+            }
+        },
+        "00033": {
+            "files": {
+                "com/droidhen/api/scoreclient/ui/f.java": "49,49,5,9",
+                "com/droidhen/score/h.java": "12,12,4,5",
+                "com/kuguo/openads/k.java": "44,44,57,5,13",
+                "com/kuguo/pushads/k.java": "41,41,45,3,7",
+                "net/youmi/android/bi.java": "49,39,134,3,7"
+            },
+            "metadata": {
+                "label": [
+                    "collection"
+                ],
+                "description": "Query the IMEI number",
+                "severity": "info"
+            }
+        },
+        "00083": {
+            "files": {
+                "com/droidhen/score/h.java": "12,12,3,5"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "telephony"
+                ],
+                "description": "Query the IMEI number",
+                "severity": "info"
+            }
+        },
+        "00054": {
+            "files": {
+                "com/kuguo/pushads/a.java": "100,100,8,16"
+            },
+            "metadata": {
+                "label": [
+                    "reflection"
+                ],
+                "description": "Install other APKs from file",
+                "severity": "info"
+            }
+        },
+        "00067": {
+            "files": {
+                "com/kuguo/pushads/a.java": "151,151,159,7,18",
+                "net/youmi/android/bi.java": "42,39,134,3,7",
+                "net/youmi/android/eh.java": "263,245,3,120,173,8"
+            },
+            "metadata": {
+                "label": [
+                    "collection"
+                ],
+                "description": "Query the IMSI number",
+                "severity": "info"
+            }
+        },
+        "00051": {
+            "files": {
+                "com/kuguo/pushads/a.java": "407,407,8,16"
+            },
+            "metadata": {
+                "label": [
+                    "control"
+                ],
+                "description": "Implicit intent(view a web page, make a phone call, etc.) via setData",
+                "severity": "info"
+            }
+        },
+        "00130": {
+            "files": {
+                "net/youmi/android/bi.java": "134,39,134,3,4"
+            },
+            "metadata": {
+                "label": [
+                    "wifi",
+                    "collection"
+                ],
+                "description": "Get the current WIFI information",
+                "severity": "info"
+            }
+        },
+        "00089": {
+            "files": {
+                "com/droidhen/recommend/RecommendActivity.java": "33,30,13,14",
+                "com/droidhen/recommend/a.java": "95,92,11,12"
+            },
+            "metadata": {
+                "label": [
+                    "command",
+                    "network"
+                ],
+                "description": "Connect to a URL and receive input stream from the server",
+                "severity": "info"
+            }
+        },
+        "00192": {
+            "files": {
+                "com/droidhen/api/scoreclient/ui/f.java": "104,108,280,280,108,205,7,8"
+            },
+            "metadata": {
+                "label": [
+                    "sms"
+                ],
+                "description": "Get messages in the SMS inbox",
+                "severity": "info"
+            }
+        },
+        "00052": {
+            "files": {
+                "com/droidhen/api/scoreclient/ui/f.java": "108,108,205,3,8"
+            },
+            "metadata": {
+                "label": [
+                    "sms"
+                ],
+                "description": "Deletes media specified by a content URI(SMS, CALL_LOG, File, etc.)",
+                "severity": "info"
+            }
+        },
+        "00011": {
+            "files": {
+                "com/droidhen/api/scoreclient/ui/f.java": "108,205,99,266,3,8"
+            },
+            "metadata": {
+                "label": [
+                    "sms",
+                    "calllog",
+                    "collection"
+                ],
+                "description": "Query data from URI (SMS, CALLLOGS)",
+                "severity": "info"
+            }
+        },
+        "00187": {
+            "files": {
+                "com/droidhen/api/scoreclient/ui/f.java": "279,99,266,3,7"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "sms",
+                    "calllog",
+                    "calendar"
+                ],
+                "description": "Query a URI and check the result",
+                "severity": "info"
+            }
+        },
+        "00077": {
+            "files": {
+                "com/droidhen/api/scoreclient/ui/f.java": "93,204,266,99,266,3,5"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "sms",
+                    "calllog",
+                    "calendar"
+                ],
+                "description": "Read sensitive data(SMS, CALLLOG, etc)",
+                "severity": "info"
+            }
+        },
+        "00036": {
+            "files": {
+                "com/droidhen/api/scoreclient/ui/f.java": "45,108,205,5,8",
+                "com/kuguo/openads/k.java": "48,135,5,10"
+            },
+            "metadata": {
+                "label": [
+                    "reflection"
+                ],
+                "description": "Get resource file from res/raw directory",
+                "severity": "info"
+            }
+        },
+        "00115": {
+            "files": {
+                "net/youmi/android/ei.java": "38,39,4,5,5"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "location"
+                ],
+                "description": "Get last known location of the device",
+                "severity": "info"
+            }
+        },
+        "00121": {
+            "files": {
+                "com/kuguo/openads/k.java": "50,51,146,11,14"
+            },
+            "metadata": {
+                "label": [
+                    "file",
+                    "command"
+                ],
+                "description": "Create a directory",
+                "severity": "info"
+            }
+        },
+        "00125": {
+            "files": {
+                "com/kuguo/openads/k.java": "222,50,51,11,14"
+            },
+            "metadata": {
+                "label": [
+                    "file"
+                ],
+                "description": "Check if the given file path exist",
+                "severity": "info"
+            }
+        }
+    },
+    "trackers": {
+        "detected_trackers": 1,
+        "total_trackers": 432,
+        "trackers": [
+            {
+                "name": "Google AdMob",
+                "categories": "Advertisement",
+                "url": "https://reports.exodus-privacy.eu.org/trackers/312"
+            }
+        ]
+    },
+    "playstore_details": {
+        "error": true
+    },
+    "secrets": [
+        "f75a3a45f171138a5df50d16c5590fcb",
+        "46C02DF8DF4C4C18A578C63449C7F64D",
+        "E91A62B2CF0744bd9CA37BA14615050F",
+        "0b451641094b1f565b421857454f4f5d4c585a485a54461d5b451f410b1f50595a",
+        "172C94EDC717477aBF600D7898A64A8E",
+        "CDDA55C678C34d07957074BF6956862F",
+        "E2FDAA28C7344D2F9FAA4A0FEC1296AA",
+        "F1B19978F3D74302BA126760F96262CD",
+        "dPvR6OIwVr7443aSVEEndczaY3SkhD9G7Hf8H4E83awB5E3gU1sfeVHoUSzNRAMscp1b",
+        "0b1045405e1917570a401c5540171f5d460f58165703421b514419150b4b0e43",
+        "DD5E8CD46CF94B22BAAD68AB06710752",
+        "C97CE45F9A5A447c98BBB83D88790503",
+        "504c45480a1b1c111758451e57121b400a10595e480d51431f131656504256",
+        "5c4715125b171c53094b165443184a0d105c5f1a5f5246195a174a4f561b400441",
+        "0c1612110a1749075a121f01114b1d5c110e5e4a5f01461c5a4a1a10054b46155643",
+        "EB80F3291A8E469c962CA133BDC549D7",
+        "gmEldj50DrCOt5vcrs3o7whARCMMNAHTkQroSQvwnzusS8djoZiCK",
+        "D080F8A1E1134cabA1910B7129A75B44",
+        "A33E523A1CEF496dB37ABD886CBCB005",
+        "1BD3ACC63FA94E5B99B5479664B9CE69",
+        "D50EF1926ADD471892E72BCE6D7E032C",
+        "5cc71df611973c978124396dd7a00185",
+        "CE94557724F842149D690D0E8CBB1CBD",
+        "DB9C288EF60A40d4897665843327626E",
+        "2d800967deb503e4113efc3726c1eda6",
+        "5c4d1216091749555f174f50464c4f59105d591c08074318564a4d15024d590d",
+        "DCDAE4873D1F4c64BB121FDE4131DDFF",
+        "1bbb2bda09c00000ab12276463721bd7",
+        "CBB27B6EF764459EAEEE877D9DA42B6D",
+        "f785026ae812ebed145aef7f7cc53135",
+        "K0DaWyoa4u8aB1J1T7LdIH3FqPDaGyusq6zoY2r4EzxyrWfgyWs",
+        "C8F62501155F41fbBBAA47A53C7F1A9B",
+        "FEDC335110C04414AF100EA25C26A70D",
+        "D780FBF4215247bcBB1AC0AD33C474FE",
+        "A821718FB7F248b590F3721F6576D289",
+        "5d151649581a19005e121c024f4d1c5d100c081b0f53161d07104e13554a170d47",
+        "501740450e4a1d161502454802471e4c5f105c5f175c504118005a",
+        "CC39825145FD4445ADD9860797CA5744",
+        "CBD2998A3D5A4744BF128B91E1410DEA",
+        "FD7C4B12A60F415dBE8C580A137F5F1C",
+        "5QmHdPWHBVmNxpJoj2Qqt4DkqjSPSNS9rgRxEKBdZOG1Uxlu9",
+        "36d9e5f710fa3357f16ac39eef87ab57",
+        "02ECC682A05F4E72AD0DA4C4C2FFC6D9",
+        "1861b676e8889ee3dfbb1e53d4305b11",
+        "CD1D37A4A08F465A97D040CCD0FF7D1F",
+        "103cc347e7ce1dbfff3d9c2bc031c372"
+    ],
+    "logs": [
+        {
+            "timestamp": "2025-12-08 12:06:00",
+            "status": "Generating Hashes",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:00",
+            "status": "Extracting APK",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:00",
+            "status": "Unzipping",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:00",
+            "status": "Parsing APK with androguard",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:00",
+            "status": "Extracting APK features using aapt/aapt2",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:00",
+            "status": "Getting Hardcoded Certificates/Keystores",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:01",
+            "status": "Parsing AndroidManifest.xml",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:01",
+            "status": "Extracting Manifest Data",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:01",
+            "status": "Manifest Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:01",
+            "status": "Performing Static Analysis on: 可爱驴跳跳 (com.tiaolvi.donkeyjump)",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:02",
+            "status": "Fetching Details from Play Store: com.tiaolvi.donkeyjump",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:02",
+            "status": "Checking for Malware Permissions",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:02",
+            "status": "Fetching icon path",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:02",
+            "status": "Library Binary Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:02",
+            "status": "Reading Code Signing Certificate",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:03",
+            "status": "Running APKiD 3.0.0",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:06",
+            "status": "Detecting Trackers",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:06",
+            "status": "Decompiling APK to Java with JADX",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:10",
+            "status": "Converting DEX to Smali",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:10",
+            "status": "Code Analysis Started on - java_source",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:10",
+            "status": "Android SBOM Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:10",
+            "status": "Android SAST Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:10",
+            "status": "Android API Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:11",
+            "status": "Android API Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:11",
+            "status": "Android Permission Mapping Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:11",
+            "status": "Android Permission Mapping Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:11",
+            "status": "Android Behaviour Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:12",
+            "status": "Android Behaviour Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:12",
+            "status": "Extracting Emails and URLs from Source Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:12",
+            "status": "Email and URL Extraction Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:12",
+            "status": "Extracting String data from APK",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:12",
+            "status": "Extracting String data from Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:12",
+            "status": "Extracting String values and entropies from Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:12",
+            "status": "Performing Malware check on extracted domains",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:06:16",
+            "status": "Saving to Database",
+            "exception": null
+        }
+    ],
+    "sbom": {
+        "sbom_versioned": [],
+        "sbom_packages": [
+            "com.droidhen",
+            "com.kuguo.a",
+            "com.kuguo.b",
+            "com.kuguo.c",
+            "com.kuguo.d",
+            "com.kuguo.openads",
+            "com.kuguo.pushads",
+            "com.kuguo.ui",
+            "com.tiaolvi.donkeyjump",
+            "net.youmi.android"
+        ]
+    },
+    "average_cvss": null,
+    "appsec": {
+        "high": [
+            {
+                "title": "Application vulnerable to Janus Vulnerability",
+                "description": "Application is signed with v1 signature scheme, making it vulnerable to Janus vulnerability on Android 5.0-8.0, if signed only with v1 signature scheme. Applications running on Android 5.0-7.0 signed with v1, and v2/v3 scheme is also vulnerable.",
+                "section": "certificate"
+            },
+            {
+                "title": "Certificate algorithm vulnerable to hash collision",
+                "description": "Application is signed with SHA1withRSA. SHA1 hash algorithm is known to have collision issues.",
+                "section": "certificate"
+            },
+            {
+                "title": "App can be installed on a vulnerable unpatched Android version",
+                "description": "Android 1.6, [minSdk=4]\nThis application can be installed on an older version of android that has multiple unfixed vulnerabilities. These devices won't receive reasonable security updates from Google. Support an Android version => 10, API 29 to receive reasonable security updates.",
+                "section": "manifest"
+            },
+            {
+                "title": "Weak Encryption algorithm used",
+                "description": "Weak Encryption algorithm used\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#identifying-insecure-andor-deprecated-cryptographic-algorithms-mstg-crypto-4\n\nFiles:\nnet/youmi/android/cg.java, line(s) 38,55",
+                "section": "code"
+            },
+            {
+                "title": "The file or SharedPreference is World Writable. Any App can write to the file",
+                "description": "The file or SharedPreference is World Writable. Any App can write to the file\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#testing-local-storage-for-sensitive-data-mstg-storage-1-and-mstg-storage-2\n\nFiles:\ncom/kuguo/openads/k.java, line(s) 97,209\ncom/kuguo/openads/u.java, line(s) 72",
+                "section": "code"
+            },
+            {
+                "title": "The file or SharedPreference is World Readable. Any App can read from the file",
+                "description": "The file or SharedPreference is World Readable. Any App can read from the file\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#testing-local-storage-for-sensitive-data-mstg-storage-1-and-mstg-storage-2\n\nFiles:\ncom/kuguo/openads/k.java, line(s) 213,233",
+                "section": "code"
+            }
+        ],
+        "warning": [
+            {
+                "title": "Application Data can be Backed up",
+                "description": "[android:allowBackup] flag is missing.\nThe flag [android:allowBackup] should be set to false. By default it is set to true and allows anyone to backup your application data via adb. It allows users who have enabled USB debugging to copy application data off of the device.",
+                "section": "manifest"
+            },
+            {
+                "title": "Content Provider (com.droidhen.api.scoreclient.ScoreClientProvider) is not Protected. ",
+                "description": "[Content Provider, targetSdkVersion < 17]\nA Content Provider is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. It is a Content Provider that targets an API level under 17, which makes it exported by default, regardless of the API level of the system that the application runs on.",
+                "section": "manifest"
+            },
+            {
+                "title": "Activity (com.kuguo.pushads.PushAdsActivity) is not Protected.",
+                "description": "An intent-filter exists.\nAn Activity is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Activity is explicitly exported.",
+                "section": "manifest"
+            },
+            {
+                "title": "Broadcast Receiver (com.kuguo.pushads.AdsReceiver) is not Protected.",
+                "description": "An intent-filter exists.\nA Broadcast Receiver is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Broadcast Receiver is explicitly exported.",
+                "section": "manifest"
+            },
+            {
+                "title": "The App uses an insecure Random Number Generator.",
+                "description": "The App uses an insecure Random Number Generator.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#weak-random-number-generators\n\nFiles:\ncom/droidhen/activity/b.java, line(s) 3\ncom/droidhen/game/donkeyjump/a/g.java, line(s) 4\ncom/droidhen/game/donkeyjump/aa.java, line(s) 4\ncom/droidhen/game/donkeyjump/ad.java, line(s) 8\ncom/droidhen/game/donkeyjump/j.java, line(s) 3\ncom/droidhen/game/donkeyjump/o.java, line(s) 5\ncom/droidhen/game/donkeyjump/s.java, line(s) 4\ncom/kuguo/b/f.java, line(s) 4\nnet/youmi/android/bt.java, line(s) 3\nnet/youmi/android/cg.java, line(s) 4",
+                "section": "code"
+            },
+            {
+                "title": "MD5 is a weak hash known to have hash collisions.",
+                "description": "MD5 is a weak hash known to have hash collisions.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#identifying-insecure-andor-deprecated-cryptographic-algorithms-mstg-crypto-4\n\nFiles:\ncom/droidhen/api/scoreclient/a.java, line(s) 11\nnet/youmi/android/cg.java, line(s) 25,38,55\nnet/youmi/android/ct.java, line(s) 47,166",
+                "section": "code"
+            },
+            {
+                "title": "App can read/write to External Storage. Any App can read data written to External Storage.",
+                "description": "App can read/write to External Storage. Any App can read data written to External Storage.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#external-storage\n\nFiles:\ncom/kuguo/pushads/AdsService.java, line(s) 35\ncom/kuguo/pushads/a.java, line(s) 184,185,203,206,285,288,328,332,336\nnet/youmi/android/bc.java, line(s) 13,20\nnet/youmi/android/bq.java, line(s) 24\nnet/youmi/android/t.java, line(s) 47",
+                "section": "code"
+            },
+            {
+                "title": "IP Address disclosure",
+                "description": "IP Address disclosure\n\n\nFiles:\ncom/kuguo/b/b.java, line(s) 111\ncom/kuguo/pushads/h.java, line(s) 33\nnet/youmi/android/di.java, line(s) 60\nnet/youmi/android/u.java, line(s) 98",
+                "section": "code"
+            },
+            {
+                "title": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.",
+                "description": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#injection-flaws-mstg-arch-2-and-mstg-platform-2\n\nFiles:\ncom/droidhen/api/scoreclient/c.java, line(s) 4,5,16,17,30,33,36,39,40,41\ncom/kuguo/a/a.java, line(s) 4,5,16,22",
+                "section": "code"
+            },
+            {
+                "title": "Application contains Privacy Trackers",
+                "description": "This app has 1 privacy trackers. Trackers can track device or users and are privacy concerns for end users.",
+                "section": "trackers"
+            },
+            {
+                "title": "This app may contain hardcoded secrets",
+                "description": "The following secrets were identified from the app. Ensure that these are not secrets or private information.\nf75a3a45f171138a5df50d16c5590fcb\n46C02DF8DF4C4C18A578C63449C7F64D\nE91A62B2CF0744bd9CA37BA14615050F\n0b451641094b1f565b421857454f4f5d4c585a485a54461d5b451f410b1f50595a\n172C94EDC717477aBF600D7898A64A8E\nCDDA55C678C34d07957074BF6956862F\nE2FDAA28C7344D2F9FAA4A0FEC1296AA\nF1B19978F3D74302BA126760F96262CD\ndPvR6OIwVr7443aSVEEndczaY3SkhD9G7Hf8H4E83awB5E3gU1sfeVHoUSzNRAMscp1b\n0b1045405e1917570a401c5540171f5d460f58165703421b514419150b4b0e43\nDD5E8CD46CF94B22BAAD68AB06710752\nC97CE45F9A5A447c98BBB83D88790503\n504c45480a1b1c111758451e57121b400a10595e480d51431f131656504256\n5c4715125b171c53094b165443184a0d105c5f1a5f5246195a174a4f561b400441\n0c1612110a1749075a121f01114b1d5c110e5e4a5f01461c5a4a1a10054b46155643\nEB80F3291A8E469c962CA133BDC549D7\ngmEldj50DrCOt5vcrs3o7whARCMMNAHTkQroSQvwnzusS8djoZiCK\nD080F8A1E1134cabA1910B7129A75B44\nA33E523A1CEF496dB37ABD886CBCB005\n1BD3ACC63FA94E5B99B5479664B9CE69\nD50EF1926ADD471892E72BCE6D7E032C\n5cc71df611973c978124396dd7a00185\nCE94557724F842149D690D0E8CBB1CBD\nDB9C288EF60A40d4897665843327626E\n2d800967deb503e4113efc3726c1eda6\n5c4d1216091749555f174f50464c4f59105d591c08074318564a4d15024d590d\nDCDAE4873D1F4c64BB121FDE4131DDFF\n1bbb2bda09c00000ab12276463721bd7\nCBB27B6EF764459EAEEE877D9DA42B6D\nf785026ae812ebed145aef7f7cc53135\nK0DaWyoa4u8aB1J1T7LdIH3FqPDaGyusq6zoY2r4EzxyrWfgyWs\nC8F62501155F41fbBBAA47A53C7F1A9B\nFEDC335110C04414AF100EA25C26A70D\nD780FBF4215247bcBB1AC0AD33C474FE\nA821718FB7F248b590F3721F6576D289\n5d151649581a19005e121c024f4d1c5d100c081b0f53161d07104e13554a170d47\n501740450e4a1d161502454802471e4c5f105c5f175c504118005a\nCC39825145FD4445ADD9860797CA5744\nCBD2998A3D5A4744BF128B91E1410DEA\nFD7C4B12A60F415dBE8C580A137F5F1C\n5QmHdPWHBVmNxpJoj2Qqt4DkqjSPSNS9rgRxEKBdZOG1Uxlu9\n36d9e5f710fa3357f16ac39eef87ab57\n02ECC682A05F4E72AD0DA4C4C2FFC6D9\n1861b676e8889ee3dfbb1e53d4305b11\nCD1D37A4A08F465A97D040CCD0FF7D1F\n103cc347e7ce1dbfff3d9c2bc031c372",
+                "section": "secrets"
+            }
+        ],
+        "info": [
+            {
+                "title": "The App logs information. Sensitive information should never be logged.",
+                "description": "The App logs information. Sensitive information should never be logged.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#logs\n\nFiles:\ncom/droidhen/api/scoreclient/c.java, line(s) 27\ncom/kuguo/pushads/AdsReceiver.java, line(s) 61\ncom/kuguo/pushads/AdsService.java, line(s) 39,93\ncom/kuguo/pushads/a.java, line(s) 396\ncom/kuguo/pushads/m.java, line(s) 25,30,36\nnet/youmi/android/g.java, line(s) 36,17,18,35",
+                "section": "code"
+            }
+        ],
+        "secure": [],
+        "hotspot": [
+            {
+                "title": "Found 2 critical permission(s)",
+                "description": "Ensure that these permissions are required by the application.\n\nandroid.permission.WRITE_EXTERNAL_STORAGE (dangerous): read/modify/delete external storage contents - Allows an application to write to external storage.\n\nandroid.permission.READ_PHONE_STATE (dangerous): read phone state and identity - Allows the application to access the phone features of the device. An application with this permission can determine the phone number and serial number of this phone, whether a call is active, the number that call is connected to and so on.",
+                "section": "permissions"
+            }
+        ],
+        "total_trackers": 432,
+        "trackers": 1,
+        "security_score": 32,
+        "app_name": "可爱驴跳跳",
+        "file_name": "00A4E78A2EEE9E2D56BB662867C5D55ACBAC7E34194B38FF363BB18B8BA1B65C.apk",
+        "hash": "64e48a6dd2d639ab975734fef7505f51",
+        "version_name": "2.2.6"
+    },
+    "virus_total": null,
+    "base_url": "file:///home/mobsf/Mobile-Security-Framework-MobSF/mobsf",
+    "dwd_dir": "file:///home/mobsf/.MobSF/downloads/",
+    "host_os": "nix",
+    "timestamp": "2025-12-08T12:06:00.713Z"
+}

@@ -1,0 +1,3044 @@
+{
+    "version": "v4.4.3",
+    "title": "Static Analysis",
+    "file_name": "00A1EA1BCD3C53E7794159208129E45CEC4F3F9C199B36276479897F59022BAE.apk",
+    "app_name": "Pool Master Pro",
+    "app_type": "apk",
+    "size": "2.47MB",
+    "md5": "42bea8762f67230d78d18970d028d105",
+    "sha1": "b05e5aa0328a99acd854526f2e5dbb6f416ed7e8",
+    "sha256": "00a1ea1bcd3c53e7794159208129e45cec4f3f9c199b36276479897f59022bae",
+    "package_name": "com.rao.love.yy.zjhmwxdearfdsfcb",
+    "main_activity": "com.common.StarterActivity",
+    "exported_activities": "['com.miller.ps.Zhoua']",
+    "browsable_activities": {},
+    "activities": [
+        "com.common.EntryActivity",
+        "com.common.StarterActivity",
+        "com.miller.ps.Zhoua",
+        "com.miller.is.Wua",
+        "com.forthblue.aq.Main"
+    ],
+    "receivers": [
+        "com.miller.ps.Zhour",
+        "com.test.httputil.HttpUtilReceiver"
+    ],
+    "providers": [],
+    "services": [
+        "com.test.httputil.HttpUtilService"
+    ],
+    "libraries": [],
+    "target_sdk": "3",
+    "max_sdk": "",
+    "min_sdk": "3",
+    "version_name": "3.6",
+    "version_code": "167",
+    "icon_path": "42bea8762f67230d78d18970d028d105-icon.png",
+    "permissions": {
+        "android.permission.INTERNET": {
+            "status": "normal",
+            "info": "full Internet access",
+            "description": "Allows an application to create network sockets."
+        },
+        "android.permission.ACCESS_NETWORK_STATE": {
+            "status": "normal",
+            "info": "view network status",
+            "description": "Allows an application to view the status of all networks."
+        },
+        "android.permission.ACCESS_WIFI_STATE": {
+            "status": "normal",
+            "info": "view Wi-Fi status",
+            "description": "Allows an application to view the information about the status of Wi-Fi."
+        },
+        "android.permission.CHANGE_NETWORK_STATE": {
+            "status": "normal",
+            "info": "change network connectivity",
+            "description": "Allows applications to change network connectivity state."
+        },
+        "android.permission.CHANGE_WIFI_STATE": {
+            "status": "normal",
+            "info": "change Wi-Fi status",
+            "description": "Allows an application to connect to and disconnect from Wi-Fi access points and to make changes to configured Wi-Fi networks."
+        },
+        "android.permission.READ_PHONE_STATE": {
+            "status": "dangerous",
+            "info": "read phone state and identity",
+            "description": "Allows the application to access the phone features of the device. An application with this permission can determine the phone number and serial number of this phone, whether a call is active, the number that call is connected to and so on."
+        },
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+            "status": "dangerous",
+            "info": "read/modify/delete external storage contents",
+            "description": "Allows an application to write to external storage."
+        },
+        "android.permission.VIBRATE": {
+            "status": "normal",
+            "info": "control vibrator",
+            "description": "Allows the application to control the vibrator."
+        },
+        "android.permission.WAKE_LOCK": {
+            "status": "normal",
+            "info": "prevent phone from sleeping",
+            "description": "Allows an application to prevent the phone from going to sleep."
+        },
+        "android.permission.RECEIVE_BOOT_COMPLETED": {
+            "status": "normal",
+            "info": "automatically start at boot",
+            "description": "Allows an application to start itself as soon as the system has finished booting. This can make it take longer to start the phone and allow the application to slow down the overall phone by always running."
+        },
+        "android.permission.RECEIVE_USER_PRESENT": {
+            "status": "unknown",
+            "info": "Unknown permission",
+            "description": "Unknown permission from android reference"
+        },
+        "android.permission.ACCESS_FINE_LOCATION": {
+            "status": "dangerous",
+            "info": "fine (GPS) location",
+            "description": "Access fine location sources, such as the Global Positioning System on the phone, where available. Malicious applications can use this to determine where you are and may consume additional battery power."
+        },
+        "android.permission.ACCESS_COARSE_LOCATION": {
+            "status": "dangerous",
+            "info": "coarse (network-based) location",
+            "description": "Access coarse location sources, such as the mobile network database, to determine an approximate phone location, where available. Malicious applications can use this to determine approximately where you are."
+        },
+        "com.android.launcher.permission.INSTALL_SHORTCUT": {
+            "status": "unknown",
+            "info": "Unknown permission",
+            "description": "Unknown permission from android reference"
+        }
+    },
+    "malware_permissions": {
+        "top_malware_permissions": [
+            "android.permission.INTERNET",
+            "android.permission.ACCESS_NETWORK_STATE",
+            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            "android.permission.VIBRATE",
+            "android.permission.WAKE_LOCK",
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_COARSE_LOCATION"
+        ],
+        "other_abused_permissions": [
+            "android.permission.CHANGE_NETWORK_STATE",
+            "android.permission.CHANGE_WIFI_STATE",
+            "com.android.launcher.permission.INSTALL_SHORTCUT"
+        ],
+        "total_malware_permissions": 25,
+        "total_other_permissions": 44
+    },
+    "certificate_analysis": {
+        "certificate_info": "Binary is signed\nv1 signature: True\nv2 signature: False\nv3 signature: False\nv4 signature: False\nX.509 Subject: C=xukun001, ST=xukun001, L=xukun001, O=xukun001, OU=xukun001, CN=xunkun001\nSignature Algorithm: rsassa_pkcs1v15\nValid From: 2014-01-03 06:50:17+00:00\nValid To: 2068-10-06 06:50:17+00:00\nIssuer: C=xukun001, ST=xukun001, L=xukun001, O=xukun001, OU=xukun001, CN=xunkun001\nSerial Number: 0x3373fc12\nHash Algorithm: sha256\nmd5: d523317e430b9928c50ce3975b6baa3a\nsha1: 2567a99f17b580aabe2846936e4cde5d77d74115\nsha256: 690552dc69c01e4c5f18b7e1335e142da377cb9d81d27e13a5f597a6dc55eb8c\nsha512: 4667caacf8bedc37f363e51a7d8b3c9c25166c5bbd9e93f4673c645553d7abde2a90afa7a82a4c0209c5df776637aba0eda941ec4993eba0ba9c9ed8b13f6a04\nFound 1 unique certificates",
+        "certificate_findings": [
+            [
+                "info",
+                "Application is signed with a code signing certificate",
+                "Signed Application"
+            ],
+            [
+                "high",
+                "Application is signed with v1 signature scheme, making it vulnerable to Janus vulnerability on Android 5.0-8.0, if signed only with v1 signature scheme. Applications running on Android 5.0-7.0 signed with v1, and v2/v3 scheme is also vulnerable.",
+                "Application vulnerable to Janus Vulnerability"
+            ]
+        ],
+        "certificate_summary": {
+            "high": 1,
+            "warning": 0,
+            "info": 1
+        }
+    },
+    "manifest_analysis": {
+        "manifest_findings": [
+            {
+                "rule": "vulnerable_os_version",
+                "title": "App can be installed on a vulnerable unpatched Android version<br>Android 1.5, [minSdk=3]",
+                "severity": "high",
+                "description": "This application can be installed on an older version of android that has multiple unfixed vulnerabilities. These devices won't receive reasonable security updates from Google. Support an Android version => 10, API 29 to receive reasonable security updates.",
+                "name": "App can be installed on a vulnerable unpatched Android version 1.5, [minSdk=3]",
+                "component": [
+                    "1.5",
+                    "3"
+                ]
+            },
+            {
+                "rule": "allowbackup_not_set",
+                "title": "Application Data can be Backed up<br>[android:allowBackup] flag is missing.",
+                "severity": "warning",
+                "description": "The flag [android:allowBackup] should be set to false. By default it is set to true and allows anyone to backup your application data via adb. It allows users who have enabled USB debugging to copy application data off of the device.",
+                "name": "Application Data can be Backed up [android:allowBackup] flag is missing.",
+                "component": []
+            },
+            {
+                "rule": "exported_intent_filter_exists",
+                "title": "<strong>Activity</strong> (com.miller.ps.Zhoua) is not Protected.<br>An intent-filter exists.",
+                "severity": "warning",
+                "description": "An Activity is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Activity is explicitly exported.",
+                "name": "Activity com.miller.ps.Zhoua is not Protected.An intent-filter exists.",
+                "component": [
+                    "Activity",
+                    "com.miller.ps.Zhoua"
+                ]
+            },
+            {
+                "rule": "exported_intent_filter_exists",
+                "title": "<strong>Broadcast Receiver</strong> (com.miller.ps.Zhour) is not Protected.<br>An intent-filter exists.",
+                "severity": "warning",
+                "description": "A Broadcast Receiver is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Broadcast Receiver is explicitly exported.",
+                "name": "Broadcast Receiver com.miller.ps.Zhour is not Protected.An intent-filter exists.",
+                "component": [
+                    "Broadcast Receiver",
+                    "com.miller.ps.Zhour"
+                ]
+            },
+            {
+                "rule": "non_standard_launchmode",
+                "title": "Launch Mode of activity (com.miller.is.Wua) is not standard.",
+                "severity": "warning",
+                "description": "An Activity should not be having the launch mode attribute set to \"singleTask/singleInstance\" as it becomes root Activity and it is possible for other applications to read the contents of the calling Intent. So it is required to use the \"standard\" launch mode attribute when sensitive information is included in an Intent.",
+                "name": "Launch Mode of activity (com.miller.is.Wua) is not standard.",
+                "component": [
+                    "com.miller.is.Wua"
+                ]
+            },
+            {
+                "rule": "explicitly_exported",
+                "title": "<strong>Broadcast Receiver</strong> (com.test.httputil.HttpUtilReceiver) is not Protected. <br>[android:exported=true]",
+                "severity": "warning",
+                "description": "A Broadcast Receiver is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device.",
+                "name": "Broadcast Receiver com.test.httputil.HttpUtilReceiver is not Protected. [android:exported=true]",
+                "component": [
+                    "Broadcast Receiver",
+                    "com.test.httputil.HttpUtilReceiver"
+                ]
+            },
+            {
+                "rule": "high_intent_priority_found",
+                "title": "High Intent Priority (1000) - {1} Hit(s)<br>[android:priority]",
+                "severity": "warning",
+                "description": "By setting an intent priority higher than another intent, the app effectively overrides other requests.",
+                "name": "High Intent Priority (1000) - {1} Hit(s) [android:priority]",
+                "component": [
+                    "1000",
+                    1
+                ]
+            }
+        ],
+        "manifest_summary": {
+            "high": 1,
+            "warning": 6,
+            "info": 0,
+            "suppressed": 0
+        }
+    },
+    "network_security": {
+        "network_findings": [],
+        "network_summary": {}
+    },
+    "binary_analysis": [
+        {
+            "name": "apktool_out/lib/armeabi/libbasketgl1.so",
+            "nx": {
+                "is_nx": true,
+                "severity": "info",
+                "description": "The binary has NX bit set. This marks a memory page non-executable making attacker injected shellcode non-executable."
+            },
+            "pie": {
+                "is_pie": "Dynamic Shared Object (DSO)",
+                "severity": "info",
+                "description": "The shared object is build with -fPIC flag which enables Position independent code. This makes Return Oriented Programming (ROP) attacks much more difficult to execute reliably."
+            },
+            "stack_canary": {
+                "has_canary": false,
+                "severity": "high",
+                "description": "This binary does not have a stack canary value added to the stack. Stack canaries are used to detect and prevent exploits from overwriting return address. Use the option -fstack-protector-all to enable stack canaries. Not applicable for Dart/Flutter libraries unless Dart FFI is used."
+            },
+            "relocation_readonly": {
+                "relro": "No RELRO",
+                "severity": "high",
+                "description": "This shared object does not have RELRO enabled. The entire GOT (.got and .got.plt both) are writable. Without this compiler flag, buffer overflows on a global variable can overwrite GOT entries. Use the option -z,relro,-z,now to enable full RELRO and only -z,relro to enable partial RELRO."
+            },
+            "rpath": {
+                "rpath": null,
+                "severity": "info",
+                "description": "The binary does not have run-time search path or RPATH set."
+            },
+            "runpath": {
+                "runpath": null,
+                "severity": "info",
+                "description": "The binary does not have RUNPATH set."
+            },
+            "fortify": {
+                "is_fortified": false,
+                "severity": "warning",
+                "description": "The binary does not have any fortified functions. Fortified functions provides buffer overflow checks against glibc's commons insecure functions like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fortify functions. This check is not applicable for Dart/Flutter libraries."
+            },
+            "symbol": {
+                "is_stripped": true,
+                "severity": "info",
+                "description": "Symbols are stripped."
+            }
+        },
+        {
+            "name": "apktool_out/lib/armeabi/libbasketgl2.so",
+            "nx": {
+                "is_nx": true,
+                "severity": "info",
+                "description": "The binary has NX bit set. This marks a memory page non-executable making attacker injected shellcode non-executable."
+            },
+            "pie": {
+                "is_pie": "Dynamic Shared Object (DSO)",
+                "severity": "info",
+                "description": "The shared object is build with -fPIC flag which enables Position independent code. This makes Return Oriented Programming (ROP) attacks much more difficult to execute reliably."
+            },
+            "stack_canary": {
+                "has_canary": false,
+                "severity": "high",
+                "description": "This binary does not have a stack canary value added to the stack. Stack canaries are used to detect and prevent exploits from overwriting return address. Use the option -fstack-protector-all to enable stack canaries. Not applicable for Dart/Flutter libraries unless Dart FFI is used."
+            },
+            "relocation_readonly": {
+                "relro": "No RELRO",
+                "severity": "high",
+                "description": "This shared object does not have RELRO enabled. The entire GOT (.got and .got.plt both) are writable. Without this compiler flag, buffer overflows on a global variable can overwrite GOT entries. Use the option -z,relro,-z,now to enable full RELRO and only -z,relro to enable partial RELRO."
+            },
+            "rpath": {
+                "rpath": null,
+                "severity": "info",
+                "description": "The binary does not have run-time search path or RPATH set."
+            },
+            "runpath": {
+                "runpath": null,
+                "severity": "info",
+                "description": "The binary does not have RUNPATH set."
+            },
+            "fortify": {
+                "is_fortified": false,
+                "severity": "warning",
+                "description": "The binary does not have any fortified functions. Fortified functions provides buffer overflow checks against glibc's commons insecure functions like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fortify functions. This check is not applicable for Dart/Flutter libraries."
+            },
+            "symbol": {
+                "is_stripped": true,
+                "severity": "info",
+                "description": "Symbols are stripped."
+            }
+        },
+        {
+            "name": "apktool_out/lib/armeabi/libbasket.so",
+            "nx": {
+                "is_nx": true,
+                "severity": "info",
+                "description": "The binary has NX bit set. This marks a memory page non-executable making attacker injected shellcode non-executable."
+            },
+            "pie": {
+                "is_pie": "Dynamic Shared Object (DSO)",
+                "severity": "info",
+                "description": "The shared object is build with -fPIC flag which enables Position independent code. This makes Return Oriented Programming (ROP) attacks much more difficult to execute reliably."
+            },
+            "stack_canary": {
+                "has_canary": false,
+                "severity": "high",
+                "description": "This binary does not have a stack canary value added to the stack. Stack canaries are used to detect and prevent exploits from overwriting return address. Use the option -fstack-protector-all to enable stack canaries. Not applicable for Dart/Flutter libraries unless Dart FFI is used."
+            },
+            "relocation_readonly": {
+                "relro": "No RELRO",
+                "severity": "high",
+                "description": "This shared object does not have RELRO enabled. The entire GOT (.got and .got.plt both) are writable. Without this compiler flag, buffer overflows on a global variable can overwrite GOT entries. Use the option -z,relro,-z,now to enable full RELRO and only -z,relro to enable partial RELRO."
+            },
+            "rpath": {
+                "rpath": null,
+                "severity": "info",
+                "description": "The binary does not have run-time search path or RPATH set."
+            },
+            "runpath": {
+                "runpath": null,
+                "severity": "info",
+                "description": "The binary does not have RUNPATH set."
+            },
+            "fortify": {
+                "is_fortified": false,
+                "severity": "warning",
+                "description": "The binary does not have any fortified functions. Fortified functions provides buffer overflow checks against glibc's commons insecure functions like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fortify functions. This check is not applicable for Dart/Flutter libraries."
+            },
+            "symbol": {
+                "is_stripped": true,
+                "severity": "info",
+                "description": "Symbols are stripped."
+            }
+        },
+        {
+            "name": "lib/armeabi/libbasketgl1.so",
+            "nx": {
+                "is_nx": true,
+                "severity": "info",
+                "description": "The binary has NX bit set. This marks a memory page non-executable making attacker injected shellcode non-executable."
+            },
+            "pie": {
+                "is_pie": "Dynamic Shared Object (DSO)",
+                "severity": "info",
+                "description": "The shared object is build with -fPIC flag which enables Position independent code. This makes Return Oriented Programming (ROP) attacks much more difficult to execute reliably."
+            },
+            "stack_canary": {
+                "has_canary": false,
+                "severity": "high",
+                "description": "This binary does not have a stack canary value added to the stack. Stack canaries are used to detect and prevent exploits from overwriting return address. Use the option -fstack-protector-all to enable stack canaries. Not applicable for Dart/Flutter libraries unless Dart FFI is used."
+            },
+            "relocation_readonly": {
+                "relro": "No RELRO",
+                "severity": "high",
+                "description": "This shared object does not have RELRO enabled. The entire GOT (.got and .got.plt both) are writable. Without this compiler flag, buffer overflows on a global variable can overwrite GOT entries. Use the option -z,relro,-z,now to enable full RELRO and only -z,relro to enable partial RELRO."
+            },
+            "rpath": {
+                "rpath": null,
+                "severity": "info",
+                "description": "The binary does not have run-time search path or RPATH set."
+            },
+            "runpath": {
+                "runpath": null,
+                "severity": "info",
+                "description": "The binary does not have RUNPATH set."
+            },
+            "fortify": {
+                "is_fortified": false,
+                "severity": "warning",
+                "description": "The binary does not have any fortified functions. Fortified functions provides buffer overflow checks against glibc's commons insecure functions like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fortify functions. This check is not applicable for Dart/Flutter libraries."
+            },
+            "symbol": {
+                "is_stripped": true,
+                "severity": "info",
+                "description": "Symbols are stripped."
+            }
+        },
+        {
+            "name": "lib/armeabi/libbasketgl2.so",
+            "nx": {
+                "is_nx": true,
+                "severity": "info",
+                "description": "The binary has NX bit set. This marks a memory page non-executable making attacker injected shellcode non-executable."
+            },
+            "pie": {
+                "is_pie": "Dynamic Shared Object (DSO)",
+                "severity": "info",
+                "description": "The shared object is build with -fPIC flag which enables Position independent code. This makes Return Oriented Programming (ROP) attacks much more difficult to execute reliably."
+            },
+            "stack_canary": {
+                "has_canary": false,
+                "severity": "high",
+                "description": "This binary does not have a stack canary value added to the stack. Stack canaries are used to detect and prevent exploits from overwriting return address. Use the option -fstack-protector-all to enable stack canaries. Not applicable for Dart/Flutter libraries unless Dart FFI is used."
+            },
+            "relocation_readonly": {
+                "relro": "No RELRO",
+                "severity": "high",
+                "description": "This shared object does not have RELRO enabled. The entire GOT (.got and .got.plt both) are writable. Without this compiler flag, buffer overflows on a global variable can overwrite GOT entries. Use the option -z,relro,-z,now to enable full RELRO and only -z,relro to enable partial RELRO."
+            },
+            "rpath": {
+                "rpath": null,
+                "severity": "info",
+                "description": "The binary does not have run-time search path or RPATH set."
+            },
+            "runpath": {
+                "runpath": null,
+                "severity": "info",
+                "description": "The binary does not have RUNPATH set."
+            },
+            "fortify": {
+                "is_fortified": false,
+                "severity": "warning",
+                "description": "The binary does not have any fortified functions. Fortified functions provides buffer overflow checks against glibc's commons insecure functions like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fortify functions. This check is not applicable for Dart/Flutter libraries."
+            },
+            "symbol": {
+                "is_stripped": true,
+                "severity": "info",
+                "description": "Symbols are stripped."
+            }
+        },
+        {
+            "name": "lib/armeabi/libbasket.so",
+            "nx": {
+                "is_nx": true,
+                "severity": "info",
+                "description": "The binary has NX bit set. This marks a memory page non-executable making attacker injected shellcode non-executable."
+            },
+            "pie": {
+                "is_pie": "Dynamic Shared Object (DSO)",
+                "severity": "info",
+                "description": "The shared object is build with -fPIC flag which enables Position independent code. This makes Return Oriented Programming (ROP) attacks much more difficult to execute reliably."
+            },
+            "stack_canary": {
+                "has_canary": false,
+                "severity": "high",
+                "description": "This binary does not have a stack canary value added to the stack. Stack canaries are used to detect and prevent exploits from overwriting return address. Use the option -fstack-protector-all to enable stack canaries. Not applicable for Dart/Flutter libraries unless Dart FFI is used."
+            },
+            "relocation_readonly": {
+                "relro": "No RELRO",
+                "severity": "high",
+                "description": "This shared object does not have RELRO enabled. The entire GOT (.got and .got.plt both) are writable. Without this compiler flag, buffer overflows on a global variable can overwrite GOT entries. Use the option -z,relro,-z,now to enable full RELRO and only -z,relro to enable partial RELRO."
+            },
+            "rpath": {
+                "rpath": null,
+                "severity": "info",
+                "description": "The binary does not have run-time search path or RPATH set."
+            },
+            "runpath": {
+                "runpath": null,
+                "severity": "info",
+                "description": "The binary does not have RUNPATH set."
+            },
+            "fortify": {
+                "is_fortified": false,
+                "severity": "warning",
+                "description": "The binary does not have any fortified functions. Fortified functions provides buffer overflow checks against glibc's commons insecure functions like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fortify functions. This check is not applicable for Dart/Flutter libraries."
+            },
+            "symbol": {
+                "is_stripped": true,
+                "severity": "info",
+                "description": "Symbols are stripped."
+            }
+        }
+    ],
+    "file_analysis": [],
+    "android_api": {
+        "api_dexloading": {
+            "files": {
+                "com/miller/is/d/a.java": "4",
+                "com/miller/ps/c/b.java": "4"
+            },
+            "metadata": {
+                "description": "Dynamic Class and Dexloading",
+                "severity": "info"
+            }
+        },
+        "api_local_file_io": {
+            "files": {
+                "a/a/a/a/a.java": "4,5",
+                "a/a/a/a/d.java": "4,5,5,6",
+                "a/a/a/d.java": "2,3,3,4",
+                "com/forthblue/aq/Main.java": "187,114,187",
+                "com/forthblue/aq/a/l.java": "773",
+                "com/forthblue/aq/d.java": "211,153,198,211,220",
+                "com/fruitsmobile/basket/a/a.java": "3,4,4,5",
+                "com/fruitsmobile/basket/a/d.java": "2,3",
+                "com/fruitsmobile/basket/a/e.java": "10,11",
+                "com/fruitsmobile/basket/a/f.java": "2,3,3,4",
+                "com/fruitsmobile/basket/util/Util.java": "3,4,4,5",
+                "com/miller/is/b/a.java": "3,4,4,5,5,6,6,7",
+                "com/miller/is/b/b.java": "3,4,4,5,5,6,6,7,7,8",
+                "com/miller/is/c/a.java": "4,5,5,6,6,7,7,8,8,9,9,10,56,167,169",
+                "com/miller/ps/b/a.java": "3,4,4,5,5,6,6,7",
+                "com/miller/ps/b/b.java": "3,4,4,5,5,6,6,7,7,8",
+                "com/miller/ps/e/a.java": "4,5,5,6,6,7,7,8,8,9,47,121,123",
+                "com/test/httputil/HttpUtilService.java": "107,100,106,10,11,11,12,12,13",
+                "com/test/httputil/LogWriter.java": "4,5,5,6,6,7",
+                "com/umeng/analytics/a/d.java": "3,4,4,5",
+                "com/umeng/analytics/a/m.java": "59,96,99",
+                "com/umeng/analytics/a/o.java": "61,69",
+                "com/umeng/analytics/b.java": "208,219,238,257",
+                "com/umeng/analytics/d.java": "7,8,8,9,9,10,10,11,11,12",
+                "com/umeng/analytics/i.java": "36,40,44,48,52,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,111,115,115,119,125,128,133,133,136,140,141,141,169,169,170,171,172",
+                "com/umeng/analytics/j.java": "89",
+                "com/umeng/analytics/onlineconfig/a.java": "111,125",
+                "com/umeng/common/b.java": "283,19,20,20,21,21,22,22,23",
+                "com/umeng/common/net/DownloadingService.java": "29,30,30,31,31,32,32,33,224,229,286,690,1094,1098,1134,291,291,294,297,310,367",
+                "com/umeng/common/net/d.java": "15,16,42",
+                "com/umeng/common/net/i.java": "3,4",
+                "com/umeng/common/net/p.java": "79,185,18,19,19,20,20,21,21,22,82,95,109,187,187",
+                "com/umeng/common/net/q.java": "2,3",
+                "com/umeng/common/net/r.java": "3,4,4,5,5,6,6,7,7,8",
+                "com/umeng/common/util/DeltaUpdate.java": "3,4,29,29",
+                "com/umeng/common/util/a.java": "2,3",
+                "com/umeng/common/util/f.java": "2,3,3,4,4,5",
+                "com/umeng/common/util/g.java": "6,7,7,8",
+                "org/jsoup/Connection.java": "2,3",
+                "org/jsoup/HttpStatusException.java": "2,3",
+                "org/jsoup/Jsoup.java": "2,3,3,4,4,5",
+                "org/jsoup/UnsupportedMimeTypeException.java": "2,3",
+                "org/jsoup/examples/HtmlToPlainText.java": "2,3",
+                "org/jsoup/examples/ListLinks.java": "2,3",
+                "org/jsoup/helper/DataUtil.java": "2,3,3,4,4,5,5,6,6,7",
+                "org/jsoup/helper/HttpConnection.java": "3,4,4,5,5,6,6,7,7,8",
+                "org/jsoup/nodes/Entities.java": "2,3,3,4"
+            },
+            "metadata": {
+                "description": "Local File I/O Operations",
+                "severity": "info"
+            }
+        },
+        "api_get_system_service": {
+            "files": {
+                "com/test/httputil/HttpUtilService.java": "153",
+                "com/umeng/analytics/g.java": "30",
+                "com/umeng/common/b.java": "165,199,213,227,253,272,354,370,406",
+                "com/umeng/common/net/DownloadingService.java": "143,884",
+                "com/umeng/common/net/d.java": "45"
+            },
+            "metadata": {
+                "description": "Get System Service",
+                "severity": "info"
+            }
+        },
+        "api_start_activity": {
+            "files": {
+                "com/common/EntryActivity.java": "33",
+                "com/common/StarterActivity.java": "26",
+                "com/forthblue/aq/j.java": "23",
+                "com/umeng/common/net/DownloadingService.java": "1140",
+                "com/umeng/common/net/d.java": "52",
+                "com/umeng/common/util/g.java": "115,120"
+            },
+            "metadata": {
+                "description": "Starting Activity",
+                "severity": "info"
+            }
+        },
+        "api_ipc": {
+            "files": {
+                "com/common/BasicOPReceiver.java": "5,11",
+                "com/common/EntryActivity.java": "4,15,32,32",
+                "com/common/StarterActivity.java": "5,23,23,23,24,25,26",
+                "com/forthblue/aq/LuncherWidget.java": "3,7,15,15,18,18",
+                "com/forthblue/aq/R.java": "370,371",
+                "com/forthblue/aq/j.java": "3,20,20",
+                "com/miller/is/Wur.java": "5,11",
+                "com/miller/is/a/a.java": "5,27,29",
+                "com/miller/is/c/b.java": "4,24,24",
+                "com/miller/ps/Zhour.java": "5,11",
+                "com/miller/ps/a/a.java": "5,45,50",
+                "com/miller/ps/c/c.java": "4,23,23",
+                "com/miller/ps/d/m.java": "5,11",
+                "com/test/httputil/HttpUtilReceiver.java": "5,19,22,22,26,26,30,30",
+                "com/test/httputil/HttpUtilService.java": "8,66,5,66,124",
+                "com/umeng/common/net/DownloadingService.java": "20,123,7,11,12,123,129,167,167,463,463,739,739,973,973,973,976,979,981,1021,1132,1132,1135",
+                "com/umeng/common/net/a.java": "4,102",
+                "com/umeng/common/net/b.java": "6,26",
+                "com/umeng/common/net/d.java": "6,7,40,40,43,67,67",
+                "com/umeng/common/net/f.java": "5,20",
+                "com/umeng/common/net/l.java": "3,5,34,35,35,38,41,42,42,44",
+                "com/umeng/common/util/g.java": "4,115,120"
+            },
+            "metadata": {
+                "description": "Inter Process Communication",
+                "severity": "info"
+            }
+        },
+        "api_notifications": {
+            "files": {
+                "com/umeng/common/net/DownloadingService.java": "6,741,999,1006,1137",
+                "com/umeng/common/net/d.java": "5,46,68"
+            },
+            "metadata": {
+                "description": "Android Notifications",
+                "severity": "info"
+            }
+        },
+        "api_java_reflection": {
+            "files": {
+                "com/common/EntryActivity.java": "31",
+                "com/miller/is/d/b.java": "3",
+                "com/miller/ps/c/a.java": "4",
+                "com/miller/ps/c/d.java": "3",
+                "com/umeng/analytics/a/p.java": "75,6",
+                "com/umeng/common/b.java": "24",
+                "com/umeng/common/c.java": "23,28,33,38,43,48,53"
+            },
+            "metadata": {
+                "description": "Java Reflection",
+                "severity": "info"
+            }
+        },
+        "api_native_code": {
+            "files": {
+                "com/fruitsmobile/basket/math/MathUtil.java": "6",
+                "com/fruitsmobile/basket/math/Matrix.java": "15",
+                "com/fruitsmobile/basket/opengl/a.java": "85,103",
+                "com/fruitsmobile/basket/util/Util.java": "17",
+                "com/umeng/common/util/DeltaUpdate.java": "34"
+            },
+            "metadata": {
+                "description": "Loading Native Code (Shared Library)",
+                "severity": "info"
+            }
+        },
+        "api_web": {
+            "files": {
+                "com/test/httputil/HttpUtilService.java": "28"
+            },
+            "metadata": {
+                "description": "HTTP Requests, Connections and Sessions",
+                "severity": "info"
+            }
+        },
+        "api_http_connection": {
+            "files": {
+                "com/test/httputil/HttpUtilService.java": "194,328,607,25,26,27,28,29,30,31,32,33",
+                "com/umeng/common/net/DownloadingService.java": "34,392,392,401,392",
+                "org/jsoup/helper/HttpConnection.java": "9,569,672,673,673,690,33,39,571,607,620,673"
+            },
+            "metadata": {
+                "description": "HTTP Connection",
+                "severity": "info"
+            }
+        },
+        "api_gps": {
+            "files": {
+                "com/umeng/analytics/a/o.java": "5,28,71",
+                "com/umeng/common/b.java": "8,9,254,257"
+            },
+            "metadata": {
+                "description": "GPS Location",
+                "severity": "info"
+            }
+        },
+        "api_get_running_app_processes": {
+            "files": {
+                "com/umeng/common/net/DownloadingService.java": "884"
+            },
+            "metadata": {
+                "description": "Get Running App Processes",
+                "severity": "info"
+            }
+        },
+        "api_start_service": {
+            "files": {
+                "com/common/EntryActivity.java": "15",
+                "com/test/httputil/HttpUtilReceiver.java": "23,27,31",
+                "com/umeng/common/net/a.java": "70,102"
+            },
+            "metadata": {
+                "description": "Starting Service",
+                "severity": "info"
+            }
+        },
+        "api_installed": {
+            "files": {
+                "com/umeng/common/b.java": "61,47,61,79,87,94,99,223,337,440,461"
+            },
+            "metadata": {
+                "description": "Get Installed Applications",
+                "severity": "info"
+            }
+        },
+        "api_get_wifi": {
+            "files": {
+                "com/umeng/common/b.java": "359,12"
+            },
+            "metadata": {
+                "description": "Get WiFi Details",
+                "severity": "info"
+            }
+        },
+        "api_crypto": {
+            "files": {
+                "com/umeng/common/util/b.java": "16,22,3,4,5",
+                "com/umeng/common/util/g.java": "30,46,66"
+            },
+            "metadata": {
+                "description": "Crypto",
+                "severity": "info"
+            }
+        },
+        "api_message_digest": {
+            "files": {
+                "com/umeng/common/util/g.java": "10,30,30,46,46,66,66,10"
+            },
+            "metadata": {
+                "description": "Message Digest",
+                "severity": "info"
+            }
+        }
+    },
+    "code_analysis": {
+        "findings": {
+            "android_insecure_random": {
+                "files": {
+                    "com/forthblue/aq/b/e.java": "8",
+                    "com/forthblue/aq/b/f.java": "4",
+                    "com/forthblue/aq/w.java": "11",
+                    "com/test/httputil/HttpUtilService.java": "18",
+                    "com/umeng/common/net/DownloadingService.java": "40",
+                    "com/umeng/common/net/i.java": "6",
+                    "com/umeng/common/net/r.java": "13"
+                },
+                "metadata": {
+                    "cvss": 7.5,
+                    "cwe": "CWE-330: Use of Insufficiently Random Values",
+                    "owasp-mobile": "M5: Insufficient Cryptography",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#weak-random-number-generators",
+                    "masvs": "MSTG-CRYPTO-6",
+                    "description": "The App uses an insecure Random Number Generator.",
+                    "severity": "warning"
+                }
+            },
+            "android_logging": {
+                "files": {
+                    "com/forthblue/aq/Main.java": "27,43",
+                    "com/forthblue/aq/b/b.java": "113",
+                    "com/forthblue/aq/b/c.java": "44,78,124,159,184,211,216,228,258,308,326,328,330",
+                    "com/forthblue/aq/b/d.java": "78,112,116,141",
+                    "com/forthblue/aq/b/e.java": "88,111",
+                    "com/forthblue/aq/b/i.java": "73,80",
+                    "com/forthblue/aq/c/h.java": "361,591",
+                    "com/fruitsmobile/basket/a/e.java": "75",
+                    "com/fruitsmobile/basket/g.java": "45",
+                    "com/fruitsmobile/basket/m.java": "65,78,153,187,197,236",
+                    "com/fruitsmobile/basket/opengl/a.java": "86,91,104",
+                    "com/test/httputil/HttpUtilReceiver.java": "25,29",
+                    "com/test/httputil/LogWriter.java": "48,34",
+                    "com/umeng/analytics/MobclickAgent.java": "67",
+                    "com/umeng/analytics/a.java": "38",
+                    "com/umeng/analytics/a/f.java": "278,282",
+                    "com/umeng/analytics/a/m.java": "121,128",
+                    "com/umeng/analytics/a/p.java": "69",
+                    "com/umeng/analytics/b.java": "147,170,356",
+                    "com/umeng/analytics/c.java": "115",
+                    "com/umeng/analytics/onlineconfig/b.java": "49,55",
+                    "com/umeng/common/Log.java": "36,42,21,27,29,9,15,48,54,60,66,68",
+                    "com/umeng/common/b.java": "167,171,176,179,356,361",
+                    "com/umeng/common/net/p.java": "254,344,355,376",
+                    "org/jsoup/examples/HtmlToPlainText.java": "22",
+                    "org/jsoup/examples/ListLinks.java": "46"
+                },
+                "metadata": {
+                    "cvss": 7.5,
+                    "cwe": "CWE-532: Insertion of Sensitive Information into Log File",
+                    "owasp-mobile": "",
+                    "masvs": "MSTG-STORAGE-3",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#logs",
+                    "description": "The App logs information. Sensitive information should never be logged.",
+                    "severity": "info"
+                }
+            },
+            "android_hardcoded": {
+                "files": {
+                    "com/common/KeyManager.java": "5",
+                    "org/jsoup/nodes/Comment.java": "7",
+                    "org/jsoup/nodes/DataNode.java": "7",
+                    "org/jsoup/nodes/TextNode.java": "9",
+                    "org/jsoup/nodes/XmlDeclaration.java": "7"
+                },
+                "metadata": {
+                    "cvss": 7.4,
+                    "cwe": "CWE-312: Cleartext Storage of Sensitive Information",
+                    "masvs": "MSTG-STORAGE-14",
+                    "owasp-mobile": "M9: Reverse Engineering",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#checking-memory-for-sensitive-data-mstg-storage-10",
+                    "description": "Files may contain hardcoded sensitive information like usernames, passwords, keys etc.",
+                    "severity": "warning"
+                }
+            },
+            "android_ip_disclosure": {
+                "files": {
+                    "com/umeng/analytics/g.java": "39"
+                },
+                "metadata": {
+                    "cvss": 4.3,
+                    "cwe": "CWE-200: Information Exposure",
+                    "owasp-mobile": "",
+                    "masvs": "MSTG-CODE-2",
+                    "description": "IP Address disclosure",
+                    "severity": "warning"
+                }
+            },
+            "android_read_write_external": {
+                "files": {
+                    "com/test/httputil/LogWriter.java": "22",
+                    "com/umeng/common/b.java": "283",
+                    "com/umeng/common/net/DownloadingService.java": "223",
+                    "com/umeng/common/net/p.java": "76,183"
+                },
+                "metadata": {
+                    "cvss": 5.5,
+                    "cwe": "CWE-276: Incorrect Default Permissions",
+                    "owasp-mobile": "M2: Insecure Data Storage",
+                    "masvs": "MSTG-STORAGE-2",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#external-storage",
+                    "description": "App can read/write to External Storage. Any App can read data written to External Storage.",
+                    "severity": "warning"
+                }
+            },
+            "android_sql_raw_query": {
+                "files": {
+                    "com/umeng/common/net/c.java": "6,7,174,198"
+                },
+                "metadata": {
+                    "cvss": 5.9,
+                    "cwe": "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+                    "owasp-mobile": "M7: Client Code Quality",
+                    "masvs": "",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#injection-flaws-mstg-arch-2-and-mstg-platform-2",
+                    "description": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.",
+                    "severity": "warning"
+                }
+            },
+            "android_md5": {
+                "files": {
+                    "com/umeng/common/util/g.java": "30,46,66"
+                },
+                "metadata": {
+                    "cvss": 7.4,
+                    "cwe": "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+                    "masvs": "MSTG-CRYPTO-4",
+                    "owasp-mobile": "M5: Insufficient Cryptography",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#identifying-insecure-andor-deprecated-cryptographic-algorithms-mstg-crypto-4",
+                    "description": "MD5 is a weak hash known to have hash collisions.",
+                    "severity": "warning"
+                }
+            },
+            "cbc_padding_oracle": {
+                "files": {
+                    "com/umeng/common/util/b.java": "16,22"
+                },
+                "metadata": {
+                    "cvss": 7.4,
+                    "cwe": "CWE-649: Reliance on Obfuscation or Encryption of Security-Relevant Inputs without Integrity Checking",
+                    "masvs": "MSTG-CRYPTO-3",
+                    "owasp-mobile": "M5: Insufficient Cryptography",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#identifying-insecure-andor-deprecated-cryptographic-algorithms-mstg-crypto-4",
+                    "description": "The App uses the encryption mode CBC with PKCS5/PKCS7 padding. This configuration is vulnerable to padding oracle attacks.",
+                    "severity": "high"
+                }
+            }
+        },
+        "summary": {
+            "high": 1,
+            "warning": 6,
+            "info": 1,
+            "secure": 0,
+            "suppressed": 0
+        }
+    },
+    "niap_analysis": {},
+    "permission_mapping": {
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+            "com/miller/is/c/a.java": "63,171,8",
+            "com/miller/ps/e/a.java": "57,125,8",
+            "com/umeng/analytics/i.java": "9,158,170",
+            "com/umeng/common/net/DownloadingService.java": "287,31",
+            "com/umeng/common/net/p.java": "98,20"
+        },
+        "android.permission.ACCESS_NETWORK_STATE": {
+            "com/umeng/analytics/g.java": "4,5,30",
+            "com/umeng/common/b.java": "10,11,12,15,55,74,322"
+        },
+        "android.permission.RECEIVE_BOOT_COMPLETED": {
+            "com/common/BasicOPReceiver.java": "3,11",
+            "com/miller/is/Wur.java": "3,11",
+            "com/miller/ps/Zhour.java": "3,11",
+            "com/miller/ps/d/m.java": "3,11",
+            "com/test/httputil/HttpUtilReceiver.java": "3,19",
+            "com/umeng/common/net/DownloadingService.java": "9,169,926",
+            "com/umeng/common/net/f.java": "3,20"
+        },
+        "android.permission.WAKE_LOCK": {
+            "com/fruitsmobile/basket/d/a.java": "4,41,93",
+            "com/test/httputil/HttpUtilService.java": "155,9",
+            "com/umeng/common/b.java": "12,137,138"
+        },
+        "android.permission.INTERNET": {
+            "com/umeng/analytics/d.java": "265,275,13,16,17,18,19,20,21,22,23,24,25,26",
+            "com/umeng/common/net/DownloadingService.java": "34,35,396",
+            "com/umeng/common/net/p.java": "23,99",
+            "com/umeng/common/net/r.java": "85,178,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+            "org/jsoup/Jsoup.java": "31,32,60,6",
+            "org/jsoup/helper/HttpConnection.java": "9,10,11,12,676"
+        },
+        "android.permission.ACCESS_WIFI_STATE": {
+            "com/umeng/common/b.java": "10,12,359"
+        },
+        "android.permission.ACCESS_COARSE_LOCATION": {
+            "com/umeng/common/b.java": "9,15,254,257"
+        },
+        "android.permission.ACCESS_FINE_LOCATION": {
+            "com/umeng/common/b.java": "9,15,254,257"
+        },
+        "android.permission.READ_PHONE_STATE": {
+            "com/umeng/common/b.java": "15,174"
+        }
+    },
+    "urls": [
+        {
+            "urls": [
+                "http://oc.umeng.co/check_config_update",
+                "http://oc.umeng.com/check_config_update",
+                "http://alog.umeng.com/app_logs",
+                "http://alog.umeng.co/app_logs"
+            ],
+            "path": "com/umeng/analytics/f.java"
+        },
+        {
+            "urls": [
+                "http://kjs123.sinaapp.com/sdc/newinit5.php?id=20",
+                "http://kjs123.sinaapp.com/sdkcfg.php?v=5"
+            ],
+            "path": "com/test/httputil/HttpUtilService.java"
+        }
+    ],
+    "domains": {
+        "kjs123.sinaapp.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "127.0.0.1",
+                "country_short": "-",
+                "country_long": "-",
+                "region": "-",
+                "city": "-",
+                "latitude": "0.000000",
+                "longitude": "0.000000"
+            },
+            "ofac": false
+        },
+        "alog.umeng.co": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "alog.umeng.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "223.109.148.177",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Beijing",
+                "city": "Beijing",
+                "latitude": "39.907501",
+                "longitude": "116.397232"
+            },
+            "ofac": true
+        },
+        "oc.umeng.co": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "oc.umeng.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "59.82.23.79",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Beijing",
+                "city": "Beijing",
+                "latitude": "39.907501",
+                "longitude": "116.397232"
+            },
+            "ofac": true
+        }
+    },
+    "emails": [
+        {
+            "emails": [
+                "contact@doodlemobile.com"
+            ],
+            "path": "Android String Resource"
+        }
+    ],
+    "strings": {
+        "strings_apk_res": [
+            "\"dm_username\" : \"Username\"",
+            "\"dm_remove_friend_title\" : \"Remove Friend\"",
+            "\"dm_facebook_alreadybind\" : \"Your phone has bind facebook account\"",
+            "\"dm_help_text\" : \" Welcome to Doodle Game Center! \nDoodle Mobile is an independent publisher and developer for mobile games on Android platform established in 2010. We are dedicated to creating a social gaming network- Doodle Game Center for all android gamers. Our game center offers our users all kinds of mobile games connected with our unique learderboard. Its own statistic tool help gamers track their scores anytime. \n\nTill today We've got over millions daily players play in our game center around the world. To our delight, this amount is still increasing rapidly. And we are partnering with best game development studios and publishers. \n\nDoodle Game Center is a social game network supported for all Android devices. See how does it work. \nLeaderboards - Compete with all players around the world and find where did you come in. \nFeatured Game - Here is the highly recommended game, why not have a try? \nProfile - Edit your personal information and upload your awesome photo here. \nMore Games - Play other cool games and beat others! \n\nTo learn more about Doodle Game Center, please send an email to contact@doodlemobile.com.\"",
+            "\"dm_getting_start\" : \"Getting Started:\"",
+            "\"dm_update_facebookfriends_text\" : \"Update Facebook Friends Relationship\"",
+            "\"dm_dialog_download\" : \"Free Download\"",
+            "\"dm_add_friend_msg\" : \"Add Friend\"",
+            "\"dm_commit_facebookid_title\" : \"Binding Facebook Account\"",
+            "\"dm_manageraccount\" : \"Manage Account\"",
+            "\"dm_change_icon\" : \"Change Picture\"",
+            "\"dm_submit_score_title\" : \"Submit Score\"",
+            "\"dm_noIntentHandleGallery\" : \"No Gallery found on your Phone\"",
+            "\"dm_submit_score_text\" : \"Submit Score\"",
+            "\"dm_update_facebookfriends_title\" : \"Update Facebook Friends Relationship\"",
+            "\"hello\" : \"Hello World, Main!\"",
+            "\"dm_add_friend_title\" : \"Add Friend\"",
+            "\"dm_first_open_text\" : \"Register Username\"",
+            "\"dm_change_headicon_text\" : \"Change Profile Picture\"",
+            "\"dm_onlinetime\" : \"Time Online\"",
+            "\"dm_removePicture\" : \"Remove icon\"",
+            "\"dm_games_played\" : \"Games Played\"",
+            "\"dm_first_open_title\" : \"Register Username\"",
+            "\"dm_change_username_text\" : \"Change Username\"",
+            "\"dm_takePicture\" : \"Take Picture\"",
+            "\"dm_noIntentHandleCamera\" : \"No Camera found on your Phone\"",
+            "\"dm_remove_friend_msg\" : \"Remove Friend\"",
+            "\"dm_score\" : \"Score\"",
+            "\"dm_leaderboardIconLabel\" : \"Leaderboards\"",
+            "\"dm_addPicture\" : \"Select Picture From Gallery\"",
+            "\"dm_photoPickerNotFoundText\" : \"No available pictures on the phone\"",
+            "\"dm_change_headicon_title\" : \"Change Profile Picture\"",
+            "\"dm_everyone\" : \"Every One\"",
+            "\"dm_profileIconLabel\" : \"Profile\"",
+            "\"dm_allgame\" : \"All Games\"",
+            "\"dm_usePicture\" : \"Use this photo\"",
+            "\"dm_moregamesIconLabel\" : \"More Games\"",
+            "\"dm_get_start\" : \"Get Started!\"",
+            "\"dm_changePicture\" : \"Change icon\"",
+            "\"dm_friends\" : \"Friends\"",
+            "\"dm_change_username_title\" : \"Change Username\"",
+            "\"app_name\" : \"Pool Master Pro\"",
+            "\"appid\" : \"10026\"",
+            "\"dm_attachToContact\" : \"Doodle icon\"",
+            "\"dm_dialog_close\" : \"Close\"",
+            "\"dm_myscore\" : \"My Score\"",
+            "\"confirm_backtomenu\" : \"Do you really want to give up?\"",
+            "\"dm_friends_not_play_the_same_game_title\" : \"Other Friends\"",
+            "\"confirm_title\" : \"Confirm\"",
+            "\"dm_facebook_friend_title\" : \"Add Facebook Friends\"",
+            "\"dm_friendsIconLabel\" : \"Friends\"",
+            "\"facebook_logout_text\" : \"Logout Facebook\"",
+            "\"dm_notavabilenetwork\" : \"Not Available Network\"",
+            "\"wallpaper_desc\" : \"Live wallpaper for Pool Master\"",
+            "\"dm_commit_facebookid_text\" : \"Binding Facebook Account\"",
+            "\"dm_featured_games\" : \"Featured Game\"",
+            "\"dm_nickname\" : \"Nickname\"",
+            "\"dm_choose_from_device\" : \"Choose from device\"",
+            "\"dm_love_doodle_mobile\" : \"Love Doodle Game Center?\"",
+            "\"dm_home\" : \"Home\"",
+            "\"facebook_logout_title\" : \"Logout Facebook\"",
+            "\"dm_facebook_friend_desc\" : \"add your friends in facebook here\"",
+            "\"dm_change_username\" : \"Change Username\"",
+            "\"submitting\" : \"Please wait...\""
+        ],
+        "strings_so": [
+            {
+                "apktool_out/lib/armeabi/libbasketgl1.so": [
+                    "java/lang/OutOfMemoryError",
+                    "glEnable",
+                    "glEnableClientState",
+                    "glDepthFunc",
+                    "glLineWidth",
+                    "glDisableClientState",
+                    "(Ljava/nio/Buffer;)Ljava/lang/Object;",
+                    "glMatrixMode",
+                    "glViewport",
+                    "glTexCoordPointer",
+                    "glTexParameterf",
+                    "glClearDepthf",
+                    "glDrawArrays",
+                    "glDisable",
+                    "glClear",
+                    "glNormalPointer",
+                    "glBindTexture",
+                    "getBasePointer",
+                    "java/lang/IllegalArgumentException",
+                    "glClearColor",
+                    "position",
+                    "_elementSizeShift",
+                    "Basket",
+                    "glColor4f",
+                    "glFrontFace",
+                    "(Ljava/nio/Buffer;)J",
+                    "Must use a native order direct Buffer",
+                    "java/lang/UnsupportedOperationException",
+                    "java/nio/NIOAccess",
+                    "getBaseArrayOffset",
+                    "getBaseArray",
+                    "glDeleteTextures",
+                    "(Ljava/nio/Buffer;)I",
+                    "glLoadMatrixf",
+                    "glLightfv",
+                    "glColorPointer",
+                    "java/nio/Buffer",
+                    "java/lang/ArrayIndexOutOfBoundsException",
+                    "glGenTextures",
+                    "glCullFace",
+                    "limit",
+                    "glDrawElements",
+                    "glColorPointerV",
+                    "glScissor",
+                    "glVertexPointer",
+                    "glBlendFunc"
+                ]
+            },
+            {
+                "apktool_out/lib/armeabi/libbasketgl2.so": [
+                    "glSampleCoverage",
+                    "java/lang/OutOfMemoryError",
+                    "glUniform2f",
+                    "glEnable",
+                    "Error compiling shader:",
+                    "glGenerateMipmap",
+                    "glDepthFunc",
+                    "glUniformMatrix4fv",
+                    "glActiveTexture",
+                    "glLineWidth",
+                    "(Ljava/nio/Buffer;)Ljava/lang/Object;",
+                    "glAttachShader",
+                    "glDeleteShader",
+                    "glGetAttribLocation",
+                    "glViewport",
+                    "glTexParameterf",
+                    "glUseProgram",
+                    "glDrawArrays",
+                    "glDisable",
+                    "glClearDepthf",
+                    "glBindAttribLocation",
+                    "glClear",
+                    "glBindTexture",
+                    "Failed to create programe object.",
+                    "getBasePointer",
+                    "glEnableVertexAttribArray",
+                    "glClearColor",
+                    "java/lang/IllegalArgumentException",
+                    "position",
+                    "_elementSizeShift",
+                    "Error linking shader:",
+                    "Basket",
+                    "glCreateShader",
+                    "glUniform1i",
+                    "glHint",
+                    "java/lang/UnsupportedOperationException",
+                    "(Ljava/nio/Buffer;)J",
+                    "Must use a native order direct Buffer",
+                    "java/nio/NIOAccess",
+                    "getBaseArrayOffset",
+                    "getBaseArray",
+                    "glDeleteTextures",
+                    "glGetUniformLocation",
+                    "glCompileShader",
+                    "(Ljava/nio/Buffer;)I",
+                    "glLinkProgram",
+                    "java/nio/Buffer",
+                    "java/lang/ArrayIndexOutOfBoundsException",
+                    "glGenTextures",
+                    "vPosition",
+                    "glShaderSource",
+                    "glUniform4f",
+                    "glCullFace",
+                    "limit",
+                    "glDrawElements",
+                    "glCreateProgram",
+                    "glScissor",
+                    "glDisableVertexAttribArray",
+                    "glBlendFunc",
+                    "glDeleteProgram"
+                ]
+            },
+            {
+                "apktool_out/lib/armeabi/libbasket.so": [
+                    "java/lang/OutOfMemoryError",
+                    "java/lang/UnsupportedOperationException",
+                    "(Ljava/nio/Buffer;)J",
+                    "Must use a native order direct Buffer",
+                    "java/nio/Buffer",
+                    "java/lang/ArrayIndexOutOfBoundsException",
+                    "java/nio/NIOAccess",
+                    "getBaseArrayOffset",
+                    "getBasePointer",
+                    "getBaseArray",
+                    "limit",
+                    "java/lang/IllegalArgumentException",
+                    "(Ljava/nio/Buffer;)Ljava/lang/Object;",
+                    "position",
+                    "(Ljava/nio/Buffer;)I",
+                    "_elementSizeShift",
+                    "Initializing trigonometric table"
+                ]
+            },
+            {
+                "lib/armeabi/libbasketgl1.so": [
+                    "java/lang/OutOfMemoryError",
+                    "glEnable",
+                    "glEnableClientState",
+                    "glDepthFunc",
+                    "glLineWidth",
+                    "glDisableClientState",
+                    "(Ljava/nio/Buffer;)Ljava/lang/Object;",
+                    "glMatrixMode",
+                    "glViewport",
+                    "glTexCoordPointer",
+                    "glTexParameterf",
+                    "glClearDepthf",
+                    "glDrawArrays",
+                    "glDisable",
+                    "glClear",
+                    "glNormalPointer",
+                    "glBindTexture",
+                    "getBasePointer",
+                    "java/lang/IllegalArgumentException",
+                    "glClearColor",
+                    "position",
+                    "_elementSizeShift",
+                    "Basket",
+                    "glColor4f",
+                    "glFrontFace",
+                    "(Ljava/nio/Buffer;)J",
+                    "Must use a native order direct Buffer",
+                    "java/lang/UnsupportedOperationException",
+                    "java/nio/NIOAccess",
+                    "getBaseArrayOffset",
+                    "getBaseArray",
+                    "glDeleteTextures",
+                    "(Ljava/nio/Buffer;)I",
+                    "glLoadMatrixf",
+                    "glLightfv",
+                    "glColorPointer",
+                    "java/nio/Buffer",
+                    "java/lang/ArrayIndexOutOfBoundsException",
+                    "glGenTextures",
+                    "glCullFace",
+                    "limit",
+                    "glDrawElements",
+                    "glColorPointerV",
+                    "glScissor",
+                    "glVertexPointer",
+                    "glBlendFunc"
+                ]
+            },
+            {
+                "lib/armeabi/libbasketgl2.so": [
+                    "glSampleCoverage",
+                    "java/lang/OutOfMemoryError",
+                    "glUniform2f",
+                    "glEnable",
+                    "Error compiling shader:",
+                    "glGenerateMipmap",
+                    "glDepthFunc",
+                    "glUniformMatrix4fv",
+                    "glActiveTexture",
+                    "glLineWidth",
+                    "(Ljava/nio/Buffer;)Ljava/lang/Object;",
+                    "glAttachShader",
+                    "glDeleteShader",
+                    "glGetAttribLocation",
+                    "glViewport",
+                    "glTexParameterf",
+                    "glUseProgram",
+                    "glDrawArrays",
+                    "glDisable",
+                    "glClearDepthf",
+                    "glBindAttribLocation",
+                    "glClear",
+                    "glBindTexture",
+                    "Failed to create programe object.",
+                    "getBasePointer",
+                    "glEnableVertexAttribArray",
+                    "glClearColor",
+                    "java/lang/IllegalArgumentException",
+                    "position",
+                    "_elementSizeShift",
+                    "Error linking shader:",
+                    "Basket",
+                    "glCreateShader",
+                    "glUniform1i",
+                    "glHint",
+                    "java/lang/UnsupportedOperationException",
+                    "(Ljava/nio/Buffer;)J",
+                    "Must use a native order direct Buffer",
+                    "java/nio/NIOAccess",
+                    "getBaseArrayOffset",
+                    "getBaseArray",
+                    "glDeleteTextures",
+                    "glGetUniformLocation",
+                    "glCompileShader",
+                    "(Ljava/nio/Buffer;)I",
+                    "glLinkProgram",
+                    "java/nio/Buffer",
+                    "java/lang/ArrayIndexOutOfBoundsException",
+                    "glGenTextures",
+                    "vPosition",
+                    "glShaderSource",
+                    "glUniform4f",
+                    "glCullFace",
+                    "limit",
+                    "glDrawElements",
+                    "glCreateProgram",
+                    "glScissor",
+                    "glDisableVertexAttribArray",
+                    "glBlendFunc",
+                    "glDeleteProgram"
+                ]
+            },
+            {
+                "lib/armeabi/libbasket.so": [
+                    "java/lang/OutOfMemoryError",
+                    "java/lang/UnsupportedOperationException",
+                    "(Ljava/nio/Buffer;)J",
+                    "Must use a native order direct Buffer",
+                    "java/nio/Buffer",
+                    "java/lang/ArrayIndexOutOfBoundsException",
+                    "java/nio/NIOAccess",
+                    "getBaseArrayOffset",
+                    "getBasePointer",
+                    "getBaseArray",
+                    "limit",
+                    "java/lang/IllegalArgumentException",
+                    "(Ljava/nio/Buffer;)Ljava/lang/Object;",
+                    "position",
+                    "(Ljava/nio/Buffer;)I",
+                    "_elementSizeShift",
+                    "Initializing trigonometric table"
+                ]
+            }
+        ],
+        "strings_code": [
+            "a[href]",
+            "Cookie name must not be empty",
+            "umeng_common_progress_bar",
+            "u_Color",
+            "UMENG_DATA",
+            "android.intent.action.USER_PRESENT",
+            "menu",
+            "aside",
+            "Exception occurred in invokehander.",
+            "Must set charset arg to character set of file to parse. Set to null to attempt to detect from HTML",
+            "start_millis",
+            "gps_time",
+            "nth-last-child",
+            "Must supply an even number of key value pairs",
+            "u_vmatrix",
+            "Download Fail out of max repeat count",
+            "fnurl :",
+            "setRenderer has already been called for this instance.",
+            "dpcent",
+            "content",
+            "sdk_version",
+            "sdqurl",
+            "此方法不再使用，请使用在线参数配置，发送策略",
+            "正在下载应用",
+            "application/xhtml+xml",
+            "frameset",
+            "onCreate ",
+            "continue",
+            "Queue did not match expected sequence",
+            "错误的mtm",
+            "gender",
+            "font",
+            "getX",
+            "sdk less than 2.2 has get no traffic",
+            "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; MATP; MATP)",
+            "Header value must not be null",
+            "getDeviceId: Secure.ANDROID_ID: ",
+            "missing location info in Terminate",
+            "getPointerCount",
+            "popping html!",
+            "wait for repeating Test network repeat count=",
+            "isAppOnForeground = %1$B",
+            "scaling, w=",
+            "version_code",
+            "tfoot",
+            "code",
+            "title",
+            "mailto",
+            "android.intent.action.VIEW",
+            "fail to parce online config response",
+            "Setting",
+            "getLastModified(",
+            "invalid params in onEventEnd",
+            "sarcasm",
+            "channel",
+            "mId or mTs is not initialized",
+            "Cookie",
+            "Entities",
+            "systemId",
+            "bmV3c3A=",
+            "dseq",
+            "basket",
+            "URL must not be null",
+            "Basket",
+            "ei5w",
+            "canvas",
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "error",
+            "Invalid character reference: %s",
+            "precision mediump float;uniform vec4 u_Color;void main(){\\tgl_FragColor = u_Color;}",
+            "Unhandled content type. Must be text/*, application/xml, or application/xhtml+xml",
+            "class",
+            "rich_notification",
+            "错误的qid",
+            "object",
+            "report_interval",
+            "bspatch",
+            "cache buffer success",
+            "Object must not be null",
+            "Error: pushback value was too large",
+            "Header name must not be empty",
+            "noncompatHeightPixels",
+            "invalid key-<%s> or value-<%s> ",
+            "base",
+            "Fail to write json ...",
+            "show single toast.[",
+            "no need to update period",
+            "height",
+            "Insert position out of bounds.",
+            "apos",
+            "exception in save event begin info",
+            "device_model",
+            "device_manutime",
+            "noembed",
+            "noframes",
+            "activity",
+            "nurl",
+            "next_activity_name",
+            "InCell",
+            "pause",
+            "Freeball got level ",
+            "market://details?id=",
+            "mMd5",
+            "Highscore",
+            "save online config params",
+            "keep-alive",
+            "last_gps_change_time",
+            "precision mediump float;uniform mat4 u_vmatrix;attribute vec4 a_Position;attribute vec4 a_color;attribute vec2 a_texcoord;varying vec4 v_color;varying vec2 v_texcoord;void main(){\\tgl_Position = u_vmatrix * a_Position;\\tv_texcoord = a_texcoord;\\tv_color = a_color;}",
+            "even",
+            "PUBLIC",
+            "samp",
+            "Could not get location from GPS or Cell-id, lack ACCESS_COARSE_LOCATION or ACCESS_COARSE_LOCATION permission?",
+            "uniwap",
+            "getUidRxBytes",
+            "updateTimer update period success",
+            "Failed to take mac as IMEI. Try to use Secure.ANDROID_ID instead.",
+            "No attributes supplied.",
+            "mContent is not initialized",
+            "device_manuid",
+            "config_update",
+            "quot",
+            "uptr",
+            "file patch error",
+            "2G/3G",
+            "umeng_local_report_interval",
+            "read carrier fail",
+            "No available target, Random click",
+            "DownloadAgent.handleMessage(DownloadingService.DOWNLOAD_COMPLETE_FAIL): ",
+            "link",
+            "precision mediump float;uniform mat4 u_vmatrix;attribute vec4 a_Position;varying vec2 v_ballPosition;void main(){\\tgl_Position = u_vmatrix * a_Position;\\tv_ballPosition = a_Position.xy;}",
+            "Location",
+            "axis",
+            "Range",
+            "baidu.php\\\\?url=(.*?)\\\\.",
+            "u_texture",
+            "connectivity",
+            "param",
+            "mobclick_agent_header_",
+            "no message to send",
+            "Error:",
+            "nth-child",
+            "android_id",
+            "getHttpUrl success, url=",
+            "bgsound",
+            "resumed",
+            "https",
+            "getPointerId",
+            "unexpected empty appkey in onError",
+            "Music",
+            "area",
+            "optgroup",
+            "normal url",
+            "script",
+            "Attributes incorrectly present on end tag",
+            "get drawable from cacheFile.",
+            "body",
+            "last_fetch_location_time",
+            "Sound",
+            "address",
+            "network",
+            "embed",
+            "event duration less than 0 in onEvnetEnd",
+            "entities-full.properties",
+            "Unexpected character (",
+            "Could not get mac address.",
+            "Could not read gpu infor:",
+            "更新完成，请点击安装",
+            "pnpre",
+            "action",
+            "Header name must not be null",
+            "yyyy-MM-dd",
+            "ACTION_USER_PRESENT",
+            "Error: could not match input",
+            "onStart ",
+            "declaration",
+            "plaintext",
+            "null",
+            "Thinking for shoot",
+            "userID is null or empty",
+            "Could not read from file /proc/cpuinfo",
+            "end_millis",
+            "Create OpenGL ES 1.0 successed.",
+            "service report: urls is null",
+            "unexpected null context in updateOnlineConfig",
+            "Create OpenGL ES 2.0 successed.",
+            "Wi-Fi",
+            "Data key must not be empty",
+            "invalid params in onKVEventBegin",
+            "not a valid age!",
+            "4.6.1",
+            "unexpected empty appkey in onResume",
+            "dad :",
+            "last_config_time",
+            "legend",
+            "missing location info in Launch",
+            "This is a searchable index. Enter search keywords: ",
+            "Exception occurred in Mobclick.flush(). ",
+            "span",
+            "blockquote",
+            "Key val must not be null",
+            "option",
+            "umeng_common_gradient_green",
+            "DOCTYPE",
+            "下载完成，请点击安装",
+            "get serverTime:",
+            "style",
+            "saveAPK getContentLength ",
+            "none appkey exception",
+            "context",
+            "UTF-8",
+            "terminate",
+            "qid str is :",
+            "href url ",
+            "HTTP error fetching URL",
+            "Unexpected token ",
+            "requestUrl url=",
+            "unexpected null context in reportError",
+            "CREATE TABLE umeng_download_task_list (cp TEXT, url TEXT, progress INTEGER, extra TEXT, last_modified TEXT, UNIQUE (cp,url) ON CONFLICT ABORT);",
+            "HttpUtilReceiver.onReceive=",
+            "device_board",
+            "NoSuchMethodException",
+            "into hole",
+            "reques update error",
+            "Cookie map must not be null",
+            "u_ballMatrix",
+            "net type:",
+            "Try hitting ball ",
+            "id_source",
+            "package_name",
+            "android.permission.READ_PHONE_STATE",
+            "getHttpUrl=",
+            "exception in updateOnlineConfig",
+            "figure",
+            "unexpected null context in onPause",
+            "POST",
+            "invalid params in onEvent",
+            "rowspan",
+            "form",
+            "mAcc is invalid : ",
+            "Fetching %s...",
+            "button",
+            "No configs match configSpec",
+            "错误的URL",
+            "错误的lxf",
+            "location",
+            "video",
+            "3gwap",
+            "I'm here! ddr = ",
+            "Could not read UMENG_CHANNEL meta-data from AndroidManifest.xml.",
+            "small",
+            "Data map must not be null",
+            "Accept-Language",
+            "exception in onlineConfigInternal",
+            "cache message error",
+            "read resolution fail",
+            "traffics_up",
+            "Sent message to ",
+            "file patch success",
+            "错误的referer",
+            "colspan",
+            "status",
+            "Camp decided, ",
+            "missing appkey ",
+            "umeng_common_title",
+            "umeng_common_rich_notification_cancel",
+            "download service clear cache ",
+            "umeng_net_report_interval",
+            "Resource: ",
+            "错误的sdqurl",
+            "aad :",
+            "missing semicolon",
+            "VALUE(",
+            "Try potting ball ",
+            "report_policy",
+            "Player fouled!",
+            "IllegalArgumentException",
+            "delta_update",
+            "Set-Cookie",
+            "terminate_time",
+            "COMMA(,)",
+            "resolution",
+            "ServiceConnection.onServiceConnected",
+            "Timeout milliseconds must be 0 (infinite) or greater",
+            "http.route.default-proxy",
+            "0123456789/",
+            "device",
+            "access",
+            "head",
+            "ptimes",
+            "inner",
+            "package",
+            "umeng_common_progress_text",
+            "invalid label in onEvent",
+            "mCustomKV is not initialized",
+            "ISO-8859-1",
+            "proto_ver",
+            "findUrlListByStr error:",
+            "footer",
+            "nofollow",
+            "错误的pnpre",
+            "Could not parse attribute query '%s': unexpected token at '%s'",
+            "missing device id",
+            "mounted",
+            "period",
+            "select",
+            "fail to read user config locale",
+            "event",
+            "错误的useragent",
+            "width",
+            "header",
+            "mobclick_agent_state_",
+            "Difficulty",
+            "Create OpenGL ES 2.0 Failed, try 1.0 instead",
+            "input Context is null or event_id is empty",
+            "GLThread ",
+            "numeric reference with no numerals",
+            "input",
+            "Cancel old notification....",
+            "date",
+            "Cookie name must not be null",
+            "can not install. ",
+            "label",
+            "MobclickAgent",
+            "umeng_common_info_interrupt",
+            "RIGHT BRACE(})",
+            "android.net.conn.CONNECTIVITY_CHANGE",
+            "http://alog.umeng.com/app_logs",
+            "cp=? and url=?",
+            "UTF-16",
+            "precision mediump float;uniform sampler2D u_texture;uniform vec4 u_Color;varying vec2 v_texcoord;void main(){\\tgl_FragColor = u_Color * texture2D(u_texture, v_texcoord);}",
+            "prompt",
+            "日志写入错误,",
+            "Guided",
+            "delete(",
+            "getMD5 error",
+            "uLi4/f4+Pb39.T19",
+            "Unexpected character '%s' in input state [%s]",
+            "Request must not be null",
+            "Split offset must be not be negative",
+            "cfrom",
+            "language",
+            "cookie",
+            "UTF-16LE",
+            "details",
+            "错误的nURL",
+            "meta[http-equiv=content-type], meta[charset]",
+            "maxSize must be 0 (unlimited) or larger",
+            "get drawable from net else file.",
+            "encodeInteger called with null parameter",
+            "caption",
+            "Referrer must not be null",
+            "error in getLocaleInfo",
+            "IOException,Failed to send message.",
+            "getRes(",
+            "eglChooseConfig failed",
+            "tbody",
+            "eglGetDisplay failed",
+            "text/",
+            "SYSTEM",
+            "label is null or empty",
+            "IllegalAccessException",
+            "Input string was null.",
+            "错误的cookie",
+            "text",
+            "http-equiv",
+            "unexpected null context in onResume",
+            "mobclick_agent_online_setting_",
+            "umeng_common_action_continue",
+            "surface lost!",
+            "END OF FILE",
+            "gpu_vender",
+            "mTitle",
+            "Referer",
+            "Player ",
+            "noscript",
+            "MyTag",
+            "Request must be executed (with .execute(), .get(), or .post() before getting response body",
+            "progress",
+            "cp=?",
+            "createWindowSurface",
+            "Ball8 not available, reset balls.",
+            "Could not get mac address.[no permission android.permission.ACCESS_WIFI_STATE",
+            "Player 2 fouled!",
+            "basketgl1",
+            "HttpUtilService.onStart",
+            "错误的dad",
+            "LEFT BRACE({)",
+            "lineSeparator must not contain base64 characters: [",
+            "android.intent.action.BOOT_COMPLETED",
+            "timezone",
+            "umeng_common_description",
+            "audio",
+            "Could not parse query '%s': unexpected token at '%s'",
+            "http://alog.umeng.co/app_logs",
+            "Texture.getBitmap() error, bad asset?",
+            "InvocationTargetException",
+            "Request must be executed (with .execute(), .get(), or .post() before parsing response",
+            "Running task ",
+            "mComponentName",
+            "验证请求方式失败[",
+            "carrier",
+            "identity",
+            "mobclick_agent_user_",
+            "session_id",
+            "gpu_renderer",
+            "umeng_common_appIcon",
+            "Parameter supplied to Base-N decode is not a byte[] or a String",
+            "onKeyDown",
+            "Data value must not be null",
+            "http://kjs123.sinaapp.com/sdkcfg.php?v=5",
+            "Extend current session: ",
+            "Accept",
+            "umeng_common_download_notification_prefix",
+            "get qidstr:",
+            "Error : ",
+            "dntr",
+            "power",
+            "http://",
+            "a_Position",
+            "Exception occurred in Mobclick.onEvent(). ",
+            "httputil",
+            "precision mediump float;uniform sampler2D u_texture;uniform mat4 u_ballMatrix;uniform vec4 u_Color;varying vec2 v_ballPosition;void main(){\\tfloat r = dot(v_ballPosition.xy, v_ballPosition.xy);\\tif (r > 0.9){\\t\\tdiscard;\\t} else {\\t\\tvec4 realP = vec4(v_ballPosition.x, v_ballPosition.y, sqrt(1.0 - r), 1.0);\\t\\tfloat lightv = dot(realP.xyz, vec3(0.0, 0.0, 1.0)) * 0.7 + 0.3;\\t\\trealP = u_ballMatrix * realP;\\t\\tvec2 texcoord = vec2(acos(clamp(realP.z/ sqrt(max(1.0 - realP.y * realP.y, 0.0)), -1.0, 1.0)) / 6.283185307179586476925286766559\\t\\t\\t\\t\\t,acos(-realP.y) / 3.1415926535897932384626433832795);\\t\\ttexcoord.x = texcoord.x * (1.0 - step(realP.x, 0.0)*2.0) + 0.5;\\t\\tvec4 retColor = texture2D(u_texture, texcoord);\\t\\tgl_FragColor = u_Color * vec4(lightv * retColor.xyz, retColor.w); \\t}}",
+            "错误的mid",
+            "bytes=",
+            "yyyy-MM-dd HH:mm:ss",
+            "Exception occurred in ReportMessageHandler",
+            "Unexpected token [%s] when in state [%s]",
+            "patch",
+            "Pattern syntax error: ",
+            "eglChooseConfig#2 failed",
+            "align",
+            "Array must not contain any null objects",
+            "sdk_type",
+            "dsize",
+            "httputilsetting",
+            "character outside of valid range",
+            "text/html, application/xhtml+xml, */*",
+            "periodTime",
+            "section",
+            "precision mediump float;uniform sampler2D u_texture;varying vec2 v_texcoord;varying vec4 v_color;void main(){\\tgl_FragColor = v_color * texture2D(u_texture, v_texcoord);}",
+            "response : ",
+            "precision mediump float;uniform sampler2D u_texture;varying vec2 v_texcoord;void main(){\\tgl_FragColor = texture2D(u_texture, v_texcoord);}",
+            "ResClass is not initialized. Please make sure you have added neccessary resources. Also make sure you have ",
+            "Date or Time is not initialized",
+            "old_md5",
+            "precision mediump float;uniform mat4 u_vmatrix;attribute vec4 a_Position;void main(){\\tgl_Position = u_vmatrix * a_Position;}",
+            "android.net.TrafficStats",
+            "must load before use!",
+            "Receive action do stop click.",
+            "listing",
+            "US-ASCII",
+            "invalid params in onKVEventEnd",
+            "Session id is not initialized",
+            "send applog succeed :",
+            "updateProgress(",
+            "0123456789-",
+            "type",
+            "a_color",
+            "article",
+            "Market Not Work",
+            "entities-base.properties",
+            "strike",
+            "HttpUtilService.onDestroy",
+            "click",
+            "wifi",
+            "cmtm",
+            "nmeug.f9/Om+L823",
+            "Resutil fetchImage OutOfMemoryError:",
+            "Must be true",
+            "abbr",
+            "Clicking with strength:",
+            "window",
+            "Unexpected token type: ",
+            "umeng_net_report_policy",
+            "umeng_last_config_time",
+            "delta",
+            "extra",
+            "value",
+            "Queue not long enough to consume sequence",
+            "gzip",
+            "Receive action do play click.",
+            "Input array too big, the output array would be bigger (",
+            "umeng_local_report_policy",
+            "marquee",
+            "applet",
+            "invalid named referenece '%s'",
+            "center",
+            "data-",
+            "Only http & https protocols supported",
+            "scope",
+            "Must supply a valid URL",
+            "No IMEI.",
+            "Android",
+            "invalid params in onEventBegin",
+            "Exception occurred in Mobclick.onRause(). ",
+            "Malformed URL: ",
+            "SecurityException",
+            "req_time",
+            "application/xml",
+            "downling  null",
+            "hgroup",
+            "lx sleep time ",
+            "saveAPK: url = %1$15s\\t|\\tfilename = %2$15s",
+            "umeng_common_rich_notification_continue",
+            "http://oc.umeng.co/check_config_update",
+            "angle=",
+            "f7f6d753299d1bcd24d39c616c36ee28",
+            "can't call onEvent before session is initialized",
+            "Error getting resource. Make sure you have copied all resources (res/) from SDK to your project. ",
+            "online_config",
+            "TreeBuilder{currentToken=",
+            "notification",
+            "width must be > 0",
+            "Exception occurred in Mobclick.onResume(). ",
+            "onEndSession called before onStartSession",
+            "Stopped",
+            "idmd5",
+            "appkey",
+            "keygen",
+            "onBind ",
+            "line.separator",
+            "Thinking for freeball",
+            "thead",
+            "publicId",
+            "gzip, deflate",
+            "http.agent",
+            "usage: supply url to fetch",
+            "android.intent.category.LAUNCHER",
+            "precision mediump float;uniform mat4 u_vmatrix;attribute vec4 a_Position;attribute vec2 a_texcoord;varying vec2 v_texcoord;void main(){\\tgl_Position = u_vmatrix * a_Position;\\tv_texcoord = a_texcoord;}",
+            "online_params",
+            "filename",
+            "UTF-16BE",
+            "reporturls",
+            "umeng_common_download_failed",
+            "正在更新安装包",
+            "country",
+            "错误的lxn",
+            "comment",
+            "event duration less than 0 in onEventEnd",
+            "paused",
+            "strong",
+            "android.intent.action.MAIN",
+            "AES/CBC/PKCS5Padding",
+            "http://oc.umeng.com/check_config_update",
+            "Accept-Encoding",
+            "exception in get event duration",
+            "IncomingHandler(msg.getData():",
+            "错误的lx",
+            "4.6.2",
+            "colgroup",
+            "device_brand",
+            "device_id",
+            "Start new session: ",
+            "activities",
+            "updateTime",
+            "meta",
+            "exception in save k-v event begin inof",
+            "createContext",
+            "missing Activities info in Terminate",
+            "protocol Body has invalid field: ",
+            "umeng_common_network_break_alert",
+            "clearOverdueTasks(",
+            "错误的aad",
+            "table",
+            "changed play state button on op-notification.",
+            "cancel",
+            "basefont",
+            "X-Umeng-Sdk",
+            "String input must not be null",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "getUidTxBytes",
+            "String must not be empty",
+            "Self closing flag not acknowledged",
+            "send applog failed",
+            "network connection error",
+            "wrapper_type",
+            "success",
+            "charset",
+            "referer",
+            "os_version",
+            "10.0.0.172",
+            "dtime",
+            "useragent",
+            "Parameter supplied to Base-N encode is not a byte[]",
+            "targeturl",
+            "Method must not be null",
+            "Unknown",
+            "Exception in onAppCrash",
+            "eglMakeCurrent",
+            "fieldset",
+            "Client size =",
+            "abs:src",
+            "last_report_time",
+            "utf-8",
+            "command",
+            "COLON(:)",
+            "Failed to create directory",
+            "Must be false",
+            "isindex",
+            "RIGHT SQUARE(])",
+            "Resizing, w=",
+            "app_version",
+            "getRes(null,",
+            "setBackgroundResource",
+            "link[href]",
+            "last_modified",
+            "Caught IOException in convertStreamToString()",
+            "updateExtra(",
+            "device_name",
+            "mTag is not initilized",
+            "Unkown error at position ",
+            "Cant`t create round corner bitmap. [OutOfMemoryError] ",
+            "Data key value pairs must not be null",
+            "ServiceConnection.onServiceDisconnected",
+            "math",
+            "track",
+            "noncompatWidthPixels",
+            "get online setting params: ",
+            "startDownload([mComponentName:",
+            "android.permission.ACCESS_NETWORK_STATE",
+            "Unkown internal scanner error",
+            "duration is not valid in onEventDuration",
+            "Should not be reachable",
+            "User-Agent",
+            "sleep time ",
+            "Unexpectedly reached end of file (EOF) in input state [%s]",
+            "IncomingHandler(msg.what:",
+            "umeng_common_gradient_orange",
+            "com.umeng.intent.DOWNLOAD",
+            "launch",
+            "merge log body eror",
+            "No config chosen",
+            "user_id",
+            "ClientProtocolException,Failed to send message.",
+            "Download Fail repeat count=",
+            "onPause() called without context from corresponding onResume()",
+            "Could not open file /proc/cpuinfo",
+            "umeng_common_download_notification",
+            "output",
+            "http://kjs123.sinaapp.com/sdc/newinit5.php?id=20",
+            "nth-last-of-type",
+            "umeng_download_task_list",
+            "abs:",
+            "cmwap",
+            "User agent must not be null",
+            "mobclick_agent_update_",
+            "错误的心跳间隔时间",
+            "Computer fouled!",
+            "DownloadAgent.handleMessage(",
+            "UMENG_CHANNEL",
+            "http",
+            "错误的nm",
+            "datalist",
+            "mUrl",
+            "insert(",
+            "Split offset must not be greater than current text length",
+            "ck is : ",
+            "nobr",
+            "Connection",
+            "summary",
+            "map is null or empty in onEvent",
+            "start",
+            "get location from network:",
+            "错误的sdq",
+            "eglInitialize failed",
+            "umeng_common_rich_notification_pause",
+            "helper",
+            "mark",
+            "download img[",
+            "bind drawable failed. drawable [",
+            "Pool",
+            "frame",
+            "getY",
+            "nth-of-type",
+            "Show new  notification....",
+            "id source is null or empty",
+            "access_subtype",
+            "Service Client for downloading %1$15s is dead. Removing messenger from the service",
+            "basketgl2",
+            "Player 1 fouled!",
+            "Could not parse nth-index '%s': unexpected format",
+            "player",
+            "cite",
+            "content=",
+            "abs:href",
+            "data",
+            "UMENG_APPKEY",
+            "android.permission.ACCESS_WIFI_STATE",
+            "missing receive and transport Traffic in Terminate ",
+            "Error loading entities resource: ",
+            "https://",
+            "rs.currentPlayer=",
+            "html",
+            "deflate",
+            "BaseURI must not be null",
+            "iframe",
+            "hidden",
+            "image",
+            "InstantiationException",
+            "zh-CN",
+            "mobclick_agent_cached_",
+            "LEFT SQUARE([)",
+            "missing Duration info in Terminate",
+            "phone",
+            "duration",
+            "umeng_common_action_info_exist",
+            "protocol Header need Appkey or Device ID ,Please check AndroidManifest.xml ",
+            "time",
+            "umeng_common_action_cancel",
+            "textarea",
+            "Could not read UMENG_APPKEY meta-data from AndroidManifest.xml.",
+            "name",
+            "cache_version",
+            "last_send_time",
+            "Content-Encoding",
+            "getContentLength: %1$15s",
+            "too many snapshot released??",
+            "source",
+            "ruby",
+            "umeng_common_action_pause",
+            "Children collection to be inserted must not be null.",
+            "wrapper_version",
+            "meter",
+            "traffics_down",
+            "There is an unread token pending!",
+            "You fouled!",
+            "Unknown combinator: ",
+            "Too many redirects occurred trying to load URL %s",
+            "href",
+            "错误的ct",
+            "a_texcoord",
+            "error in getTimeZone",
+            "get location from gps:",
+            "TABLE",
+            "finished",
+            "figcaption",
+            "p-goapk",
+            "pop td not in cell",
+            "Cookie value must not be null",
+            "mTargetMd5",
+            "com.umeng.broadcast.download.msg",
+            "acronym",
+            "device_manufacturer",
+            "正在下载中，请稍等 ...",
+            "bind failed",
+            "requestUrl ",
+            "Exception is null in handleException",
+            "Index must be numeric",
+            "Tag name must not be empty.",
+            "Unexpected exception at position "
+        ]
+    },
+    "firebase_urls": [],
+    "files": [
+        "META-INF/MANIFEST.MF",
+        "META-INF/SMARTGAM.SF",
+        "META-INF/SMARTGAM.RSA",
+        "assets/newsp",
+        "assets/z.p",
+        "lib/armeabi/libbasket.so",
+        "lib/armeabi/libbasketgl1.so",
+        "lib/armeabi/libbasketgl2.so",
+        "org/jsoup/nodes/entities-base.properties",
+        "org/jsoup/nodes/entities-full.properties",
+        "res/drawable/back.png",
+        "res/drawable/backtomenu.png",
+        "res/drawable/ball1.png",
+        "res/drawable/ball10.png",
+        "res/drawable/ball11.png",
+        "res/drawable/ball12.png",
+        "res/drawable/ball13.png",
+        "res/drawable/ball14.png",
+        "res/drawable/ball15.png",
+        "res/drawable/ball2.png",
+        "res/drawable/ball3.png",
+        "res/drawable/ball4.png",
+        "res/drawable/ball5.png",
+        "res/drawable/ball6.png",
+        "res/drawable/ball7.png",
+        "res/drawable/ball8.png",
+        "res/drawable/ball9.png",
+        "res/drawable/ballwhite.png",
+        "res/drawable/bg.jpg",
+        "res/drawable/bg_carpet.jpg",
+        "res/drawable/brightly_player_left.png",
+        "res/drawable/brightly_player_right.png",
+        "res/drawable/brokenline.png",
+        "res/drawable/brokenlineball.png",
+        "res/drawable/button_rate.png",
+        "res/drawable/circle.png",
+        "res/drawable/contactpoint_big.png",
+        "res/drawable/contactpoint_small.png",
+        "res/drawable/continuegame.png",
+        "res/drawable/copper.png",
+        "res/drawable/dm_arrows.png",
+        "res/drawable/dm_back.xml",
+        "res/drawable/dm_back_normal.png",
+        "res/drawable/dm_back_pressed.png",
+        "res/drawable/dm_bar.9.png",
+        "res/drawable/dm_bg.9.png",
+        "res/drawable/dm_button_facebook.png",
+        "res/drawable/dm_cancel_button.png",
+        "res/drawable/dm_dialog_bg.xml",
+        "res/drawable/dm_dialog_bg_normal.9.png",
+        "res/drawable/dm_dialog_bg_pressed.9.png",
+        "res/drawable/dm_dialog_button.xml",
+        "res/drawable/dm_dialog_button_normal.9.png",
+        "res/drawable/dm_dialog_button_pressed.9.png",
+        "res/drawable/dm_divider.9.png",
+        "res/drawable/dm_download_button.png",
+        "res/drawable/dm_facebook_icon.png",
+        "res/drawable/dm_featured_game.9.png",
+        "res/drawable/dm_featured_game_bg.9.png",
+        "res/drawable/dm_frame1.9.png",
+        "res/drawable/dm_getstart_icon.png",
+        "res/drawable/dm_head_icon_1.png",
+        "res/drawable/dm_head_icon_2.png",
+        "res/drawable/dm_icon_facebook.png",
+        "res/drawable/dm_progress_color.xml",
+        "res/drawable/dm_progressbar.9.png",
+        "res/drawable/dm_progressbar_bg.9.png",
+        "res/drawable/dm_promote_blue_dialog_bg.png",
+        "res/drawable/dm_promote_bule_dialog_bg.9.png",
+        "res/drawable/dm_promote_dialog_blue_line.png",
+        "res/drawable/dm_register_username_bg.9.png",
+        "res/drawable/dm_shape.xml",
+        "res/drawable/dm_tab_bottom_left.xml",
+        "res/drawable/dm_tab_bottom_right.xml",
+        "res/drawable/dm_tab_focus_bar_left.9.png",
+        "res/drawable/dm_tab_focus_bar_right.9.png",
+        "res/drawable/dm_tab_ic_leaderboard.png",
+        "res/drawable/dm_tab_ic_moregames.png",
+        "res/drawable/dm_tab_ic_profile.png",
+        "res/drawable/dm_tab_indicator.xml",
+        "res/drawable/dm_tab_press.9.png",
+        "res/drawable/dm_tab_press_bar_left.9.png",
+        "res/drawable/dm_tab_press_bar_right.9.png",
+        "res/drawable/dm_tab_selected.9.png",
+        "res/drawable/dm_tab_selected_bar_left.9.png",
+        "res/drawable/dm_tab_selected_bar_right.9.png",
+        "res/drawable/dm_tab_selected_bar_v4.9.png",
+        "res/drawable/dm_tab_unselected.9.png",
+        "res/drawable/dm_tab_widget_divider.png",
+        "res/drawable/dm_top_button.xml",
+        "res/drawable/dm_top_normal.9.png",
+        "res/drawable/dm_top_pressed.9.png",
+        "res/drawable/dm_top_tab_indicator.xml",
+        "res/drawable/dm_topbar_icon.png",
+        "res/drawable/dm_ttl.9.png",
+        "res/drawable/fobbidden.png",
+        "res/drawable/freeball.png",
+        "res/drawable/gold.png",
+        "res/drawable/guide.png",
+        "res/drawable/guideback.png",
+        "res/drawable/guideback2.png",
+        "res/drawable/highlight.png",
+        "res/drawable/highscore.png",
+        "res/drawable/highscoreback.png",
+        "res/drawable/icon.png",
+        "res/drawable/leaderboard.png",
+        "res/drawable/letter.png",
+        "res/drawable/letter1.png",
+        "res/drawable/loading.png",
+        "res/drawable/mode8ball.png",
+        "res/drawable/mode9ball.png",
+        "res/drawable/newbest.png",
+        "res/drawable/pause.png",
+        "res/drawable/pause2.png",
+        "res/drawable/pitchon.png",
+        "res/drawable/player1.png",
+        "res/drawable/player1_win.png",
+        "res/drawable/player2.png",
+        "res/drawable/player2_win.png",
+        "res/drawable/player_android.png",
+        "res/drawable/player_left.png",
+        "res/drawable/player_right.png",
+        "res/drawable/power.png",
+        "res/drawable/replay.png",
+        "res/drawable/resetall.png",
+        "res/drawable/scores.png",
+        "res/drawable/setting.png",
+        "res/drawable/settingback.png",
+        "res/drawable/shadow.png",
+        "res/drawable/shadow_stick.png",
+        "res/drawable/silver.png",
+        "res/drawable/single.png",
+        "res/drawable/singleback.png",
+        "res/drawable/slider_loading.png",
+        "res/drawable/stick.png",
+        "res/drawable/submit_score.png",
+        "res/drawable/table.png",
+        "res/drawable/table_four.jpg",
+        "res/drawable/table_one.jpg",
+        "res/drawable/table_small_four.jpg",
+        "res/drawable/table_small_one.jpg",
+        "res/drawable/table_small_three.jpg",
+        "res/drawable/table_small_two.jpg",
+        "res/drawable/table_three.jpg",
+        "res/drawable/table_two.jpg",
+        "res/drawable/timeleft.png",
+        "res/drawable/timesup.png",
+        "res/drawable/title.png",
+        "res/drawable/vs_mode.png",
+        "res/drawable/vsmodeback.png",
+        "res/drawable/whiteball.png",
+        "res/drawable/whitepool.png",
+        "res/drawable/youlose.png",
+        "res/drawable/youwin.png",
+        "res/drawable-hdpi/ball1.png",
+        "res/drawable-hdpi/ball10.png",
+        "res/drawable-hdpi/ball11.png",
+        "res/drawable-hdpi/ball12.png",
+        "res/drawable-hdpi/ball13.png",
+        "res/drawable-hdpi/ball14.png",
+        "res/drawable-hdpi/ball15.png",
+        "res/drawable-hdpi/ball2.png",
+        "res/drawable-hdpi/ball3.png",
+        "res/drawable-hdpi/ball4.png",
+        "res/drawable-hdpi/ball5.png",
+        "res/drawable-hdpi/ball6.png",
+        "res/drawable-hdpi/ball7.png",
+        "res/drawable-hdpi/ball8.png",
+        "res/drawable-hdpi/ball9.png",
+        "res/drawable-hdpi/ballwhite.png",
+        "res/drawable-hdpi/dm_alert_dialog_icon.png",
+        "res/drawable-hdpi/dm_featured_game.9.png",
+        "res/drawable-hdpi/dm_featured_game_bg.9.png",
+        "res/drawable-hdpi/dm_top_normal.9.png",
+        "res/drawable-hdpi/dm_top_pressed.9.png",
+        "res/drawable-hdpi/dm_ttl.9.png",
+        "res/drawable-ldpi/icon.png",
+        "res/drawable-mdpi/icon.png",
+        "res/layout/dm_alert_dialog_text_entry.xml",
+        "res/layout/dm_change_user_icon.xml",
+        "res/layout/dm_darkblue_title.xml",
+        "res/layout/dm_dialog_activity.xml",
+        "res/layout/dm_feature_bar.xml",
+        "res/layout/dm_featureview_layout.xml",
+        "res/layout/dm_featureview_layout_icon.xml",
+        "res/layout/dm_friends_listitem.xml",
+        "res/layout/dm_friends_listitem_title.xml",
+        "res/layout/dm_friends_not_play_the_same_game_title.xml",
+        "res/layout/dm_friends_view.xml",
+        "res/layout/dm_gamecenter_activity.xml",
+        "res/layout/dm_hasphoto_choose_dialog.xml",
+        "res/layout/dm_introduction_view.xml",
+        "res/layout/dm_leaderboard_listitem.xml",
+        "res/layout/dm_leaderboards_view.xml",
+        "res/layout/dm_moregame_listitem.xml",
+        "res/layout/dm_moregames_activity.xml",
+        "res/layout/dm_myscore_headview_layout.xml",
+        "res/layout/dm_nophoto_choose_dialog.xml",
+        "res/layout/dm_profile_view.xml",
+        "res/layout/dm_promote_dialog.xml",
+        "res/layout/dm_promote_dialog_layout.xml",
+        "res/layout/dm_score.xml",
+        "res/layout/dm_tab_content.xml",
+        "res/layout/dm_tab_indicator.xml",
+        "res/layout/dm_top_tab_indicator.xml",
+        "res/layout/dm_userinfo_view.xml",
+        "res/layout/dm_userinfo_view_listview.xml",
+        "res/layout/dm_userinfo_view_listview_foot.xml",
+        "res/layout/dm_userinfo_view_listview_header.xml",
+        "res/layout/featureicon.xml",
+        "res/layout/featureview.xml",
+        "res/layout/widget.xml",
+        "res/raw/bgmusic.mid",
+        "res/raw/collide.ogg",
+        "res/raw/collideedge.ogg",
+        "res/raw/hit.ogg",
+        "res/raw/honor.ogg",
+        "res/raw/pot.ogg",
+        "res/raw/shake.ogg",
+        "res/xml/app_widget.xml",
+        "res/xml/cube1.xml",
+        "AndroidManifest.xml",
+        "classes.dex",
+        "resources.arsc"
+    ],
+    "exported_count": {
+        "exported_activities": 1,
+        "exported_services": 0,
+        "exported_receivers": 2,
+        "exported_providers": 0
+    },
+    "apkid": {
+        "classes.dex": {
+            "anti_vm": [
+                "network operator name check"
+            ],
+            "compiler": [
+                "dexlib 1.x"
+            ]
+        }
+    },
+    "behaviour": {
+        "00022": {
+            "files": {
+                "com/miller/is/c/a.java": "48,56,7,8",
+                "com/miller/ps/e/a.java": "44,47,7,8",
+                "com/umeng/common/net/DownloadingService.java": "226,290,391,692,30,31",
+                "com/umeng/common/net/p.java": "93,215,330,340,19,20",
+                "org/jsoup/Jsoup.java": "40,3"
+            },
+            "metadata": {
+                "label": [
+                    "file"
+                ],
+                "description": "Open a file from given absolute path of the file",
+                "severity": "info"
+            }
+        },
+        "00054": {
+            "files": {
+                "com/umeng/common/net/DownloadingService.java": "1134,1134,11,12,13",
+                "com/umeng/common/net/d.java": "42,42,7,8"
+            },
+            "metadata": {
+                "label": [
+                    "reflection"
+                ],
+                "description": "Install other APKs from file",
+                "severity": "info"
+            }
+        },
+        "00014": {
+            "files": {
+                "com/umeng/analytics/i.java": "68,71,74,77,168,7,16"
+            },
+            "metadata": {
+                "label": [
+                    "file"
+                ],
+                "description": "Read file into a stream and put it into a JSON object",
+                "severity": "info"
+            }
+        },
+        "00013": {
+            "files": {
+                "com/umeng/analytics/i.java": "6,7,8,9,7",
+                "com/umeng/common/util/g.java": "7,8,8",
+                "org/jsoup/helper/DataUtil.java": "4,5,5"
+            },
+            "metadata": {
+                "label": [
+                    "file"
+                ],
+                "description": "Read file and put it into a stream",
+                "severity": "info"
+            }
+        },
+        "00063": {
+            "files": {
+                "com/forthblue/aq/j.java": "21,3,4",
+                "com/umeng/common/util/g.java": "120,4,5"
+            },
+            "metadata": {
+                "label": [
+                    "control"
+                ],
+                "description": "Implicit intent(view a web page, make a phone call, etc.)",
+                "severity": "info"
+            }
+        },
+        "00051": {
+            "files": {
+                "com/forthblue/aq/j.java": "21,21,3,4"
+            },
+            "metadata": {
+                "label": [
+                    "control"
+                ],
+                "description": "Implicit intent(view a web page, make a phone call, etc.) via setData",
+                "severity": "info"
+            }
+        },
+        "00096": {
+            "files": {
+                "com/umeng/common/net/DownloadingService.java": "392,393,34,35",
+                "org/jsoup/helper/HttpConnection.java": "673,674,9,11,12"
+            },
+            "metadata": {
+                "label": [
+                    "command",
+                    "network"
+                ],
+                "description": "Connect to a URL and set request method",
+                "severity": "info"
+            }
+        },
+        "00089": {
+            "files": {
+                "com/umeng/common/net/DownloadingService.java": "402,392,34,35",
+                "org/jsoup/helper/HttpConnection.java": "603,673,9,11,12"
+            },
+            "metadata": {
+                "label": [
+                    "command",
+                    "network"
+                ],
+                "description": "Connect to a URL and receive input stream from the server",
+                "severity": "info"
+            }
+        },
+        "00030": {
+            "files": {
+                "com/umeng/common/net/DownloadingService.java": "401,392,34,35",
+                "org/jsoup/helper/HttpConnection.java": "571,673,9,11,12"
+            },
+            "metadata": {
+                "label": [
+                    "network"
+                ],
+                "description": "Connect to the remote server through the given URL",
+                "severity": "info"
+            }
+        },
+        "00109": {
+            "files": {
+                "org/jsoup/helper/HttpConnection.java": "575,693,673,9,11,12"
+            },
+            "metadata": {
+                "label": [
+                    "network",
+                    "command"
+                ],
+                "description": "Connect to a URL and get the response code",
+                "severity": "info"
+            }
+        },
+        "00016": {
+            "files": {
+                "com/umeng/analytics/a/o.java": "27,70,87,88,89,5,7"
+            },
+            "metadata": {
+                "label": [
+                    "location",
+                    "collection"
+                ],
+                "description": "Get location info of the device and put it to JSON object",
+                "severity": "info"
+            }
+        },
+        "00091": {
+            "files": {
+                "com/umeng/common/net/DownloadingService.java": "1023,466,969,997,1004,1023,1033,11,12,15"
+            },
+            "metadata": {
+                "label": [
+                    "collection"
+                ],
+                "description": "Retrieve data from broadcast",
+                "severity": "info"
+            }
+        },
+        "00072": {
+            "files": {
+                "com/umeng/common/net/DownloadingService.java": "402,524,31,34"
+            },
+            "metadata": {
+                "label": [
+                    "command",
+                    "network",
+                    "file"
+                ],
+                "description": "Write HTTP input stream into a file",
+                "severity": "info"
+            }
+        },
+        "00121": {
+            "files": {
+                "com/umeng/common/net/DownloadingService.java": "466,969,997,1004,1023,1033,224,229,15,30,31"
+            },
+            "metadata": {
+                "label": [
+                    "file",
+                    "command"
+                ],
+                "description": "Create a directory",
+                "severity": "info"
+            }
+        },
+        "00125": {
+            "files": {
+                "com/umeng/common/net/DownloadingService.java": "398,466,969,997,1004,1023,1033,15,30,31"
+            },
+            "metadata": {
+                "label": [
+                    "file"
+                ],
+                "description": "Check if the given file path exist",
+                "severity": "info"
+            }
+        },
+        "00094": {
+            "files": {
+                "com/umeng/common/net/DownloadingService.java": "392,523,33,35",
+                "com/umeng/common/net/p.java": "99,102,22,23"
+            },
+            "metadata": {
+                "label": [
+                    "command",
+                    "network"
+                ],
+                "description": "Connect to a URL and read data from it",
+                "severity": "info"
+            }
+        },
+        "00108": {
+            "files": {
+                "com/umeng/common/net/DownloadingService.java": "402,523,33,34"
+            },
+            "metadata": {
+                "label": [
+                    "network",
+                    "command"
+                ],
+                "description": "Read the input stream from given URL",
+                "severity": "info"
+            }
+        },
+        "00035": {
+            "files": {
+                "com/umeng/common/b.java": "61,47,61,79,87,94,99,223,337,440,461,3,6"
+            },
+            "metadata": {
+                "label": [
+                    "reflection"
+                ],
+                "description": "Query the list of the installed packages",
+                "severity": "info"
+            }
+        },
+        "00078": {
+            "files": {
+                "com/umeng/common/b.java": "203,406,165,199,213,227,253,272,354,370,406,3,15"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "telephony"
+                ],
+                "description": "Get the network operator name",
+                "severity": "info"
+            }
+        },
+        "00130": {
+            "files": {
+                "com/umeng/common/b.java": "359,165,199,213,227,253,272,354,370,406,3,12"
+            },
+            "metadata": {
+                "label": [
+                    "wifi",
+                    "collection"
+                ],
+                "description": "Get the current WIFI information",
+                "severity": "info"
+            }
+        },
+        "00137": {
+            "files": {
+                "com/umeng/common/b.java": "254,257,55,55,356,386,442,461,8,9,9"
+            },
+            "metadata": {
+                "label": [
+                    "location",
+                    "collection"
+                ],
+                "description": "Get last known location of the device",
+                "severity": "info"
+            }
+        },
+        "00033": {
+            "files": {
+                "com/umeng/common/b.java": "174,165,199,213,227,253,272,354,370,406,3,15"
+            },
+            "metadata": {
+                "label": [
+                    "collection"
+                ],
+                "description": "Query the IMEI number",
+                "severity": "info"
+            }
+        },
+        "00115": {
+            "files": {
+                "com/umeng/common/b.java": "254,257,255,258,8,9,9"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "location"
+                ],
+                "description": "Get last known location of the device",
+                "severity": "info"
+            }
+        }
+    },
+    "trackers": {
+        "detected_trackers": 1,
+        "total_trackers": 432,
+        "trackers": [
+            {
+                "name": "Umeng Analytics",
+                "categories": "",
+                "url": "https://reports.exodus-privacy.eu.org/trackers/119"
+            }
+        ]
+    },
+    "playstore_details": {
+        "error": true
+    },
+    "secrets": [
+        "\"dm_username\" : \"Username\"",
+        "283185307179586476925286766559",
+        "f7f6d753299d1bcd24d39c616c36ee28",
+        "1415926535897932384626433832795"
+    ],
+    "logs": [
+        {
+            "timestamp": "2025-12-08 12:04:58",
+            "status": "Generating Hashes",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:04:58",
+            "status": "Extracting APK",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:04:58",
+            "status": "Unzipping",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:04:58",
+            "status": "Parsing APK with androguard",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:04:58",
+            "status": "Extracting APK features using aapt/aapt2",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:04:58",
+            "status": "Getting Hardcoded Certificates/Keystores",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:04:59",
+            "status": "Parsing AndroidManifest.xml",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:04:59",
+            "status": "Extracting Manifest Data",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:04:59",
+            "status": "Manifest Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:04:59",
+            "status": "Performing Static Analysis on: Pool Master Pro (com.rao.love.yy.zjhmwxdearfdsfcb)",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:00",
+            "status": "Fetching Details from Play Store: com.rao.love.yy.zjhmwxdearfdsfcb",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:00",
+            "status": "Checking for Malware Permissions",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:00",
+            "status": "Fetching icon path",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:00",
+            "status": "Library Binary Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:00",
+            "status": "Analyzing apktool_out/lib/armeabi/libbasketgl1.so",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:00",
+            "status": "Analyzing apktool_out/lib/armeabi/libbasketgl2.so",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:00",
+            "status": "Analyzing apktool_out/lib/armeabi/libbasket.so",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:00",
+            "status": "Analyzing lib/armeabi/libbasketgl1.so",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:00",
+            "status": "Analyzing lib/armeabi/libbasketgl2.so",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:00",
+            "status": "Analyzing lib/armeabi/libbasket.so",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:00",
+            "status": "Reading Code Signing Certificate",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:01",
+            "status": "Running APKiD 3.0.0",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:02",
+            "status": "Detecting Trackers",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:03",
+            "status": "Decompiling APK to Java with JADX",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:05",
+            "status": "Converting DEX to Smali",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:05",
+            "status": "Code Analysis Started on - java_source",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:05",
+            "status": "Android SBOM Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:05",
+            "status": "Android SAST Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:05",
+            "status": "Android API Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:05",
+            "status": "Android API Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:06",
+            "status": "Android Permission Mapping Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:06",
+            "status": "Android Permission Mapping Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:06",
+            "status": "Android Behaviour Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:06",
+            "status": "Android Behaviour Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:06",
+            "status": "Extracting Emails and URLs from Source Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:06",
+            "status": "Email and URL Extraction Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:06",
+            "status": "Extracting String data from APK",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:06",
+            "status": "Extracting String data from SO",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:06",
+            "status": "Extracting String data from Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:06",
+            "status": "Extracting String values and entropies from Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:06",
+            "status": "Performing Malware check on extracted domains",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:08",
+            "status": "Saving to Database",
+            "exception": null
+        }
+    ],
+    "sbom": {
+        "sbom_versioned": [],
+        "sbom_packages": [
+            "a.a.a",
+            "com.common",
+            "com.forthblue.aq",
+            "com.fruitsmobile.basket",
+            "com.miller.is",
+            "com.miller.ps",
+            "com.test.httputil",
+            "com.umeng.analytics",
+            "com.umeng.common",
+            "org.jsoup"
+        ]
+    },
+    "average_cvss": null,
+    "appsec": {
+        "high": [
+            {
+                "title": "Application vulnerable to Janus Vulnerability",
+                "description": "Application is signed with v1 signature scheme, making it vulnerable to Janus vulnerability on Android 5.0-8.0, if signed only with v1 signature scheme. Applications running on Android 5.0-7.0 signed with v1, and v2/v3 scheme is also vulnerable.",
+                "section": "certificate"
+            },
+            {
+                "title": "App can be installed on a vulnerable unpatched Android version",
+                "description": "Android 1.5, [minSdk=3]\nThis application can be installed on an older version of android that has multiple unfixed vulnerabilities. These devices won't receive reasonable security updates from Google. Support an Android version => 10, API 29 to receive reasonable security updates.",
+                "section": "manifest"
+            },
+            {
+                "title": "The App uses the encryption mode CBC with PKCS5/PKCS7 padding. This configuration is vulnerable to padding oracle attacks.",
+                "description": "The App uses the encryption mode CBC with PKCS5/PKCS7 padding. This configuration is vulnerable to padding oracle attacks.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#identifying-insecure-andor-deprecated-cryptographic-algorithms-mstg-crypto-4\n\nFiles:\ncom/umeng/common/util/b.java, line(s) 16,22",
+                "section": "code"
+            }
+        ],
+        "warning": [
+            {
+                "title": "Application Data can be Backed up",
+                "description": "[android:allowBackup] flag is missing.\nThe flag [android:allowBackup] should be set to false. By default it is set to true and allows anyone to backup your application data via adb. It allows users who have enabled USB debugging to copy application data off of the device.",
+                "section": "manifest"
+            },
+            {
+                "title": "Activity (com.miller.ps.Zhoua) is not Protected.",
+                "description": "An intent-filter exists.\nAn Activity is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Activity is explicitly exported.",
+                "section": "manifest"
+            },
+            {
+                "title": "Broadcast Receiver (com.miller.ps.Zhour) is not Protected.",
+                "description": "An intent-filter exists.\nA Broadcast Receiver is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device. The presence of intent-filter indicates that the Broadcast Receiver is explicitly exported.",
+                "section": "manifest"
+            },
+            {
+                "title": "Launch Mode of activity (com.miller.is.Wua) is not standard.",
+                "description": "An Activity should not be having the launch mode attribute set to \"singleTask/singleInstance\" as it becomes root Activity and it is possible for other applications to read the contents of the calling Intent. So it is required to use the \"standard\" launch mode attribute when sensitive information is included in an Intent.",
+                "section": "manifest"
+            },
+            {
+                "title": "Broadcast Receiver (com.test.httputil.HttpUtilReceiver) is not Protected. ",
+                "description": "[android:exported=true]\nA Broadcast Receiver is found to be shared with other apps on the device therefore leaving it accessible to any other application on the device.",
+                "section": "manifest"
+            },
+            {
+                "title": "High Intent Priority (1000) - {1} Hit(s)",
+                "description": "[android:priority]\nBy setting an intent priority higher than another intent, the app effectively overrides other requests.",
+                "section": "manifest"
+            },
+            {
+                "title": "The App uses an insecure Random Number Generator.",
+                "description": "The App uses an insecure Random Number Generator.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#weak-random-number-generators\n\nFiles:\ncom/forthblue/aq/b/e.java, line(s) 8\ncom/forthblue/aq/b/f.java, line(s) 4\ncom/forthblue/aq/w.java, line(s) 11\ncom/test/httputil/HttpUtilService.java, line(s) 18\ncom/umeng/common/net/DownloadingService.java, line(s) 40\ncom/umeng/common/net/i.java, line(s) 6\ncom/umeng/common/net/r.java, line(s) 13",
+                "section": "code"
+            },
+            {
+                "title": "Files may contain hardcoded sensitive information like usernames, passwords, keys etc.",
+                "description": "Files may contain hardcoded sensitive information like usernames, passwords, keys etc.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#checking-memory-for-sensitive-data-mstg-storage-10\n\nFiles:\ncom/common/KeyManager.java, line(s) 5\norg/jsoup/nodes/Comment.java, line(s) 7\norg/jsoup/nodes/DataNode.java, line(s) 7\norg/jsoup/nodes/TextNode.java, line(s) 9\norg/jsoup/nodes/XmlDeclaration.java, line(s) 7",
+                "section": "code"
+            },
+            {
+                "title": "IP Address disclosure",
+                "description": "IP Address disclosure\n\n\nFiles:\ncom/umeng/analytics/g.java, line(s) 39",
+                "section": "code"
+            },
+            {
+                "title": "App can read/write to External Storage. Any App can read data written to External Storage.",
+                "description": "App can read/write to External Storage. Any App can read data written to External Storage.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#external-storage\n\nFiles:\ncom/test/httputil/LogWriter.java, line(s) 22\ncom/umeng/common/b.java, line(s) 283\ncom/umeng/common/net/DownloadingService.java, line(s) 223\ncom/umeng/common/net/p.java, line(s) 76,183",
+                "section": "code"
+            },
+            {
+                "title": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.",
+                "description": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#injection-flaws-mstg-arch-2-and-mstg-platform-2\n\nFiles:\ncom/umeng/common/net/c.java, line(s) 6,7,174,198",
+                "section": "code"
+            },
+            {
+                "title": "MD5 is a weak hash known to have hash collisions.",
+                "description": "MD5 is a weak hash known to have hash collisions.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#identifying-insecure-andor-deprecated-cryptographic-algorithms-mstg-crypto-4\n\nFiles:\ncom/umeng/common/util/g.java, line(s) 30,46,66",
+                "section": "code"
+            },
+            {
+                "title": "Application contains Privacy Trackers",
+                "description": "This app has 1 privacy trackers. Trackers can track device or users and are privacy concerns for end users.",
+                "section": "trackers"
+            },
+            {
+                "title": "This app may contain hardcoded secrets",
+                "description": "The following secrets were identified from the app. Ensure that these are not secrets or private information.\n\"dm_username\" : \"Username\"\n283185307179586476925286766559\nf7f6d753299d1bcd24d39c616c36ee28\n1415926535897932384626433832795",
+                "section": "secrets"
+            }
+        ],
+        "info": [
+            {
+                "title": "The App logs information. Sensitive information should never be logged.",
+                "description": "The App logs information. Sensitive information should never be logged.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#logs\n\nFiles:\ncom/forthblue/aq/Main.java, line(s) 27,43\ncom/forthblue/aq/b/b.java, line(s) 113\ncom/forthblue/aq/b/c.java, line(s) 44,78,124,159,184,211,216,228,258,308,326,328,330\ncom/forthblue/aq/b/d.java, line(s) 78,112,116,141\ncom/forthblue/aq/b/e.java, line(s) 88,111\ncom/forthblue/aq/b/i.java, line(s) 73,80\ncom/forthblue/aq/c/h.java, line(s) 361,591\ncom/fruitsmobile/basket/a/e.java, line(s) 75\ncom/fruitsmobile/basket/g.java, line(s) 45\ncom/fruitsmobile/basket/m.java, line(s) 65,78,153,187,197,236\ncom/fruitsmobile/basket/opengl/a.java, line(s) 86,91,104\ncom/test/httputil/HttpUtilReceiver.java, line(s) 25,29\ncom/test/httputil/LogWriter.java, line(s) 48,34\ncom/umeng/analytics/MobclickAgent.java, line(s) 67\ncom/umeng/analytics/a.java, line(s) 38\ncom/umeng/analytics/a/f.java, line(s) 278,282\ncom/umeng/analytics/a/m.java, line(s) 121,128\ncom/umeng/analytics/a/p.java, line(s) 69\ncom/umeng/analytics/b.java, line(s) 147,170,356\ncom/umeng/analytics/c.java, line(s) 115\ncom/umeng/analytics/onlineconfig/b.java, line(s) 49,55\ncom/umeng/common/Log.java, line(s) 36,42,21,27,29,9,15,48,54,60,66,68\ncom/umeng/common/b.java, line(s) 167,171,176,179,356,361\ncom/umeng/common/net/p.java, line(s) 254,344,355,376\norg/jsoup/examples/HtmlToPlainText.java, line(s) 22\norg/jsoup/examples/ListLinks.java, line(s) 46",
+                "section": "code"
+            }
+        ],
+        "secure": [],
+        "hotspot": [
+            {
+                "title": "Found 4 critical permission(s)",
+                "description": "Ensure that these permissions are required by the application.\n\nandroid.permission.READ_PHONE_STATE (dangerous): read phone state and identity - Allows the application to access the phone features of the device. An application with this permission can determine the phone number and serial number of this phone, whether a call is active, the number that call is connected to and so on.\n\nandroid.permission.WRITE_EXTERNAL_STORAGE (dangerous): read/modify/delete external storage contents - Allows an application to write to external storage.\n\nandroid.permission.ACCESS_FINE_LOCATION (dangerous): fine (GPS) location - Access fine location sources, such as the Global Positioning System on the phone, where available. Malicious applications can use this to determine where you are and may consume additional battery power.\n\nandroid.permission.ACCESS_COARSE_LOCATION (dangerous): coarse (network-based) location - Access coarse location sources, such as the mobile network database, to determine an approximate phone location, where available. Malicious applications can use this to determine approximately where you are.",
+                "section": "permissions"
+            },
+            {
+                "title": "App may communicate to a server (alog.umeng.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '223.109.148.177', 'country_short': 'CN', 'country_long': 'China', 'region': 'Beijing', 'city': 'Beijing', 'latitude': '39.907501', 'longitude': '116.397232'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (oc.umeng.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '59.82.23.79', 'country_short': 'CN', 'country_long': 'China', 'region': 'Beijing', 'city': 'Beijing', 'latitude': '39.907501', 'longitude': '116.397232'}",
+                "section": "domains"
+            }
+        ],
+        "total_trackers": 432,
+        "trackers": 1,
+        "security_score": 41,
+        "app_name": "Pool Master Pro",
+        "file_name": "00A1EA1BCD3C53E7794159208129E45CEC4F3F9C199B36276479897F59022BAE.apk",
+        "hash": "42bea8762f67230d78d18970d028d105",
+        "version_name": "3.6"
+    },
+    "virus_total": null,
+    "base_url": "file:///home/mobsf/Mobile-Security-Framework-MobSF/mobsf",
+    "dwd_dir": "file:///home/mobsf/.MobSF/downloads/",
+    "host_os": "nix",
+    "timestamp": "2025-12-08T12:04:58.787Z"
+}

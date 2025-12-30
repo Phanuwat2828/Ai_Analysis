@@ -1,0 +1,2515 @@
+{
+    "version": "v4.4.3",
+    "title": "Static Analysis",
+    "file_name": "00A3AD62DD07DE18EA9577E19AFC7346B01C4095BD8C088DE4A9FDCA8F4172C6.apk",
+    "app_name": "美丽花田动态锁屏",
+    "app_type": "apk",
+    "size": "0.32MB",
+    "md5": "94619616c9f1e0ad1acbd46d0987f26b",
+    "sha1": "c7f833e86b0fed2eaeb6a7d0bfdb2fa09f656506",
+    "sha256": "00a3ad62dd07de18ea9577e19afc7346b01c4095bd8c088de4a9fdca8f4172c6",
+    "package_name": "ps.wb.csppxx.lock20120827001320",
+    "main_activity": ".LockSet",
+    "exported_activities": "[]",
+    "browsable_activities": {},
+    "activities": [
+        "com.waps.OffersWebView",
+        ".AutoUnlock",
+        ".LockSet",
+        "ps.wb.csppxx.lock20120827001320.BZ0001",
+        "ps.wb.csppxx.lock20120827001320.Turntest"
+    ],
+    "receivers": [],
+    "providers": [],
+    "services": [
+        "ps.wb.csppxx.lock20120827001320.MyService"
+    ],
+    "libraries": [],
+    "target_sdk": "8",
+    "max_sdk": "",
+    "min_sdk": "8",
+    "version_name": "1.0",
+    "version_code": "1",
+    "icon_path": "94619616c9f1e0ad1acbd46d0987f26b-icon.png",
+    "permissions": {
+        "android.permission.RECEIVE_BOOT_COMPLETED": {
+            "status": "normal",
+            "info": "automatically start at boot",
+            "description": "Allows an application to start itself as soon as the system has finished booting. This can make it take longer to start the phone and allow the application to slow down the overall phone by always running."
+        },
+        "android.permission.DISABLE_KEYGUARD": {
+            "status": "normal",
+            "info": "disable keyguard",
+            "description": "Allows applications to disable the keyguard if it is not secure."
+        },
+        "android.permission.WAKE_LOCK": {
+            "status": "normal",
+            "info": "prevent phone from sleeping",
+            "description": "Allows an application to prevent the phone from going to sleep."
+        },
+        "android.permission.SYSTEM_ALERT_WINDOW": {
+            "status": "dangerous",
+            "info": "display system-level alerts",
+            "description": "Allows an application to show system-alert windows. Malicious applications can take over the entire screen of the phone."
+        },
+        "android.permission.INTERNAL_SYSTEM_WINDOW": {
+            "status": "signature",
+            "info": "display unauthorised windows",
+            "description": "Allows the creation of windows that are intended to be used by the internal system user interface. Not for use by common applications."
+        },
+        "android.permission.INTERNET": {
+            "status": "normal",
+            "info": "full Internet access",
+            "description": "Allows an application to create network sockets."
+        },
+        "android.permission.ACCESS_NETWORK_STATE": {
+            "status": "normal",
+            "info": "view network status",
+            "description": "Allows an application to view the status of all networks."
+        },
+        "android.permission.READ_PHONE_STATE": {
+            "status": "dangerous",
+            "info": "read phone state and identity",
+            "description": "Allows the application to access the phone features of the device. An application with this permission can determine the phone number and serial number of this phone, whether a call is active, the number that call is connected to and so on."
+        },
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+            "status": "dangerous",
+            "info": "read/modify/delete external storage contents",
+            "description": "Allows an application to write to external storage."
+        },
+        "android.permission.GET_TASKS": {
+            "status": "dangerous",
+            "info": "retrieve running applications",
+            "description": "Allows application to retrieve information about currently and recently running tasks. May allow malicious applications to discover private information about other applications."
+        },
+        "android.permission.ACCESS_WIFI_STATE": {
+            "status": "normal",
+            "info": "view Wi-Fi status",
+            "description": "Allows an application to view the information about the status of Wi-Fi."
+        },
+        "com.android.launcher.permission.INSTALL_SHORTCUT": {
+            "status": "unknown",
+            "info": "Unknown permission",
+            "description": "Unknown permission from android reference"
+        }
+    },
+    "malware_permissions": {
+        "top_malware_permissions": [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            "android.permission.WAKE_LOCK",
+            "android.permission.SYSTEM_ALERT_WINDOW",
+            "android.permission.INTERNET",
+            "android.permission.ACCESS_NETWORK_STATE",
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            "android.permission.GET_TASKS",
+            "android.permission.ACCESS_WIFI_STATE"
+        ],
+        "other_abused_permissions": [
+            "com.android.launcher.permission.INSTALL_SHORTCUT"
+        ],
+        "total_malware_permissions": 25,
+        "total_other_permissions": 44
+    },
+    "certificate_analysis": {
+        "certificate_info": "Binary is signed\nv1 signature: True\nv2 signature: False\nv3 signature: False\nv4 signature: False\nX.509 Subject: C=BJ, ST=BJ, L=BJ, O=BJ, OU=BJ, CN=shun\nSignature Algorithm: rsassa_pkcs1v15\nValid From: 2012-03-13 02:27:02+00:00\nValid To: 2112-02-18 02:27:02+00:00\nIssuer: C=BJ, ST=BJ, L=BJ, O=BJ, OU=BJ, CN=shun\nSerial Number: 0x4f5eb076\nHash Algorithm: sha1\nmd5: 7fe0ec8802c684163a3cd73baaf698db\nsha1: 117a7b4475c9ddcb60aa674873e2214b07588c1b\nsha256: 00127d1197abc489a5f3f192634d41c72fcdbadd32e83b435435b3b7301f4433\nsha512: b6d77bdf817d980a04db5d836e1ea135844dd971c86fd712a6bde6a452be22a02399bef0da1bbd8b9dfb932697f6de6e04af4c3265e08d89a1b6ebe52fe9c572\nFound 1 unique certificates",
+        "certificate_findings": [
+            [
+                "info",
+                "Application is signed with a code signing certificate",
+                "Signed Application"
+            ],
+            [
+                "high",
+                "Application is signed with v1 signature scheme, making it vulnerable to Janus vulnerability on Android 5.0-8.0, if signed only with v1 signature scheme. Applications running on Android 5.0-7.0 signed with v1, and v2/v3 scheme is also vulnerable.",
+                "Application vulnerable to Janus Vulnerability"
+            ],
+            [
+                "high",
+                "Application is signed with SHA1withRSA. SHA1 hash algorithm is known to have collision issues.",
+                "Certificate algorithm vulnerable to hash collision"
+            ]
+        ],
+        "certificate_summary": {
+            "high": 2,
+            "warning": 0,
+            "info": 1
+        }
+    },
+    "manifest_analysis": {
+        "manifest_findings": [
+            {
+                "rule": "vulnerable_os_version",
+                "title": "App can be installed on a vulnerable unpatched Android version<br>Android 2.2-2.2.3, [minSdk=8]",
+                "severity": "high",
+                "description": "This application can be installed on an older version of android that has multiple unfixed vulnerabilities. These devices won't receive reasonable security updates from Google. Support an Android version => 10, API 29 to receive reasonable security updates.",
+                "name": "App can be installed on a vulnerable unpatched Android version 2.2-2.2.3, [minSdk=8]",
+                "component": [
+                    "2.2-2.2.3",
+                    "8"
+                ]
+            },
+            {
+                "rule": "allowbackup_not_set",
+                "title": "Application Data can be Backed up<br>[android:allowBackup] flag is missing.",
+                "severity": "warning",
+                "description": "The flag [android:allowBackup] should be set to false. By default it is set to true and allows anyone to backup your application data via adb. It allows users who have enabled USB debugging to copy application data off of the device.",
+                "name": "Application Data can be Backed up [android:allowBackup] flag is missing.",
+                "component": []
+            },
+            {
+                "rule": "non_standard_launchmode",
+                "title": "Launch Mode of activity (ps.wb.csppxx.lock20120827001320.Turntest) is not standard.",
+                "severity": "warning",
+                "description": "An Activity should not be having the launch mode attribute set to \"singleTask/singleInstance\" as it becomes root Activity and it is possible for other applications to read the contents of the calling Intent. So it is required to use the \"standard\" launch mode attribute when sensitive information is included in an Intent.",
+                "name": "Launch Mode of activity (ps.wb.csppxx.lock20120827001320.Turntest) is not standard.",
+                "component": [
+                    "ps.wb.csppxx.lock20120827001320.Turntest"
+                ]
+            },
+            {
+                "rule": "task_hijacking",
+                "title": "Activity (ps.wb.csppxx.lock20120827001320.Turntest) is vulnerable to Android Task Hijacking/StrandHogg.",
+                "severity": "high",
+                "description": "An Activity should not be having the launch mode attribute set to \"singleTask\". It is then possible for other applications to place a malicious activity on top of the activity stack resulting in Task Hijacking/StrandHogg 1.0 vulnerability. This makes the application an easy target for phishing attacks. The vulnerability can be remediated by setting the launch mode attribute to \"singleInstance\" or by setting an empty taskAffinity (taskAffinity=\"\") attribute. You can also update the target SDK version (8) of the app to 28 or higher to fix this issue at platform level.",
+                "name": "Activity (ps.wb.csppxx.lock20120827001320.Turntest) is vulnerable to Android Task Hijacking/StrandHogg.",
+                "component": [
+                    "ps.wb.csppxx.lock20120827001320.Turntest"
+                ]
+            }
+        ],
+        "manifest_summary": {
+            "high": 2,
+            "warning": 2,
+            "info": 0,
+            "suppressed": 0
+        }
+    },
+    "network_security": {
+        "network_findings": [],
+        "network_summary": {}
+    },
+    "binary_analysis": [],
+    "file_analysis": [],
+    "android_api": {
+        "api_start_service": {
+            "files": {
+                "ps/wb/csppxx/lock20120827001320/AutoUnlock.java": "21",
+                "ps/wb/csppxx/lock20120827001320/LockSet.java": "51",
+                "ps/wb/csppxx/lock20120827001320/MyReceiver.java": "11"
+            },
+            "metadata": {
+                "description": "Starting Service",
+                "severity": "info"
+            }
+        },
+        "api_ipc": {
+            "files": {
+                "com/waps/AppConnect.java": "8,875,1427,1428,1428,1442,1442,1451,1455,1456,1456,1470,1470,1479,1483,1484,1484",
+                "com/waps/OffersWebView.java": "9,90,90,92,282,323,339,339,339,340,341,345,379,379,403,501,501",
+                "com/waps/SDKUtils.java": "8,65,65,68,79,92,92,96,98,98,98,99,100,102,114,123,123,125,125,126,127,316,321,321,323,323,323,325,325,326,328,328,329,331,332,333,334,342,400,400,400,401,402,416,416",
+                "com/waps/aa.java": "4,26,26",
+                "com/waps/ad.java": "3,50,61",
+                "com/waps/d.java": "5,25,25",
+                "com/waps/o.java": "4,5,144,144,188,188",
+                "com/waps/p.java": "7,9,47,47,50,50,51,87,87,100,100,107,129,129,132,146,149,152,164,164,165,204,204,219,219,220",
+                "com/waps/q.java": "6,31,39",
+                "com/waps/s.java": "5,55,98,128,128",
+                "com/waps/x.java": "4,23,23",
+                "com/waps/y.java": "4,24,24",
+                "ps/wb/csppxx/lock20120827001320/AutoUnlock.java": "4,21,28",
+                "ps/wb/csppxx/lock20120827001320/LockSet.java": "4,51,54,92",
+                "ps/wb/csppxx/lock20120827001320/MyReceiver.java": "5,10,11",
+                "ps/wb/csppxx/lock20120827001320/MyService.java": "9,23,7,8,17,18,23,36,39,66,77",
+                "ps/wb/csppxx/lock20120827001320/OtherService.java": "6,15,5,15",
+                "ps/wb/csppxx/lock20120827001320/Turntest.java": "6,7,181,189"
+            },
+            "metadata": {
+                "description": "Inter Process Communication",
+                "severity": "info"
+            }
+        },
+        "api_local_file_io": {
+            "files": {
+                "com/waps/AdView.java": "73",
+                "com/waps/AppConnect.java": "495,556,562,574,582,611,636,661,788,811,1178,1181,1332,877,495,554,560,574,582,610,635,660,788,811,834,1178,1181,1311,25,26,26,27,27,28,28,29,29,30,30,31,878,879",
+                "com/waps/DisplayAd.java": "13,14",
+                "com/waps/OffersWebView.java": "45,46,47,103,375,114,103,210,211,265,266,293,328,346,374,392,393,482,31,32,115",
+                "com/waps/ac.java": "18,19,20,21",
+                "com/waps/k.java": "125,91,106,6,7,92",
+                "com/waps/l.java": "31,48,30,48",
+                "com/waps/o.java": "100,137,10,11,11,12,12,13,101,102,137,111",
+                "com/waps/p.java": "58,62,154,179,207,229,75,102,48,58,61,154,179,207,229,15,16,103",
+                "com/waps/q.java": "16,41",
+                "com/waps/r.java": "2,3,3,4,4,5,5,6",
+                "com/waps/x.java": "5,6,25",
+                "com/waps/y.java": "21,22",
+                "com/waps/z.java": "18,19",
+                "p000/p001/p002/C0000.java": "4,5",
+                "p000/p001/p002/C0002.java": "145,145,152",
+                "p000/p001/p002/HttpUtils.java": "2,3,3,4,4,5,5,6",
+                "p000/p001/p002/sendMessage.java": "4,5",
+                "ps/wb/csppxx/lock20120827001320/BookPageFactory.java": "5,6,6,7,7,8,8,9,77",
+                "ps/wb/csppxx/lock20120827001320/LockSet.java": "43,115",
+                "ps/wb/csppxx/lock20120827001320/Turntest.java": "203"
+            },
+            "metadata": {
+                "description": "Local File I/O Operations",
+                "severity": "info"
+            }
+        },
+        "api_get_system_service": {
+            "files": {
+                "com/waps/AppConnect.java": "583,1054,1291,1293,1300,1314,1352",
+                "com/waps/OffersWebView.java": "327",
+                "com/waps/SDKUtils.java": "198,234,263",
+                "com/waps/a.java": "23,30",
+                "com/waps/p.java": "53,68,88,108,175,222",
+                "ps/wb/csppxx/lock20120827001320/MyService.java": "29",
+                "ps/wb/csppxx/lock20120827001320/OtherService.java": "21"
+            },
+            "metadata": {
+                "description": "Get System Service",
+                "severity": "info"
+            }
+        },
+        "api_start_activity": {
+            "files": {
+                "com/waps/AppConnect.java": "1424,1448,1476",
+                "com/waps/OffersWebView.java": "282,341,381,408,503",
+                "com/waps/SDKUtils.java": "316,402,418",
+                "com/waps/aa.java": "28",
+                "com/waps/ad.java": "69",
+                "com/waps/d.java": "32",
+                "com/waps/o.java": "147",
+                "com/waps/q.java": "39",
+                "com/waps/s.java": "105,142",
+                "com/waps/x.java": "26",
+                "com/waps/y.java": "36",
+                "ps/wb/csppxx/lock20120827001320/LockSet.java": "92",
+                "ps/wb/csppxx/lock20120827001320/MyService.java": "80"
+            },
+            "metadata": {
+                "description": "Starting Activity",
+                "severity": "info"
+            }
+        },
+        "api_webview_get": {
+            "files": {
+                "com/waps/ad.java": "5,6,11,12,14,14,15,19,19,20,24,32,40,48,5,6,42"
+            },
+            "metadata": {
+                "description": "WebView GET Request",
+                "severity": "info"
+            }
+        },
+        "api_notifications": {
+            "files": {
+                "com/waps/p.java": "6,55,59,89,109,168,169,176,177,180,224,225,230"
+            },
+            "metadata": {
+                "description": "Android Notifications",
+                "severity": "info"
+            }
+        },
+        "api_crypto": {
+            "files": {
+                "com/waps/AppConnect.java": "1081"
+            },
+            "metadata": {
+                "description": "Crypto",
+                "severity": "info"
+            }
+        },
+        "api_get_subscriber": {
+            "files": {
+                "com/waps/AppConnect.java": "1291,22",
+                "com/waps/SDKUtils.java": "199,20"
+            },
+            "metadata": {
+                "description": "Get Subscriber ID",
+                "severity": "info"
+            }
+        },
+        "api_message_digest": {
+            "files": {
+                "com/waps/AppConnect.java": "32,1081,1081,32"
+            },
+            "metadata": {
+                "description": "Message Digest",
+                "severity": "info"
+            }
+        },
+        "api_installed": {
+            "files": {
+                "com/waps/AppConnect.java": "569,966,569,966,1243",
+                "com/waps/OffersWebView.java": "98,215,270,282,339,403,92",
+                "com/waps/SDKUtils.java": "98,122,148,207,281,298,342,399,420,125"
+            },
+            "metadata": {
+                "description": "Get Installed Applications",
+                "severity": "info"
+            }
+        },
+        "api_get_wifi": {
+            "files": {
+                "com/waps/AppConnect.java": "1293,18",
+                "com/waps/SDKUtils.java": "234,18"
+            },
+            "metadata": {
+                "description": "Get WiFi Details",
+                "severity": "info"
+            }
+        },
+        "api_webview": {
+            "files": {
+                "com/waps/OffersWebView.java": "21,39,59,330,337,373,422,471,474,475,472,20,21"
+            },
+            "metadata": {
+                "description": "WebView JavaScript Interface",
+                "severity": "info"
+            }
+        },
+        "api_http_connection": {
+            "files": {
+                "com/waps/SDKUtils.java": "23,106,234,235,236,242,106",
+                "com/waps/o.java": "14,209,209,209,18,19,20,21,22,23",
+                "p000/p001/p002/HttpUtils.java": "7,30,42,42,215,226,226,134,180,294,335,42,226"
+            },
+            "metadata": {
+                "description": "HTTP Connection",
+                "severity": "info"
+            }
+        },
+        "api_send_broadcast": {
+            "files": {
+                "com/waps/SDKUtils.java": "81,116"
+            },
+            "metadata": {
+                "description": "Sending Broadcast",
+                "severity": "info"
+            }
+        }
+    },
+    "code_analysis": {
+        "findings": {
+            "android_logging": {
+                "files": {
+                    "com/waps/AppConnect.java": "1259,1263,1270,1306,596,1255,1272,1295",
+                    "com/waps/AppLog.java": "11,17,23,33,39,45,51",
+                    "com/waps/OffersWebView.java": "333,511",
+                    "com/waps/SDKUtils.java": "155,240,242,404",
+                    "com/waps/o.java": "55",
+                    "p000/p001/p002/SyS_Args.java": "83",
+                    "ps/wb/csppxx/lock20120827001320/LockSet.java": "136,141",
+                    "ps/wb/csppxx/lock20120827001320/MyService.java": "67,44,49",
+                    "ps/wb/csppxx/lock20120827001320/Turntest.java": "186"
+                },
+                "metadata": {
+                    "cvss": 7.5,
+                    "cwe": "CWE-532: Insertion of Sensitive Information into Log File",
+                    "owasp-mobile": "",
+                    "masvs": "MSTG-STORAGE-3",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#logs",
+                    "description": "The App logs information. Sensitive information should never be logged.",
+                    "severity": "info"
+                }
+            },
+            "android_ip_disclosure": {
+                "files": {
+                    "com/waps/o.java": "87,199",
+                    "com/waps/r.java": "39,85"
+                },
+                "metadata": {
+                    "cvss": 4.3,
+                    "cwe": "CWE-200: Information Exposure",
+                    "owasp-mobile": "",
+                    "masvs": "MSTG-CODE-2",
+                    "description": "IP Address disclosure",
+                    "severity": "warning"
+                }
+            },
+            "android_read_write_external": {
+                "files": {
+                    "com/waps/AppConnect.java": "877,878,879",
+                    "com/waps/OffersWebView.java": "114",
+                    "com/waps/k.java": "91,92",
+                    "com/waps/o.java": "100,137",
+                    "com/waps/p.java": "75,102"
+                },
+                "metadata": {
+                    "cvss": 5.5,
+                    "cwe": "CWE-276: Incorrect Default Permissions",
+                    "owasp-mobile": "M2: Insecure Data Storage",
+                    "masvs": "MSTG-STORAGE-2",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#external-storage",
+                    "description": "App can read/write to External Storage. Any App can read data written to External Storage.",
+                    "severity": "warning"
+                }
+            },
+            "android_world_readable": {
+                "files": {
+                    "com/waps/AppConnect.java": "582"
+                },
+                "metadata": {
+                    "cvss": 4,
+                    "cwe": "CWE-276: Incorrect Default Permissions",
+                    "owasp-mobile": "M2: Insecure Data Storage",
+                    "masvs": "MSTG-STORAGE-2",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#testing-local-storage-for-sensitive-data-mstg-storage-1-and-mstg-storage-2",
+                    "description": "The file or SharedPreference is World Readable. Any App can read from the file",
+                    "severity": "high"
+                }
+            },
+            "android_md5": {
+                "files": {
+                    "com/waps/AppConnect.java": "1081"
+                },
+                "metadata": {
+                    "cvss": 7.4,
+                    "cwe": "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+                    "masvs": "MSTG-CRYPTO-4",
+                    "owasp-mobile": "M5: Insufficient Cryptography",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#identifying-insecure-andor-deprecated-cryptographic-algorithms-mstg-crypto-4",
+                    "description": "MD5 is a weak hash known to have hash collisions.",
+                    "severity": "warning"
+                }
+            },
+            "android_webview": {
+                "files": {
+                    "com/waps/OffersWebView.java": "472,473"
+                },
+                "metadata": {
+                    "cvss": 8.8,
+                    "cwe": "CWE-749: Exposed Dangerous Method or Function",
+                    "owasp-mobile": "M1: Improper Platform Usage",
+                    "masvs": "MSTG-PLATFORM-7",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-javascript-execution-in-webviews-mstg-platform-5",
+                    "description": "Insecure WebView Implementation. Execution of user controlled code in WebView is a critical Security Hole.",
+                    "severity": "warning"
+                }
+            },
+            "android_hardcoded": {
+                "files": {
+                    "p000/p001/p002/sendMessage.java": "14",
+                    "ps/wb/csppxx/lock20120827001320/LockSet.java": "28"
+                },
+                "metadata": {
+                    "cvss": 7.4,
+                    "cwe": "CWE-312: Cleartext Storage of Sensitive Information",
+                    "masvs": "MSTG-STORAGE-14",
+                    "owasp-mobile": "M9: Reverse Engineering",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#checking-memory-for-sensitive-data-mstg-storage-10",
+                    "description": "Files may contain hardcoded sensitive information like usernames, passwords, keys etc.",
+                    "severity": "warning"
+                }
+            },
+            "android_insecure_random": {
+                "files": {
+                    "com/waps/AnimationType.java": "13"
+                },
+                "metadata": {
+                    "cvss": 7.5,
+                    "cwe": "CWE-330: Use of Insufficiently Random Values",
+                    "owasp-mobile": "M5: Insufficient Cryptography",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#weak-random-number-generators",
+                    "masvs": "MSTG-CRYPTO-6",
+                    "description": "The App uses an insecure Random Number Generator.",
+                    "severity": "warning"
+                }
+            }
+        },
+        "summary": {
+            "high": 1,
+            "warning": 6,
+            "info": 1,
+            "secure": 0,
+            "suppressed": 0
+        }
+    },
+    "niap_analysis": {},
+    "permission_mapping": {
+        "android.permission.RECEIVE_BOOT_COMPLETED": {
+            "com/waps/q.java": "4,57",
+            "ps/wb/csppxx/lock20120827001320/MyReceiver.java": "3,10",
+            "ps/wb/csppxx/lock20120827001320/MyService.java": "5,38,41,51,54",
+            "ps/wb/csppxx/lock20120827001320/Turntest.java": "4,179,182"
+        },
+        "android.permission.DISABLE_KEYGUARD": {
+            "ps/wb/csppxx/lock20120827001320/MyService.java": "3,35",
+            "ps/wb/csppxx/lock20120827001320/OtherService.java": "3,23"
+        },
+        "android.permission.GET_TASKS": {
+            "com/waps/AppConnect.java": "4,583",
+            "com/waps/OffersWebView.java": "5,327",
+            "com/waps/a.java": "3,23"
+        },
+        "android.permission.ACCESS_WIFI_STATE": {
+            "com/waps/AppConnect.java": "15,18,1293",
+            "com/waps/SDKUtils.java": "17,18,234"
+        },
+        "android.permission.WAKE_LOCK": {
+            "com/waps/AppConnect.java": "18,907,908,909,918,919,920,931,932,933,993,994,995,1001,1002,1003,1010,1011,1012",
+            "com/waps/SDKUtils.java": "17,18,43,366,373,379",
+            "ps/wb/csppxx/lock20120827001320/Turntest.java": "12,295"
+        },
+        "android.permission.ACCESS_NETWORK_STATE": {
+            "com/waps/AppConnect.java": "15,16,18,22,1291",
+            "com/waps/SDKUtils.java": "17,18,20,106"
+        },
+        "android.permission.READ_PHONE_STATE": {
+            "com/waps/AppConnect.java": "22,1316",
+            "com/waps/SDKUtils.java": "20,264"
+        },
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+            "com/waps/AppConnect.java": "984,30",
+            "com/waps/o.java": "109,12"
+        },
+        "android.permission.SYSTEM_ALERT_WINDOW": {
+            "com/waps/AppConnect.java": "25,583,1054,1291,1293,1300,1314,1352"
+        },
+        "android.permission.INTERNET": {
+            "com/waps/SDKUtils.java": "23,24,106",
+            "com/waps/o.java": "14,15,18,19,20,21,22,23,210",
+            "p000/p001/p002/HttpUtils.java": "7,8,42,226"
+        }
+    },
+    "urls": [
+        {
+            "urls": [
+                "http://app.wapx.cn/action/account/award?"
+            ],
+            "path": "com/waps/f.java"
+        },
+        {
+            "urls": [
+                "http://app.wapx.cn/action/"
+            ],
+            "path": "com/waps/i.java"
+        },
+        {
+            "urls": [
+                "http://app.wapx.cn/action/account/spend?"
+            ],
+            "path": "com/waps/j.java"
+        },
+        {
+            "urls": [
+                "http://app.wapx.cn/action/app/update?",
+                "http://app.wapx.cn/action/connect/active?"
+            ],
+            "path": "com/waps/k.java"
+        },
+        {
+            "urls": [
+                "http://app.wapx.cn/action/account/getinfo?"
+            ],
+            "path": "com/waps/g.java"
+        },
+        {
+            "urls": [
+                "http://app",
+                "http://ads.wapx.cn",
+                "http://app.wapx.cn"
+            ],
+            "path": "com/waps/r.java"
+        },
+        {
+            "urls": [
+                "http://ads.wapx.cn/action/user_info"
+            ],
+            "path": "com/waps/h.java"
+        },
+        {
+            "urls": [
+                "http://app.wapx.cn/action/account/ownslist?",
+                "http://app.wapx.cn/action/",
+                "http://app.wapx.cn/action/feedback/form",
+                "http://app.wapx.cn/action/account/offerlist?",
+                "http://ads.wapx.cn/action/"
+            ],
+            "path": "com/waps/AppConnect.java"
+        },
+        {
+            "urls": [
+                "http://www.soso.com/",
+                "http://shun.sinaapp.com/log.php?cmd=g&id="
+            ],
+            "path": "p000/p001/p002/C0002.java"
+        },
+        {
+            "urls": [
+                "http://shun.sinaapp.com/log.php",
+                "http://shun.sinaapp.com/action.php"
+            ],
+            "path": "p000/p001/p002/C0001.java"
+        },
+        {
+            "urls": [
+                "http://shun.sinaapp.com/log.php?cmd=dapk&id=",
+                "http://shun.sinaapp.com/action.php?k=dapk"
+            ],
+            "path": "p000/p001/p002/ddMessage.java"
+        },
+        {
+            "urls": [
+                "http://app.mobiomni.com/",
+                "http://www.fajue.net/",
+                "http://www.appchina.com/",
+                "http://www.aimi8.com",
+                "http://www.nduoa.com",
+                "http://author.skycn.com/",
+                "http://www.eoemarket.com/",
+                "http://www.anzhuoyuan.com/",
+                "http://www.aliyun.com/",
+                "http://www.borpor.com/class.php",
+                "http://www.eomarket.com/",
+                "http://www.htc.com/",
+                "http://www.52vz.com/",
+                "http://www.apkol.com/",
+                "http://www.az4sd.com/",
+                "http://www.777ccc.com/",
+                "http://www.liqucn.com/",
+                "http://www.bkill.com/",
+                "http://sj.91.com/",
+                "http://www.51vapp.com",
+                "http://www.mphone.cc",
+                "http://www.iandroid.cn/index.php",
+                "http://apk.gfan.com/",
+                "http://www.nearme.com.cn/",
+                "http://www.doudouyou.net/index.action",
+                "http://www.coolmart.net.cn",
+                "http://munion.baidu.com/",
+                "http://www.anfensi.com",
+                "http://www.coolapk.com/",
+                "http://www.3g.cn/",
+                "http://bbs.d.cn",
+                "http://www.iwanapk.com/",
+                "http://www.aouu.com/",
+                "http://www.mcsdn.com/",
+                "http://www.anzhuoku.com/",
+                "http://www.hicloud.com/",
+                "http://android.myapp.com/?pid=14",
+                "http://www.apkdd.com/",
+                "http://www.mumayi.com/market/",
+                "http://www.souapp.com/",
+                "http://www.imobihome.com/",
+                "http://www.fpwap.com/",
+                "http://www.lenovomm.com/appstore/html/index.html",
+                "http://www.crossmo.com/",
+                "http://www.sdapk.com/",
+                "http://apk.hiapk.com/default.html",
+                "http://app.starandroid.com/",
+                "http://www.anzhi.com/index.html",
+                "http://www.meizu.com/",
+                "http://download.sohu.com/",
+                "http://www.tuapk.com/",
+                "http://www.sjvip.com/",
+                "http://www.apkke.com/",
+                "http://www.quntiao.com/",
+                "http://xiazai.zol.com.cn/",
+                "http://www.51spsoft.com/"
+            ],
+            "path": "p000/p001/p002/SyS_Args.java"
+        }
+    ],
+    "domains": {
+        "www.anfensi.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "180.163.146.85",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Shanghai",
+                "city": "Shanghai",
+                "latitude": "31.222219",
+                "longitude": "121.458061"
+            },
+            "ofac": true
+        },
+        "www.anzhi.com": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "xiazai.zol.com.cn": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "123.59.191.85",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Beijing",
+                "city": "Beijing",
+                "latitude": "39.907501",
+                "longitude": "116.397232"
+            },
+            "ofac": true
+        },
+        "sj.91.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "110.242.69.107",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Hebei",
+                "city": "Baoding",
+                "latitude": "38.851109",
+                "longitude": "115.490280"
+            },
+            "ofac": true
+        },
+        "www.apkol.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "154.211.77.217",
+                "country_short": "HK",
+                "country_long": "Hong Kong",
+                "region": "Hong Kong",
+                "city": "Hong Kong",
+                "latitude": "22.285521",
+                "longitude": "114.157692"
+            },
+            "ofac": true
+        },
+        "www.777ccc.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "104.26.13.79",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "San Francisco",
+                "latitude": "37.775700",
+                "longitude": "-122.395203"
+            },
+            "ofac": false
+        },
+        "www.bkill.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "116.153.39.130",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Jiangxi",
+                "city": "Nanchang",
+                "latitude": "28.683331",
+                "longitude": "115.883331"
+            },
+            "ofac": true
+        },
+        "download.sohu.com": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "www.htc.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "122.155.243.64",
+                "country_short": "TH",
+                "country_long": "Thailand",
+                "region": "Krung Thep Maha Nakhon",
+                "city": "Bangkok",
+                "latitude": "13.750000",
+                "longitude": "100.516670"
+            },
+            "ofac": false
+        },
+        "munion.baidu.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "111.206.208.169",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Beijing",
+                "city": "Beijing",
+                "latitude": "39.907501",
+                "longitude": "116.397232"
+            },
+            "ofac": true
+        },
+        "bbs.d.cn": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "138.113.144.75",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Monrovia",
+                "latitude": "34.142773",
+                "longitude": "-117.999565"
+            },
+            "ofac": false
+        },
+        "www.hicloud.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "159.138.85.186",
+                "country_short": "SG",
+                "country_long": "Singapore",
+                "region": "Singapore",
+                "city": "Singapore",
+                "latitude": "1.289670",
+                "longitude": "103.850067"
+            },
+            "ofac": false
+        },
+        "www.soso.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "43.153.249.87",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Beijing",
+                "city": "Beijing",
+                "latitude": "39.907501",
+                "longitude": "116.397232"
+            },
+            "ofac": true
+        },
+        "www.aliyun.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "47.88.198.69",
+                "country_short": "SG",
+                "country_long": "Singapore",
+                "region": "Singapore",
+                "city": "Singapore",
+                "latitude": "1.289670",
+                "longitude": "103.850067"
+            },
+            "ofac": false
+        },
+        "www.quntiao.com": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "www.sjvip.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "38.49.34.3",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "District of Columbia",
+                "city": "Washington",
+                "latitude": "38.901566",
+                "longitude": "-77.050781"
+            },
+            "ofac": false
+        },
+        "www.doudouyou.net": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "8.142.130.105",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Zhejiang",
+                "city": "Hangzhou",
+                "latitude": "30.293650",
+                "longitude": "120.161423"
+            },
+            "ofac": true
+        },
+        "www.az4sd.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "149.29.124.248",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "District of Columbia",
+                "city": "Washington",
+                "latitude": "38.901566",
+                "longitude": "-77.050781"
+            },
+            "ofac": false
+        },
+        "www.lenovomm.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "82.157.74.11",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Beijing",
+                "city": "Beijing",
+                "latitude": "39.907501",
+                "longitude": "116.397232"
+            },
+            "ofac": true
+        },
+        "www.mcsdn.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "172.67.192.127",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "San Francisco",
+                "latitude": "37.775700",
+                "longitude": "-122.395203"
+            },
+            "ofac": false
+        },
+        "www.iandroid.cn": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "39.99.149.38",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Zhejiang",
+                "city": "Hangzhou",
+                "latitude": "30.293650",
+                "longitude": "120.161423"
+            },
+            "ofac": true
+        },
+        "app.mobiomni.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "54.243.117.197",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "Virginia",
+                "city": "Ashburn",
+                "latitude": "39.043720",
+                "longitude": "-77.487488"
+            },
+            "ofac": false
+        },
+        "www.nearme.com.cn": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "106.39.205.56",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Beijing",
+                "city": "Beijing",
+                "latitude": "39.907501",
+                "longitude": "116.397232"
+            },
+            "ofac": true
+        },
+        "www.iwanapk.com": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "www.anzhuoku.com": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "www.souapp.com": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "www.mphone.cc": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "154.64.247.3",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "District of Columbia",
+                "city": "Washington",
+                "latitude": "38.901566",
+                "longitude": "-77.050781"
+            },
+            "ofac": false
+        },
+        "www.fpwap.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "36.41.168.164",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Shaanxi",
+                "city": "Xi'an",
+                "latitude": "34.258331",
+                "longitude": "108.928612"
+            },
+            "ofac": true
+        },
+        "www.eomarket.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "104.21.88.178",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "San Francisco",
+                "latitude": "37.775700",
+                "longitude": "-122.395203"
+            },
+            "ofac": false
+        },
+        "www.3g.cn": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "39.108.87.182",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Zhejiang",
+                "city": "Hangzhou",
+                "latitude": "30.293650",
+                "longitude": "120.161423"
+            },
+            "ofac": true
+        },
+        "www.appchina.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "113.142.207.41",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Shaanxi",
+                "city": "Xianyang",
+                "latitude": "34.337780",
+                "longitude": "108.702606"
+            },
+            "ofac": true
+        },
+        "android.myapp.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "129.226.106.5",
+                "country_short": "HK",
+                "country_long": "Hong Kong",
+                "region": "Hong Kong",
+                "city": "Hong Kong",
+                "latitude": "22.285521",
+                "longitude": "114.157692"
+            },
+            "ofac": true
+        },
+        "www.borpor.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "121.40.25.215",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Zhejiang",
+                "city": "Hangzhou",
+                "latitude": "30.293650",
+                "longitude": "120.161423"
+            },
+            "ofac": true
+        },
+        "www.apkdd.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "38.182.229.189",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Los Angeles",
+                "latitude": "34.052231",
+                "longitude": "-118.243683"
+            },
+            "ofac": false
+        },
+        "www.eoemarket.com": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "www.fajue.net": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "ads.wapx.cn": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "shun.sinaapp.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "220.181.168.193",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Beijing",
+                "city": "Beijing",
+                "latitude": "39.907501",
+                "longitude": "116.397232"
+            },
+            "ofac": true
+        },
+        "www.sdapk.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "104.21.50.223",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "San Francisco",
+                "latitude": "37.775700",
+                "longitude": "-122.395203"
+            },
+            "ofac": false
+        },
+        "www.anzhuoyuan.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "23.225.76.39",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Los Angeles",
+                "latitude": "34.052231",
+                "longitude": "-118.243683"
+            },
+            "ofac": false
+        },
+        "apk.hiapk.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "110.242.69.109",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Hebei",
+                "city": "Baoding",
+                "latitude": "38.851109",
+                "longitude": "115.490280"
+            },
+            "ofac": true
+        },
+        "www.52vz.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "208.98.40.37",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "Illinois",
+                "city": "Chicago",
+                "latitude": "41.850029",
+                "longitude": "-87.650047"
+            },
+            "ofac": false
+        },
+        "www.tuapk.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "165.3.47.23",
+                "country_short": "ZA",
+                "country_long": "South Africa",
+                "region": "Western Cape",
+                "city": "Cape Town",
+                "latitude": "-33.925838",
+                "longitude": "18.423220"
+            },
+            "ofac": false
+        },
+        "app.wapx.cn": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "www.coolapk.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "43.159.106.19",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Beijing",
+                "city": "Beijing",
+                "latitude": "39.907501",
+                "longitude": "116.397232"
+            },
+            "ofac": true
+        },
+        "www.aouu.com": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "www.51spsoft.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "172.67.192.132",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "San Francisco",
+                "latitude": "37.775700",
+                "longitude": "-122.395203"
+            },
+            "ofac": false
+        },
+        "www.apkke.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "45.199.39.196",
+                "country_short": "HK",
+                "country_long": "Hong Kong",
+                "region": "Hong Kong",
+                "city": "Hong Kong",
+                "latitude": "22.285521",
+                "longitude": "114.157692"
+            },
+            "ofac": true
+        },
+        "www.51vapp.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "47.95.164.203",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Zhejiang",
+                "city": "Hangzhou",
+                "latitude": "30.293650",
+                "longitude": "120.161423"
+            },
+            "ofac": true
+        },
+        "www.aimi8.com": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "www.nduoa.com": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "apk.gfan.com": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "www.liqucn.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "61.170.79.95",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Shanghai",
+                "city": "Shanghai",
+                "latitude": "31.222219",
+                "longitude": "121.458061"
+            },
+            "ofac": true
+        },
+        "www.imobihome.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "104.201.21.67",
+                "country_short": "US",
+                "country_long": "United States of America",
+                "region": "California",
+                "city": "Los Angeles",
+                "latitude": "34.052986",
+                "longitude": "-118.263687"
+            },
+            "ofac": false
+        },
+        "www.meizu.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "47.246.8.233",
+                "country_short": "TH",
+                "country_long": "Thailand",
+                "region": "Krung Thep Maha Nakhon",
+                "city": "Bangkok",
+                "latitude": "13.750000",
+                "longitude": "100.516670"
+            },
+            "ofac": false
+        },
+        "app.starandroid.com": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "www.mumayi.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "42.62.3.197",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Beijing",
+                "city": "Beijing",
+                "latitude": "39.907501",
+                "longitude": "116.397232"
+            },
+            "ofac": true
+        },
+        "www.crossmo.com": {
+            "bad": "no",
+            "geolocation": {
+                "ip": "123.57.237.191",
+                "country_short": "CN",
+                "country_long": "China",
+                "region": "Zhejiang",
+                "city": "Hangzhou",
+                "latitude": "30.293650",
+                "longitude": "120.161423"
+            },
+            "ofac": true
+        },
+        "author.skycn.com": {
+            "bad": "no",
+            "geolocation": null
+        },
+        "www.coolmart.net.cn": {
+            "bad": "no",
+            "geolocation": null
+        }
+    },
+    "emails": [
+        {
+            "emails": [
+                "kingxiaoguang@gmail.com"
+            ],
+            "path": "com/waps/i.java"
+        },
+        {
+            "emails": [
+                "kingxiaoguang@gmail.com"
+            ],
+            "path": "com/waps/AppConnect.java"
+        }
+    ],
+    "strings": {
+        "strings_apk_res": [
+            "\"hello\" : \"Hello World, ServiceAuto!\"",
+            "\"app_name\" : \"美丽花田动态锁屏\""
+        ],
+        "strings_so": [],
+        "strings_code": [
+            "AppWords",
+            "borpor,宝瓶网,http://www.borpor.com/class.php",
+            "notify_text",
+            "http://",
+            "android.intent.action.PACKAGE_REMOVED",
+            "feedback",
+            "country_code",
+            "post",
+            "sohu,搜狐,http://download.sohu.com/",
+            "Package_Names",
+            "Push_ring",
+            "请先激活软件，您需要点【激活去广告】下载软件赚取5积分才能激活软件，赚够200积分可以永久去除广告，终身免费！您现在的积分是:",
+            "install",
+            "APP_ID",
+            "关\\u3000闭",
+            "mcsdn,mcsdn,http://www.mcsdn.com/",
+            "http://app.wapx.cn/action/account/getinfo?",
+            "mumayi,木蚂蚁,http://www.mumayi.com/market/",
+            "appIcon",
+            "52vz,微桌,http://www.52vz.com/",
+            "gzip",
+            "http://shun.sinaapp.com/Action.php?k=dapk",
+            "下次再说",
+            "userid",
+            "android.intent.extra.shortcut.NAME",
+            "消费积分失败.",
+            "51vapp,网讯安卓市场,http://www.51vapp.com",
+            "com.mx.browser",
+            "android.intent.action.SCREEN_ON",
+            "app_version",
+            "title",
+            "http://www.soso.com/",
+            "fajue,发掘网,http://www.fajue.net/",
+            "android.intent.action.MAIN",
+            "AppMore",
+            "给力程度：★★★★☆",
+            "zol,zol应用下载,http://xiazai.zol.com.cn/",
+            "android.intent.action.VIEW",
+            "iwanapk,爱玩APK,http://www.iwanapk.com/",
+            "The mac address is not found!",
+            "Response-Code",
+            "PrimaryColor",
+            "notify/show?",
+            "az4sd,安卓4S店,http://www.az4sd.com/",
+            "ffffff\\",
+            "777ccc,七喜软件,http://www.777ccc.com/",
+            "正在获取文件名...",
+            "http",
+            "isScreenOn",
+            "Success",
+            "doudouyou,豆豆游,http://www.doudouyou.net/index.action",
+            "正在下载",
+            "mdmk",
+            "power",
+            "奖励积分失败.",
+            "layout",
+            "anzhuoku,安卓库,http://www.anzhuoku.com/",
+            "http://app.wapx.cn/action/account/offerlist?",
+            "sdk_version",
+            "device_width",
+            "The app is not exist.",
+            "className",
+            "Display Ad",
+            "mobile",
+            "Content",
+            "Clear",
+            "device_type=",
+            "meizu,魅族,http://www.meizu.com/",
+            "WAPS_PID",
+            "udid=",
+            "liqucn,历趣网,http://www.liqucn.com/",
+            "wifi",
+            "onCreate--------------------",
+            "text/html",
+            "http://app.wapx.cn/action/account/ownslist?",
+            "ShowType",
+            "Permission.ACCESS_WIFI_STATE is not found or the device is Emulator, Please check it!",
+            "0000000000000000",
+            "YOUMI_CHANNEL",
+            "notify/click?",
+            "show_ad_flag",
+            "isToServer",
+            "http.route.default-proxy",
+            "center\\",
+            "WapsId is setted by manifest, the value is: ",
+            "screen off ---------------------->",
+            "device_height=",
+            "USER_ID",
+            "WAPS",
+            "给力程度：★☆☆☆☆",
+            "hicloud,智汇云,http://www.hicloud.com/",
+            "content_text",
+            "WapsId is setted by code,the value is: ",
+            "Notify_Url_Params",
+            "push_flag",
+            "sdk_version=",
+            "duplicate",
+            "check_auto_set_key",
+            "http://shun.sinaapp.com/log.php?cmd=g&id=",
+            "apkol,安卓在线,http://www.apkol.com/",
+            "onCreate",
+            "bkill,比克尔下载,http://www.bkill.com/",
+            "setReadTimeout",
+            "onDestroy--------------------",
+            "yyyy-MM-dd=HH:mm",
+            "android.intent.extra.shortcut.ICON_RESOURCE",
+            "Update_tip",
+            "给力程度：★★★☆☆",
+            "check_animation_set_key",
+            "act=",
+            "发现新应用",
+            "window",
+            "正在准备下载,请稍候...",
+            "device_width=",
+            "device_height",
+            "WAPS_SDK",
+            "http://app.wapx.cn/action/account/spend?",
+            "country_code=",
+            "无法更新积分",
+            "ads.wapx.cn",
+            "android.intent.category.DEFAULT",
+            "SHWO_FLAG",
+            "下载完成,点击安装",
+            "Notify_UrlParams",
+            "true",
+            "亲爱的用户！您需要点【开启动画】下载并安装任意一个软件,就能开启动画详细设置功能！",
+            "onKeyDown :: name = ",
+            "android.intent.action.BATTERY_CHANGED",
+            "check_animation_music_set_key",
+            "language=",
+            "新安装应用列表",
+            "java.vm.version",
+            "Start_Tag",
+            "eoe,优亿市场,http://www.eoemarket.com/",
+            "onDestroy",
+            "sun.net.client.defaultReadTimeout",
+            "mounted",
+            "name = ",
+            "false",
+            "tuapk,兔卓市场,http://www.tuapk.com/",
+            "baidu,baidu,http://munion.baidu.com/",
+            "Mark",
+            "重启服务成功",
+            "content",
+            "CurrencyName",
+            "sun.net.client.defaultConnectTimeout",
+            "Offers_URL",
+            "isFinshClose",
+            "app_id=",
+            "coolmart,酷派,http://www.coolmart.net.cn",
+            "Notify_UrlPath",
+            "android.intent.extra.shortcut.ICON",
+            "mobiomni,欧米网,http://app.mobiomni.com/",
+            "push_layout",
+            "Notify",
+            "OffersWebView",
+            "livewallpaper_background_key",
+            "quntiao,群挑网市场,http://www.quntiao.com/",
+            "com.mx.browser.MxBrowserActivity",
+            "Accept-Encoding",
+            "Notify_Content",
+            "anfensi,安卓粉丝网,http://www.anfensi.com",
+            "ClickUrl",
+            "activity",
+            "shortcut",
+            "fpwap,飞鹏网,http://www.fpwap.com/",
+            "Request-method",
+            "apkdd,安卓地带,http://www.apkdd.com/",
+            "http://shun.sinaapp.com/Action.php",
+            "http://app.wapx.cn/action/",
+            "温馨提示",
+            "PushFlag",
+            "UTF-8",
+            "htc,htc,http://www.htc.com/",
+            "Version",
+            "http://ads.wapx.cn/action/user_info",
+            "http://app.wapx.cn/action/app/update?",
+            "apkke,安卓客,http://www.apkke.com/",
+            "给力程度：★★☆☆☆",
+            "sjvip,手微,http://www.sjvip.com/",
+            "下载完成！",
+            "Image",
+            "gfan,机锋,http://apk.gfan.com/",
+            "level",
+            "下载失败，请重新下载",
+            "http://app.wapx.cn/action/connect/active?",
+            "device_name",
+            "该安装文件已存在于/sdcard/download/目录下，您可以直接安装或重新下载！",
+            "com.android.launcher.action.INSTALL_SHORTCUT",
+            "scale",
+            "com.waps.OffersWebView",
+            "appPrefrences",
+            "ShowAdFlag",
+            "android.intent.extra.shortcut.INTENT",
+            "Notify_Show_detail",
+            "appList",
+            "Charge",
+            "os_version",
+            "app.wapx.cn",
+            "Mcolor",
+            "Encoding",
+            "receiver/install?",
+            "kingxiaoguang@gmail.com",
+            "NewBrowser",
+            "Notify_Id",
+            "http://ads.wapx.cn",
+            "http://app.wapx.cn/action/feedback/form",
+            "title=?",
+            "sj91,91,http://sj.91.com/",
+            "10.0.0.172",
+            "charset",
+            "WapsId is setted by code is not equals the value be setted by manifest! Please chick it!",
+            "package_tag",
+            "未获取到正确的下载地址",
+            "Finalize_Flag",
+            "nyid",
+            "app_version=",
+            "device_type",
+            "load",
+            "connectivity",
+            "drawable",
+            "push/api_ad?",
+            "Show_detail",
+            "Network Error.",
+            "imsi",
+            "load://",
+            "device_name=",
+            "1234567890abcdefghijklmnopqrstuvw",
+            "000000\\",
+            "开启动画",
+            "anzhi,安智网,http://www.anzhi.com/index.html",
+            "3g,3G安卓市场,http://www.3g.cn/",
+            "eomarket,易优市场,http://www.eomarket.com/",
+            "DEVICE_ID",
+            "push/ad?",
+            "Notify_Title",
+            "android_id",
+            "正在下载,请稍候...",
+            "http://ads.wapx.cn/action/",
+            "coolapk,酷安网,http://www.coolapk.com/",
+            "aliyun,阿里云,http://www.aliyun.com/",
+            "lockset_key",
+            "AppList",
+            "Package_Name",
+            "notify_start_tag",
+            "channel=",
+            "receiver/load_ad?",
+            "DownLoadSave",
+            "MotoA953",
+            "The WapsId in manifest is: ",
+            "null",
+            "SDKUtils",
+            "UTF-16BE",
+            "UrlPath",
+            "sdapk,桑德网,http://www.sdapk.com/",
+            "yyyy-MM-dd",
+            "aouu,邀友网,http://www.aouu.com/",
+            "receiver/load_offer?",
+            "channel",
+            "UTF-16LE",
+            "Wait",
+            "souapp,搜应用,http://www.souapp.com/",
+            "给力程度：★★★★★",
+            "URL_PARAMS",
+            "Title",
+            "appName",
+            "android.intent.category.LAUNCHER",
+            "mphone,魅峰网,http://www.mphone.cc",
+            "WapsId is not setted！ Please check it!",
+            "Points",
+            "dcn,当乐网,http://bbs.d.cn",
+            "新安装应用",
+            "phone",
+            "nearme,Nearme市场,http://www.nearme.com.cn/",
+            "android",
+            "AppName",
+            "http://app",
+            "package",
+            "Ad content has error.",
+            "offers_webview_tag",
+            "免费下载推荐的应用,安装并至少使用一次,便可获得开启动画功能.",
+            "skycn,天空软件站,http://author.skycn.com/",
+            "EMULATOR",
+            "NotifyAd_Tag",
+            "points",
+            "receiver/uninstall?",
+            "os_version=",
+            "packageName",
+            "com.",
+            "setConnectTimeout",
+            "有新版本(",
+            "您有新应用安装，点击查看！",
+            "com.tencent.mtt.MainActivity",
+            "Fcolor",
+            "utf-8",
+            "lenovomm,联想开发者社区,http://www.lenovomm.com/appstore/html/index.html",
+            "android.intent.action.PACKAGE_ADDED",
+            "Message",
+            "正在下载，已完成  ",
+            "emulatorDeviceId",
+            "Notify_Ad_Package",
+            "udid",
+            "CLIENT_PACKAGE",
+            "appChina,应用汇,http://www.appchina.com/",
+            "net=",
+            "nduoa,N多网,http://www.nduoa.com",
+            "anzhuoyuan,安卓园,http://www.anzhuoyuan.com/",
+            "hiapk,安卓市场,http://apk.hiapk.com/default.html",
+            "http://shun.sinaapp.com/log.php?cmd=dapk&id=",
+            "android.intent.action.SCREEN_OFF",
+            "Content-length",
+            "display/ad?",
+            "activityName",
+            "crossmo,十字猫,http://www.crossmo.com/",
+            "language",
+            "miidi",
+            "The net is: ",
+            "1.5.3",
+            "down_type",
+            "keyguard",
+            "name",
+            "设置动态解锁成功!!!",
+            "uninstall",
+            "show",
+            "重新下载",
+            "notify_image",
+            "imsi=",
+            "notify",
+            "http://app.wapx.cn",
+            "BaseActivity",
+            "short_className",
+            "aimi8,爱米,http://www.aimi8.com",
+            "WAPS_ID",
+            "http://app.wapx.cn/action/account/award?",
+            "Loop",
+            "51spsoft,无优,http://www.51spsoft.com/",
+            "Push",
+            "imobihome,IMOB,http://www.imobihome.com/",
+            "sys.chanle=",
+            "com.tencent.mtt",
+            "AdPackage",
+            "http://shun.sinaapp.com/log.php",
+            "ACTIVITY_FLAG",
+            "Pleass check the Network connection!",
+            "check_animationlock_set_key",
+            "确\\u3000定",
+            "notification",
+            "Response-Message",
+            "icon",
+            "新版提示",
+            "Bcolor",
+            "encoding",
+            "InstallReferral"
+        ]
+    },
+    "firebase_urls": [],
+    "files": [
+        "META-INF/MANIFEST.MF",
+        "META-INF/CSPPXX.SF",
+        "META-INF/CSPPXX.RSA",
+        "res/drawable/bg1.jpg",
+        "res/drawable/icon.png",
+        "res/layout/main.xml",
+        "res/layout/main2.xml",
+        "res/raw/open1.mp3",
+        "res/xml/livewallpaper_settings.xml",
+        "AndroidManifest.xml",
+        "resources.arsc",
+        "res/drawable-hdpi/bg2.jpg",
+        "res/drawable-hdpi/cs.png",
+        "res/drawable-hdpi/cs2.png",
+        "res/drawable-hdpi/d1.png",
+        "res/drawable-hdpi/d10.png",
+        "res/drawable-hdpi/d2.png",
+        "res/drawable-hdpi/d3.png",
+        "res/drawable-hdpi/d4.png",
+        "res/drawable-hdpi/d5.png",
+        "res/drawable-hdpi/d6.png",
+        "res/drawable-hdpi/d7.png",
+        "res/drawable-hdpi/d8.png",
+        "res/drawable-hdpi/d9.png",
+        "res/drawable-hdpi/icon.png",
+        "res/drawable-hdpi/n0.png",
+        "res/drawable-hdpi/n1.png",
+        "res/drawable-hdpi/n10.png",
+        "res/drawable-hdpi/n11.png",
+        "res/drawable-hdpi/n2.png",
+        "res/drawable-hdpi/n3.png",
+        "res/drawable-hdpi/n4.png",
+        "res/drawable-hdpi/n5.png",
+        "res/drawable-hdpi/n6.png",
+        "res/drawable-hdpi/n7.png",
+        "res/drawable-hdpi/n8.png",
+        "res/drawable-hdpi/n9.png",
+        "res/drawable-ldpi/icon.png",
+        "res/drawable-mdpi/icon.png",
+        "classes.dex"
+    ],
+    "exported_count": {
+        "exported_activities": 0,
+        "exported_services": 0,
+        "exported_receivers": 0,
+        "exported_providers": 0
+    },
+    "apkid": {
+        "classes.dex": {
+            "anti_vm": [
+                "subscriber ID check"
+            ],
+            "obfuscator": [
+                "unreadable method names"
+            ],
+            "compiler": [
+                "dx"
+            ]
+        }
+    },
+    "behaviour": {
+        "00054": {
+            "files": {
+                "com/waps/o.java": "146,146,4,5,6",
+                "com/waps/p.java": "103,105,103,105,9,12",
+                "com/waps/x.java": "25,25,4,5"
+            },
+            "metadata": {
+                "label": [
+                    "reflection"
+                ],
+                "description": "Install other APKs from file",
+                "severity": "info"
+            }
+        },
+        "00063": {
+            "files": {
+                "com/waps/AppConnect.java": "526,535,8,17",
+                "com/waps/SDKUtils.java": "96,102,333,358,358,416,8,16",
+                "com/waps/p.java": "146,9,12",
+                "ps/wb/csppxx/lock20120827001320/LockSet.java": "92,4,6"
+            },
+            "metadata": {
+                "label": [
+                    "control"
+                ],
+                "description": "Implicit intent(view a web page, make a phone call, etc.)",
+                "severity": "info"
+            }
+        },
+        "00036": {
+            "files": {
+                "com/waps/AppConnect.java": "589,1211,1245,1276,1285,526,535,7,17",
+                "com/waps/SDKUtils.java": "70,149,282,300,96,102,333,358,358,416,7,16",
+                "com/waps/p.java": "166,167,167,168,169,170,192,146,8,12"
+            },
+            "metadata": {
+                "label": [
+                    "reflection"
+                ],
+                "description": "Get resource file from res/raw directory",
+                "severity": "info"
+            }
+        },
+        "00035": {
+            "files": {
+                "com/waps/AppConnect.java": "569,966,569,966,1243,7,12",
+                "com/waps/OffersWebView.java": "98,98,8,12",
+                "com/waps/SDKUtils.java": "208,98,122,148,207,281,298,342,399,420,7,11"
+            },
+            "metadata": {
+                "label": [
+                    "reflection"
+                ],
+                "description": "Query the list of the installed packages",
+                "severity": "info"
+            }
+        },
+        "00107": {
+            "files": {
+                "com/waps/AppConnect.java": "1291,986,22,30"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "telephony",
+                    "file",
+                    "command"
+                ],
+                "description": "Write the IMSI number into a file",
+                "severity": "info"
+            }
+        },
+        "00130": {
+            "files": {
+                "com/waps/AppConnect.java": "1293,583,1054,1291,1293,1300,1314,1352,7,18",
+                "com/waps/SDKUtils.java": "234,198,234,263,7,18"
+            },
+            "metadata": {
+                "label": [
+                    "wifi",
+                    "collection"
+                ],
+                "description": "Get the current WIFI information",
+                "severity": "info"
+            }
+        },
+        "00013": {
+            "files": {
+                "com/waps/AppConnect.java": "28,29,30,29"
+            },
+            "metadata": {
+                "label": [
+                    "file"
+                ],
+                "description": "Read file and put it into a stream",
+                "severity": "info"
+            }
+        },
+        "00033": {
+            "files": {
+                "com/waps/AppConnect.java": "1316,583,1054,1291,1293,1300,1314,1352,7,22",
+                "com/waps/SDKUtils.java": "264,198,234,263,7,20"
+            },
+            "metadata": {
+                "label": [
+                    "collection"
+                ],
+                "description": "Query the IMEI number",
+                "severity": "info"
+            }
+        },
+        "00031": {
+            "files": {
+                "com/waps/AppConnect.java": "589,1211,1245,1276,1285,583,4,6",
+                "com/waps/OffersWebView.java": "380,327,5,7"
+            },
+            "metadata": {
+                "label": [
+                    "reflection",
+                    "collection"
+                ],
+                "description": "Check the list of currently running applications",
+                "severity": "info"
+            }
+        },
+        "00119": {
+            "files": {
+                "com/waps/AppConnect.java": "1316,986,22,30"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "file",
+                    "telephony",
+                    "command"
+                ],
+                "description": "Write the IMEI number into a file",
+                "severity": "info"
+            }
+        },
+        "00067": {
+            "files": {
+                "com/waps/AppConnect.java": "1291,583,1054,1291,1293,1300,1314,1352,7,22",
+                "com/waps/SDKUtils.java": "199,198,234,263,7,20"
+            },
+            "metadata": {
+                "label": [
+                    "collection"
+                ],
+                "description": "Query the IMSI number",
+                "severity": "info"
+            }
+        },
+        "00083": {
+            "files": {
+                "com/waps/AppConnect.java": "1316,583,1054,1291,1293,1300,1314,1352,3,4,22",
+                "com/waps/SDKUtils.java": "264,198,234,263,4,20"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "telephony"
+                ],
+                "description": "Query the IMEI number",
+                "severity": "info"
+            }
+        },
+        "00091": {
+            "files": {
+                "com/waps/OffersWebView.java": "345,162,163,165,166,168,169,170,171,172,174,177,178,179,180,183,189,190,191,192,193,194,196,199,202,214,269,279,329,335,336,376,403,482,9,15"
+            },
+            "metadata": {
+                "label": [
+                    "collection"
+                ],
+                "description": "Retrieve data from broadcast",
+                "severity": "info"
+            }
+        },
+        "00096": {
+            "files": {
+                "com/waps/o.java": "209,211,14,15"
+            },
+            "metadata": {
+                "label": [
+                    "command",
+                    "network"
+                ],
+                "description": "Connect to a URL and set request method",
+                "severity": "info"
+            }
+        },
+        "00094": {
+            "files": {
+                "com/waps/o.java": "209,116,132,13,15",
+                "p000/p001/p002/HttpUtils.java": "42,226,91,156,282,313,5,8"
+            },
+            "metadata": {
+                "label": [
+                    "command",
+                    "network"
+                ],
+                "description": "Connect to a URL and read data from it",
+                "severity": "info"
+            }
+        },
+        "00023": {
+            "files": {
+                "com/waps/SDKUtils.java": "323,342,400,316,402,418,7,11",
+                "com/waps/s.java": "98,105,142,4,7"
+            },
+            "metadata": {
+                "label": [
+                    "reflection",
+                    "control"
+                ],
+                "description": "Start another application from current application",
+                "severity": "info"
+            }
+        },
+        "00062": {
+            "files": {
+                "com/waps/SDKUtils.java": "234,236,17,18"
+            },
+            "metadata": {
+                "label": [
+                    "wifi",
+                    "collection"
+                ],
+                "description": "Query WiFi information and WiFi Mac Address",
+                "severity": "info"
+            }
+        },
+        "00150": {
+            "files": {
+                "com/waps/SDKUtils.java": "199,106,20,24"
+            },
+            "metadata": {
+                "label": [
+                    "phone"
+                ],
+                "description": "Send IMSI over Internet",
+                "severity": "info"
+            }
+        },
+        "00089": {
+            "files": {
+                "com/waps/SDKUtils.java": "106,106,23,24",
+                "p000/p001/p002/HttpUtils.java": "87,152,278,309,42,226,7,8"
+            },
+            "metadata": {
+                "label": [
+                    "command",
+                    "network"
+                ],
+                "description": "Connect to a URL and receive input stream from the server",
+                "severity": "info"
+            }
+        },
+        "00051": {
+            "files": {
+                "com/waps/SDKUtils.java": "96,102,333,358,358,416,333,8,16"
+            },
+            "metadata": {
+                "label": [
+                    "control"
+                ],
+                "description": "Implicit intent(view a web page, make a phone call, etc.) via setData",
+                "severity": "info"
+            }
+        },
+        "00082": {
+            "files": {
+                "com/waps/SDKUtils.java": "236,198,234,263,7,17"
+            },
+            "metadata": {
+                "label": [
+                    "collection",
+                    "wifi"
+                ],
+                "description": "Get the current WiFi MAC address",
+                "severity": "info"
+            }
+        },
+        "00109": {
+            "files": {
+                "p000/p001/p002/HttpUtils.java": "85,150,276,307,42,226,7,8"
+            },
+            "metadata": {
+                "label": [
+                    "network",
+                    "command"
+                ],
+                "description": "Connect to a URL and get the response code",
+                "severity": "info"
+            }
+        },
+        "00108": {
+            "files": {
+                "p000/p001/p002/HttpUtils.java": "87,152,278,309,91,156,282,313,5,7"
+            },
+            "metadata": {
+                "label": [
+                    "network",
+                    "command"
+                ],
+                "description": "Read the input stream from given URL",
+                "severity": "info"
+            }
+        }
+    },
+    "trackers": {
+        "detected_trackers": 0,
+        "total_trackers": 432,
+        "trackers": []
+    },
+    "playstore_details": {
+        "error": true
+    },
+    "secrets": [],
+    "logs": [
+        {
+            "timestamp": "2025-12-08 12:05:10",
+            "status": "Generating Hashes",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:10",
+            "status": "Extracting APK",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:10",
+            "status": "Unzipping",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:10",
+            "status": "Parsing APK with androguard",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:10",
+            "status": "Extracting APK features using aapt/aapt2",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:10",
+            "status": "Getting Hardcoded Certificates/Keystores",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:10",
+            "status": "Parsing AndroidManifest.xml",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:10",
+            "status": "Extracting Manifest Data",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:10",
+            "status": "Manifest Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:10",
+            "status": "Performing Static Analysis on: 美丽花田动态锁屏 (ps.wb.csppxx.lock20120827001320)",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:11",
+            "status": "Fetching Details from Play Store: ps.wb.csppxx.lock20120827001320",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:11",
+            "status": "Checking for Malware Permissions",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:11",
+            "status": "Fetching icon path",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:11",
+            "status": "Library Binary Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:11",
+            "status": "Reading Code Signing Certificate",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:12",
+            "status": "Running APKiD 3.0.0",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:14",
+            "status": "Detecting Trackers",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:14",
+            "status": "Decompiling APK to Java with JADX",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:15",
+            "status": "Converting DEX to Smali",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:15",
+            "status": "Code Analysis Started on - java_source",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:15",
+            "status": "Android SBOM Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:15",
+            "status": "Android SAST Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:15",
+            "status": "Android API Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:16",
+            "status": "Android API Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:16",
+            "status": "Android Permission Mapping Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:16",
+            "status": "Android Permission Mapping Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:16",
+            "status": "Android Behaviour Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:16",
+            "status": "Android Behaviour Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:16",
+            "status": "Extracting Emails and URLs from Source Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:16",
+            "status": "Email and URL Extraction Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:16",
+            "status": "Extracting String data from APK",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:16",
+            "status": "Extracting String data from Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:16",
+            "status": "Extracting String values and entropies from Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:16",
+            "status": "Performing Malware check on extracted domains",
+            "exception": null
+        },
+        {
+            "timestamp": "2025-12-08 12:05:41",
+            "status": "Saving to Database",
+            "exception": null
+        }
+    ],
+    "sbom": {
+        "sbom_versioned": [],
+        "sbom_packages": [
+            "com.waps",
+            "p000.p001.p002",
+            "ps.wb.csppxx.lock0001",
+            "ps.wb.csppxx.lock20120827001320"
+        ]
+    },
+    "average_cvss": null,
+    "appsec": {
+        "high": [
+            {
+                "title": "Application vulnerable to Janus Vulnerability",
+                "description": "Application is signed with v1 signature scheme, making it vulnerable to Janus vulnerability on Android 5.0-8.0, if signed only with v1 signature scheme. Applications running on Android 5.0-7.0 signed with v1, and v2/v3 scheme is also vulnerable.",
+                "section": "certificate"
+            },
+            {
+                "title": "Certificate algorithm vulnerable to hash collision",
+                "description": "Application is signed with SHA1withRSA. SHA1 hash algorithm is known to have collision issues.",
+                "section": "certificate"
+            },
+            {
+                "title": "App can be installed on a vulnerable unpatched Android version",
+                "description": "Android 2.2-2.2.3, [minSdk=8]\nThis application can be installed on an older version of android that has multiple unfixed vulnerabilities. These devices won't receive reasonable security updates from Google. Support an Android version => 10, API 29 to receive reasonable security updates.",
+                "section": "manifest"
+            },
+            {
+                "title": "Activity (ps.wb.csppxx.lock20120827001320.Turntest) is vulnerable to Android Task Hijacking/StrandHogg.",
+                "description": "An Activity should not be having the launch mode attribute set to \"singleTask\". It is then possible for other applications to place a malicious activity on top of the activity stack resulting in Task Hijacking/StrandHogg 1.0 vulnerability. This makes the application an easy target for phishing attacks. The vulnerability can be remediated by setting the launch mode attribute to \"singleInstance\" or by setting an empty taskAffinity (taskAffinity=\"\") attribute. You can also update the target SDK version (8) of the app to 28 or higher to fix this issue at platform level.",
+                "section": "manifest"
+            },
+            {
+                "title": "The file or SharedPreference is World Readable. Any App can read from the file",
+                "description": "The file or SharedPreference is World Readable. Any App can read from the file\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#testing-local-storage-for-sensitive-data-mstg-storage-1-and-mstg-storage-2\n\nFiles:\ncom/waps/AppConnect.java, line(s) 582",
+                "section": "code"
+            }
+        ],
+        "warning": [
+            {
+                "title": "Application Data can be Backed up",
+                "description": "[android:allowBackup] flag is missing.\nThe flag [android:allowBackup] should be set to false. By default it is set to true and allows anyone to backup your application data via adb. It allows users who have enabled USB debugging to copy application data off of the device.",
+                "section": "manifest"
+            },
+            {
+                "title": "Launch Mode of activity (ps.wb.csppxx.lock20120827001320.Turntest) is not standard.",
+                "description": "An Activity should not be having the launch mode attribute set to \"singleTask/singleInstance\" as it becomes root Activity and it is possible for other applications to read the contents of the calling Intent. So it is required to use the \"standard\" launch mode attribute when sensitive information is included in an Intent.",
+                "section": "manifest"
+            },
+            {
+                "title": "IP Address disclosure",
+                "description": "IP Address disclosure\n\n\nFiles:\ncom/waps/o.java, line(s) 87,199\ncom/waps/r.java, line(s) 39,85",
+                "section": "code"
+            },
+            {
+                "title": "App can read/write to External Storage. Any App can read data written to External Storage.",
+                "description": "App can read/write to External Storage. Any App can read data written to External Storage.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#external-storage\n\nFiles:\ncom/waps/AppConnect.java, line(s) 877,878,879\ncom/waps/OffersWebView.java, line(s) 114\ncom/waps/k.java, line(s) 91,92\ncom/waps/o.java, line(s) 100,137\ncom/waps/p.java, line(s) 75,102",
+                "section": "code"
+            },
+            {
+                "title": "MD5 is a weak hash known to have hash collisions.",
+                "description": "MD5 is a weak hash known to have hash collisions.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#identifying-insecure-andor-deprecated-cryptographic-algorithms-mstg-crypto-4\n\nFiles:\ncom/waps/AppConnect.java, line(s) 1081",
+                "section": "code"
+            },
+            {
+                "title": "Insecure WebView Implementation. Execution of user controlled code in WebView is a critical Security Hole.",
+                "description": "Insecure WebView Implementation. Execution of user controlled code in WebView is a critical Security Hole.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-javascript-execution-in-webviews-mstg-platform-5\n\nFiles:\ncom/waps/OffersWebView.java, line(s) 472,473",
+                "section": "code"
+            },
+            {
+                "title": "Files may contain hardcoded sensitive information like usernames, passwords, keys etc.",
+                "description": "Files may contain hardcoded sensitive information like usernames, passwords, keys etc.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#checking-memory-for-sensitive-data-mstg-storage-10\n\nFiles:\np000/p001/p002/sendMessage.java, line(s) 14\nps/wb/csppxx/lock20120827001320/LockSet.java, line(s) 28",
+                "section": "code"
+            },
+            {
+                "title": "The App uses an insecure Random Number Generator.",
+                "description": "The App uses an insecure Random Number Generator.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04g-Testing-Cryptography.md#weak-random-number-generators\n\nFiles:\ncom/waps/AnimationType.java, line(s) 13",
+                "section": "code"
+            }
+        ],
+        "info": [
+            {
+                "title": "The App logs information. Sensitive information should never be logged.",
+                "description": "The App logs information. Sensitive information should never be logged.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#logs\n\nFiles:\ncom/waps/AppConnect.java, line(s) 1259,1263,1270,1306,596,1255,1272,1295\ncom/waps/AppLog.java, line(s) 11,17,23,33,39,45,51\ncom/waps/OffersWebView.java, line(s) 333,511\ncom/waps/SDKUtils.java, line(s) 155,240,242,404\ncom/waps/o.java, line(s) 55\np000/p001/p002/SyS_Args.java, line(s) 83\nps/wb/csppxx/lock20120827001320/LockSet.java, line(s) 136,141\nps/wb/csppxx/lock20120827001320/MyService.java, line(s) 67,44,49\nps/wb/csppxx/lock20120827001320/Turntest.java, line(s) 186",
+                "section": "code"
+            }
+        ],
+        "secure": [
+            {
+                "title": "This application has no privacy trackers",
+                "description": "This application does not include any user or device trackers. Unable to find trackers during static analysis.",
+                "section": "trackers"
+            }
+        ],
+        "hotspot": [
+            {
+                "title": "Found 4 critical permission(s)",
+                "description": "Ensure that these permissions are required by the application.\n\nandroid.permission.SYSTEM_ALERT_WINDOW (dangerous): display system-level alerts - Allows an application to show system-alert windows. Malicious applications can take over the entire screen of the phone.\n\nandroid.permission.READ_PHONE_STATE (dangerous): read phone state and identity - Allows the application to access the phone features of the device. An application with this permission can determine the phone number and serial number of this phone, whether a call is active, the number that call is connected to and so on.\n\nandroid.permission.WRITE_EXTERNAL_STORAGE (dangerous): read/modify/delete external storage contents - Allows an application to write to external storage.\n\nandroid.permission.GET_TASKS (dangerous): retrieve running applications - Allows application to retrieve information about currently and recently running tasks. May allow malicious applications to discover private information about other applications.",
+                "section": "permissions"
+            },
+            {
+                "title": "App may communicate to a server (www.anfensi.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '180.163.146.85', 'country_short': 'CN', 'country_long': 'China', 'region': 'Shanghai', 'city': 'Shanghai', 'latitude': '31.222219', 'longitude': '121.458061'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (xiazai.zol.com.cn) in OFAC sanctioned country (China)",
+                "description": "{'ip': '123.59.191.85', 'country_short': 'CN', 'country_long': 'China', 'region': 'Beijing', 'city': 'Beijing', 'latitude': '39.907501', 'longitude': '116.397232'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (sj.91.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '110.242.69.107', 'country_short': 'CN', 'country_long': 'China', 'region': 'Hebei', 'city': 'Baoding', 'latitude': '38.851109', 'longitude': '115.490280'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.apkol.com) in OFAC sanctioned country (Hong Kong)",
+                "description": "{'ip': '154.211.77.217', 'country_short': 'HK', 'country_long': 'Hong Kong', 'region': 'Hong Kong', 'city': 'Hong Kong', 'latitude': '22.285521', 'longitude': '114.157692'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.bkill.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '116.153.39.130', 'country_short': 'CN', 'country_long': 'China', 'region': 'Jiangxi', 'city': 'Nanchang', 'latitude': '28.683331', 'longitude': '115.883331'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (munion.baidu.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '111.206.208.169', 'country_short': 'CN', 'country_long': 'China', 'region': 'Beijing', 'city': 'Beijing', 'latitude': '39.907501', 'longitude': '116.397232'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.soso.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '43.153.249.87', 'country_short': 'CN', 'country_long': 'China', 'region': 'Beijing', 'city': 'Beijing', 'latitude': '39.907501', 'longitude': '116.397232'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.doudouyou.net) in OFAC sanctioned country (China)",
+                "description": "{'ip': '8.142.130.105', 'country_short': 'CN', 'country_long': 'China', 'region': 'Zhejiang', 'city': 'Hangzhou', 'latitude': '30.293650', 'longitude': '120.161423'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.lenovomm.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '82.157.74.11', 'country_short': 'CN', 'country_long': 'China', 'region': 'Beijing', 'city': 'Beijing', 'latitude': '39.907501', 'longitude': '116.397232'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.iandroid.cn) in OFAC sanctioned country (China)",
+                "description": "{'ip': '39.99.149.38', 'country_short': 'CN', 'country_long': 'China', 'region': 'Zhejiang', 'city': 'Hangzhou', 'latitude': '30.293650', 'longitude': '120.161423'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.nearme.com.cn) in OFAC sanctioned country (China)",
+                "description": "{'ip': '106.39.205.56', 'country_short': 'CN', 'country_long': 'China', 'region': 'Beijing', 'city': 'Beijing', 'latitude': '39.907501', 'longitude': '116.397232'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.fpwap.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '36.41.168.164', 'country_short': 'CN', 'country_long': 'China', 'region': 'Shaanxi', 'city': \"Xi'an\", 'latitude': '34.258331', 'longitude': '108.928612'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.3g.cn) in OFAC sanctioned country (China)",
+                "description": "{'ip': '39.108.87.182', 'country_short': 'CN', 'country_long': 'China', 'region': 'Zhejiang', 'city': 'Hangzhou', 'latitude': '30.293650', 'longitude': '120.161423'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.appchina.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '113.142.207.41', 'country_short': 'CN', 'country_long': 'China', 'region': 'Shaanxi', 'city': 'Xianyang', 'latitude': '34.337780', 'longitude': '108.702606'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (android.myapp.com) in OFAC sanctioned country (Hong Kong)",
+                "description": "{'ip': '129.226.106.5', 'country_short': 'HK', 'country_long': 'Hong Kong', 'region': 'Hong Kong', 'city': 'Hong Kong', 'latitude': '22.285521', 'longitude': '114.157692'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.borpor.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '121.40.25.215', 'country_short': 'CN', 'country_long': 'China', 'region': 'Zhejiang', 'city': 'Hangzhou', 'latitude': '30.293650', 'longitude': '120.161423'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (shun.sinaapp.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '220.181.168.193', 'country_short': 'CN', 'country_long': 'China', 'region': 'Beijing', 'city': 'Beijing', 'latitude': '39.907501', 'longitude': '116.397232'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (apk.hiapk.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '110.242.69.109', 'country_short': 'CN', 'country_long': 'China', 'region': 'Hebei', 'city': 'Baoding', 'latitude': '38.851109', 'longitude': '115.490280'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.coolapk.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '43.159.106.19', 'country_short': 'CN', 'country_long': 'China', 'region': 'Beijing', 'city': 'Beijing', 'latitude': '39.907501', 'longitude': '116.397232'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.apkke.com) in OFAC sanctioned country (Hong Kong)",
+                "description": "{'ip': '45.199.39.196', 'country_short': 'HK', 'country_long': 'Hong Kong', 'region': 'Hong Kong', 'city': 'Hong Kong', 'latitude': '22.285521', 'longitude': '114.157692'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.51vapp.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '47.95.164.203', 'country_short': 'CN', 'country_long': 'China', 'region': 'Zhejiang', 'city': 'Hangzhou', 'latitude': '30.293650', 'longitude': '120.161423'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.liqucn.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '61.170.79.95', 'country_short': 'CN', 'country_long': 'China', 'region': 'Shanghai', 'city': 'Shanghai', 'latitude': '31.222219', 'longitude': '121.458061'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.mumayi.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '42.62.3.197', 'country_short': 'CN', 'country_long': 'China', 'region': 'Beijing', 'city': 'Beijing', 'latitude': '39.907501', 'longitude': '116.397232'}",
+                "section": "domains"
+            },
+            {
+                "title": "App may communicate to a server (www.crossmo.com) in OFAC sanctioned country (China)",
+                "description": "{'ip': '123.57.237.191', 'country_short': 'CN', 'country_long': 'China', 'region': 'Zhejiang', 'city': 'Hangzhou', 'latitude': '30.293650', 'longitude': '120.161423'}",
+                "section": "domains"
+            }
+        ],
+        "total_trackers": 432,
+        "trackers": 0,
+        "security_score": 37,
+        "app_name": "美丽花田动态锁屏",
+        "file_name": "00A3AD62DD07DE18EA9577E19AFC7346B01C4095BD8C088DE4A9FDCA8F4172C6.apk",
+        "hash": "94619616c9f1e0ad1acbd46d0987f26b",
+        "version_name": "1.0"
+    },
+    "virus_total": null,
+    "base_url": "file:///home/mobsf/Mobile-Security-Framework-MobSF/mobsf",
+    "dwd_dir": "file:///home/mobsf/.MobSF/downloads/",
+    "host_os": "nix",
+    "timestamp": "2025-12-08T12:05:10.135Z"
+}

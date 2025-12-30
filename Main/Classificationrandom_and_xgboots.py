@@ -12,9 +12,7 @@ from sklearn.metrics import (
     accuracy_score, precision_score, recall_score,
     f1_score, roc_auc_score
 )
-
 warnings.filterwarnings('ignore')
-
 class MalwareModelComparison:
 
     def __init__(self, data_path):
@@ -54,38 +52,29 @@ class MalwareModelComparison:
             col for col in self.data.columns
             if col not in exclude_cols and self.data[col].dtype in ['int64', 'float64']
         ]
-
         self.X = self.data[feature_cols]
         self.y = self.data['label']
-
         self.train_x, self.test_x, self.train_y, self.test_y = train_test_split(
             self.X, self.y, test_size=0.2, random_state=42, stratify=self.y
         )
-
         self.feature_names = feature_cols
         print(f"Selected {len(feature_cols)} numerical features")
-
         return self.X, self.y
     
     # ---------------------------------------------------------
     def train_and_evaluate_models(self, cv_folds=5):
         print("\n=== 📌 Cross Validation Training ===")
-
         models = {
             'Random Forest': RandomForestClassifier(
-                n_estimators=180,
+                n_estimators=100,
                 max_depth=12,
                 min_samples_split=5,
                 min_samples_leaf=2,
-                random_state=42,
-                oob_score=True,
-                warm_start=True,
-                ccp_alpha=0.035,
-                max_features='log2'
+                random_state=42
                 
             ),
             'XGBoost': xgb.XGBClassifier(
-                n_estimators=200,
+                n_estimators=100,
                 max_depth=6,
                 learning_rate=0.1,
                 subsample=0.8,
@@ -169,16 +158,15 @@ class MalwareModelComparison:
         print("\n=== 📌 Training Final Models ===")
 
         rf = RandomForestClassifier(
-            n_estimators=180, max_depth=10,
+            n_estimators=100, max_depth=12,
             min_samples_split=5, min_samples_leaf=2,
             random_state=42,oob_score=True,
                 warm_start=True,
-                ccp_alpha=0.035,
-                max_features='log2'
+                max_features='sqrt'
         ).fit(self.train_x, self.train_y)
 
         xgb_ = xgb.XGBClassifier(
-            n_estimators=200, max_depth=6,
+            n_estimators=100, max_depth=6,
             learning_rate=0.1, subsample=0.8,
             colsample_bytree=0.8, random_state=42
         ).fit(self.train_x, self.train_y)
