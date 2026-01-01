@@ -56,7 +56,7 @@ class MalwareDetector:
 detector = MalwareDetector()
 
 json_file_path_benign = "./Data_test/benign/Killer Sudoku-mob.json"
-json_file_path_malware = "./Data_test/malware/1234_bot.json"
+json_file_path_malware = "./Data_test/malware/12349.json"
 
 
 def use_model(json_file_path):
@@ -67,4 +67,4 @@ def use_model(json_file_path):
     except Exception as e:
         print(f"❌ Error processing {json_file_path}: {e}")
 
-use_model(json_file_path_malware)
+use_model(json_file_path_benign)

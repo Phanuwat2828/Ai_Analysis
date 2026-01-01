@@ -4,3 +4,5 @@ Main/.venv/
 Main/__pycache__/
 Main/malware
 Main/Dataset_Test
+Main/Dataset_N
+Main/venv/

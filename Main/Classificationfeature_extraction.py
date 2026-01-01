@@ -6,13 +6,15 @@ from Classificationusefeature import extract_features_001 as extract_features
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def process_malware_dataset(max_files_per_folder=2000): # <-- function for create dataset from json report file
+dataset_size = 2000
+
+def process_malware_dataset(max_files_per_folder=0): # <-- function for create dataset from json report file
     BASE_PATH = os.path.abspath(os.path.join(os.getcwd(), "."))  # กำหนด path ฐานที่เก็บข้อมูล
     folders = ['malware', 'benign'] # โฟลเดอร์ที่เก็บข้อมูล malware และ benign
     dataset = [] # list สำหรับเก็บข้อมูลทั้งหมด
 
     for folder in folders: # loop ผ่านแต่ละโฟลเดอร์
-        folder_path = os.path.join(BASE_PATH, "Dataset_Test", folder) # สร้าง path เต็มไปยังโฟลเดอร์ folder Data
+        folder_path = os.path.join(BASE_PATH, "Dataset_N", folder) # สร้าง path เต็มไปยังโฟลเดอร์ folder Data
         print("===========> " + folder_path)
 
         json_files = glob.glob(os.path.join(folder_path, "*.json")) # ค้นหาไฟล์ .json ทั้งหมดในโฟลเดอร์
@@ -43,7 +45,7 @@ def process_malware_dataset(max_files_per_folder=2000): # <-- function for creat
 
 
 if __name__ == "__main__":
-    df = process_malware_dataset() # เรียกใช้ฟังก์ชันเพื่อสร้าง dataset
+    df = process_malware_dataset(dataset_size) # เรียกใช้ฟังก์ชันเพื่อสร้าง dataset
     print(f"Dataset shape: {df.shape}")
 
     if not df.empty and 'label' in df.columns: # ตรวจสอบว่า dataset ไม่ว่างและมีคอลัมน์ 'label'
@@ -53,7 +55,7 @@ if __name__ == "__main__":
         # ===== Export as CSV =====
         output_dir = os.path.join(os.getcwd(), "Dataset") # กำหนดโฟลเดอร์สำหรับบันทึก dataset
         os.makedirs(output_dir, exist_ok=True) # สร้างโฟลเดอร์ถ้ายังไม่มี
-        output_file = os.path.join(output_dir, "malware_dataset.csv") # กำหนดชื่อไฟล์ CSV
+        output_file = os.path.join(output_dir, "malware_dataset_"+str(dataset_size)+".csv") # กำหนดชื่อไฟล์ CSV
         df.to_csv(output_file, index=False, encoding='utf-8') # บันทึก DataFrame เป็นไฟล์ CSV
         print(f"✅ Dataset saved to {output_file}")
     else:

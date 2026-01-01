@@ -12,12 +12,103 @@ from sklearn.metrics import (
     accuracy_score, precision_score, recall_score,
     f1_score, roc_auc_score
 )
+
+from dataclasses import dataclass, asdict
+from typing import Optional, Union
 warnings.filterwarnings('ignore')
 
 dataset_size = [500,1000,1500,2000]
+test_size = [10,20,30]
 
 
+class ParamRandomForest:
+    n_estimators: int
+    max_depth: Optional[int]
+    min_samples_split: int
+    min_samples_leaf: int
+    max_features: Union[str, float]
+    random_state: int = 42
 
+
+parm_random = [
+    {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": "sqrt",
+        "random_state": 42
+    },
+    {
+        "n_estimators": 200,
+        "max_depth": 12,
+        "min_samples_split": 5,
+        "min_samples_leaf": 2,
+        "max_features": "sqrt",
+        "random_state": 42
+    },
+    {
+        "n_estimators": 300,
+        "max_depth": None,           # tree ลึกสุด
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": "log2",
+        "random_state": 42
+    },
+    {
+        "n_estimators": 500,
+        "max_depth": 20,
+        "min_samples_split": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "random_state": 42
+    }
+]
+
+parm_xgboost = [
+    # baseline
+    {
+        "n_estimators": 100,
+        "max_depth": 4,
+        "learning_rate": 0.1,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "random_state": 42
+    },
+    # deeper tree + slower learning
+    {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "random_state": 42
+    },
+    # aggressive model
+    {
+        "n_estimators": 300,
+        "max_depth": 8,
+        "learning_rate": 0.1,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "random_state": 42
+    },
+    # regularized
+    {
+        "n_estimators": 300,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42
+    }
+]
+
+total_resualt = {
+
+}
 class MalwareModelComparison:
 
     def __init__(self, data_path):
@@ -49,7 +140,7 @@ class MalwareModelComparison:
         return self.data
     
     # ---------------------------------------------------------
-    def select_features(self):
+    def select_features(self,test_size=0):
         print("\n=== 📌 Selecting Features ===")
 
         exclude_cols = ['label', 'family', 'filename']
@@ -60,7 +151,7 @@ class MalwareModelComparison:
         self.X = self.data[feature_cols]
         self.y = self.data['label']
         self.train_x, self.test_x, self.train_y, self.test_y = train_test_split(
-            self.X, self.y, test_size=0.2, random_state=42, stratify=self.y
+            self.X, self.y, test_size=test_size, random_state=42, stratify=self.y
         )
         self.feature_names = feature_cols
         print(f"Selected {len(feature_cols)} numerical features")
@@ -215,38 +306,29 @@ class MalwareModelComparison:
         return models
 
     # ---------------------------------------------------------
-    def save_models(self, output_dir="./Model"):
-        print("\n=== 📌 Saving Models ===")
 
-        os.makedirs(output_dir, exist_ok=True)
-
-        for name, model in self.final_models.items():
-            path = f"{output_dir}/{name.replace(' ','_')}_final.pkl"
-            joblib.dump(model, path)
-            print(f"Saved {name} → {path}")
-
-        with open(f"{output_dir}/feature_names.json","w") as f:
-            json.dump(self.feature_names, f)
-
-        print("Saved feature list.")
 
 # ---------------------------------------------------------
 if __name__ == "__main__":
 
-    CSV_FILE = "./Dataset/malware_dataset_2000.csv"
+    for data_size in dataset_size:
+        CSV_FILE = "./Dataset/malware_dataset_"+str(data_size)+".csv"
+        total_resualt[str(data_size)] = {}
+        for test_size in test_size:
+            total_resualt[str(data_size)][str(test_size)] = []
+            for parm in parm_random:
+                try:
+                    comparison = MalwareModelComparison(CSV_FILE)
+                    comparison.load_and_prepare_data()
+                    comparison.select_features(test_size/100)
+                    result = comparison.train_and_evaluate_models(cv_folds=5)
+                    total_resualt[str(data_size)][str(test_size)] = result;
+                #     comparison.print_final_recommendation()
+                #     comparison.train_final_models()
+                #     print("\n🎉 Completed Successfully!")
 
-    try:
-        comparison = MalwareModelComparison(CSV_FILE)
-        comparison.load_and_prepare_data()
-        comparison.select_features()
-        comparison.train_and_evaluate_models(cv_folds=5)
-        comparison.print_final_recommendation()
-        comparison.train_final_models()
-        comparison.save_models("./Model")
-        print("\n🎉 Completed Successfully!")
+                except FileNotFoundError:
+                    print(f"❌ CSV not found: {CSV_FILE}")
 
-    except FileNotFoundError:
-        print(f"❌ CSV not found: {CSV_FILE}")
-
-    except Exception as e:
-        print(f"❌ Error: {e}")
+                except Exception as e:
+                    print(f"❌ Error: {e}")

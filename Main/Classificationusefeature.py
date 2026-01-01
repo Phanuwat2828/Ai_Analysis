@@ -1,6 +1,7 @@
 import json
 from pyexpat import features
-
+from datetime import datetime
+import re
 def extract_features_002(data):
     features = {}
     def status_info(str):
@@ -225,7 +226,18 @@ def extract_features_001(data):
     features["has_certificate_high"] = summary.get("high", 0)
     features["has_certificate_warning"] = summary.get("warning", 0)
     features["has_certificate_info"] = summary.get("info", 0)
-
+    try:
+        start_match = re.search(r"Valid From: ([0-9\-\:\+ ]+)", info)
+        end_match = re.search(r"Valid To: ([0-9\-\:\+ ]+)", info)
+        if start_match and end_match:
+            start = datetime.fromisoformat(start_match.group(1).replace("+00:00", ""))
+            end = datetime.fromisoformat(end_match.group(1).replace("+00:00", ""))
+            age_years = (end - start).days / 365
+            features["certificate_age_years"] = round(age_years, 2)
+        else:
+            features["certificate_age_years"] = None
+    except Exception:
+        features["certificate_age_years"] = None
     # 4. Manifest analysis
     manifest = data.get("manifest_analysis", {}) # ดึง manifest analysis จาก JSON ที่
     features["has_manifest_high"] = manifest.get("manifest_summary", {}).get("high", 0) # จำนวนปัญหาระดับสูง (high) ที่พบใน manifest analysis 
