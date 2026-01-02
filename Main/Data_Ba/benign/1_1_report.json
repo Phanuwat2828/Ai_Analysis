@@ -1,0 +1,583 @@
+{
+    "version": "v4.4.4",
+    "title": "Static Analysis",
+    "file_name": "1.apk",
+    "app_name": "Anstop",
+    "app_type": "apk",
+    "size": "0.06MB",
+    "md5": "fa1b788eab848cd646a17779dbd0682e",
+    "sha1": "57686b007e6aa7e1699519882f5772241149baa4",
+    "sha256": "78ec7805f5a49b156fbd5f6af174c1cd8ae9900c9c7af2b2df021aca8cd5eae9",
+    "package_name": "An.stop",
+    "main_activity": ".Anstop",
+    "exported_activities": "[]",
+    "browsable_activities": {},
+    "activities": [
+        ".Anstop",
+        "SettingsActivity",
+        "LoadActivity",
+        "ShowTimesActivity"
+    ],
+    "receivers": [],
+    "providers": [],
+    "services": [],
+    "libraries": [],
+    "target_sdk": "4",
+    "max_sdk": "",
+    "min_sdk": "4",
+    "version_name": "1.5",
+    "version_code": "10",
+    "icon_path": "fa1b788eab848cd646a17779dbd0682e-icon.png",
+    "permissions": {
+        "android.permission.VIBRATE": {
+            "status": "normal",
+            "info": "control vibrator",
+            "description": "Allows the application to control the vibrator."
+        },
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+            "status": "dangerous",
+            "info": "read/modify/delete external storage contents",
+            "description": "Allows an application to write to external storage."
+        }
+    },
+    "malware_permissions": {
+        "top_malware_permissions": [
+            "android.permission.VIBRATE",
+            "android.permission.WRITE_EXTERNAL_STORAGE"
+        ],
+        "other_abused_permissions": [],
+        "total_malware_permissions": 25,
+        "total_other_permissions": 44
+    },
+    "certificate_analysis": {
+        "certificate_info": "Binary is signed\nv1 signature: True\nv2 signature: False\nv3 signature: False\nv4 signature: False\nX.509 Subject: C=UK, ST=ORG, L=ORG, O=fdroid.org, OU=FDroid, CN=FDroid\nSignature Algorithm: rsassa_pkcs1v15\nValid From: 2011-07-06 09:21:35+00:00\nValid To: 2038-11-21 09:21:35+00:00\nIssuer: C=UK, ST=ORG, L=ORG, O=fdroid.org, OU=FDroid, CN=FDroid\nSerial Number: 0x4e14291f\nHash Algorithm: sha1\nmd5: 8b1980f762dd7142af48961d4b4d0de9\nsha1: 3da87669a6b5125b7294f66e951f0b455e6745fd\nsha256: 1a7974d7d08f0038ee40fbf44a9deeddd0fee8b2cf2df5f6449e869c75ec70fb\nsha512: 02c863cf362c80c715a20db3b4c5897e9f2cc9ec8acd51221ff643c97daab8fe635b249668b831041dc1dda654d31eca3a8bb1249277938be944fc06a4f30c9a\nFound 1 unique certificates",
+        "certificate_findings": [
+            [
+                "info",
+                "Application is signed with a code signing certificate",
+                "Signed Application"
+            ],
+            [
+                "high",
+                "Application is signed with v1 signature scheme, making it vulnerable to Janus vulnerability on Android 5.0-8.0, if signed only with v1 signature scheme. Applications running on Android 5.0-7.0 signed with v1, and v2/v3 scheme is also vulnerable.",
+                "Application vulnerable to Janus Vulnerability"
+            ],
+            [
+                "high",
+                "Application is signed with SHA1withRSA. SHA1 hash algorithm is known to have collision issues.",
+                "Certificate algorithm vulnerable to hash collision"
+            ]
+        ],
+        "certificate_summary": {
+            "high": 2,
+            "warning": 0,
+            "info": 1
+        }
+    },
+    "manifest_analysis": {
+        "manifest_findings": [
+            {
+                "rule": "vulnerable_os_version",
+                "title": "App can be installed on a vulnerable unpatched Android version<br>Android 1.6, [minSdk=4]",
+                "severity": "high",
+                "description": "This application can be installed on an older version of android that has multiple unfixed vulnerabilities. These devices won't receive reasonable security updates from Google. Support an Android version => 10, API 29 to receive reasonable security updates.",
+                "name": "App can be installed on a vulnerable unpatched Android version 1.6, [minSdk=4]",
+                "component": [
+                    "1.6",
+                    "4"
+                ]
+            },
+            {
+                "rule": "allowbackup_not_set",
+                "title": "Application Data can be Backed up<br>[android:allowBackup] flag is missing.",
+                "severity": "warning",
+                "description": "The flag [android:allowBackup] should be set to false. By default it is set to true and allows anyone to backup your application data via adb. It allows users who have enabled USB debugging to copy application data off of the device.",
+                "name": "Application Data can be Backed up [android:allowBackup] flag is missing.",
+                "component": []
+            }
+        ],
+        "manifest_summary": {
+            "high": 1,
+            "warning": 1,
+            "info": 0,
+            "suppressed": 0
+        }
+    },
+    "network_security": {
+        "network_findings": [],
+        "network_summary": {}
+    },
+    "binary_analysis": [],
+    "file_analysis": [],
+    "android_api": {
+        "api_ipc": {
+            "files": {
+                "An/stop/Anstop.java": "8,416,416,447,452,453,453,453,455,456,457,458,459,459,547",
+                "An/stop/LoadActivity.java": "4,64,64,96",
+                "An/stop/ShowTimesActivity.java": "35,86"
+            },
+            "metadata": {
+                "description": "Inter Process Communication",
+                "severity": "info"
+            }
+        },
+        "api_local_file_io": {
+            "files": {
+                "An/stop/Anstop.java": "145,154,683",
+                "An/stop/Clock.java": "92",
+                "An/stop/ExportHelper.java": "21,5,6,6,7,7,8,8,9,26",
+                "An/stop/SettingsActivity.java": "21,27"
+            },
+            "metadata": {
+                "description": "Local File I/O Operations",
+                "severity": "info"
+            }
+        },
+        "api_start_activity": {
+            "files": {
+                "An/stop/Anstop.java": "444,459,434",
+                "An/stop/LoadActivity.java": "66"
+            },
+            "metadata": {
+                "description": "Starting Activity",
+                "severity": "info"
+            }
+        },
+        "api_get_system_service": {
+            "files": {
+                "An/stop/AccelerometerListener.java": "31",
+                "An/stop/Anstop.java": "124"
+            },
+            "metadata": {
+                "description": "Get System Service",
+                "severity": "info"
+            }
+        }
+    },
+    "code_analysis": {
+        "findings": {
+            "android_sql_raw_query": {
+                "files": {
+                    "An/stop/AnstopDbAdapter.java": "8,9,45,46,47,48,56,60,61,62,63,64,71,72"
+                },
+                "metadata": {
+                    "cvss": 5.9,
+                    "cwe": "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+                    "owasp-mobile": "M7: Client Code Quality",
+                    "masvs": "",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#injection-flaws-mstg-arch-2-and-mstg-platform-2",
+                    "description": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.",
+                    "severity": "warning"
+                }
+            },
+            "android_read_write_external": {
+                "files": {
+                    "An/stop/ExportHelper.java": "21,25"
+                },
+                "metadata": {
+                    "cvss": 5.5,
+                    "cwe": "CWE-276: Incorrect Default Permissions",
+                    "owasp-mobile": "M2: Insecure Data Storage",
+                    "masvs": "MSTG-STORAGE-2",
+                    "ref": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#external-storage",
+                    "description": "App can read/write to External Storage. Any App can read data written to External Storage.",
+                    "severity": "warning"
+                }
+            }
+        },
+        "summary": {
+            "high": 0,
+            "warning": 2,
+            "info": 0,
+            "secure": 0,
+            "suppressed": 0
+        }
+    },
+    "niap_analysis": {},
+    "permission_mapping": {
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+            "An/stop/ExportHelper.java": "28,8"
+        },
+        "android.permission.VIBRATE": {
+            "An/stop/Anstop.java": "16,753,843"
+        }
+    },
+    "urls": [],
+    "domains": {},
+    "emails": [],
+    "strings": {
+        "strings_apk_res": {},
+        "strings_so": [],
+        "strings_code": [
+            "anstop_state_clockCountMin",
+            "laps~t\\",
+            "clockActive",
+            "create index \\",
+            "android.intent.extra.SUBJECT",
+            "start_systime",
+            "lap_format_delta",
+            "times_id",
+            "alter table times add column stop_systime int;",
+            "vibrator",
+            "clockAnstopWroteStart",
+            "SwipeRight",
+            "android.intent.extra.TEXT",
+            "anstop_state_clockDigits_m",
+            "clockStartTimeActual",
+            "laps",
+            "android.intent.action.SEND",
+            "anstop_state_clockDigits_h",
+            "anstop_state_current",
+            "DROP TABLE IF EXISTS times",
+            "first_start",
+            "anstop_state_clockDigits_d",
+            "alter table times add column elapsed int;",
+            "mounted",
+            "vibrate",
+            "times",
+            "lap_systime",
+            "body",
+            "anstop_state_clockDigits_s",
+            "anstop_state_clockCountSec",
+            "anstop_state_clockComment",
+            "create table laps (_id integer primary key autoincrement, times_id int not null, lap_elapsed int not null, lap_systime int not null, lap_comment text null);",
+            "text/plain",
+            "anstop_state_clockActive",
+            "anstop_state_clockStopTime",
+            "temp_laps",
+            "lap_format_elapsed",
+            "anstop_state_clockStartTimeActual",
+            "clockComment",
+            "clockStartTimeAdj",
+            "create table temp_laps (_id integer primary key autoincrement, lap_elapsed int not null, lap_systime int not null, lap_comment text null);",
+            "lap_comment",
+            "elapsed",
+            "clockDigits",
+            "mode",
+            "Anstop_db",
+            "clockLapsSystime",
+            "anstop_state_clockWasActive",
+            "clockCountHour",
+            "clockAnstopCurrent",
+            "anstop_state_clockLaps",
+            "clockLapsElapsed",
+            "clockCountSec",
+            "stop_systime",
+            "SwipeLeft",
+            "anstop_state_clockCountHour",
+            "count(_id)",
+            "clockWasActive",
+            "alter table times add column start_systime int;",
+            "sensor",
+            "android.intent.extra.EMAIL",
+            "lap_format_",
+            "anstop_in_use",
+            "clockStateSaveTime",
+            "times_id=",
+            "clockStopTime",
+            "clockLaps",
+            "ModeError",
+            "anstop_state_wroteStart",
+            "anstop_state_clockStateSaveTime",
+            "use_motion_sensor",
+            "clockLapCount",
+            "alter table times add column mode int;",
+            "lap_elapsed",
+            "anstop_state_clockStartTimeAdj",
+            "create table times (_id integer primary key autoincrement, title text not null, body text not null, mode int not null, start_systime int null, stop_systime int null, elapsed int not null);",
+            "lap_format_systime",
+            "title",
+            "clockCountMin",
+            "anstop_state_clockLapCount"
+        ]
+    },
+    "firebase_urls": [],
+    "files": [
+        "META-INF/MANIFEST.MF",
+        "META-INF/8EBC01A5.SF",
+        "META-INF/8EBC01A5.RSA",
+        "res/drawable/icon.png",
+        "res/layout/countdown.xml",
+        "res/layout/load.xml",
+        "res/layout/main.xml",
+        "res/layout/settings.xml",
+        "res/layout/show_times.xml",
+        "res/layout/times_row.xml",
+        "res/raw/gestures",
+        "res/xml/settings.xml",
+        "AndroidManifest.xml",
+        "resources.arsc",
+        "classes.dex"
+    ],
+    "exported_count": {
+        "exported_activities": 0,
+        "exported_services": 0,
+        "exported_receivers": 0,
+        "exported_providers": 0
+    },
+    "apkid": {
+        "classes.dex": {
+            "compiler": [
+                "dx"
+            ]
+        }
+    },
+    "behaviour": {},
+    "trackers": {
+        "detected_trackers": 0,
+        "total_trackers": 432,
+        "trackers": []
+    },
+    "playstore_details": {
+        "error": true
+    },
+    "secrets": [],
+    "logs": [
+        {
+            "timestamp": "2026-01-02 18:02:25",
+            "status": "Generating Hashes",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:25",
+            "status": "Extracting APK",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:25",
+            "status": "Unzipping",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:25",
+            "status": "Parsing APK with androguard",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:25",
+            "status": "Extracting APK features using aapt/aapt2",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:25",
+            "status": "aapt and aapt2 not found, skipping APK feature extraction",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:25",
+            "status": "Getting Hardcoded Certificates/Keystores",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:28",
+            "status": "Parsing AndroidManifest.xml",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:28",
+            "status": "Extracting Manifest Data",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:28",
+            "status": "Manifest Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:28",
+            "status": "Performing Static Analysis on: Anstop (An.stop)",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:28",
+            "status": "Fetching Details from Play Store: An.stop",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:28",
+            "status": "Checking for Malware Permissions",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:28",
+            "status": "Fetching icon path",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:28",
+            "status": "Library Binary Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:28",
+            "status": "Reading Code Signing Certificate",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:29",
+            "status": "Running APKiD 3.0.0",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:30",
+            "status": "Detecting Trackers",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:31",
+            "status": "Decompiling APK to Java with JADX",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:35",
+            "status": "Converting DEX to Smali",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:35",
+            "status": "Code Analysis Started on - java_source",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:35",
+            "status": "Android SBOM Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:36",
+            "status": "Android SAST Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:36",
+            "status": "Android API Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:36",
+            "status": "Android API Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:36",
+            "status": "Android Permission Mapping Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:37",
+            "status": "Android Permission Mapping Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:37",
+            "status": "Android Behaviour Analysis Started",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:37",
+            "status": "Android Behaviour Analysis Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:37",
+            "status": "Extracting Emails and URLs from Source Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:37",
+            "status": "Email and URL Extraction Completed",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:37",
+            "status": "Extracting String data from Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:37",
+            "status": "Extracting String values and entropies from Code",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:37",
+            "status": "Performing Malware check on extracted domains",
+            "exception": null
+        },
+        {
+            "timestamp": "2026-01-02 18:02:37",
+            "status": "Saving to Database",
+            "exception": null
+        }
+    ],
+    "sbom": {
+        "sbom_versioned": [],
+        "sbom_packages": [
+            "An.stop",
+            "android.annotation"
+        ]
+    },
+    "average_cvss": null,
+    "appsec": {
+        "high": [
+            {
+                "title": "Application vulnerable to Janus Vulnerability",
+                "description": "Application is signed with v1 signature scheme, making it vulnerable to Janus vulnerability on Android 5.0-8.0, if signed only with v1 signature scheme. Applications running on Android 5.0-7.0 signed with v1, and v2/v3 scheme is also vulnerable.",
+                "section": "certificate"
+            },
+            {
+                "title": "Certificate algorithm vulnerable to hash collision",
+                "description": "Application is signed with SHA1withRSA. SHA1 hash algorithm is known to have collision issues.",
+                "section": "certificate"
+            },
+            {
+                "title": "App can be installed on a vulnerable unpatched Android version",
+                "description": "Android 1.6, [minSdk=4]\nThis application can be installed on an older version of android that has multiple unfixed vulnerabilities. These devices won't receive reasonable security updates from Google. Support an Android version => 10, API 29 to receive reasonable security updates.",
+                "section": "manifest"
+            }
+        ],
+        "warning": [
+            {
+                "title": "Application Data can be Backed up",
+                "description": "[android:allowBackup] flag is missing.\nThe flag [android:allowBackup] should be set to false. By default it is set to true and allows anyone to backup your application data via adb. It allows users who have enabled USB debugging to copy application data off of the device.",
+                "section": "manifest"
+            },
+            {
+                "title": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.",
+                "description": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#injection-flaws-mstg-arch-2-and-mstg-platform-2\n\nFiles:\nAn/stop/AnstopDbAdapter.java, line(s) 8,9,45,46,47,48,56,60,61,62,63,64,71,72",
+                "section": "code"
+            },
+            {
+                "title": "App can read/write to External Storage. Any App can read data written to External Storage.",
+                "description": "App can read/write to External Storage. Any App can read data written to External Storage.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#external-storage\n\nFiles:\nAn/stop/ExportHelper.java, line(s) 21,25",
+                "section": "code"
+            }
+        ],
+        "info": [],
+        "secure": [
+            {
+                "title": "This application has no privacy trackers",
+                "description": "This application does not include any user or device trackers. Unable to find trackers during static analysis.",
+                "section": "trackers"
+            }
+        ],
+        "hotspot": [
+            {
+                "title": "Found 1 critical permission(s)",
+                "description": "Ensure that these permissions are required by the application.\n\nandroid.permission.WRITE_EXTERNAL_STORAGE (dangerous): read/modify/delete external storage contents - Allows an application to write to external storage.",
+                "section": "permissions"
+            }
+        ],
+        "total_trackers": 432,
+        "trackers": 0,
+        "security_score": 38,
+        "app_name": "Anstop",
+        "file_name": "1.apk",
+        "hash": "fa1b788eab848cd646a17779dbd0682e",
+        "version_name": "1.5"
+    },
+    "virus_total": null,
+    "base_url": "file:///home/kali/Mobile-Security-Framework-MobSF/mobsf",
+    "dwd_dir": "file:///home/kali/.MobSF/downloads/",
+    "host_os": "nix",
+    "timestamp": "2026-01-02T18:02:25.549Z"
+}

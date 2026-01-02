@@ -233,7 +233,7 @@ class MalwareModelComparison:
 # ---------------------------------------------------------
 if __name__ == "__main__":
 
-    CSV_FILE = "./Dataset/malware_dataset_2000.csv"
+    CSV_FILE = "./Dataset/malware_dataset_4000.csv"
 
     try:
         comparison = MalwareModelComparison(CSV_FILE)

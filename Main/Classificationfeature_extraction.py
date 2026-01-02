@@ -6,7 +6,7 @@ from Classificationusefeature import extract_features_001 as extract_features
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-dataset_size = 2000
+dataset_size = 4000
 
 def process_malware_dataset(max_files_per_folder=0): # <-- function for create dataset from json report file
     BASE_PATH = os.path.abspath(os.path.join(os.getcwd(), "."))  # กำหนด path ฐานที่เก็บข้อมูล

@@ -10,7 +10,6 @@ def extract_features_002(data):
         else :
             return 1
     # 1. Basic info
-    features["size_mb"] = float(data.get("size", "0MB").replace("MB", "")) # ขนาดของไฟล์แอปพลิเคชัน 
     features["count_receivers"] = len(data.get("receivers", [])) # การนับจำนวน broadcast receivers ทั้งหมดที่อยู่ใน androidmanifest.xml Broadcast Receiver คือ ตัวดักฟังเหตุการณ์ในเครื่อง Android เช่นหน้าจอดับ แบตไกล้หมด sms ใหม่เข้ามา เป็นต้น
     features["count_services"] = len(data.get("services", [])) # การนับจำนวน services ทั้งหมดที่อยู่ใน androidmanifest.xml Service คือ ส่วนทำงานเบื้องหลังที่ทำงานโดยไม่ต้องมี UI เช่น การเล่นเพลง การดาวน์โหลดไฟล์ เป็นต้น
     features["count_providers"] = len(data.get("providers", [])) # การนับจำนวน content providers ทั้งหมดที่อยู่ใน androidmanifest.xml Content Provider คือ ส่วนที่จัดการข้อมูลและแชร์ข้อมูลระหว่างแอปพลิเคชันต่างๆ
@@ -156,7 +155,6 @@ def extract_features_002(data):
 def extract_features_001(data):
     features = {}
     # 1. Basic info
-    features["size_mb"] = float(data.get("size", "0MB").replace("MB", "")) # ขนาดของไฟล์แอปพลิเคชัน 
     features["count_receivers"] = len(data.get("receivers", [])) # การนับจำนวน broadcast receivers ทั้งหมดที่อยู่ใน androidmanifest.xml Broadcast Receiver คือ ตัวดักฟังเหตุการณ์ในเครื่อง Android เช่นหน้าจอดับ แบตไกล้หมด sms ใหม่เข้ามา เป็นต้น
     features["count_services"] = len(data.get("services", [])) # การนับจำนวน services ทั้งหมดที่อยู่ใน androidmanifest.xml Service คือ ส่วนทำงานเบื้องหลังที่ทำงานโดยไม่ต้องมี UI เช่น การเล่นเพลง การดาวน์โหลดไฟล์ เป็นต้น
     features["count_providers"] = len(data.get("providers", [])) # การนับจำนวน content providers ทั้งหมดที่อยู่ใน androidmanifest.xml Content Provider คือ ส่วนที่จัดการข้อมูลและแชร์ข้อมูลระหว่างแอปพลิเคชันต่างๆ
@@ -276,4 +274,8 @@ def extract_features_001(data):
             features["hardcoded_keystore"] = 1  # เจอ Hardcoded Keystore
             features["hardcoded_keystore_count"] += len(files)
     features["is_on_playstore"] = 1 if data.get("playstore_details") else 0
+
+    # 9 trackers
+    trackers = data.get("trackers",{})
+    features["detected_trackers"] = trackers.get("detected_trackers")
     return features
