@@ -12,103 +12,32 @@ from sklearn.metrics import (
     accuracy_score, precision_score, recall_score,
     f1_score, roc_auc_score
 )
+from sklearn.model_selection import ParameterGrid
+from tqdm import tqdm
 
-from dataclasses import dataclass, asdict
-from typing import Optional, Union
+from sklearn.metrics import roc_curve, auc
+from sklearn.model_selection import GridSearchCV
+import matplotlib.pyplot as plt
+
 warnings.filterwarnings('ignore')
 
-dataset_size = [500,1000,1500,2000]
-test_size = [10,20,30]
-
-
-class ParamRandomForest:
-    n_estimators: int
-    max_depth: Optional[int]
-    min_samples_split: int
-    min_samples_leaf: int
-    max_features: Union[str, float]
-    random_state: int = 42
-
-
-parm_random = [
-    {
-        "n_estimators": 100,
-        "max_depth": 10,
-        "min_samples_split": 2,
-        "min_samples_leaf": 1,
-        "max_features": "sqrt",
-        "random_state": 42
-    },
-    {
-        "n_estimators": 200,
-        "max_depth": 12,
-        "min_samples_split": 5,
-        "min_samples_leaf": 2,
-        "max_features": "sqrt",
-        "random_state": 42
-    },
-    {
-        "n_estimators": 300,
-        "max_depth": None,           # tree ลึกสุด
-        "min_samples_split": 2,
-        "min_samples_leaf": 1,
-        "max_features": "log2",
-        "random_state": 42
-    },
-    {
-        "n_estimators": 500,
-        "max_depth": 20,
-        "min_samples_split": 10,
-        "min_samples_leaf": 5,
-        "max_features": "sqrt",
-        "random_state": 42
-    }
-]
-
-parm_xgboost = [
-    # baseline
-    {
-        "n_estimators": 100,
-        "max_depth": 4,
-        "learning_rate": 0.1,
-        "subsample": 0.8,
-        "colsample_bytree": 0.8,
-        "random_state": 42
-    },
-    # deeper tree + slower learning
-    {
-        "n_estimators": 200,
-        "max_depth": 6,
-        "learning_rate": 0.05,
-        "subsample": 0.8,
-        "colsample_bytree": 0.8,
-        "random_state": 42
-    },
-    # aggressive model
-    {
-        "n_estimators": 300,
-        "max_depth": 8,
-        "learning_rate": 0.1,
-        "subsample": 0.9,
-        "colsample_bytree": 0.9,
-        "random_state": 42
-    },
-    # regularized
-    {
-        "n_estimators": 300,
-        "max_depth": 6,
-        "learning_rate": 0.03,
-        "subsample": 0.7,
-        "colsample_bytree": 0.7,
-        "reg_alpha": 0.1,
-        "reg_lambda": 1.0,
-        "random_state": 42
-    }
-]
-
-total_resualt = {
-
+RF_PARAM_GRID = {
+    "n_estimators": [100, 300, 500],
+    "max_depth": [None, 10, 20],
+    "min_samples_split": [2, 5],
+    "min_samples_leaf": [1, 2],
+    "max_features": ["sqrt"]
 }
+
+XGB_PARAM_GRID = {
+    "n_estimators": [100, 300, 500],
+    "max_depth": [4, 6, 8],
+    "learning_rate": [0.05, 0.1],
+    "subsample": [0.8, 1.0],
+    "colsample_bytree": [0.8, 1.0]
+}
+
+
 class MalwareModelComparison:
 
     def __init__(self, data_path):
@@ -140,7 +69,7 @@ class MalwareModelComparison:
         return self.data
     
     # ---------------------------------------------------------
-    def select_features(self,test_size=0):
+    def select_features(self):
         print("\n=== 📌 Selecting Features ===")
 
         exclude_cols = ['label', 'family', 'filename']
@@ -151,7 +80,7 @@ class MalwareModelComparison:
         self.X = self.data[feature_cols]
         self.y = self.data['label']
         self.train_x, self.test_x, self.train_y, self.test_y = train_test_split(
-            self.X, self.y, test_size=test_size, random_state=42, stratify=self.y
+            self.X, self.y, test_size=0.2, random_state=42, stratify=self.y
         )
         self.feature_names = feature_cols
         print(f"Selected {len(feature_cols)} numerical features")
@@ -306,29 +235,221 @@ class MalwareModelComparison:
         return models
 
     # ---------------------------------------------------------
+    def save_models(self, output_dir="./Model"):
+        print("\n=== 📌 Saving Models ===")
 
+        os.makedirs(output_dir, exist_ok=True)
+
+        for name, model in self.final_models.items():
+            path = f"{output_dir}/{name.replace(' ','_')}_final.pkl"
+            joblib.dump(model, path)
+            print(f"Saved {name} → {path}")
+
+        with open(f"{output_dir}/feature_names.json","w") as f:
+            json.dump(self.feature_names, f)
+
+        print("Saved feature list.")
+
+    def run_full_hyperparameter_experiments_all_models(self, save_dir="./results"):
+        print("\n=== 🔬 Full Hyperparameter Experiments: RF + XGBoost ===")
+
+        os.makedirs(save_dir, exist_ok=True)
+
+        dataset_sizes = [500, 1000, 2000, "full"]
+        test_sizes = [0.2, 0.3]
+
+        experiments = {
+            "RandomForest": (
+                RandomForestClassifier(random_state=42, n_jobs=-1),
+                list(ParameterGrid(RF_PARAM_GRID))
+            ),
+            "XGBoost": (
+                xgb.XGBClassifier(
+                    eval_metric="logloss",
+                    random_state=42
+                ),
+                list(ParameterGrid(XGB_PARAM_GRID))
+            )
+        }
+
+        total_steps = sum(
+            len(dataset_sizes) * len(test_sizes) * len(pgrid)
+            for _, pgrid in experiments.values()
+        )
+
+        all_results = []
+
+        with tqdm(total=total_steps, desc="🧪 Experiments", ncols=110) as pbar:
+
+            for size in dataset_sizes:
+                if size == "full":
+                    X_sub, y_sub = self.X, self.y
+                else:
+                    X_sub, _, y_sub, _ = train_test_split(
+                        self.X, self.y,
+                        train_size=size,
+                        stratify=self.y,
+                        random_state=42
+                    )
+
+                for test_size in test_sizes:
+                    X_train, X_test, y_train, y_test = train_test_split(
+                        X_sub, y_sub,
+                        test_size=test_size,
+                        stratify=y_sub,
+                        random_state=42
+                    )
+
+                    for model_name, (base_model, param_list) in experiments.items():
+
+                        for pid, params in enumerate(param_list):
+                            model = base_model.__class__(**base_model.get_params())
+                            model.set_params(**params)
+
+                            model.fit(X_train, y_train)
+
+                            y_pred = model.predict(X_test)
+
+                            if hasattr(model, "predict_proba"):
+                                y_prob = model.predict_proba(X_test)[:, 1]
+                                roc = roc_auc_score(y_test, y_prob)
+                            else:
+                                roc = None
+
+                            all_results.append({
+                                "model": model_name,
+                                "dataset_size": size,
+                                "test_size": test_size,
+                                "param_id": pid,
+                                **params,
+                                "accuracy": accuracy_score(y_test, y_pred),
+                                "precision": precision_score(y_test, y_pred),
+                                "recall": recall_score(y_test, y_pred),
+                                "f1": f1_score(y_test, y_pred),
+                                "roc_auc": roc
+                            })
+
+                            pbar.set_postfix({
+                                "model": model_name,
+                                "size": size,
+                                "test": test_size,
+                                "param": pid
+                            })
+                            pbar.update(1)
+
+        df = pd.DataFrame(all_results)
+
+        # 🔽 Save CSV (รวมทุก model)
+        full_path = os.path.join(save_dir, "rf_xgb_hyperparameter_results.csv")
+        df.to_csv(full_path, index=False)
+
+        # 🔽 แยก CSV ต่อ model
+        for m in df["model"].unique():
+            path = os.path.join(save_dir, f"{m.lower()}_results.csv")
+            df[df["model"] == m].to_csv(path, index=False)
+
+        print(f"\n📄 Saved results → {full_path}")
+
+        self.hyper_results = df
+        return df
+
+
+    def plot_metrics_vs_params_subplot(self):
+        metrics = ["accuracy", "precision", "recall", "f1", "roc_auc"]
+        models = self.hyper_results["model"].unique()
+
+        fig, axes = plt.subplots(1, len(models), figsize=(14,5), sharey=True)
+
+        for ax, model_name in zip(axes, models):
+            subset = self.hyper_results[
+                self.hyper_results["model"] == model_name
+            ]
+
+            for m in metrics:
+                mean_scores = subset.groupby("param_id")[m].mean()
+                ax.plot(mean_scores.index, mean_scores.values, label=m)
+
+            ax.set_title(model_name)
+            ax.set_xlabel("Parameter Set ID")
+            ax.grid(True)
+
+        axes[0].set_ylabel("Score")
+        axes[0].legend(loc="lower right")
+
+        plt.suptitle("Performance Metrics across Hyperparameter Configurations")
+        plt.show()
+
+
+    def plot_f1_vs_roc_auc(self):
+        plt.figure()
+        plt.scatter(
+            self.hyper_results["roc_auc"],
+            self.hyper_results["f1"],
+            alpha=0.7
+        )
+        plt.xlabel("ROC-AUC")
+        plt.ylabel("F1-score")
+        plt.title("F1 vs ROC-AUC Trade-off across Hyperparameters")
+        plt.grid(True)
+        plt.show()
+    def plot_metrics_vs_dataset_size(self):
+        metrics = ["accuracy", "precision", "recall", "f1", "roc_auc"]
+
+        for m in metrics:
+            plt.figure()
+            mean_scores = self.hyper_results.groupby("dataset_size")[m].mean()
+            std_scores  = self.hyper_results.groupby("dataset_size")[m].std()
+
+            plt.errorbar(
+                mean_scores.index,
+                mean_scores.values,
+                yerr=std_scores.values,
+                marker='o',
+                capsize=5
+            )
+
+            plt.xlabel("Dataset Size")
+            plt.ylabel(m)
+            plt.title(f"{m.upper()} vs Dataset Size")
+            plt.grid(True)
+            plt.show()
+    def show_best_parameters(self):
+        best = (
+            self.hyper_results
+            .assign(score=lambda df:
+                0.2*df["accuracy"] +
+                0.2*df["precision"] +
+                0.2*df["recall"] +
+                0.3*df["f1"] +
+                0.1*df["roc_auc"]
+            )
+            .sort_values("score", ascending=False)
+            .iloc[0]
+        )
+
+        print("\n🏆 Best Hyperparameter Configuration")
+        print(best)
 
 # ---------------------------------------------------------
 if __name__ == "__main__":
 
-    for data_size in dataset_size:
-        CSV_FILE = "./Dataset/malware_dataset_"+str(data_size)+".csv"
-        total_resualt[str(data_size)] = {}
-        for test_size in test_size:
-            total_resualt[str(data_size)][str(test_size)] = []
-            for parm in parm_random:
-                try:
-                    comparison = MalwareModelComparison(CSV_FILE)
-                    comparison.load_and_prepare_data()
-                    comparison.select_features(test_size/100)
-                    result = comparison.train_and_evaluate_models(cv_folds=5)
-                    total_resualt[str(data_size)][str(test_size)] = result;
-                #     comparison.print_final_recommendation()
-                #     comparison.train_final_models()
-                #     print("\n🎉 Completed Successfully!")
+    CSV_FILE = "./Dataset/malware_dataset_4000.csv"
 
-                except FileNotFoundError:
-                    print(f"❌ CSV not found: {CSV_FILE}")
+    try:
+        
+        comparison = MalwareModelComparison(CSV_FILE)
+        comparison.load_and_prepare_data()
+        comparison.select_features()
+        comparison.run_full_hyperparameter_experiments_all_models()
+        comparison.plot_metrics_vs_params_subplot()
 
-                except Exception as e:
-                    print(f"❌ Error: {e}")
+
+        
+
+        print("\n🎉 Completed Successfully!")
+
+    except FileNotFoundError:
+        print(f"❌ CSV not found: {CSV_FILE}")
+
+    except Exception as e:
+        print(f"❌ Error: {e}")

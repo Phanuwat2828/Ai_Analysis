@@ -12,10 +12,30 @@ from sklearn.metrics import (
     accuracy_score, precision_score, recall_score,
     f1_score, roc_auc_score
 )
+from sklearn.model_selection import ParameterGrid
+from tqdm import tqdm
+
+from sklearn.metrics import roc_curve, auc
+from sklearn.model_selection import GridSearchCV
+import matplotlib.pyplot as plt
+
 warnings.filterwarnings('ignore')
 
-dataset_size = [500,1000,1500,2000]
+RF_PARAM_GRID = {
+    "n_estimators": [100, 300, 500],
+    "max_depth": [None, 10, 20],
+    "min_samples_split": [2, 5],
+    "min_samples_leaf": [1, 2],
+    "max_features": ["sqrt"]
+}
 
+XGB_PARAM_GRID = {
+    "n_estimators": [100, 300, 500],
+    "max_depth": [4, 6, 8],
+    "learning_rate": [0.05, 0.1],
+    "subsample": [0.8, 1.0],
+    "colsample_bytree": [0.8, 1.0]
+}
 
 
 class MalwareModelComparison:
@@ -235,18 +255,42 @@ if __name__ == "__main__":
 
     CSV_FILE = "./Dataset/malware_dataset_4000.csv"
 
-    try:
-        comparison = MalwareModelComparison(CSV_FILE)
-        comparison.load_and_prepare_data()
-        comparison.select_features()
-        comparison.train_and_evaluate_models(cv_folds=5)
-        comparison.print_final_recommendation()
-        comparison.train_final_models()
-        comparison.save_models("./Model")
-        print("\n🎉 Completed Successfully!")
+    text = str(input("yes if you want save file model!"))
+    if text == "yes":
+        try:
+            
+            comparison = MalwareModelComparison(CSV_FILE)
+            comparison.load_and_prepare_data()
+            comparison.select_features()
+            comparison.train_and_evaluate_models(cv_folds=5)
+            comparison.print_final_recommendation()
+            comparison.train_final_models()
 
-    except FileNotFoundError:
-        print(f"❌ CSV not found: {CSV_FILE}")
+            
 
-    except Exception as e:
-        print(f"❌ Error: {e}")
+            print("\n🎉 Completed Successfully!")
+
+        except FileNotFoundError:
+            print(f"❌ CSV not found: {CSV_FILE}")
+
+        except Exception as e:
+            print(f"❌ Error: {e}")
+    else:
+
+        try:
+            comparison = MalwareModelComparison(CSV_FILE)
+            comparison.load_and_prepare_data()
+            comparison.select_features()
+            comparison.train_and_evaluate_models(cv_folds=5)
+            comparison.print_final_recommendation()
+            comparison.train_final_models()
+            comparison.save_models("./Model")
+
+            print("\n🎉 Completed Successfully!")
+
+        except FileNotFoundError:
+            print(f"❌ CSV not found: {CSV_FILE}")
+
+        except Exception as e:
+            print(f"❌ Error: {e}")
+        
