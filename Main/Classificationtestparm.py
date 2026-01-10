@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 warnings.filterwarnings('ignore')
 
 RF_PARAM_GRID = {
-    "n_estimators": [100, 300, 500],
+    "n_estimators": [100,200,300],
     "max_depth": [None, 10, 20],
     "min_samples_split": [2, 5],
     "min_samples_leaf": [1, 2],
@@ -30,7 +30,7 @@ RF_PARAM_GRID = {
 }
 
 XGB_PARAM_GRID = {
-    "n_estimators": [100, 300, 500],
+    "n_estimators": [100,200,300],
     "max_depth": [4, 6, 8],
     "learning_rate": [0.05, 0.1],
     "subsample": [0.8, 1.0],
@@ -255,8 +255,8 @@ class MalwareModelComparison:
 
         os.makedirs(save_dir, exist_ok=True)
 
-        dataset_sizes = [500, 1000, 2000, "full"]
-        test_sizes = [0.2, 0.3]
+        dataset_sizes = [2000,2500,3000, "full"]
+        test_sizes = [0.1,0.2, 0.3]
 
         experiments = {
             "RandomForest": (
@@ -278,7 +278,7 @@ class MalwareModelComparison:
         )
 
         all_results = []
-
+        pid = 0
         with tqdm(total=total_steps, desc="🧪 Experiments", ncols=110) as pbar:
 
             for size in dataset_sizes:
@@ -291,7 +291,7 @@ class MalwareModelComparison:
                         stratify=self.y,
                         random_state=42
                     )
-
+                
                 for test_size in test_sizes:
                     X_train, X_test, y_train, y_test = train_test_split(
                         X_sub, y_sub,
@@ -302,7 +302,7 @@ class MalwareModelComparison:
 
                     for model_name, (base_model, param_list) in experiments.items():
 
-                        for pid, params in enumerate(param_list):
+                        for i,params in enumerate(param_list):
                             model = base_model.__class__(**base_model.get_params())
                             model.set_params(**params)
 
@@ -336,20 +336,33 @@ class MalwareModelComparison:
                                 "param": pid
                             })
                             pbar.update(1)
+                            pid += 1
 
         df = pd.DataFrame(all_results)
 
         # 🔽 Save CSV (รวมทุก model)
         full_path = os.path.join(save_dir, "rf_xgb_hyperparameter_results.csv")
         df.to_csv(full_path, index=False)
-
+        best_param_ids = {}
         # 🔽 แยก CSV ต่อ model
         for m in df["model"].unique():
+            
+            sub = df[df["model"] == model_name].copy()
+
+            sub["score"] = (
+                0.2 * sub["accuracy"] +
+                0.2 * sub["precision"] +
+                0.2 * sub["recall"] +
+                0.3 * sub["f1"] +
+                0.1 * sub["roc_auc"]
+            )
+
+            best_row = sub.sort_values("score", ascending=False).iloc[0]
+            best_param_ids[model_name] = int(best_row["param_id"])
+            print(f"🏆 Best param_id for {model_name}: {int(best_row['param_id'])}")
+            print(f"\n📄 Saved results → {full_path}")
             path = os.path.join(save_dir, f"{m.lower()}_results.csv")
-            df[df["model"] == m].to_csv(path, index=False)
-
-        print(f"\n📄 Saved results → {full_path}")
-
+            sub.to_csv(path, index=False)
         self.hyper_results = df
         return df
 

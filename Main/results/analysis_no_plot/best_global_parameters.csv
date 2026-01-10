@@ -1,0 +1,3 @@
+model,dataset_size,test_size,param_id,max_depth,max_features,min_samples_leaf,min_samples_split,n_estimators,accuracy,precision,recall,f1,roc_auc,colsample_bytree,learning_rate,subsample,score
+XGBoost,1500,0.1,22,4.0,,,,300,1.0,1.0,1.0,1.0,1.0,0.8,0.1,0.8,1.0000000000000002
+RandomForest,2000,0.1,12,10.0,sqrt,1.0,2.0,100,0.995,0.99009900990099,1.0,0.9950248756218906,0.9984,,,,0.9953672646667652

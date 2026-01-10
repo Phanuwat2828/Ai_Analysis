@@ -1,0 +1,9 @@
+model,dataset_size,test_size,param_id,max_depth,max_features,min_samples_leaf,min_samples_split,n_estimators,accuracy,precision,recall,f1,roc_auc,colsample_bytree,learning_rate,subsample
+XGBoost,1500,0.1,5,4.0,,,,300,1.0,1.0,1.0,1.0,1.0,0.8,0.05,1.0
+XGBoost,1500,0.1,18,4.0,,,,100,1.0,1.0,1.0,1.0,1.0,0.8,0.1,0.8
+XGBoost,1500,0.1,20,4.0,,,,200,1.0,1.0,1.0,1.0,1.0,0.8,0.1,0.8
+XGBoost,1500,0.1,21,4.0,,,,200,1.0,1.0,1.0,1.0,1.0,0.8,0.1,1.0
+XGBoost,1500,0.1,22,4.0,,,,300,1.0,1.0,1.0,1.0,1.0,0.8,0.1,0.8
+XGBoost,1500,0.1,23,4.0,,,,300,1.0,1.0,1.0,1.0,1.0,0.8,0.1,1.0
+XGBoost,1500,0.1,28,6.0,,,,300,1.0,1.0,1.0,1.0,1.0,0.8,0.1,0.8
+XGBoost,1500,0.1,34,8.0,,,,300,1.0,1.0,1.0,1.0,1.0,0.8,0.1,0.8
